@@ -1,0 +1,136 @@
+\documentclass{beamer}
+\usetheme{Warsaw}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\newtheorem{thm}{Theorem}
+\newtheorem{prop}#[thm#]{Proposition}
+
+\begin{document}
+
+\title{Abstract Algebra \\ Day 1: The $\mathbb{Z}$ Axioms}
+\author{Nathan Bloomfield}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{The $\mathbb{Z}$ Axioms}
+There is a set $\mathbb{Z}$, whose elements are called \emph{integers}, which is equipped with two operations $+$ and $\cdot$ and a binary relation $\leq$ which satisfy the following properties.
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{The $\mathbb{Z}$ Axioms: Arithmetic}
+\begin{itemize}
+\item#[A1.#] $a+(b+c) = (a+b)+c$ \textcolor{lightgray}{for all $a,b,c \in \mathbb{Z}$.} \pause
+\item#[A2.#] \textcolor{lightgray}{There is an integer 0 such that} $a + 0 = 0 + a = a$ \textcolor{lightgray}{for all $a \in \mathbb{Z}$.} \pause
+\item#[A3.#] \textcolor{lightgray}{For every $a \in \mathbb{Z}$ there is a unique integer, denoted $-a$, such that} $a + (-a) = (-a) + a = 0$. \pause
+\item#[A4.#] $a + b = b + a$ \textcolor{lightgray}{for all $a,b \in \mathbb{Z}$.} \pause
+\item#[M.#] $a(bc) = (ab)c$ \textcolor{lightgray}{for all $a,b,c \in \mathbb{Z}$.} \pause
+\item#[D.#] $a(b+c) = ab + ac$ and $(b+c)a = ba + ca$ \textcolor{lightgray}{for all $a,b,c \in \mathbb{Z}$.} \pause
+\item#[C.#] $ab = ba$ \textcolor{lightgray}{for all $a,b \in \mathbb{Z}$.} \pause
+\item#[U.#] \textcolor{lightgray}{There is an integer 1 such that} $a \cdot 1 = 1 \cdot a = a$ \textcolor{lightgray}{for all $a \in \mathbb{Z}$.} \pause
+\item#[Z.#] If $ab = 0$, then either $a = 0$ or $b = 0$ \textcolor{lightgray}{for all $a,b \in \mathbb{Z}$.}
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{The $\mathbb{Z}$ Axioms: Order}
+\begin{itemize}
+\item#[P1.#] $a \leq a$ \textcolor{lightgray}{for all $a \in \mathbb{Z}$.} \pause
+\item#[P2.#] If $a \leq b$ and $b \leq a$ then $a = b$ \textcolor{lightgray}{for all $a,b \in \mathbb{Z}$.} \pause
+\item#[P3.#] If $a \leq b$ and $b \leq c$ then $a \leq c$ \textcolor{lightgray}{for all $a,b,c \in \mathbb{Z}$.} \pause
+\item#[P4.#] Either $a \leq b$ or $b \leq a$ \textcolor{lightgray}{for all $a,b \in \mathbb{Z}$.} \pause
+\item#[O1.#] If $a \leq b$ then $a+c \leq b+c$ \textcolor{lightgray}{for all $a,b,c \in \mathbb{Z}$.} \pause
+\item#[O2.#] If $0 \leq a$ and $0 \leq b$ then $0 \leq ab$ \textcolor{lightgray}{for all $a,b \in \mathbb{Z}$.} \pause
+\item#[O3.#] $0 < 1$.
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{The $\mathbb{Z}$ Axioms: Well-Ordering Property}
+
+We call \#[\mathbb{N} = \{a \in \mathbb{Z} \mid 0 \leq a\}\#] the set of \emph{natural numbers}. \pause
+
+\vspace{1cm}
+
+\begin{itemize}
+\item#[WOP.#] Every nonempty subset of $\mathbb{N}$ has a $\leq$-least element. \pause
+\end{itemize}
+
+\vspace{1cm}
+
+That is, if $S \subseteq \mathbb{N}$ is not empty, there is a natural number $m \in S$ such that $m \leq s$ for all $s \in S$.
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Consequences}
+
+These 16 axioms uniquely characterize the ``integers'' we know and love; any other true statement about $\mathbb{Z}$ can be derived from them. For example: \pause
+
+\begin{itemize}
+\item $(-1) \cdot a = -a$ for all $a \in \mathbb{Z}$. \pause
+\item $a \cdot 0 = 0 \cdot a = 0$ for all $a \in \mathbb{Z}$. \pause (Use D) \pause
+\item If $a \leq b$ and $0 \leq c$, then $ac \leq bc$. \pause (Use D) \pause
+\item There is no integer $t$ such that $0 < t < 1$. \pause (Use WOP; $t^2 < t$) \pause
+\item If $a < b$ then $a+1 \leq b$ \pause
+\item Exactly one of $a < 0$, $a = 0$, and $a > 0$ is true. \pause
+\item Every element of $\mathbb{N}$ is either 0 or of the form $n+1$ where $n \in \mathbb{N}$. \pause
+\item ... etc.
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Principle of Mathematical Induction}
+
+\begin{thm}#[Induction#]
+Suppose $B \subseteq \mathbb{N}$ is a subset such that
+\begin{itemize}
+\item $0 \in B$ (the \emph{Base Case}) and
+\item If $n \in B$, then $n + 1 \in B$ (the \emph{Inductive Step}).
+\end{itemize}
+Then $B = \mathbb{N}$.
+\end{thm}
+
+\begin{thm}#[Strong Induction#]
+Suppose $B \subseteq \mathbb{N}$ is a subset such that
+\begin{itemize}
+\item $0 \in B$ and
+\item If $k \in B$ for all $0 \leq k \leq n$, then $n+1 \in B$.
+\end{itemize}
+Then $B = \mathbb{N}$.
+\end{thm}
+
+Proof: Use WOP. These two statements are equivalent in power, but sometimes Strong Induction is convenient.
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Principle of Mathematical Induction: Examples}
+
+\begin{prop}
+For all natural numbers $n$, we have \#[ \sum_{i=1}^n i = \frac{n(n+1)}{2}. \#]
+\end{prop} \pause
+
+\begin{prop}
+For all natural numbers $n$, we have \#[ \sum_{i=1}^n \frac{1}{i(i+1)} = \frac{n}{n+1} \#] (Hint: Use two base cases, 0 and 1.)
+\end{prop}
+\end{frame}
+
+
+
+\end{document}

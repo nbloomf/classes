@@ -1,0 +1,116 @@
+\documentclass{article}
+\usepackage{mdwlist}
+\usepackage#[margin=2cm#]{geometry}
+\usepackage{graphicx}
+
+\begin{document}
+
+\begin{center}
+\includegraphics#[width=6cm#]{ca/tex/syllabus/nsulogo} \\ \vspace{0.5cm}
+College of Science and Health Professions \\
+Department of Mathematics and Computer Science \\
+Fall 2015
+\end{center}
+
+\begin{itemize}
+\item#[#] \textbf{\Large MATH 3313-20179, College Geometry}
+
+\item \textbf{Instructor:} Nathan Bloomfield, Ph.D.
+\begin{itemize}
+\item#[#] \textbf{Email:} \texttt{bloomfie#@nsuok.edu}
+\item#[#] \textbf{Office Location:} SC 252 
+\item#[#] \textbf{Office Hours:} MWF 11--12, MW 8:30--9, 2--4
+\item#[#] \textbf{Website:} \texttt{nbloomf.github.io}
+\end{itemize}
+
+
+\item \textbf{Course Delivery Mode:} Face-to-face
+
+
+\item \textbf{Class Days and Times:} MWF 1--2 in SC 257
+
+
+\item \textbf{Course Prerequisites and/or Corequisites:} Math 3703: Introduction to Proof.
+
+
+\item \textbf{Catalog Description:} An advanced study of Euclidean geometry including angles, triangles, parallel and perpendicular lines, circles, polygons, similarity, areas and volumes.
+
+
+\item \textbf{Course Purpose and Goals:} This course provides the student with a comprehensive treatment of classic Euclidean geometry complete with mathematical proofs.  This course is required for mathematics education majors and any who plan to teach mathematics (especially geometry) at the secondary level.
+
+
+\item \textbf{Course Topics:} We will develop some Euclidean plane geometry using an axiomatic approach, with an emphasis on the historical context and significance of both geometry and the axiomatic method.
+
+
+\item \textbf{Student Learning Outcomes:} The student will be expected to achieve the following objectives.
+\begin{enumerate*}
+\item Communicate effectively with mathematical symbols.
+\item Identify, analyze, and classify   two and three dimensional geometric figures.
+\item Learn appropriate formulas and calculate perimeters, areas, volumes of geometric figures.
+\item Apply problem solving strategies to real-life application problems involving measurement and geometric figures.
+\item Write direct and indirect proofs of geometric theorems.
+\item Using compasses, miras and straightedges, students will do a variety of geometric constructions.
+\item Compute efficiently choosing the appropriate method - paper and pencil algorithms, calculator, or mental calculation.
+\item Use \emph{Geometer's Sketchpad} to explore geometry and generate conjectures.
+\end{enumerate*}
+
+
+\item \textbf{General Education Learning Outcomes:} Specific educational objectives for the Quantitative Analysis category include the following.
+\begin{enumerate*}
+\item Solving problems using basic arithmetic and algebra;
+\item Reasoning logically;
+\item Communicating with symbols;
+\item Drawing valid inferences from data presented in the form of a graph; and
+\item Creatively applying known results to new situations.
+\end{enumerate*}
+
+
+\item \textbf{Instructional Methods:} This is a primarily lecture and demonstration-based course. However, some class meetings will include an activity assignment which will be worked on in small groups.
+
+
+\item \textbf{Learning Outcome Assessment Methods:} Grades will be based on the following assignments.
+\begin{itemize*}
+\item#[(60\%)#] \textbf{Exams:} We will have some tests.
+\item#[(30\%)#] \textbf{Activities:} We will have several in-class group activities, which may involve writing proofs.
+\item#[(10\%)#] \textbf{Presentation:} Each student will present at least one proof (for a result I will provide) in front of the class.
+\end{itemize*}
+
+The final grade will be the weighted average of the grades in each assignment category above. A final grade of 90 or better is an A; a grade in the interval $#[80,90)$ is a B, et cetera. I reserve the right to adjust the cutoffs between letter grades downward at my discretion.
+
+
+\item \textbf{Instructional Materials.} We will not be using a textbook.
+
+
+\item \textbf{Class and Instructor Policies:}
+\begin{itemize}
+\item \textbf{Attendance:} I do not give points for attendance. However, some class meetings will include graded assignments. It is to your benefit to come to class every day. If you are unable to come to class, plan to get notes and handouts from another student.
+
+\item \textbf{Make-ups:} There will be no make-up tests without a good, documented reason. What counts as a ``good'' reason is up to me. If you know in advance that you will miss an exam (e.g. due to travel) let me know as soon as possible so we can schedule an alternative testing time.
+\end{itemize}
+
+
+\item \textbf{Academic Policies and Required Information:} Please go to 
+
+\begin{center}
+\texttt{http://offices.nsuok.edu/academicaffairs/SyllabiInformation.aspx}
+\end{center}
+
+for important information pertaining to:
+
+\begin{itemize*}
+\item Academic Misconduct
+\item Americans with Disabilities Act (ADA) Compliance
+\item Inclement Weather/Disaster Policy
+\item Teach Act
+\item Release of Confidential Information (FERPA)
+\item Student Handbook
+\item Textbook Information
+\item Title IX
+\end{itemize*}
+
+
+\item \textbf{Class Calendar:} Test dates are to be determined. I will announce each test in class at least a week in advance.
+\end{itemize}
+
+\end{document}
+
