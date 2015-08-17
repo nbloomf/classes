@@ -77,7 +77,7 @@ That is, if $S \subseteq \mathbb{N}$ is not empty, there is a natural number $m 
 \begin{frame}
 \frametitle{Consequences}
 
-These 16 axioms uniquely characterize the ``integers'' we know and love; any other true statement about $\mathbb{Z}$ can be derived from them. For example: \pause
+These 16 axioms uniquely characterize the ``integers'' we know and love; any other provably true statement about $\mathbb{Z}$ can be derived from them. For example: \pause
 
 \begin{itemize}
 \item $(-1) \cdot a = -a$ for all $a \in \mathbb{Z}$. \pause
