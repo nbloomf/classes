@@ -54,6 +54,10 @@ ca: FORCE
 	$(call render,ca,syllabus,syllabus10)
 	$(call cleantex1,syllabus09)
 	$(call cleantex1,syllabus10)
+
+	$(call process,ca,review,r0-prereq)
+	$(call render,ca,review,r0-prereq)
+	$(call cleantex1,r0-prereq)
 	rm error
 
 FORCE:
