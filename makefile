@@ -5,6 +5,14 @@ define process
    > $(1)/tex/$(2)/$(3).tex
 endef
 
+define splitslides
+  cat $(1)/tex/$(2)/$(3).tex \
+    | sed s/class\{beamer\}/class\[handout\]\{beamer\}/ \
+    | sed s/colortheme\{default\}/colortheme\{dove\}/ \
+    > $(1)/tex/$(2)/$(3)-print.tex
+  mv $(1)/tex/$(2)/$(3).tex $(1)/tex/$(2)/$(3)-screen.tex
+endef
+
 # Render tex file at $(1)/tex/$(2)/$(3).tex
 define render
   pdflatex $(1)/tex/$(2)/$(3).tex
@@ -31,9 +39,13 @@ abstract: FORCE
 
 	# Slides
 	$(call process,abstract,slides,zz-axioms)
-	$(call render,abstract,slides,zz-axioms)
-	$(call cleantex1,zz-axioms)
-	$(call cleantex2,zz-axioms)
+	$(call splitslides,abstract,slides,zz-axioms)
+	$(call render,abstract,slides,zz-axioms-screen)
+	$(call render,abstract,slides,zz-axioms-print)
+	$(call cleantex1,zz-axioms-screen)
+	$(call cleantex2,zz-axioms-screen)
+	$(call cleantex1,zz-axioms-print)
+	$(call cleantex2,zz-axioms-print)
 
 	rm error
 
