@@ -1,75 +1,98 @@
-# Process feivel template at $(1)/fvl/$(2)/$(3).fvl
-define process
+define document
+  # Run through feivel
   feivel -t $(1)/fvl/$(2)/$(3).fvl \
    | tee error \
    > $(1)/tex/$(2)/$(3).tex
+
+  # Generate pdfs
+  pdflatex -interaction=batchmode $(1)/tex/$(2)/$(3).tex
+  pdflatex -interaction=batchmode $(1)/tex/$(2)/$(3).tex
+  mv $(3).pdf $(1)
+
+  # Clean up
+  rm $(3).aux $(3).log
+  rm -f error
+
+  echo -e "\033[1;32mSuccessfully built $(1)/fvl/$(2)/$(3)\033[0m"
 endef
 
-define splitslides
-  cat $(1)/tex/$(2)/$(3).tex \
+
+
+define slides
+  # Run through feivel
+  feivel -t $(1)/fvl/slides/$(2).fvl \
+   | tee error \
+   > $(1)/tex/slides/$(2).tex
+
+  # Split into screen and print versions
+  cat $(1)/tex/slides/$(2).tex \
     | sed s/class\{beamer\}/class\[handout\]\{beamer\}/ \
     | sed s/colortheme\{default\}/colortheme\{dove\}/ \
-    > $(1)/tex/$(2)/$(3)-print.tex
-  mv $(1)/tex/$(2)/$(3).tex $(1)/tex/$(2)/$(3)-screen.tex
+    > $(1)/tex/slides/$(2)-print.tex
+  mv $(1)/tex/slides/$(2).tex $(1)/tex/slides/$(2)-screen.tex
+
+  # Generate pdfs
+  pdflatex -interaction=batchmode $(1)/tex/slides/$(2)-print.tex
+  pdflatex -interaction=batchmode $(1)/tex/slides/$(2)-print.tex
+  mv $(2)-print.pdf $(1)
+
+  pdflatex -interaction=batchmode $(1)/tex/slides/$(2)-screen.tex
+  pdflatex -interaction=batchmode $(1)/tex/slides/$(2)-screen.tex
+  mv $(2)-screen.pdf $(1)
+
+  # Clean up
+  rm -- $(2)-print.aux $(2)-print.log
+  rm -- $(2)-print.nav $(2)-print.out $(2)-print.snm $(2)-print.toc
+
+  rm -- $(2)-screen.aux $(2)-screen.log
+  rm -- $(2)-screen.nav $(2)-screen.out $(2)-screen.snm $(2)-screen.toc
+  rm error
+
+  echo -e "\033[1;32mSuccessfully built $(1)/fvl/slides/$(2)\033[0m"
 endef
 
-# Render tex file at $(1)/tex/$(2)/$(3).tex
-define render
-  pdflatex $(1)/tex/$(2)/$(3).tex
-  pdflatex $(1)/tex/$(2)/$(3).tex
-  mv $(3).pdf $(1)
-endef
+
 
 define copy
   cp $(1)/fvl/$(2)/$(3) $(1)/tex/$(2)/$(3)
 endef
 
 
-cleantex1 = rm $(1).aux $(1).log
-cleantex2 = rm $(1).nav $(1).out $(1).snm $(1).toc
 
-all: abstract geom ca
+all: aa geo ca
 
-abstract: FORCE
-	# Syllabus
-	$(call process,abstract,syllabus,syllabus)
+
+
+aa: \
+  abstract/syllabus.pdf \
+  abstract/zz-axioms-screen.pdf
+
+abstract/syllabus.pdf: abstract/fvl/syllabus/syllabus.fvl
 	$(call copy,abstract,syllabus,nsulogo.png)
-	$(call render,abstract,syllabus,syllabus)
-	$(call cleantex1,syllabus)
+	$(call document,abstract,syllabus,syllabus)
 
-	# Slides
-	$(call process,abstract,slides,zz-axioms)
-	$(call splitslides,abstract,slides,zz-axioms)
-	$(call render,abstract,slides,zz-axioms-screen)
-	$(call render,abstract,slides,zz-axioms-print)
-	$(call cleantex1,zz-axioms-screen)
-	$(call cleantex2,zz-axioms-screen)
-	$(call cleantex1,zz-axioms-print)
-	$(call cleantex2,zz-axioms-print)
+abstract/zz-axioms-screen.pdf: abstract/fvl/slides/zz-axioms.fvl
+	$(call slides,abstract,zz-axioms)
 
-	rm error
 
-geom: FORCE
-	# Syllabus
-	$(call process,geom,syllabus,syllabus)
+
+geo: \
+  geom/syllabus.pdf
+
+geom/syllabus.pdf: geom/fvl/syllabus/syllabus.fvl
 	$(call copy,geom,syllabus,nsulogo.png)
-	$(call render,geom,syllabus,syllabus)
-	$(call cleantex1,syllabus)
-	rm error
+	$(call document,geom,syllabus,syllabus)
 
-ca: FORCE
-	# Syllabus
-	$(call process,ca,syllabus,syllabus09)
-	$(call process,ca,syllabus,syllabus10)
+
+
+ca: \
+  ca/syllabus09.pdf \
+  ca/r0-prereq.pdf
+
+ca/syllabus09.pdf: ca/fvl/syllabus/syllabus09.fvl ca/fvl/syllabus/syllabus10.fvl
 	$(call copy,ca,syllabus,nsulogo.png)
-	$(call render,ca,syllabus,syllabus09)
-	$(call render,ca,syllabus,syllabus10)
-	$(call cleantex1,syllabus09)
-	$(call cleantex1,syllabus10)
+	$(call document,ca,syllabus,syllabus09)
+	$(call document,ca,syllabus,syllabus10)
 
-	$(call process,ca,review,r0-prereq)
-	$(call render,ca,review,r0-prereq)
-	$(call cleantex1,r0-prereq)
-	rm error
-
-FORCE:
+ca/r0-prereq.pdf: ca/fvl/review/r0-prereq.fvl
+	$(call document,ca,review,r0-prereq)
