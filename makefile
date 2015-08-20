@@ -77,11 +77,15 @@ abstract/zz-axioms-screen.pdf: abstract/fvl/slides/zz-axioms.fvl
 
 
 geo: \
-  geom/syllabus.pdf
+  geom/syllabus.pdf \
+  geom/01-incidence-structures.pdf
 
 geom/syllabus.pdf: geom/fvl/syllabus/syllabus.fvl
 	$(call copy,geom,syllabus,nsulogo.png)
 	$(call document,geom,syllabus,syllabus)
+
+geom/01-incidence-structures.pdf: geom/fvl/notes/01-incidence-structures.fvl
+	$(call document,geom,notes,01-incidence-structures)
 
 
 
