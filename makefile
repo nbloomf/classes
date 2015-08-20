@@ -65,11 +65,15 @@ all: aa geo ca
 
 aa: \
   abstract/syllabus.pdf \
+  abstract/02-division-algorithm.pdf \
   abstract/zz-axioms-screen.pdf
 
 abstract/syllabus.pdf: abstract/fvl/syllabus/syllabus.fvl
 	$(call copy,abstract,syllabus,nsulogo.png)
 	$(call document,abstract,syllabus,syllabus)
+
+abstract/02-division-algorithm.pdf: abstract/fvl/notes/02-division-algorithm.fvl
+	$(call document,abstract,notes,02-division-algorithm)
 
 abstract/zz-axioms-screen.pdf: abstract/fvl/slides/zz-axioms.fvl
 	$(call slides,abstract,zz-axioms)
