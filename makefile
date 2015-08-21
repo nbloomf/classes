@@ -82,7 +82,8 @@ abstract/zz-axioms-screen.pdf: abstract/fvl/slides/zz-axioms.fvl
 
 geo: \
   geom/syllabus.pdf \
-  geom/01-incidence-structures.pdf
+  geom/01-incidence-structures.pdf \
+  geom/02-incidence-geometries.pdf
 
 geom/syllabus.pdf: geom/fvl/syllabus/syllabus.fvl
 	$(call copy,geom,syllabus,nsulogo.png)
@@ -90,6 +91,9 @@ geom/syllabus.pdf: geom/fvl/syllabus/syllabus.fvl
 
 geom/01-incidence-structures.pdf: geom/fvl/notes/01-incidence-structures.fvl
 	$(call document,geom,notes,01-incidence-structures)
+
+geom/02-incidence-geometries.pdf: geom/fvl/notes/02-incidence-geometries.fvl
+	$(call document,geom,notes,02-incidence-geometries)
 
 
 

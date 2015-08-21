@@ -1,0 +1,86 @@
+\documentclass{article}
+\usepackage{neb-macros}
+
+\begin{document}
+
+\CheapTitle{Incidence Geometries}
+
+\begin{dfn}[Incidence Geometry]
+Let $\mathcal{P} = (P,L)$ be an incidence structure. We say $\mathcal{P}$ is an \emph{incidence geometry} if the following properties are satisfied.
+\begin{itemize}
+\item[IG1.] If $x,y \in P$ are distinct points, then there is a unique line $\ell \in L$ such that $x,y \in \ell$. We denote this line \Line{x}{y}.
+\item[IG2.] If $\ell \in L$ is a line, then there are at least two distinct points $x,y \in \ell$.
+\item[IG3.] There is a set of three distinct points which is noncollinear.
+\end{itemize}
+\end{dfn}
+
+\begin{prop}
+Let $\mathcal{P} = (P,L)$ be an incidence geometry.
+\begin{enumerate}
+\item If $x,y \in P$, then $\Line{x}{y} = \Line{y}{x}$.
+\item If $x,y,z \in P$, then the set $\{x,y,z\}$ is collinear if and only if $z \in \Line{x}{y}$.
+\item If $z \in \Line{x}{y}$, then $\Line{x}{z} = \Line{x}{y}$.
+\end{enumerate}
+\end{prop}
+
+
+
+\subsection*{Examples}
+
+\begin{itemize}
+\item[$2^P$] If $P$ is a nonempty set, then the trivial incidence structure $2^P$ is \emph{not} an incidence geometry since it includes lines with only one point.
+
+\item[$\Reals^2$] The Cartesian Plane is an incidence geometry, as we show.
+\begin{itemize}
+\item[IG1.] Let $A,B \in \Reals^2$ be distinct points; we need to show that there is exactly one line containing $A$ and $B$. First note that $A,B \in \ell_{A,B}$ (since $A = A + 0(B-A)$ and $B = A - 1(B-A)$), so there is at least one such line. Suppose that $\ell = \ell_{P,Q}$ is a line such that $A,B \in \ell$; say $A = P + t_A(Q-P)$ and $B = P + t_B(Q-P)$. (Since $A$ and $B$ are distinct, we have $t_A \neq t_B$.) We claim that $\ell_{A,B} = \ell_{P,Q}$. To this end, if $X \in \ell_{A,B}$, say with $X = A + t(B-A)$, then we have \[X = A + t(B-A) = P + tt_A(t_B - t_A)(Q-P) \in \ell_{P,Q}. \] Thus we have $\ell_{A,B} \subseteq \ell_{P,Q}$. Now suppose $X \in \ell_{P,Q}$; say $X = P + t(Q-P)$. We have \[ A + \frac{t-t_A}{t_B-t_A}(B-A) = X, \] so that $X \in \ell_{A,B}$ as needed. So we have $\ell_{A,B} = \ell_{P,Q}$; in particular, any line containing $A$ and $B$ is equal to $\ell_{A,B}$.
+\item[IG2.] By definition, since $A = A + 0(B-A), B = A + 1(B-A) \in \ell_{A,B}$.
+\item[IG3.] The point $(0,1)$ is not on $\ell_{(0,0),(1,0)}$.
+\end{itemize}
+
+\item[$\mathbb{D}$] The Unit Disk is an incidence geometry; to show this, use the fact that $\Reals^2$ is an incidence geometry.
+
+\item[$\Rats^2$] The Rational Plane is an incidence geometry; the proof of this is similar to that for $\Reals^2$.
+
+\item[$\Reals^3$] Three Space is an incidence geometry; the proof of this is similar to that for $\Reals^2$.
+\end{itemize}
+
+
+
+\subsection*{Intersecting Lines}
+
+\begin{prop}
+Let $\mathcal{P} = (P,L)$ be an incidence geometry, with $\ell_1, \ell_2 \in L$ lines. Then exactly one of the following holds.
+\begin{itemize}
+\item $\ell_1 = \ell_2$,
+\item $\ell_1 \cap \ell_2 = \varnothing$, and
+\item $\ell_1 \cap \ell_2 = \{p\}$.
+\end{itemize}
+\end{prop}
+
+\begin{proof}
+Suppose $\ell_1 \cap \ell_2$ contains at least two points, say $x$ and $y$. Then in fact $\ell_1 = \Line{x}{y} = \ell_2$. So $\ell_1 \cap \ell_1$ contains either exactly one or zero points.
+\end{proof}
+
+\begin{cor}
+In an incidence geometry, three points $x$, $y$, and $z$ are not collinear if and only if $\Line{x}{y} \cap \Line{x}{z} = \{x\}$.
+\end{cor}
+
+
+
+\subsection*{Examples}
+
+In $\Reals^2$, we have a nice criterion which detects pairs of lines which intersect at a single point.
+
+\begin{prop}
+Let $A = (a_1,a_2)$, $B = (b_1,b_2)$, $C = (c_1,c_2)$, and $D = (d_1,d_2)$ be points in the Cartesian Plane, $\Reals^2$. Then $\Line{A}{B} \cap \Line{C}{D} = \{p\}$ is a singleton if and only if \[ \mathsf{det} \begin{bmatrix} b_1 - a_1 & d_1 - c_1 \\ b_2 - a_2 & d_2 - c_2 \end{bmatrix} \neq 0. \]
+\end{prop}
+
+\begin{cor}
+In $\Reals^2$, three points $A$, $B$, and $C$ are not collinear if and only if \[ \mathsf{det} \begin{bmatrix} b_1 - a_1 & c_1 - a_1 \\ b_2 - a_2 & c_2 - a_2 \end{bmatrix} \neq 0. \]
+\end{cor}
+
+\begin{cor}
+This statement is also true in the Rational Plane, $\Rats^2$.
+\end{cor}
+
+\end{document}
