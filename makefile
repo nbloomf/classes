@@ -65,15 +65,27 @@ all: aa geo ca
 
 aa: \
   abstract/syllabus.pdf \
+  abstract/01-induction-and-wop.pdf \
   abstract/02-division-algorithm.pdf \
+  abstract/03-divisibility-and-gcd.pdf \
+  abstract/04-bezouts-identity.pdf \
   abstract/zz-axioms-screen.pdf
 
 abstract/syllabus.pdf: abstract/fvl/syllabus/syllabus.fvl
 	$(call copy,abstract,syllabus,nsulogo.png)
 	$(call document,abstract,syllabus,syllabus)
 
+abstract/01-induction-and-wop.pdf: abstract/fvl/notes/01-induction-and-wop.fvl
+	$(call document,abstract,notes,01-induction-and-wop)
+
 abstract/02-division-algorithm.pdf: abstract/fvl/notes/02-division-algorithm.fvl
 	$(call document,abstract,notes,02-division-algorithm)
+
+abstract/03-divisibility-and-gcd.pdf: abstract/fvl/notes/03-divisibility-and-gcd.fvl
+	$(call document,abstract,notes,03-divisibility-and-gcd)
+
+abstract/04-bezouts-identity.pdf: abstract/fvl/notes/04-bezouts-identity.fvl
+	$(call document,abstract,notes,04-bezouts-identity)
 
 abstract/zz-axioms-screen.pdf: abstract/fvl/slides/zz-axioms.fvl
 	$(call slides,abstract,zz-axioms)
