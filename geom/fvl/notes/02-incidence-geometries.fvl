@@ -72,7 +72,7 @@ In an incidence geometry, three points $x$, $y$, and $z$ are not collinear if an
 In $\Reals^2$, we have a nice criterion which detects pairs of lines which intersect at a single point.
 
 \begin{prop}
-Let $A = (a_1,a_2)$, $B = (b_1,b_2)$, $C = (c_1,c_2)$, and $D = (d_1,d_2)$ be points in the Cartesian Plane, $\Reals^2$. Then $\Line{A}{B} \cap \Line{C}{D} = \{p\}$ is a singleton if and only if \#[ \mathsf{det} \begin{bmatrix} b_1 - a_1 & d_1 - c_1 \\ b_2 - a_2 & d_2 - c_2 \end{bmatrix} \neq 0. \#]
+Let $A = (a_1,a_2)$, $B = (b_1,b_2)$, $C = (c_1,c_2)$, and $D = (d_1,d_2)$ be points in the Cartesian Plane with $A \neq B$ and $C \neq D$. Then $\Line{A}{B} \cap \Line{C}{D} = \{p\}$ is a singleton if and only if \#[ \DET \begin{bmatrix} b_1 - a_1 & d_1 - c_1 \\ b_2 - a_2 & d_2 - c_2 \end{bmatrix} \neq 0. \#]
 \end{prop}
 
 \begin{proof}

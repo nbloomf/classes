@@ -95,7 +95,9 @@ abstract/zz-axioms-screen.pdf: abstract/fvl/slides/zz-axioms.fvl
 geo: \
   geom/syllabus.pdf \
   geom/01-incidence-structures.pdf \
-  geom/02-incidence-geometries.pdf
+  geom/02-incidence-geometries.pdf \
+  geom/03-parallel-lines.pdf \
+  geom/04-betweenness.pdf
 
 geom/syllabus.pdf: geom/fvl/syllabus/syllabus.fvl
 	$(call copy,geom,syllabus,nsulogo.png)
@@ -107,16 +109,25 @@ geom/01-incidence-structures.pdf: geom/fvl/notes/01-incidence-structures.fvl
 geom/02-incidence-geometries.pdf: geom/fvl/notes/02-incidence-geometries.fvl
 	$(call document,geom,notes,02-incidence-geometries)
 
+geom/03-parallel-lines.pdf: geom/fvl/notes/03-parallel-lines.fvl
+	$(call document,geom,notes,03-parallel-lines)
+
+geom/04-betweenness.pdf: geom/fvl/notes/04-betweenness.fvl
+	$(call document,geom,notes,04-betweenness)
 
 
 ca: \
   ca/syllabus09.pdf \
+  ca/h01-linear-equations.pdf \
   ca/r0-prereq.pdf
 
 ca/syllabus09.pdf: ca/fvl/syllabus/syllabus09.fvl ca/fvl/syllabus/syllabus10.fvl
 	$(call copy,ca,syllabus,nsulogo.png)
 	$(call document,ca,syllabus,syllabus09)
 	$(call document,ca,syllabus,syllabus10)
+
+ca/h01-linear-equations.pdf: ca/fvl/homework/h01-linear-equations.fvl
+	$(call document,ca,homework,h01-linear-equations)
 
 ca/r0-prereq.pdf: ca/fvl/review/r0-prereq.fvl
 	$(call document,ca,review,r0-prereq)

@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage{neb-macros}
+
+\begin{document}
+
+\CheapTitle{Betweenness and Linear Geometries}
+
+\begin{dfn}#[Betweenness#]
+Let $\mathcal{P}$ be an incidence geometry. We say that a ternary relation $\Between{\cdot}{\cdot}{\cdot}$ on the set of points of $\mathcal{P}$ is a \emph{betweenness relation} if the following properties hold.
+\begin{itemize}
+\item#[B1.#] If $\Between{x}{y}{x}$, then $x = y$, for all points $x$ and $y$.
+\item#[B2.#] 
+\item#[B3.#] 
+\end{itemize}
+\end{dfn}
+
+\begin{dfn}#[Segment, Ray#]
+Let $x$ and $y$ be distinct points in an incidence geometry $\mathcal{P} = (P,L)$.
+\begin{itemize}
+\item The set \#[ \Segment{x}{y} = \{ z \in P \mid z = x\ \mathrm{or}\ z = y\ \mathrm{or}\ \Between{x}{z}{y} \} \#] is called the \emph{segment} with \emph{endpoints} $x$ and $y$. If $z \in \Segment{x}{y}$ and $z \neq x$ and $z \neq y$, we say that $z$ is \emph{interior to} $\Segment{x}{y}$.
+\item The set \#[ \Ray{x}{y} = \{ z \in P \mid z = x\ \mathrm{or}\ z = y\ \mathrm{or}\ \Between{x}{z}{y}\ \mathrm{or}\ \Between{x}{y}{z} \} \#] is called the \emph{ray} with \emph{vertex} $x$ \emph{toward} $y$.
+\end{itemize}
+\end{dfn}
+
+
+
+\subsection*{Examples}
+
+\begin{itemize}
+\item#[$\Reals^2$#]
+
+\item#[$\mathcal{A}$#] 
+\end{itemize}
+
+
+
+\subsection*{The Trichotomy Property}
+
+
+
+\subsection*{The 4-Point Property}
+
+\end{document}
