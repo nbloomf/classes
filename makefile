@@ -69,6 +69,7 @@ aa: \
   abstract/02-division-algorithm.pdf \
   abstract/03-divisibility-and-gcd.pdf \
   abstract/04-bezouts-identity.pdf \
+  abstract/05-primes-and-factorization.pdf \
   abstract/zz-axioms-screen.pdf
 
 abstract/syllabus.pdf: abstract/fvl/syllabus/syllabus.fvl
@@ -87,6 +88,9 @@ abstract/03-divisibility-and-gcd.pdf: abstract/fvl/notes/03-divisibility-and-gcd
 abstract/04-bezouts-identity.pdf: abstract/fvl/notes/04-bezouts-identity.fvl
 	$(call document,abstract,notes,04-bezouts-identity)
 
+abstract/05-primes-and-factorization.pdf: abstract/fvl/notes/05-primes-and-factorization.fvl
+	$(call document,abstract,notes,05-primes-and-factorization)
+
 abstract/zz-axioms-screen.pdf: abstract/fvl/slides/zz-axioms.fvl
 	$(call slides,abstract,zz-axioms)
 
@@ -97,7 +101,8 @@ geo: \
   geom/01-incidence-structures.pdf \
   geom/02-incidence-geometries.pdf \
   geom/03-parallel-lines.pdf \
-  geom/04-betweenness.pdf
+  geom/04-betweenness.pdf \
+  geom/05-line-separation.pdf
 
 geom/syllabus.pdf: geom/fvl/syllabus/syllabus.fvl
 	$(call copy,geom,syllabus,nsulogo.png)
@@ -114,6 +119,9 @@ geom/03-parallel-lines.pdf: geom/fvl/notes/03-parallel-lines.fvl
 
 geom/04-betweenness.pdf: geom/fvl/notes/04-betweenness.fvl
 	$(call document,geom,notes,04-betweenness)
+
+geom/05-line-separation.pdf: geom/fvl/notes/05-line-separation.fvl
+	$(call document,geom,notes,05-line-separation)
 
 
 ca: \

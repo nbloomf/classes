@@ -3,14 +3,14 @@
 
 \begin{document}
 
-\CheapTitle{Betweenness and Linear Geometries}
+\CheapTitle{Betweenness}
 
 \begin{dfn}#[Betweenness#]
 Let $\mathcal{P}$ be an incidence geometry. We say that a ternary relation $\Between{\cdot}{\cdot}{\cdot}$ on the set of points of $\mathcal{P}$ is a \emph{betweenness relation} if the following properties hold.
 \begin{itemize}
 \item#[B1.#] If $\Between{x}{y}{x}$, then $x = y$, for all points $x$ and $y$.
-\item#[B2.#] 
-\item#[B3.#] 
+\item#[B2.#] If $x$ and $y$ are distinct points and $\Between{x}{z}{y}$, then $\Between{y}{z}{x}$ and $z \in \Line{x}{y}$.
+\item#[B3.#] If $x$, $y$, and $z$ are distinct points, then at most one of $\Between{x}{y}{z}$, $\Between{y}{z}{x}$, and $\Between{z}{x}{y}$ is true. 
 \end{itemize}
 \end{dfn}
 
@@ -21,6 +21,16 @@ Let $x$ and $y$ be distinct points in an incidence geometry $\mathcal{P} = (P,L)
 \item The set \#[ \Ray{x}{y} = \{ z \in P \mid z = x\ \mathrm{or}\ z = y\ \mathrm{or}\ \Between{x}{z}{y}\ \mathrm{or}\ \Between{x}{y}{z} \} \#] is called the \emph{ray} with \emph{vertex} $x$ \emph{toward} $y$.
 \end{itemize}
 \end{dfn}
+
+\begin{prop}
+If $\mathcal{P}$ is an incidence geometry and $\Between{\cdot}{\cdot}{\cdot}$ a betweenness relation on $\mathcal{P}$, then the following hold.
+\begin{enumerate}
+\item $\Segment{x}{y} = \Segment{y}{x}$ for all distinct points $x$ and $y$.
+\item $\Segment{x}{y} \subseteq \Ray{x}{y} \subseteq \Line{x}{y}$ for all distinct points $x$ and $y$.
+\item If $\ell$ is a line and $x$ and $y$ distinct points, then $\Segment{x}{y} \cap \ell$ is either $\Segment{x}{y}$, $\varnothing$, or $\{p\}$ for some point $p$.
+\item $\Ray{x}{y} \cap \Ray{y}{x} = \Segment{x}{y}$ for all distinct points $x$ and $y$.
+\end{enumerate}
+\end{prop}
 
 
 
@@ -36,8 +46,56 @@ Let $x$ and $y$ be distinct points in an incidence geometry $\mathcal{P} = (P,L)
 
 \subsection*{The Trichotomy Property}
 
+\begin{dfn}
+We say that a betweenness relation $\Between{\cdot}{\cdot}{\cdot}$ on an incidence geometry $\mathcal{P}$ has the \emph{Trichotomy Property} if, whenever $x$, $y$, and $z$ are distinct, collinear points, exactly one of $\Between{x}{y}{z}$, $\Between{y}{z}{x}$, and $\Between{z}{x}{y}$ is true. That is, given three collinear points, exactly one is between the other two.
+\end{dfn}
+
+\begin{prop}
+Suppose $\mathcal{P}$ is an incidence geometry and $\Between{\cdot}{\cdot}{\cdot}$ a betweenness relation with the Trichotomy Property. Then the following hold.
+\begin{enumerate}
+\item For all distinct points $x$ and $y$, \#[ \Line{x}{y} = \{ z \mid z = x\ \mathrm{or}\ z = y\ \mathrm{or}\ \Between{z}{x}{y}\ \mathrm{or}\ \Between{x}{z}{y}\ \mathrm{or}\ \Between{x}{y}{z} \}. \#]
+\item $\Ray{x}{y} \cap \Ray{y}{x} = \Segment{x}{y}$ for all distinct points $x$ and $y$.
+\end{enumerate}
+\end{prop}
+
 
 
 \subsection*{The 4-Point Property}
+
+First for some shorthand: if $x$, $y$, $z$, and $w$ are distinct points, we will say $#[xyzw#]$ precisely when $\Between{x}{y}{z}$, $\Between{x}{y}{w}$, $\Between{x}{z}{w}$, and $\Between{y}{z}{w}$. More generally, if $x_1, \ldots, x_n$ are distinct points, then $#[x_1x_2 \ldots x_n#]$ means that $\Between{x_i}{x_j}{x_k}$ for all triples $(i,j,k)$ with $1 \leq i < j < k \leq n$.
+
+\begin{dfn}#[The 4-Point Property#]
+We say that a betweenness relation $\Between{\cdot}{\cdot}{\cdot}$ on an incidence geometry $\mathcal{P}$ has the \emph{4-Point Property} if the following hold for all distinct points $x$, $y$, $z$, and $w$.
+\begin{enumerate}
+\item If $\Between{x}{y}{z}$ and $\Between{x}{z}{w}$, then $\Between{x}{y}{w}$ and $\Between{y}{z}{w}$.
+\item If $\Between{x}{y}{z}$ and $\Between{y}{z}{w}$, then $\Between{x}{y}{z}$ and $\Between{x}{z}{w}$.
+\end{enumerate}
+\end{dfn}
+
+\begin{prop}
+Suppose $\mathcal{P}$ is an incidence geometry and $\Between{\cdot}{\cdot}{\cdot}$ a betweenness relation on $\mathcal{P}$ having the 4-Point Property. If $x$, $y$, and $z$ are distinct points such that $\Between{x}{y}{z}$, then the following hold.
+\begin{enumerate}
+\item $\Segment{x}{y} \cup \Segment{y}{z} = \Segment{x}{z}$
+\item $\Segment{x}{y} \cap \Segment{y}{z} = \{y\}$
+\item $\Ray{y}{x} \cap \Ray{y}{z} = \{y\}$
+\item $\Ray{x}{y} = \Ray{x}{z}$
+\end{enumerate}
+\end{prop}
+
+\begin{prop}
+If $\mathcal{P}$ is an incidence geometry with a betweenness relation having both the Trichotomy Property and the 4-Point Property, and if $x$, $y$, and $z$ are distinct points such that $\Between{x}{y}{z}$, then $\Ray{y}{x} \cup \Ray{y}{z} = \Line{x}{z}$.
+\end{prop}
+
+
+
+\subsection*{The Interpolation Property}
+
+\begin{dfn}
+We say that a betweenness relation $\Between{\cdot}{\cdot}{\cdot}$ on an incidence geometry $\mathcal{P}$ has the \emph{Interpolation Property} if for all distinct points $x$ and $y$ in $\mathcal{P}$, there exist points $z_1$, $z_2$, and $z_3$ such that $\Between{z_1}{x}{y}$, $\Between{x}{z_2}{y}$, and $\Between{x}{y}{z_3}$.
+\end{dfn}
+
+\begin{prop}
+If $\mathcal{P}$ is an incidence geometry with a betweenness relation having both the Interpolation Property and the 4-Point Property, then every line in $\mathcal{P}$ has infinitely many points.
+\end{prop}
 
 \end{document}
