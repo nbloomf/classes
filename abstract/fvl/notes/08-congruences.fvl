@@ -1,0 +1,28 @@
+\documentclass{article}
+\usepackage{neb-macros}
+
+\begin{document}
+
+\CheapTitle{Solving Congruences}
+
+\begin{thm}#[Modular Inverses#]
+Let $n$ be a positive integer, and $a$ an integer. Then the congruence $ax \equiv 1 \mod n$ has a solution $x$ if and only if $\GCD{a}{n} = 1$. In this case, the solution $x$ is unique mod $n$.
+\end{thm}
+
+\begin{proof}
+First suppose $\GCD{a}{n} = 1$. By Bezout's Identity, we have $au + nv = 1$ for some integers $u$ and $v$. In particular, $n|(au - 1)$, so that $au \equiv 1 \mod n$ as needed. Conversely, suppose $ax \equiv 1 \mod n$ has a solution $u$. By definition we have that $n$ divides $au - 1$, so that $1 = au + nv$ for some integer $v$. Now let $d = \GCD{a}{n}$, with $a = da'$ and $n = dn'$. Then $1 = d(a'u + n'v)$, so that $d = 1$ as claimed.
+
+Finally, suppose we have two solutions of this equation, $u_1$ and $u_2$. Note that $au_1 \equiv au_2 \mod n$, so that $n$ divides $au_1 - au_2 = a(u_1 - u_2)$. Since $\GCD{a}{n} = 1$ we have $n|(u_1 - u_2)$, so that $u_1 \equiv u_2 \mod n$ as claimed.
+\end{proof}
+
+\begin{thm}#[Simultaneous Linear Congruences#]
+Let $a$ and $b$ be relatively prime positive integers. Then for any integers $u$ and $v$, the system of congruences \#[ \left\{ \begin{array}{rcl} x & \equiv & u \mod a \\ x & \equiv & v \mod b \end{array} \right. \#] has a unique solution mod $n$.
+\end{thm}
+
+\begin{proof}
+First we show existence. Since $\GCD{a}{b} = 1$, by Bezout's Identity there exist integers $h$ and $k$ such that $1 = ah + bk$. Multiplying by $v-u$, we have \#[ v-u = ah(v-u) + bk(v-u), \#] and rearranging, we let \#[ t = u + ah(v-u) = v - bk(v-u). \#] Clearly $t \equiv u \mod a$ and $t \equiv v \mod b$.
+
+Next we show uniqueness. To this end, suppose $t$ and $s$ are both solutions of this system. In particular, we have $t \equiv u \mod a$ and $t \equiv u \mod b$. Say $q_1a = u - t = q_2b$. Now $a$ divides $q_2b$, and since $a$ and $b$ are relatively prime, by Euclid's Lemma we have $a|q_2$. Thus $u-t = q_2^\prime ab$, so that $t \equiv u \mod ab$ as needed.
+\end{proof}
+
+\end{document}

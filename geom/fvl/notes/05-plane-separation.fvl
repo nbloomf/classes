@@ -1,0 +1,28 @@
+\documentclass{article}
+\usepackage{neb-macros}
+
+\begin{document}
+
+\CheapTitle{The Plane Separation Property}
+
+\begin{dfn}#[Convexity#]
+Let $\mathcal{P}$ be an incidence geometry with a betweenness relation $\Between{\cdot}{\cdot}{\cdot}$. A non empty set $S$ of points in $\mathcal{P}$ is called \emph{convex} if whenever $x,y \in S$ are distinct points, $\Segment{x}{y} \subseteq S$.
+\end{dfn}
+
+\begin{dfn}#[Plane Separation Property#]
+Let $\mathcal{P}$ be an incidence geometry with a betweenness relation $\Between{\cdot}{\cdot}{\cdot}$. We say that this geometry has the \emph{Plane Separation Property} if every line $\ell$ partitions the set of points not on $\ell$ into two nonempty, disjoint, convex sets, $H_1$ and $H_2$, with the property that if $x \in H_1$ and $y \in H_2$ then $\Segment{x}{y} \cap \ell = \{p\}$ for some point $p$. The sets $H_1$ and $H_2$ are called \emph{half-planes}.
+\end{dfn}
+
+\subsection*{Examples}
+
+\begin{itemize}
+\item#[$\Reals^2$#]
+\end{itemize}
+
+\subsection*{Ordered Geometries}
+
+\begin{dfn}#[Ordered Geometry#]
+Let $\mathcal{P}$ be an incidence geometry with a betweenness relation $\Between{\cdot}{\cdot}{\cdot}$. We say that $\mathcal{P}$ (with this betweenness relation) is an \emph{Ordered Geometry} if it has the Trichotomy Property, the 4-Point Property, the Interpolation Property, and the Line Separation Property.
+\end{dfn}
+
+\end{document}

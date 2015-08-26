@@ -37,9 +37,20 @@ If $\mathcal{P}$ is an incidence geometry and $\Between{\cdot}{\cdot}{\cdot}$ a 
 \subsection*{Examples}
 
 \begin{itemize}
-\item[$\Reals^2$]
-
-\item[$\mathcal{A}$] 
+\item[$\Reals^2$] Given points $A$, $B$, and $C$ in $\Reals^2$, we say $\Between{A}{C}{B}$ if the equation $C = A + t(B-A)$ has a solution $t \in [0,1]$. This is a betweenness relation.
+\begin{itemize}
+\item[B1.] Suppose $\Between{A}{B}{A}$. Now $B = A + t(A - A) = A$ as needed.
+\item[B2.] Suppose $A$, $B$, and $C$ are distinct points such that $\Between{A}{C}{B}$. By definition, we have $C = A + t(B-A)$ for some real number $t \in [0,1]$. Certainly $C \in \Line{A}{B}$. Moreover, note that
+\begin{eqnarray*}
+B + (1-t)(A-B) & = & B + A - B - t(A-B) \\
+ & = & A + t(B-A) \\
+ & = & C,
+\end{eqnarray*}
+so that $\Between{B}{C}{A}$.
+\item[B3.] Suppose we have distinct points $A$, $B$, and $C$ such that $\Between{A}{B}{C}$ and $\Between{B}{C}{A}$.
+Now $B = A + t(C-A)$ and $C = B + u(A-B)$ for some real numbers $u,t \in [0,1]$ by definition.
+Substituting the second equation into the first, we see that $B = A + t(1-u)(B - A)$, so that $0 = (t(1-u) - 1)(B - A)$. Since $A$ and $B$ are distinct, we must have $t(1-u) = 1$. Similarly, substituting the first equation into the second, we have $u(1-t) = 1$. Then $t$ must be a root of the quadratic $t^2 - t + 1$, which has no real solutions.
+\end{itemize}
 \end{itemize}
 
 
@@ -47,7 +58,7 @@ If $\mathcal{P}$ is an incidence geometry and $\Between{\cdot}{\cdot}{\cdot}$ a 
 \subsection*{The Trichotomy Property}
 
 \begin{dfn}
-We say that a betweenness relation $\Between{\cdot}{\cdot}{\cdot}$ on an incidence geometry $\mathcal{P}$ has the \emph{Trichotomy Property} if, whenever $x$, $y$, and $z$ are distinct, collinear points, exactly one of $\Between{x}{y}{z}$, $\Between{y}{z}{x}$, and $\Between{z}{x}{y}$ is true. That is, given three collinear points, exactly one is between the other two.
+We say that a betweenness relation $\Between{\cdot}{\cdot}{\cdot}$ on an incidence geometry $\mathcal{P}$ has the \emph{Trichotomy Property} if, whenever $x$, $y$, and $z$ are distinct, collinear points, at least one of $\Between{x}{y}{z}$, $\Between{y}{z}{x}$, and $\Between{z}{x}{y}$ is true. That is, given three collinear points, exactly one is between the other two.
 \end{dfn}
 
 \begin{prop}
@@ -57,6 +68,12 @@ Suppose $\mathcal{P}$ is an incidence geometry and $\Between{\cdot}{\cdot}{\cdot
 \item $\Ray{x}{y} \cap \Ray{y}{x} = \Segment{x}{y}$ for all distinct points $x$ and $y$.
 \end{enumerate}
 \end{prop}
+
+\subsection*{Examples}
+
+\begin{itemize}
+\item[$\Reals^2$] The Cartesian Plane has the Trichotomy Property, as we show. Let $A$, $B$, and $C$ be distinct collinear points. Now $C \in \Line{A}{B}$, so that $C = A + t(B-A)$ for some real number $t$. If $t \in [0,1]$, then $\Between{A}{C}{B}$. If $t > 1$, then $\frac{1}{t} \in (0,1)$, and we have $B = A + \frac{1}{t}(C-A)$ so that $\Between{A}{B}{C}$. If $t < 0$, then $\frac{-t}{1-t} \in (0,1]$ and we have $A = C + \frac{-t}{1-t}(B-C)$, so that $\Between{C}{A}{B}$.
+\end{itemize}
 
 
 
@@ -83,7 +100,11 @@ Suppose $\mathcal{P}$ is an incidence geometry and $\Between{\cdot}{\cdot}{\cdot
 \end{prop}
 
 \begin{prop}
-If $\mathcal{P}$ is an incidence geometry with a betweenness relation having both the Trichotomy Property and the 4-Point Property, and if $x$, $y$, and $z$ are distinct points such that $\Between{x}{y}{z}$, then $\Ray{y}{x} \cup \Ray{y}{z} = \Line{x}{z}$.
+If $\mathcal{P}$ is an incidence geometry with a betweenness relation having both the Trichotomy Property and the 4-Point Property, then the following hold.
+\begin{enumerate}
+\item If $\Between{x}{z}{y}$ and $\Between{x}{w}{y}$, then either $\Between{x}{z}{w}$ or $\Between{x}{w}{z}$ or $z = w$.
+\item If $x$, $y$, and $z$ are distinct points such that $\Between{x}{y}{z}$, then $\Ray{y}{x} \cup \Ray{y}{z} = \Line{x}{z}$.
+\end{enumerate}
 \end{prop}
 
 

@@ -70,6 +70,9 @@ aa: \
   abstract/03-divisibility-and-gcd.pdf \
   abstract/04-bezouts-identity.pdf \
   abstract/05-primes-and-factorization.pdf \
+  abstract/06-equivalence-relations.pdf \
+  abstract/07-modular-arithmetic.pdf \
+  abstract/08-congruences.pdf \
   abstract/zz-axioms-screen.pdf
 
 abstract/syllabus.pdf: abstract/fvl/syllabus/syllabus.fvl
@@ -91,6 +94,15 @@ abstract/04-bezouts-identity.pdf: abstract/fvl/notes/04-bezouts-identity.fvl
 abstract/05-primes-and-factorization.pdf: abstract/fvl/notes/05-primes-and-factorization.fvl
 	$(call document,abstract,notes,05-primes-and-factorization)
 
+abstract/06-equivalence-relations.pdf: abstract/fvl/notes/06-equivalence-relations.fvl
+	$(call document,abstract,notes,06-equivalence-relations)
+
+abstract/07-modular-arithmetic.pdf: abstract/fvl/notes/07-modular-arithmetic.fvl
+	$(call document,abstract,notes,07-modular-arithmetic)
+
+abstract/08-congruences.pdf: abstract/fvl/notes/08-congruences.fvl
+	$(call document,abstract,notes,08-congruences)
+
 abstract/zz-axioms-screen.pdf: abstract/fvl/slides/zz-axioms.fvl
 	$(call slides,abstract,zz-axioms)
 
@@ -102,7 +114,7 @@ geo: \
   geom/02-incidence-geometries.pdf \
   geom/03-parallel-lines.pdf \
   geom/04-betweenness.pdf \
-  geom/05-line-separation.pdf
+  geom/05-plane-separation.pdf
 
 geom/syllabus.pdf: geom/fvl/syllabus/syllabus.fvl
 	$(call copy,geom,syllabus,nsulogo.png)
@@ -120,8 +132,8 @@ geom/03-parallel-lines.pdf: geom/fvl/notes/03-parallel-lines.fvl
 geom/04-betweenness.pdf: geom/fvl/notes/04-betweenness.fvl
 	$(call document,geom,notes,04-betweenness)
 
-geom/05-line-separation.pdf: geom/fvl/notes/05-line-separation.fvl
-	$(call document,geom,notes,05-line-separation)
+geom/05-plane-separation.pdf: geom/fvl/notes/05-plane-separation.fvl
+	$(call document,geom,notes,05-plane-separation)
 
 
 ca: \
