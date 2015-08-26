@@ -1,0 +1,27 @@
+\documentclass{article}
+\usepackage{neb-macros}
+
+\begin{document}
+
+\CheapTitle{Angles}
+
+\begin{dfn}#[Angle#]
+Let $\mathcal{P}$ be an ordered geometry and $x$, $o$, and $y$ distinct points.
+\begin{itemize}
+\item The set \#[ \Angle{x}{o}{y} = \Ray{o}{x} \cup \Ray{o}{y} \#] is called the \emph{angle} with \emph{vertex} $o$ and \emph{sides} $\Ray{o}{x}$ and $\Ray{o}{y}$.
+\item Suppose further that $x$, $o$, and $y$ are not collinear. In this case, since $\mathcal{P}$ is an ordered geometry, the lines $\Line{o}{x}$ and $\Line{o}{y}$ divide $\mathcal{P}$ into half-planes. Let $H_1$ be the $y$ half-plane of $\Line{o}{x}$, and let $K_1$ be the $x$ half-plane of $\Line{o}{y}$. We define the \emph{interior} of $\Angle{x}{o}{y}$ to be the set \#[ \IntAngle{x}{o}{y} = H_1 \cap K_1. \#] If $x$, $y$, and $o$ are collinear, then the interior of $\Angle{x}{o}{y}$ is not defined.
+\end{itemize}
+\end{dfn}
+
+
+
+\begin{dfn}#[Linear Pair, Vertial Pair#]
+Suppose $x$, $y$, $z$, $w$, and $o$ are distinct points in an ordered geometry.
+\begin{itemize}
+\item $\Angle{x}{o}{y}$ and $\Angle{y}{o}{z}$ are called an \emph{adjacent pair} if $y \in \IntAngle{x}{o}{z}$.
+\item $\Angle{x}{o}{y}$ and $\Angle{y}{o}{z}$ are called a \emph{linear pair} if $\Between{x}{o}{z}$.
+\item $\Angle{x}{o}{y}$ and $\Angle{z}{o}{w}$ are called a \emph{vertical pair} if $\Between{x}{o}{z}$ and $\Between{y}{o}{w}$.
+\end{itemize}
+\end{dfn}
+
+\end{document}

@@ -51,6 +51,18 @@ so that $\Between{B}{C}{A}$.
 Now $B = A + t(C-A)$ and $C = B + u(A-B)$ for some real numbers $u,t \in [0,1]$ by definition.
 Substituting the second equation into the first, we see that $B = A + t(1-u)(B - A)$, so that $0 = (t(1-u) - 1)(B - A)$. Since $A$ and $B$ are distinct, we must have $t(1-u) = 1$. Similarly, substituting the first equation into the second, we have $u(1-t) = 1$. Then $t$ must be a root of the quadratic $t^2 - t + 1$, which has no real solutions.
 \end{itemize}
+
+We can say something a little stronger about the intersection of a segment and a line in $\Reals^2$; this next fact will become useful later, so we state and prove it now.
+
+\begin{prop}
+Let $A,B \in \Reals^2$ be distinct points and let $X = (x_1, x_2), Y = (y_1, y_2) \in \Reals^2$ be distinct points not in $\ell_{A,B}$. Then $\Segment{X}{Y} \cap \Line{A}{B}$ consists of a single point if and only if \[ \DET \begin{bmatrix} a_1 & a_2 & 1 \\ b_1 & b_2 & 1 \\ x_1 & x_2 & 1 \end{bmatrix} \quad \mathrm{and} \quad \DET \begin{bmatrix} a_1 & a_2 & 1 \\ b_1 & b_2 & 1 \\ y_1 & y_2 & 1 \end{bmatrix} \] have opposite signs.
+\end{prop}
+
+\begin{proof}
+Note that $\Line{X}{Y} \cap \Line{A}{B}$ contains exactly one point if and only if the equation $X + t(Y-X) = A + u(B-A)$ has a unique solution $(t,u)$. In fact we have \[ \begin{bmatrix} t \\ -u \end{bmatrix} = \begin{bmatrix} y_1 - x_1 & b_1 - a_1 \\ y_2 - x_2 & b_2 - a_2 \end{bmatrix}^{-1} \begin{bmatrix} a_1 - x_1 \\ a_2 - x_2 \end{bmatrix}. \] Comparing entries of this matrix, we see that \[ t = \frac{(b_2-a_2)(a_1-x_1) + (a_1-b_1)(a_2-x_2)}{(y_1-x_1)(b_2-a_2) - (y_2-x_2)(b_1-a_1)}. \] Note that the unique point in $\Line{X}{Y} \cap \Line{A}{B}$ is in fact in the segment $\Segment{X}{Y}$ if and only if $t \in [0,1]$.
+
+There are now two possibilities, depending on whether the denominator of $t$ is positive or negative. If the denominator of $t$ is positive, we can see that $t \in (0,1)$ if and only if \[ \DET \begin{bmatrix} a_1 & a_2 & 1 \\ b_1 & b_2 & 1 \\ x_1 & x_2 & 1 \end{bmatrix} > 0 > \begin{bmatrix} a_1 & a_2 & 1 \\ b_1 & b_2 & 1 \\ y_1 & y_2 & 1 \end{bmatrix}. \] If the denominator of $t$ is negative, then $t \in (0,1)$ if and only if \[ \DET \begin{bmatrix} a_1 & a_2 & 1 \\ b_1 & b_2 & 1 \\ x_1 & x_2 & 1 \end{bmatrix} < 0 < \begin{bmatrix} a_1 & a_2 & 1 \\ b_1 & b_2 & 1 \\ y_1 & y_2 & 1 \end{bmatrix}. \qedhere \]
+\end{proof}
 \end{itemize}
 
 

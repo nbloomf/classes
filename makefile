@@ -114,7 +114,8 @@ geo: \
   geom/02-incidence-geometries.pdf \
   geom/03-parallel-lines.pdf \
   geom/04-betweenness.pdf \
-  geom/05-plane-separation.pdf
+  geom/05-plane-separation.pdf \
+  geom/06-angles.pdf
 
 geom/syllabus.pdf: geom/fvl/syllabus/syllabus.fvl
 	$(call copy,geom,syllabus,nsulogo.png)
@@ -134,6 +135,9 @@ geom/04-betweenness.pdf: geom/fvl/notes/04-betweenness.fvl
 
 geom/05-plane-separation.pdf: geom/fvl/notes/05-plane-separation.fvl
 	$(call document,geom,notes,05-plane-separation)
+
+geom/06-angles.pdf: geom/fvl/notes/06-angles.fvl
+	$(call document,geom,notes,06-angles)
 
 
 ca: \

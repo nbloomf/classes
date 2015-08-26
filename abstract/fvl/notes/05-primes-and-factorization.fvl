@@ -50,7 +50,7 @@ Every integer other than $0$, $1$, and $-1$ can be written as a product of prime
 \begin{proof}
 Suppose first that $b > 0$. We proceed by strong induction.
 \begin{itemize}
-\item \textbf{Base Case} ($b = 2$): If $d|2$, then $0 < |d| \leq |2|$. Thus the only possible divisors of 2 are $pm 1$ and $\pm 2$, and so 2 is prime by definition.
+\item \textbf{Base Case} ($b = 2$): If $d|2$, then $0 < |d| \leq |2|$. Thus the only possible divisors of 2 are $\pm 1$ and $\pm 2$, and so 2 is prime by definition.
 \item \textbf{Inductive Step}: Suppose that for some $n$, every integer $2 \leq n' < n$ can be written as a product of primes, and consider $n$. If $n$ is itself prime, then $n = n$ is its own prime factorization. If $n$ is not prime, then there exist integers $a$ and $b$ such that $n = ab$ and $n \neq \pm a$ and $n \neq \pm b$. Since $n > 0$, we can assume that $a > 0$ and $b > 0$. In fact we have $a > 1$ and $b > 1$, so that $a,b < n$. By the inductive hypothesis, $a$ and $b$ have prime factorizations; say $a = p_1p_2 \cdots p_h$ and $b = q_1q_2 \cdots q_k$. Now \#[ n = ab = p_1p_2 \cdots p_h q_1q_2 \cdots q_k \#] has a prime factorization.
 \end{itemize}
 Thus by strong induction every integer $n \geq 2$ has a prime factorization. If $n < 0$, then $-n > 0$, so that $-n = p_1p_2 \cdots p_k$ has a prime factorization; then $n = (-p_1)p_2 \cdots p_k$ also has a prime factorization.
