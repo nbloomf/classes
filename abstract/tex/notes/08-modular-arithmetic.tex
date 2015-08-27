@@ -1,0 +1,58 @@
+\documentclass{article}
+\usepackage{neb-macros}
+
+\begin{document}
+
+\CheapTitle{Modular Arithmetic}
+
+\begin{dfn}[Congruence Modulo $n$]
+Let $n$ be a positive integer. We say that integers $a$ and $b$ are \emph{congruent modulo $n$}, denoted $a \equiv b \mod n$ or $a \equiv_n b$, if $n|(b-a)$.
+\end{dfn}
+
+\begin{prop}
+If $n$ is a fixed positive integer, then congruence modulo $n$ is an equivalence relation. 
+\end{prop}
+
+Since $\equiv_n$ is an equivalence, it induces a partition on the set $\Ints$ of integers, $\ZZ/\equiv_n$. We will denote this partition using $\ZZ/(n)$, and refer to this set as the set of \emph{modular integers}.
+
+\begin{thm}
+The elements of $\ZZ/(n)$ are sets of the form $[r]_n$, where $0 leq r < n$; such $r$ are called \emph{residues} mod $n$. Moreover, any two such sets are distinct. In particular, $\ZZ/(n)$ is a finite set with precisely $n$ elements, which are represented by the set of residues $\{0,1,\ldots,n-1\}$. 
+\end{thm}
+
+\begin{proof}
+First we show that every class in $\ZZ/(n)$ has a representative $r$ with $0 \leq r < n$. To this end, let $[a] \in \ZZ/(n)$. By the Division Algorithm, we have $a = qn + r$, where $0 \leq r < n$, and since $a - r = qn$, we have $a \equiv r \mod n$. Thus $[a] = [r]$ as needed.
+
+Next we show that two such classes are distinct. To this end, suppose we have $[r_1] = [r_2]$, where $0 \leq r_1, r_2 < n$. By definition, we have that $n$ divides $r_2 - r_1$; say $r_2 - r_1 = qn$. In particular, $r_2 = qn + r_1$. Note also that $r_2 = 0 \cdot n + r_2$. By the uniqueness of positive remainders given by the Division Algorithm, we have $r_1 = r_2$.
+\end{proof}
+
+
+
+\subsection*{Arithmetic in $\ZZ/(n)$}
+
+\begin{thm}
+Let $n$ be a positive integer. If $a_1$, $a_2$, $b_1$, and $b_2$ are integers such that $a_1 \equiv a_2 \mod n$ and $b_1 \equiv b_2 \mod n$, then we have the following.
+\begin{enumerate}
+\item $a_1 + b_1 \equiv a_2 + b_2 \mod n$.
+\item $a_1 b_1 \equiv a_2 b_2 \mod n$.
+\end{enumerate}
+\end{thm}
+
+\begin{cor}
+Let $n$ be a positive integer. Then the operations $+$ and $\cdot$ on $\ZZ/(n)$ given by \[ [a] + [b] = [a+b] \quad \mathrm{and} \quad [a] \cdot [b] = [ab] \] are well-defined.
+\end{cor}
+
+\begin{thm}[Modular Arithmetic]
+Let $n$ be a positive integer. Then $\ZZ/(n)$, with the operations $+$ and $\cdot$ defined as above, satisfy the following properties.
+\begin{itemize}
+\item[A1.] $\left([a] + [b]\right) + [c] = [a] + \left([b] + [c]\right)$ for all $a$, $b$, and $c$.
+\item[A2.] There is a modular integer $0$ with the property that $[a] + 0 = 0 + [a] = [a]$ for all $a$.
+\item[A3.] For every residue $[a]$, there is a unique residue $[b]$ with the property that $[a] + [b] = [b] + [a] = 0$. We denote this residue by $-[a]$.
+\item[A4.] $[a] + [b] = [b] + [a]$ for all $a$ and $b$.
+\item[M.] $\left([a] \cdot [b]\right) \cdot [c] = [a] \cdot \left([b] \cdot [c]\right)$ for all $a$, $b$, and $c$.
+\item[D.] $[a] \cdot \left([b] + [c]\right) = [a] \cdot [b] + [a] \cdot [c]$ and $\left([b] + [c]\right) \cdot [a] = [b] \cdot [a] + [c] \cdot [a]$ for all $a$, $b$, and $c$.
+\item[C.] $[a] \cdot [b] = [b] \cdot [a]$ for all $a$ and $b$.
+\item[U.] There is a modular integer $1$ with the property that $[a] \cdot 1 = 1 \cdot [a] = [a]$ for all $a$.
+\end{itemize}
+\end{thm}
+
+\end{document}

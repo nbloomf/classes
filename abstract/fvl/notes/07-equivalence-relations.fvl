@@ -37,15 +37,21 @@ Let $A$ be a set.
 
 That is, given an equivalence we can build a partition, and given a partition we can build an equivalence relation.
 
-\begin{dfn} \mbox{}
-\begin{itemize}
-\item Let $A$ be a set and $\sigma$ an equivalence on $A$. The mapping $\pi_\sigma : A \rightarrow A/\sigma$ given by $\varphi(a) = #[a#]$ is called the \emph{natural projection} of $A$ onto $A/\sigma$.
-\item Let $\varphi : A \rightarrow B$ be a function. The relation \#[ \KER{\varphi} = \{ (x,y) \mid \varphi(x) = \varphi(y) \} \#] is an equivalence on $A$, called the \emph{kernel} of $\varphi$.
-\end{itemize}
+\begin{dfn}
+Let $A$ be a set and $\sigma$ an equivalence on $A$. Then the mapping $\pi_\sigma : A \rightarrow A/\sigma$ given by $\varphi(a) = #[a#]_\sigma$ is called the \emph{natural projection} of $A$ onto $A/\sigma$.
 \end{dfn}
 
+\begin{thm} \mbox{}
+\begin{itemize}
+\item If $\varphi : A \rightarrow B$ is a mapping, then $\KER{\varphi}$ is an equivalence relation.
+\item If $\sigma$ is an equivalence relation on $A$ and $\pi : A \rightarrow A/\sigma$ the natural projection, then $\KER{\pi} = \sigma$.
+\end{itemize}
+\end{thm}
+
+Quotient sets, it turns out, are extremely important, and we use them frequently. Defining functions on a quotient set can be tricky.
+
 \begin{thm}#[First Isomorphism Theorem for Sets#]
-Let $f : A \rightarrow B$ be a function. There is a unique function $\overline{f}$ such that $f = \overline{f} \circ \pi_{\KER{f}}$.
+Let $\varphi : A \rightarrow B$ be a function, and suppose we have an equivalence relation $\sigma$ such that $\sigma \subseteq \KER{\varphi}$. Then there is a unique function $\overline{\varphi} : A/\sigma \rightarrow B$ such that $\varphi = \overline{\varphi} \circ \pi_{\sigma}$.
 \end{thm}
 
 \end{document}

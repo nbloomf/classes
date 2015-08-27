@@ -70,9 +70,10 @@ aa: \
   abstract/03-divisibility-and-gcd.pdf \
   abstract/04-bezouts-identity.pdf \
   abstract/05-primes-and-factorization.pdf \
-  abstract/06-equivalence-relations.pdf \
-  abstract/07-modular-arithmetic.pdf \
-  abstract/08-congruences.pdf \
+  abstract/06-relations-and-functions.pdf \
+  abstract/07-equivalence-relations.pdf \
+  abstract/08-modular-arithmetic.pdf \
+  abstract/09-congruences.pdf \
   abstract/zz-axioms-screen.pdf
 
 abstract/syllabus.pdf: abstract/fvl/syllabus/syllabus.fvl
@@ -94,14 +95,17 @@ abstract/04-bezouts-identity.pdf: abstract/fvl/notes/04-bezouts-identity.fvl
 abstract/05-primes-and-factorization.pdf: abstract/fvl/notes/05-primes-and-factorization.fvl
 	$(call document,abstract,notes,05-primes-and-factorization)
 
-abstract/06-equivalence-relations.pdf: abstract/fvl/notes/06-equivalence-relations.fvl
-	$(call document,abstract,notes,06-equivalence-relations)
+abstract/06-relations-and-functions.pdf: abstract/fvl/notes/06-relations-and-functions.fvl
+	$(call document,abstract,notes,06-relations-and-functions)
 
-abstract/07-modular-arithmetic.pdf: abstract/fvl/notes/07-modular-arithmetic.fvl
-	$(call document,abstract,notes,07-modular-arithmetic)
+abstract/07-equivalence-relations.pdf: abstract/fvl/notes/07-equivalence-relations.fvl
+	$(call document,abstract,notes,07-equivalence-relations)
 
-abstract/08-congruences.pdf: abstract/fvl/notes/08-congruences.fvl
-	$(call document,abstract,notes,08-congruences)
+abstract/08-modular-arithmetic.pdf: abstract/fvl/notes/08-modular-arithmetic.fvl
+	$(call document,abstract,notes,08-modular-arithmetic)
+
+abstract/09-congruences.pdf: abstract/fvl/notes/09-congruences.fvl
+	$(call document,abstract,notes,09-congruences)
 
 abstract/zz-axioms-screen.pdf: abstract/fvl/slides/zz-axioms.fvl
 	$(call slides,abstract,zz-axioms)
