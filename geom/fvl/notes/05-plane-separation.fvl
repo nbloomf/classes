@@ -53,4 +53,12 @@ Since $\mathcal{P}$ is an ordered geometry, it satisfies the Plane Separation pr
 
 In other words, Pasch's Axiom states that if a line enters a triangle then it must also exit.
 
+\begin{lem}
+Let $\ell$ be a line and $C \in \ell$ a point in an ordered geometry. Suppose $A$ and $B$ are points not on $\ell$ such that $\Between{A}{B}{C}$. Then $A$ and $B$ are on the same side of $\ell$.
+\end{lem}
+
+\begin{proof}
+Suppose otherwise that $A$ and $B$ are on opposite sides of $\ell$. By the Plane Separation property, and because $A$ and $B$ are not on $\ell$, the segment $\Segment{A}{B}$ cuts $\ell$ at a unique point $D$. That is, $D \in \ell$ and $\Between{A}{D}{B}$. But note that $C, D \in \ell$, so $\Line{C}{D} = \ell$, and also $C, D \in \Line{A}{B}$, so that $\Line{C}{D} = \Line{A}{B}$. But then $\Line{A}{B} = \ell$, a contradiction. Thus $A$ and $B$ must be on the same side of $\ell$.
+\end{proof}
+
 \end{document}

@@ -15,11 +15,19 @@ If $A$ and $B$ are sets, then the subsets of $A \times B$ are called \emph{relat
 \end{itemize}
 \end{dfn}
 
+\begin{prop} \mbox{}
+\begin{enumerate}
+\item If $A$ is a set, then the relation $1_A = \{ (x,x) \mid x \in A \}$ is a function, called the \emph{identity} on $A$, and $1_A(x) = x$ for all $x \in A$.
+\item If $\varphi : A \rightarrow B$ and $\psi : B \rightarrow C$ are functions, then the relation \#[ \psi \circ \varphi = \{ (a, \psi(\varphi(a))) \mid a \in A \} \#] is a function $A \rightarrow C$.
+\end{enumerate}
+\end{prop}
+
 \begin{dfn}
 Let $\varphi : A \rightarrow B$ be a function.
 \begin{itemize}
 \item We say that $\varphi$ is \emph{injective} if whenever $\varphi(a_1) = \varphi(a_2)$, in fact $a_1 = a_2$.
 \item We say that $\varphi$ is \emph{surjective} if for every $b \in B$, there is an element $a \in A$ such that $\varphi(a) = b$.
+\item If $\varphi$ is both injective and surjective, we say it is \emph{bijective}.
 \end{itemize}
 \end{dfn}
 

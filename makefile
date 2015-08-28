@@ -74,6 +74,7 @@ aa: \
   abstract/07-equivalence-relations.pdf \
   abstract/08-modular-arithmetic.pdf \
   abstract/09-congruences.pdf \
+  abstract/10-the-euler-totient.pdf \
   abstract/zz-axioms-screen.pdf
 
 abstract/syllabus.pdf: abstract/fvl/syllabus/syllabus.fvl
@@ -106,6 +107,9 @@ abstract/08-modular-arithmetic.pdf: abstract/fvl/notes/08-modular-arithmetic.fvl
 
 abstract/09-congruences.pdf: abstract/fvl/notes/09-congruences.fvl
 	$(call document,abstract,notes,09-congruences)
+
+abstract/10-the-euler-totient.pdf: abstract/fvl/notes/10-the-euler-totient.fvl
+	$(call document,abstract,notes,10-the-euler-totient)
 
 abstract/zz-axioms-screen.pdf: abstract/fvl/slides/zz-axioms.fvl
 	$(call slides,abstract,zz-axioms)
