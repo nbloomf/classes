@@ -75,6 +75,7 @@ aa: \
   abstract/08-modular-arithmetic.pdf \
   abstract/09-congruences.pdf \
   abstract/10-the-euler-totient.pdf \
+  abstract/11-rings.pdf \
   abstract/zz-axioms-screen.pdf
 
 abstract/syllabus.pdf: abstract/fvl/syllabus/syllabus.fvl
@@ -111,6 +112,9 @@ abstract/09-congruences.pdf: abstract/fvl/notes/09-congruences.fvl
 abstract/10-the-euler-totient.pdf: abstract/fvl/notes/10-the-euler-totient.fvl
 	$(call document,abstract,notes,10-the-euler-totient)
 
+abstract/11-rings.pdf: abstract/fvl/notes/11-rings.fvl
+	$(call document,abstract,notes,11-rings)
+
 abstract/zz-axioms-screen.pdf: abstract/fvl/slides/zz-axioms.fvl
 	$(call slides,abstract,zz-axioms)
 
@@ -123,7 +127,8 @@ geo: \
   geom/03-parallel-lines.pdf \
   geom/04-betweenness.pdf \
   geom/05-plane-separation.pdf \
-  geom/06-angles.pdf
+  geom/06-angles.pdf \
+  geom/07-congruence.pdf
 
 geom/syllabus.pdf: geom/fvl/syllabus/syllabus.fvl
 	$(call copy,geom,syllabus,nsulogo.png)
@@ -146,6 +151,9 @@ geom/05-plane-separation.pdf: geom/fvl/notes/05-plane-separation.fvl
 
 geom/06-angles.pdf: geom/fvl/notes/06-angles.fvl
 	$(call document,geom,notes,06-angles)
+
+geom/07-congruence.pdf: geom/fvl/notes/07-congruence.fvl
+	$(call document,geom,notes,07-congruence)
 
 
 ca: \
