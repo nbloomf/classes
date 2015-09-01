@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage{neb-macros}
+\usepackage{tikz}
 
 \begin{document}
 
@@ -73,16 +74,33 @@ Our list of examples is starting to get complicated, so we make two additional d
 \begin{dfn}
 Let $R$ be a ring.
 \begin{itemize}
-\item We say that $R$ is \emph{commutative} if it satisfies the following additional property.
+\item We say that $R$ is \emph{commutative} if it satisfies the following property.
 \begin{itemize}
 \item[C.] $ab = ba$ for all $a,b \in R$.
 \end{itemize}
-\item We say that $R$ is \emph{unital} if it satisfies the following additional property.
+\item We say that $R$ is \emph{unital} if it satisfies the following property.
 \begin{itemize}
 \item[U.] There is an element $1 \in R$ (called a \emph{one}) such that $1 \cdot a = a \cdot 1 = a$ for all $a \in R$.
 \end{itemize}
 \end{itemize}
 \end{dfn}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.35]
+  \draw (-15,-10) -- (-15,10) -- (15,10) -- (15,-10) -- cycle;
+  \draw (-5,0) circle (7.5);
+  \draw (5,0) circle (7.5);
+  \draw (-15,10) node [anchor=north west] {Rings};
+  \draw (-5,5) node [anchor=center] {Commutative};
+  \draw (5,5) node [anchor=center] {Unital};
+
+  \draw (0,2.5) node [anchor=center] {$\ZZ$};
+  \draw (0,-2.5) node [anchor=center] {$\ZZ/(n)$};
+  \draw (-7,0) node [anchor=center] {$2\ZZ$};
+  \draw (7,0) node [anchor=center] {$\MAT{2}{\ZZ}$};
+  \draw (12,-7) node [anchor=center] {$\MAT{2}{2\ZZ}$};
+\end{tikzpicture}
+\end{center}
 
 \begin{prop}
 Let $R$ be a unital ring.
@@ -92,11 +110,13 @@ Let $R$ be a unital ring.
 \end{enumerate}
 \end{prop}
 
-\begin{proof}
+\begin{proof} \mbox{}
 \begin{enumerate}
 \item Suppose $u$ is such an element. In particular, $1 = u \cdot 1 = u$.
-\item Let $a \in R$. Then $a + (-1)a = 1a + (-1)a = (1 + (-1))a = 0a = 0$, so that $(-1)a = -a$.
+\item Let $a \in R$. Then $a + (-1)a = 1a + (-1)a = (1 + (-1))a = 0a = 0$, so that $(-1)a = -a$. \qedhere
 \end{enumerate}
 \end{proof}
+
+
 
 \end{document}

@@ -12,7 +12,29 @@ Let $n$ be a positive integer, and $a$ an integer. Then the congruence $ax \equi
 \begin{proof}
 First suppose $\GCD{a}{n} = 1$. By Bezout's Identity, we have $au + nv = 1$ for some integers $u$ and $v$. In particular, $n|(au - 1)$, so that $au \equiv 1 \mod n$ as needed. Conversely, suppose $ax \equiv 1 \mod n$ has a solution $u$. By definition we have that $n$ divides $au - 1$, so that $1 = au + nv$ for some integer $v$. Now let $d = \GCD{a}{n}$, with $a = da'$ and $n = dn'$. Then $1 = d(a'u + n'v)$, so that $d = 1$ as claimed.
 
-Finally, suppose we have two solutions of this equation, $u_1$ and $u_2$. Note that $au_1 \equiv au_2 \mod n$, so that $n$ divides $au_1 - au_2 = a(u_1 - u_2)$. Since $\GCD{a}{n} = 1$ we have $n|(u_1 - u_2)$, so that $u_1 \equiv u_2 \mod n$ as claimed.
+Finally, suppose we have two solutions of this equation, $u_1$ and $u_2$. Note that $au_1 \equiv au_2 \mod n$, so that $n$ divides $au_1 - au_2 = a(u_1 - u_2)$. Since $\GCD{a}{n} = 1$ we have $n|(u_1 - u_2)$ by Euclid's Lemma, so that $u_1 \equiv u_2 \mod n$ as claimed.
+\end{proof}
+
+\begin{cor}
+Let $p > 1$ be a prime. If $ab \equiv 0 \mod p$, then either $a \equiv 0 \mod p$ or $b \equiv 0 \mod p$.
+\end{cor}
+
+\begin{cor}
+Let $p$ be a prime. If $a \in [1,p)$, then there is a unique $b \in [1,p)$ such that $ab \equiv 1 \mod p$. Moreover, $a$ and $b$ are distinct unless $a = 1$ or $a = p-1$.
+\end{cor}
+
+\begin{proof}
+The existence and uniqueness of $b$ follows from the previous result. Now suppose $a = b$; that is, $a^2 \equiv 1 \mod p$. Then $(a-1)(a+1) \equiv 0 \mod p$. Since $p$ is prime, we must have either $a-1 \equiv 0 \mod p$ or $a+1 \equiv 0 \mod p$; in the first case, $a = 1$, and in the second case, $a = p-1$.
+\end{proof}
+
+\begin{cor}[Wilson's Theorem]
+Let $n > 2$ be an integer. Then $n$ is prime if and only if $(p-1)! \equiv -1 \mod p$.
+\end{cor}
+
+\begin{proof}
+Suppose $n = p$ is prime, and consider the residues \[1, 2, 3, \ldots, p-2, p-1.\] All such residues \emph{except} $1$ and $p-1$ come in inverse pairs. So after rearranging, we have \[ (p-1)! = 1 \cdot (p-1) \cdot (t_1 \cdot u_1) \cdot \cdots \cdot (t_k \cdot u_k), \] where $t_i \cdot u_i \equiv 1 \mod p$. Thus $(p-1)! \equiv p-1 \equiv -1 \mod p$ as claimed.
+
+Conversely, suppose $n$ is not prime; then we have $1 < a < n$ and $1 < b < n$ such that $n = ab$. But now $a$ and $b$ both appear among the factors of $(n-1)!$, so that $(n-1)! \equiv 0 \mod n$.
 \end{proof}
 
 \begin{thm}[Simultaneous Linear Congruences]

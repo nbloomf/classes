@@ -1,0 +1,54 @@
+\documentclass{article}
+\usepackage{neb-titles}
+
+[import (kreb-scout/ca/eqn/abs/linear.fvl)]#
+[import (kreb-scout/ca/eqn/rat/linear.fvl)]#
+[import (kreb-scout/ca/eqn/quad/int.fvl)]#
+[import (kreb-scout/ca/eqn/quad/quad-type.fvl)]#
+[import (kreb-scout/ca/ineq/abs.fvl)]#
+
+\begin{document}
+
+\ReviewTitle#[class={College Algebra}, for={Test 1}#]
+
+Solve the following equations.
+
+\begin{enumerate}
+\item [eval @linear.rat.1] \vspace{4cm}
+
+\item [eval @linear.abs.1] \vspace{4cm}
+
+\item [eval @linear.abs.2] \vspace{4cm}
+
+\item [eval @linear.abs.3] \vspace{4cm}
+
+\newpage
+
+\item [eval @monic.int.roots.1] \vspace{4cm}
+
+\item [eval @monic.int.roots.2] \vspace{4cm}
+
+\item [eval @quad.with.lc] \vspace{4cm}
+
+\item [eval @quad.with.lc (int @lc := 3)] \vspace{4cm}
+
+\item [eval @quad.radical.roots.1] \vspace{4cm}
+
+\newpage
+
+\item [eval @cubic.zero.root.1] \vspace{4cm}
+
+\item [eval @biquadratic.with.lc] \vspace{4cm}
+
+\item [eval @abs.monic.1] \vspace{4cm}
+\end{enumerate}
+
+Solve the following inequalities. Give your answers in interval notation.
+
+\begin{enumerate}
+\item [eval @in.linear.abs.1] \vspace{4cm}
+
+\item [eval @in.linear.abs.4]
+\end{enumerate}
+
+\end{document}

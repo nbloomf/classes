@@ -76,6 +76,7 @@ aa: \
   abstract/09-congruences.pdf \
   abstract/10-the-euler-totient.pdf \
   abstract/11-rings.pdf \
+  abstract/12-homomorphisms.pdf \
   abstract/zz-axioms-screen.pdf
 
 abstract/syllabus.pdf: abstract/fvl/syllabus/syllabus.fvl
@@ -114,6 +115,9 @@ abstract/10-the-euler-totient.pdf: abstract/fvl/notes/10-the-euler-totient.fvl
 
 abstract/11-rings.pdf: abstract/fvl/notes/11-rings.fvl
 	$(call document,abstract,notes,11-rings)
+
+abstract/12-homomorphisms.pdf: abstract/fvl/notes/12-homomorphisms.fvl
+	$(call document,abstract,notes,12-homomorphisms)
 
 abstract/zz-axioms-screen.pdf: abstract/fvl/slides/zz-axioms.fvl
 	$(call slides,abstract,zz-axioms)
@@ -159,7 +163,9 @@ geom/07-congruence.pdf: geom/fvl/notes/07-congruence.fvl
 ca: \
   ca/syllabus09.pdf \
   ca/h01-linear-equations.pdf \
-  ca/r0-prereq.pdf
+  ca/h02-quadratic-equations.pdf \
+  ca/r0-prereq.pdf \
+  ca/r1-equations.pdf
 
 ca/syllabus09.pdf: ca/fvl/syllabus/syllabus09.fvl ca/fvl/syllabus/syllabus10.fvl
 	$(call copy,ca,syllabus,nsulogo.png)
@@ -169,5 +175,11 @@ ca/syllabus09.pdf: ca/fvl/syllabus/syllabus09.fvl ca/fvl/syllabus/syllabus10.fvl
 ca/h01-linear-equations.pdf: ca/fvl/homework/h01-linear-equations.fvl
 	$(call document,ca,homework,h01-linear-equations)
 
+ca/h02-quadratic-equations.pdf: ca/fvl/homework/h02-quadratic-equations.fvl
+	$(call document,ca,homework,h02-quadratic-equations)
+
 ca/r0-prereq.pdf: ca/fvl/review/r0-prereq.fvl
 	$(call document,ca,review,r0-prereq)
+
+ca/r1-equations.pdf: ca/fvl/review/r1-equations.fvl
+	$(call document,ca,review,r1-equations)
