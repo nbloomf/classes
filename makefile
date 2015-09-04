@@ -75,8 +75,11 @@ aa: \
   abstract/08-modular-arithmetic.pdf \
   abstract/09-congruences.pdf \
   abstract/10-the-euler-totient.pdf \
+  abstract/10a-pythagorean-triples.pdf \
   abstract/11-rings.pdf \
   abstract/12-homomorphisms.pdf \
+  abstract/13-subrings.pdf \
+  abstract/14-direct-sums.pdf \
   abstract/zz-axioms-screen.pdf
 
 abstract/syllabus.pdf: abstract/fvl/syllabus/syllabus.fvl
@@ -113,11 +116,20 @@ abstract/09-congruences.pdf: abstract/fvl/notes/09-congruences.fvl
 abstract/10-the-euler-totient.pdf: abstract/fvl/notes/10-the-euler-totient.fvl
 	$(call document,abstract,notes,10-the-euler-totient)
 
+abstract/10a-pythagorean-triples.pdf: abstract/fvl/notes/10a-pythagorean-triples.fvl
+	$(call document,abstract,notes,10a-pythagorean-triples)
+
 abstract/11-rings.pdf: abstract/fvl/notes/11-rings.fvl
 	$(call document,abstract,notes,11-rings)
 
 abstract/12-homomorphisms.pdf: abstract/fvl/notes/12-homomorphisms.fvl
 	$(call document,abstract,notes,12-homomorphisms)
+
+abstract/13-subrings.pdf: abstract/fvl/notes/13-subrings.fvl
+	$(call document,abstract,notes,13-subrings)
+
+abstract/14-direct-sums.pdf: abstract/fvl/notes/14-direct-sums.fvl
+	$(call document,abstract,notes,14-direct-sums)
 
 abstract/zz-axioms-screen.pdf: abstract/fvl/slides/zz-axioms.fvl
 	$(call slides,abstract,zz-axioms)

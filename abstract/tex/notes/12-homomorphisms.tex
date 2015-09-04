@@ -19,7 +19,7 @@ If $R$ and $S$ are both unital rings, we say that $\varphi$ is \emph{unital} if 
 
 \begin{prop} \mbox{}
 \begin{enumerate}
-\item If $R$ is a ring, then $1 : R \rightarrow R$ given by $1(x) = x$ is a ring homomorphism. If $R$ is unital, then $1$ is unital.
+\item If $R$ is a ring, then $\ID[R] : R \rightarrow R$ given by $\ID[R](x) = x$ is a ring homomorphism. If $R$ is unital, then $\ID$ is unital.
 \item If $\varphi : R \rightarrow S$ and $\psi : S \rightarrow T$ are ring homomorphisms, then $\psi \circ \varphi : R \rightarrow T$ is a homomorphism. If $\varphi$ and $\psi$ are unital, then $\psi \circ \varphi$ is unital.
 \end{enumerate}
 \end{prop}
@@ -104,5 +104,39 @@ We can think of the image of this map as a copy of the integers in $R$, with $1 
 \begin{dfn}[Characteristic]
 Let $R$ be a unital ring and $\varphi : \ZZ \rightarrow R$ the unique unital homomorphism. If there is a positive integer $n$ such that $\varphi(n) = 0$, then there is a \emph{smallest} such integer. We call this the \emph{characteristic} of $R$, denoted $\CHAR{R}$. That is, $\CHAR{R}$ is the smallest positive natural number such that \[\underbrace{1_R + 1_R + \cdots + 1_R}_{n\ \mathrm{times}} = 0_R.\] If no such $n$ exists, we say that $\CHAR{R} = 0$.
 \end{dfn}
+
+
+\subsection*{Isomorphisms}
+
+\begin{dfn}
+If $\varphi : R \rightarrow S$ is a ring homomorphism which is also bijective as a mapping, we say $\varphi$ is an \emph{isomorphism}. In this case we say that $R$ is \emph{isomorphic to} $S$, denoted $R \cong S$.
+\end{dfn}
+
+In a very concrete sense, if $R \cong S$, then $R$ and $S$ are really ``the same'' ring, with the elements relabeled.
+
+\begin{prop}
+For all rings $R$, $S$, and $T$, the following hold.
+\begin{enumerate}
+\item $R \cong R$.
+\item If $R \cong S$ then $S \cong R$.
+\item If $R \cong S$ and $S \cong T$ then $R \cong T$.
+\end{enumerate}
+\end{prop}
+
+\begin{center}
+\framebox{Given rings $R$ and $S$, is it true that $R \cong S$?}
+\end{center}
+
+To distinguish rings from each other, it is useful to have on hand several properties of rings which are \emph{preserved} by isomorphisms. For instance, the property ``contains the number 3 as an element'' is \emph{not} preserved by isomorphisms: the elements of isomorphic rings may have nothing to do with each other.
+
+\begin{prop}
+Let $R$ and $S$ be rings. If $R \cong S$, then the following hold.
+\begin{enumerate}
+\item $R$ and $S$ have the same cardinality.
+\item $R$ is commutative if and only if $S$ is commutative.
+\item $R$ is unital if and only if $S$ is unital.
+\item $\CHAR{R} = \CHAR{S}$.
+\end{enumerate}
+\end{prop}
 
 \end{document}
