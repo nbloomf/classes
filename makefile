@@ -144,7 +144,8 @@ geo: \
   geom/04-betweenness.pdf \
   geom/05-plane-separation.pdf \
   geom/06-angles.pdf \
-  geom/07-congruence.pdf
+  geom/07-congruence.pdf \
+  geom/08-circles.pdf
 
 geom/syllabus.pdf: geom/fvl/syllabus/syllabus.fvl
 	$(call copy,geom,syllabus,nsulogo.png)
@@ -170,6 +171,9 @@ geom/06-angles.pdf: geom/fvl/notes/06-angles.fvl
 
 geom/07-congruence.pdf: geom/fvl/notes/07-congruence.fvl
 	$(call document,geom,notes,07-congruence)
+
+geom/08-circles.pdf: geom/fvl/notes/08-circles.fvl
+	$(call document,geom,notes,08-circles)
 
 
 ca: \

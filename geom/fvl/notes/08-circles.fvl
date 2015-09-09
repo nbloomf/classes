@@ -1,0 +1,12 @@
+\documentclass{article}
+\usepackage{neb-macros}
+
+\begin{document}
+
+\CheapTitle{Circles}
+
+\begin{dfn}#[Circle#]
+Let $o$ and $x$ be points in an ordered geometry with a segment congruence. The \emph{circle} with \emph{center} at $o$ and passing through $x$ is the set \#[ \Circle{o}{x} = \{ y \mid \Segment{o}{y} \cong \Segment{o}{x} \}. \#]
+\end{dfn}
+
+\end{document}

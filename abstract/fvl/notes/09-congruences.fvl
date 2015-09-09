@@ -28,7 +28,7 @@ The existence and uniqueness of $b$ follows from the previous result. Now suppos
 \end{proof}
 
 \begin{cor}#[Wilson's Theorem#]
-Let $n > 2$ be an integer. Then $n$ is prime if and only if $(p-1)! \equiv -1 \mod p$.
+Let $n > 2$ be an integer. Then $n$ is prime if and only if $(n-1)! \equiv -1 \mod n$.
 \end{cor}
 
 \begin{proof}

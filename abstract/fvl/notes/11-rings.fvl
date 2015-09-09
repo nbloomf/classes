@@ -6,7 +6,11 @@
 
 \CheapTitle{Rings}
 
-\begin{dfn}#[Ring#]
+So far we've studied two kinds of numbers: the integers, $\ZZ$, that we know and love, and the integers modulo $n$, $\ZZ/(n)$, which are a little strange. These kinds of numbers differ in some crucial ways. For example, $\ZZ$ comes with a useful order relation $\leq$ while $\ZZ/(n)$ does not, and in $\ZZ/(n)$ it may be possible to find ``nonzero'' numbers $a$ and $b$ such that $ab \equiv_n 0$, which cannot happen in $\ZZ$. However both $\ZZ$ and $\ZZ/(n)$ have an arithmetic -- plus and times -- which behave very similarly. Addition is associative and commutative, there is a zero element, and so on.
+
+In mathematics, when different concrete objects have behavior in common it is frequently useful to ``abstract out'' the common behavior. This is what motivates the following definition.
+
+\begin{dfn}#[Ring#] \label{dfn:ring}
 A \emph{ring} is a set $R$ equipped with two operations $+$ and $\cdot$, which satisfy the following properties.
 \begin{itemize}
 \item#[A1.#] $(a+b)+c = a+(b+c)$ for all $a,b,c \in R$.
@@ -18,8 +22,10 @@ A \emph{ring} is a set $R$ equipped with two operations $+$ and $\cdot$, which s
 \end{itemize}
 \end{dfn}
 
+Many of the usual properties of arithmetic in $\ZZ$ can be derived as properties of any ring.
+
 \begin{prop}
-Let $R$ be a ring.
+Let $R$ be a ring. Then we have the following.
 \begin{enumerate}
 \item The zero element of $R$ is unique in the following sense: if $a,b \in R$ such that $a+b = a$, then $b = 0_R$.
 \item Negative elements in $R$ are unique in the following sense: If $a,b \in R$ such that $a+b = 0_R$, then $b = -a$.
@@ -37,7 +43,7 @@ Let $R$ be a ring.
 \item By definition, $(-a) + a = 0_R$, so by the uniqueness of negatives we have $a = -(-a)$.
 \item Let $a \in R$. Now $a \cdot a + 0_R \cdot a = (a + 0_R) \cdot a = a \cdot a$, and so $0_R \cdot a = 0_R$. The other equality is similar.
 \item Let $a,b \in R$. Now $(-a)b + ab = (-a + a)b = 0_R \cdot b = 0_R$, so that $(-a)b = -(ab)$. The other equality is similar.
-\item Using the previous statement, we have $(-a)(-b) = -(a(-b)) = -(-(ab)) = ab$.
+\item Using the previous statement, we have \#[ (-a)(-b) = -(a(-b)) = -(-(ab)) = ab. \qedhere \#]
 \end{enumerate}
 \end{proof}
 
@@ -85,6 +91,12 @@ Let $R$ be a ring.
 \end{itemize}
 \end{dfn}
 
+\subsection*{Examples}
+
+\begin{itemize}
+\item#[$\MAT{2}{R}$#] If $R$ is unital, then $\MAT{2}{R}$ is also unital, with \#[ 1_{\MAT{2}{R}} = \begin{bmatrix} 1_R & 0_R \\ 0_R & 1_R \end{bmatrix}. \#] Is this ring ever commutative?
+\end{itemize}
+
 \begin{center}
 \begin{tikzpicture}#[scale=0.35#]
   \draw (-15,-10) -- (-15,10) -- (15,10) -- (15,-10) -- cycle;
@@ -117,6 +129,29 @@ Let $R$ be a unital ring.
 \end{enumerate}
 \end{proof}
 
+\subsection*{Exercises}
 
+\begin{enumerate}
+\item Let $R$ be a ring. Show that $\MAT{2}{R}$ is a ring by verifying that each of the properties in Definition \ref{dfn:ring} hold. This will be tedious.
+
+\item Let $X$ be a nonempty set. Show that the ring of sets $2^X$ is a ring by verifying that each of the properties in Definition \ref{dfn:ring} hold. This will be tedious.
+
+\item Let $R$ be a ring. Show that the ring $\MAT{2}{R}$ is unital if and only if $R$ is unital.
+
+\item \textbf{Sigma Notation.} Let $R$ be a ring and $a \leq b$ integers. If $\{ r_i \mid a \leq i \leq b \}$ is a finite subset of $R$ indexed by the integers from $a$ to $b$, we define \#[ \sum_{i=a}^b r_i = r_a + r_{a+1} + \cdots + r_{b-1} + r_b. \#] Show that the following hold.
+\begin{enumerate}
+\item $\left( \sum_{i=a}^b r_i \right) + \left( \sum_{i=b}^c r_i \right) = \sum_{i=a}^c r_i$ whenever $a \leq b \leq c$.
+\item $s \cdot \left( \sum_{i=a}^b r_i \right) = \sum_{i=a}^b sr_i$ and $\left( \sum_{i=a}^b r_i \right) \cdot s = \sum_{i=a}^b r_i s$.
+\end{enumerate}
+
+\item A ring $R$ is called \emph{boolean} if for all $a \in R$, we have $aa = a$. Let $R$ be a boolean ring.
+\begin{enumerate}
+\item Show that the ring of sets $2^X$ is boolean for any nonempy $X$.
+\item Show that $-a = a$ for all $a \in R$. (Hint: consider $a+a$.)
+\item Show that $R$ is commutative. (Hint: let $a,b \in R$ and consider $a+b$.)
+\end{enumerate}
+
+\item Find all the matrices $A \in \MAT{2}{\ZZ/(5)}$ such that $A^2 = 0$. This will be tedious.
+\end{enumerate}
 
 \end{document}
