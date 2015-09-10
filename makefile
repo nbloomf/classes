@@ -145,7 +145,9 @@ geo: \
   geom/05-plane-separation.pdf \
   geom/06-angles.pdf \
   geom/07-congruence.pdf \
-  geom/08-circles.pdf
+  geom/08-circles.pdf \
+  geom/09-plane-geometries.pdf \
+  geom/10-neutral-geometry.pdf
 
 geom/syllabus.pdf: geom/fvl/syllabus/syllabus.fvl
 	$(call copy,geom,syllabus,nsulogo.png)
@@ -175,13 +177,20 @@ geom/07-congruence.pdf: geom/fvl/notes/07-congruence.fvl
 geom/08-circles.pdf: geom/fvl/notes/08-circles.fvl
 	$(call document,geom,notes,08-circles)
 
+geom/09-plane-geometries.pdf: geom/fvl/notes/09-plane-geometries.fvl
+	$(call document,geom,notes,09-plane-geometries)
+
+geom/10-neutral-geometry.pdf: geom/fvl/notes/10-neutral-geometry.fvl
+	$(call document,geom,notes,10-neutral-geometry)
+
 
 ca: \
   ca/syllabus09.pdf \
   ca/h01-linear-equations.pdf \
   ca/h02-quadratic-equations.pdf \
   ca/r0-prereq.pdf \
-  ca/r1-equations.pdf
+  ca/r1-equations.pdf \
+  ca/t1-equations.pdf
 
 ca/syllabus09.pdf: ca/fvl/syllabus/syllabus09.fvl ca/fvl/syllabus/syllabus10.fvl
 	$(call copy,ca,syllabus,nsulogo.png)
@@ -199,3 +208,6 @@ ca/r0-prereq.pdf: ca/fvl/review/r0-prereq.fvl
 
 ca/r1-equations.pdf: ca/fvl/review/r1-equations.fvl
 	$(call document,ca,review,r1-equations)
+
+ca/t1-equations.pdf: ca/fvl/test/t1-equations.fvl
+	$(call document,ca,test,t1-equations)

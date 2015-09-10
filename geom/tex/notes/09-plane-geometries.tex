@@ -7,44 +7,44 @@
 
 \CheapTitle{Plane Geometry}
 
-\begin{dfn}#[Plane Geometry#]
+\begin{dfn}[Plane Geometry]
 Let $\mathcal{P}$ be an ordered geometry with a segment congruence and an angle congruence. We say that $\mathcal{P}$ is a \emph{plane geometry} if the following properties are satisfied.
 \begin{itemize}
 \item \textbf{Circle Separation.} If $o$, $a$, and $b$ are distinct points, then there is a unique point $c \in \Circle{o}{a} \cap \Ray{o}{b}$.
 
 \begin{center}
-\begin{tikzpicture}#[scale=0.6#]
-  \coordinate #[label=below left:$o$#]  (o) at (0  : 0);
-  \draw #[fill#] (o) circle #[radius=1pt#];
-  \coordinate #[label=above right:$a$#] (a) at (70 : 2);
-  \draw #[fill#] (a) circle #[radius=1pt#];
-  \coordinate #[label=below:$b$#]       (b) at (10 : 3);
-  \draw #[fill#] (b) circle #[radius=1pt#];
+\begin{tikzpicture}[scale=0.6]
+  \coordinate [label=below left:$o$]  (o) at (0  : 0);
+  \draw [fill] (o) circle [radius=1pt];
+  \coordinate [label=above right:$a$] (a) at (70 : 2);
+  \draw [fill] (a) circle [radius=1pt];
+  \coordinate [label=below:$b$]       (b) at (10 : 3);
+  \draw [fill] (b) circle [radius=1pt];
 
-  \draw #[->#] (o) -- (10: 4);
-  \draw (o) circle #[radius=2#];
+  \draw [->] (o) -- (10: 4);
+  \draw (o) circle [radius=2];
 \end{tikzpicture}
 \end{center}
 
 \item \textbf{Circle Cut.} Let $o$, $a$, $p$, and $x$ be points, and suppose there are distinct points $u$ and $v$ on $\Circle{p}{x}$ such that $u \in \IntCircle{o}{a}$ and $v \in \ExtCircle{o}{a}$. Then $\Circle{o}{a} \cap \Circle{p}{x}$ contains two distinct points.
 
 \begin{center}
-\begin{tikzpicture}#[scale=0.6#]
-  \coordinate #[label=below left:$o$#]  (o) at (0,0);
-  \draw #[fill#] (o) circle #[radius=1pt#];
-  \coordinate #[label=above left:$a$#] (a) at ($ (o)+(140 : 2) $);
-  \draw #[fill#] (a) circle #[radius=1pt#];
-  \draw (o) circle #[radius=2#];
+\begin{tikzpicture}[scale=0.6]
+  \coordinate [label=below left:$o$]  (o) at (0,0);
+  \draw [fill] (o) circle [radius=1pt];
+  \coordinate [label=above left:$a$] (a) at ($ (o)+(140 : 2) $);
+  \draw [fill] (a) circle [radius=1pt];
+  \draw (o) circle [radius=2];
 
-  \coordinate #[label=below left:$p$#]  (p) at (4,0);
-  \draw #[fill#] (p) circle #[radius=1pt#];
-  \coordinate #[label=below right:$x$#] (x) at ($ (p)+(320 : 3) $);
-  \draw #[fill#] (x) circle #[radius=1pt#];
-  \coordinate #[label=below right:$u$#] (u) at ($ (p)+(170 : 3) $);
-  \draw #[fill#] (u) circle #[radius=1pt#];
-  \coordinate #[label=below right:$v$#] (v) at ($ (p)+(20  : 3) $);
-  \draw #[fill#] (v) circle #[radius=1pt#];
-  \draw (p) circle #[radius=3#];
+  \coordinate [label=below left:$p$]  (p) at (4,0);
+  \draw [fill] (p) circle [radius=1pt];
+  \coordinate [label=below right:$x$] (x) at ($ (p)+(320 : 3) $);
+  \draw [fill] (x) circle [radius=1pt];
+  \coordinate [label=below right:$u$] (u) at ($ (p)+(170 : 3) $);
+  \draw [fill] (u) circle [radius=1pt];
+  \coordinate [label=below right:$v$] (v) at ($ (p)+(20  : 3) $);
+  \draw [fill] (v) circle [radius=1pt];
+  \draw (p) circle [radius=3];
 
 
 \end{tikzpicture}
@@ -62,11 +62,11 @@ The Circle Separation and Circle Cut properties allow us to construct points on 
 
 In the remainder of this section, suppose $\mathcal{P}$ is a plane geometry.
 
-\begin{prop}#[Circle Trichotomy#]
+\begin{prop}[Circle Trichotomy]
 Let $o$ and $a$ be distinct points. Then $\Circle{o}{a}$, $\IntCircle{o}{a}$, and $\ExtCircle{o}{a}$ partition the set of points in $\mathcal{P}$. That is, every point is either on $\Circle{o}{a}$, interior to $\Circle{o}{a}$, or exterior to $\Circle{o}{a}$.
 \end{prop}
 
-\begin{prop}#[SSS Theorem#]
+\begin{prop}[SSS Theorem]
 If two triangles can be labeled such that corresponding sides are congruent, then the triangles are congruent. More precisely, let $a$, $b$, and $c$ be distinct points and $x$, $y$, and $z$ be distinct points. If $\Segment{a}{b} \equiv \Segment{x}{y}$, $\Segment{b}{c} \equiv \Segment{y}{z}$, and $\Segment{c}{a} \equiv \Segment{z}{x}$, then $\Triangle{a}{b}{c} \equiv \Triangle{x}{y}{z}$.
 \end{prop}
 
@@ -74,7 +74,7 @@ If two triangles can be labeled such that corresponding sides are congruent, the
 That $\Angle{a}{b}{c} \equiv \Angle{x}{y}{z}$, $\Angle{b}{c}{a} \equiv \Angle{y}{z}{x}$, and $\Angle{z}{x}{y} \equiv \Angle{c}{a}{b}$ follows from three applications of the Angle-Side Congruence property.
 \end{proof}
 
-\begin{prop}#[Uniqueness of Circle Cuts#]
+\begin{prop}[Uniqueness of Circle Cuts]
 Let $o$, $a$, $p$, $x$, and $h$ be points, with $o$ and $p$ distinct and with $h$ not on $\Line{o}{p}$. There is at most one point $u \in \Circle{o}{a} \cap \Circle{p}{x}$ on the $h$-side of $\Line{o}{p}$.
 \end{prop}
 
@@ -82,11 +82,11 @@ Let $o$, $a$, $p$, $x$, and $h$ be points, with $o$ and $p$ distinct and with $h
 Suppose we have two such points, $u$ and $v$. That is, both $u$ and $v$ are on the $h$-side of $\Line{o}{p}$ and $u,v \in \Circle{o}{a} \cap \Circle{p}{x}$. Note that $\Segment{o}{p} \equiv \Segment{o}{p}$, $\Segment{p}{u} \equiv \Segment{p}{x} \equiv \Segment{p}{v}$, and $\Segment{u}{o} \equiv \Segment{a}{o} \equiv \Segment{v}{o}$. By the SSS Theorem, we have $\Triangle{u}{o}{p} \equiv \Triangle{v}{o}{p}$. In particular, we have $\Angle{u}{o}{p} \equiv \Angle{v}{o}{p}$ and $\Angle{u}{p}{o} \equiv \Angle{v}{p}{o}$. Now by AC7, we have $v \in \Ray{o}{u} \subseteq \Line{o}{u}$ and $u \in \Ray{p}{v} \subseteq \Line{p}{v}$. That is, $u$ and $v$ are points in the intersection of the lines $\Line{o}{u}$ and $\Line{p}{v}$. Since $o$ and $p$ are distinct, these lines must be distinct, and so they intersect at a unique point. Hence $u = v$.
 \end{proof}
 
-\begin{prop}#[SAS Theorem#]
+\begin{prop}[SAS Theorem]
 If two triangles can be labeled such that two corresponding sides, and the angles between, are congruent, then the triangles are congruent. More precisely, let $a$, $b$, and $c$ be distinct points, and $x$, $y$, and $z$ be distinct points. If $\Segment{a}{b} \equiv \Segment{x}{y}$, $\Segment{b}{c} \equiv \Segment{y}{z}$, and $\Angle{a}{b}{c} \equiv \Angle{x}{y}{z}$, then $\Triangle{a}{b}{c} \equiv \Triangle{x}{y}{z}$.
 \end{prop}
 
-\begin{construct}#[equilateral triangle with a given side#]
+\begin{construct}[equilateral triangle with a given side]
 Given distinct points $x$ and $y$, there exist points $z_1$ and $z_2$, on opposite sides of $\Line{x}{y}$, such that $\Triangle{x}{y}{z_1}$ and $\Triangle{x}{y}{z_2}$ are equilateral. In fact, we have $\Triangle{x}{y}{z_1} \equiv \Triangle{x}{y}{z_2}$.
 \end{construct}
 
