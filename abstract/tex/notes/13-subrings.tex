@@ -7,19 +7,21 @@
 
 \CheapTitle{Subrings}
 
+We've seen several examples of rings: the integers, modular integers, matrices, and more. As we will see there is quite a bit of technology that makes sense in any ring, or in lots of different rings. And so a natural question to ask is this:
+
 \begin{center}
 \framebox{Where can we find rings?}
 \end{center}
 
-Of course the difficult part of building a ring is coming up with the arithmetic -- the plus and times -- so that the ring axioms are satisfied. Well, suppose we already have a ring $R$ lying around. Perhaps we can use the fact that $R$ already has a nice plus and times to build new rings.
+Of course the difficult part of ``building'' a ring is coming up with the arithmetic -- the plus and times -- so that the ring axioms are satisfied. Well, suppose we have a particular ring $R$ lying around. Perhaps we can use the fact that $R$ already has a nice plus and times to build new rings.
 
 \begin{center}
 \framebox{Given a ring $R$, how can we construct new rings out of the ``parts'' of $R$?}
 \end{center}
 
-The simplest way to do this is by taking a subset of $R$, and restricting the arithmetic on $R$ to that subset.
+It turns out there are several ways to do exactly this. The simplest is to take \emph{subsets} of $R$, and restrict the arithmetic on $R$ to that subset.
 
-There is a potential obstacle to making this work, though; given a subset $S \subseteq R$ and two elements $x,y \in S$, \emph{a priori} we expect their sum $x+y$ to be in $R$, not necessarily in $S$. This is a problem! To avoid this, we single out the subsets of $R$ for which precisely this does not happen. That is, the subsets which are closed under the arithmetic on $R$.
+There is a potential obstacle to making this work, though; given a subset $S \subseteq R$ and two elements $x,y \in S$, \emph{a priori} we expect their sum $x+y$ to be in $R$ but not necessarily in $S$. This is a problem! To avoid this, we single out the subsets of $R$ for which precisely this does not happen. That is, the subsets which are closed under the arithmetic on $R$.
 
 \begin{center}
 \begin{tikzpicture}[scale=0.4]
@@ -84,7 +86,7 @@ Let $R$ be a unital ring. Then $A \subseteq R$ is a unital subring if and only i
 \begin{enumerate}
 \item Let $R = \ZZ$ and $S \subseteq R$ the set of all prime integers. Show that $S$ is \emph{not} a subring of $R$.
 
-\item Let $R$ be a ring, and let $e \in R$ be idempotent. Show that \[ eRe = \{ ere \mid r \in R \} \] is a subring of $R$. Show that as a ring, $eRe$ is unital with $1 = e$. In particular, if $R$ is a unital ring and $e \neq 1_R$, then $S$ is not a \emph{unital subring}, even though it is a \emph{subring which is unital}, since in a unital subring $S$ we have $1_S = 1_R$.
+\item Let $R$ be a ring, and let $e \in R$ be idempotent (that is, $e^2 = e$). Show that \[ eRe = \{ ere \mid r \in R \} \] is a subring of $R$. Show that as a ring, $S = eRe$ is unital with $1_S = e$. In particular, if $R$ is a unital ring and $e \neq 1_R$, then $S$ is not a \emph{unital subring}, even though it is a \emph{subring which is unital}, since in a unital subring $S$ we have $1_S = 1_R$.
 \end{enumerate}
 
 \end{document}

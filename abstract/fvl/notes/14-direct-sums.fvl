@@ -31,4 +31,8 @@ Then we have the following.
 \end{enumerate}
 \end{prop}
 
+\begin{prop}
+Let $a, b > 1$ be coprime integers. Then $\ZZ/(a) \oplus \ZZ/(b) \cong \ZZ/(ab)$.
+\end{prop}
+
 \end{document}
