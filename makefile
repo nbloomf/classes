@@ -147,7 +147,7 @@ geo: \
   geom/07-congruence.pdf \
   geom/08-circles.pdf \
   geom/09-plane-geometries.pdf \
-  geom/10-neutral-geometry.pdf
+  geom/10-transversals.pdf
 
 geom/syllabus.pdf: geom/fvl/syllabus/syllabus.fvl
 	$(call copy,geom,syllabus,nsulogo.png)
@@ -180,8 +180,8 @@ geom/08-circles.pdf: geom/fvl/notes/08-circles.fvl
 geom/09-plane-geometries.pdf: geom/fvl/notes/09-plane-geometries.fvl
 	$(call document,geom,notes,09-plane-geometries)
 
-geom/10-neutral-geometry.pdf: geom/fvl/notes/10-neutral-geometry.fvl
-	$(call document,geom,notes,10-neutral-geometry)
+geom/10-transversals.pdf: geom/fvl/notes/10-transversals.fvl
+	$(call document,geom,notes,10-transversals)
 
 
 ca: \

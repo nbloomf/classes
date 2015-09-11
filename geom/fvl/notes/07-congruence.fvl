@@ -35,7 +35,7 @@ Let $\mathcal{P}$ be an ordered geometry, and suppose we have an equivalence rel
 \item#[AC1.#] $(a,o,b) \CONGA (a,o,b)$ for all points $a$, $o$, and $b$.
 \item#[AC2.#] If $(a,o,b) \CONGA (x,p,y)$, then $(x,p,y) \CONGA (a,o,b)$ for all points $a$, $o$, $b$, $x$, $p$, and $y$.
 \item#[AC3.#] If $(a,o,b) \CONGA (x,p,y)$ and $(x,p,y) \CONGA (h,q,k)$, then $(a,o,b) \CONGA (h,q,k)$ for all points $a$, $o$, $b$, $x$, $p$, $y$, $h$, $q$, and $k$.
-\item#[AC4.#] If $\Between{x}{y}{z}$ and $\Between{a}{b}{c}$, then $(x,y,z) \CONGA (a,b,c)$ and $(y,x,z) \CONGA (b,a,c)$.
+\item#[AC4.#] If $\Between{x}{y}{z}$ and $\Between{a}{b}{c}$, then $(x,y,z) \CONGA (a,b,c)$ and $(y,x,z) \CONGA (b,a,c)$, and $(x,y,z) \not\CONGA (y,x,z)$.
 \item#[AC5.#] If $x \in \Ray{o}{a}$ and $y \in \Ray{o}{b}$ and $x$, $y$, and $o$ are distinct, then $(a,o,b) \CONGA (x,o,y)$.
 \item#[AC6.#] $(a,o,b) \CONGA (b,o,a)$ and $(a,o,b) \CONGA (a,o,b)$ for all points $a$, $o$, and $b$.
 \item#[AC7.#] If $a$, $b$, and $o$ are noncollinear points and $x$ is on the $b$-side of $\Line{o}{a}$ such that $(a,o,b) \CONGA (a,o,x)$, then $x \in \Ray{o}{b}$.
@@ -55,6 +55,7 @@ Let $a$, $b$, and $c$ be distinct points, and let $x$, $y$, and $z$ be distinct 
 \item $\Triangle{a}{b}{c} \equiv \Triangle{a}{b}{c}$.
 \item If $\Triangle{a}{b}{c} \equiv \Triangle{x}{y}{z}$, then $\Triangle{x}{y}{z} \equiv \Triangle{a}{b}{c}$.
 \item If $\Triangle{a}{b}{c} \equiv \Triangle{x}{y}{z}$ and $\Triangle{x}{y}{z} \equiv \Triangle{h}{k}{\ell}$, then $\Triangle{a}{b}{c} \equiv \Triangle{h}{k}{\ell}$.
+\item If $\Triangle{a}{b}{c} \equiv \Triangle{x}{y}{z}$, then $\Triangle{b}{c}{a} \equiv \Triangle{y}{z}{x}$.
 \end{enumerate}
 \end{prop}
 
@@ -79,5 +80,9 @@ Let $\mathcal{P}$ be an ordered geometry with an angle congruence.
 \item Every angle has a supplement.
 \end{enumerate}
 \end{prop}
+
+\begin{dfn}
+An angle is called \emph{right} if it is supplementary to itself.
+\end{dfn}
 
 \end{document}
