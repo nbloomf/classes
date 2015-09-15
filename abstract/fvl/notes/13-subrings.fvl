@@ -87,6 +87,8 @@ Let $R$ be a unital ring. Then $A \subseteq R$ is a unital subring if and only i
 \item Let $R = \ZZ$ and $S \subseteq R$ the set of all prime integers. Show that $S$ is \emph{not} a subring of $R$.
 
 \item Let $R$ be a ring, and let $e \in R$ be idempotent (that is, $e^2 = e$). Show that \#[ eRe = \{ ere \mid r \in R \} \#] is a subring of $R$. Show that as a ring, $S = eRe$ is unital with $1_S = e$. In particular, if $R$ is a unital ring and $e \neq 1_R$, then $S$ is not a \emph{unital subring}, even though it is a \emph{subring which is unital}, since in a unital subring $S$ we have $1_S = 1_R$.
+
+\item (Extended example - Generated Subrings)
 \end{enumerate}
 
 \end{document}
