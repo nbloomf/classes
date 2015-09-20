@@ -78,8 +78,9 @@ aa: \
   abstract/10a-pythagorean-triples.pdf \
   abstract/11-rings.pdf \
   abstract/12-homomorphisms.pdf \
-  abstract/13-subrings.pdf \
-  abstract/14-direct-sums.pdf \
+  abstract/14-subrings.pdf \
+  abstract/13-direct-sums.pdf \
+  abstract/15-domains-and-fields.pdf \
   abstract/zz-axioms-screen.pdf
 
 abstract/syllabus.pdf: abstract/fvl/syllabus/syllabus.fvl
@@ -125,11 +126,14 @@ abstract/11-rings.pdf: abstract/fvl/notes/11-rings.fvl
 abstract/12-homomorphisms.pdf: abstract/fvl/notes/12-homomorphisms.fvl
 	$(call document,abstract,notes,12-homomorphisms)
 
-abstract/13-subrings.pdf: abstract/fvl/notes/13-subrings.fvl
-	$(call document,abstract,notes,13-subrings)
+abstract/14-subrings.pdf: abstract/fvl/notes/14-subrings.fvl
+	$(call document,abstract,notes,14-subrings)
 
-abstract/14-direct-sums.pdf: abstract/fvl/notes/14-direct-sums.fvl
-	$(call document,abstract,notes,14-direct-sums)
+abstract/13-direct-sums.pdf: abstract/fvl/notes/13-direct-sums.fvl
+	$(call document,abstract,notes,13-direct-sums)
+
+abstract/15-domains-and-fields.pdf: abstract/fvl/notes/15-domains-and-fields.fvl
+	$(call document,abstract,notes,15-domains-and-fields)
 
 abstract/zz-axioms-screen.pdf: abstract/fvl/slides/zz-axioms.fvl
 	$(call slides,abstract,zz-axioms)

@@ -1,0 +1,47 @@
+\documentclass{article}
+\usepackage{neb-macros}
+\usepackage{tikz}
+  \usetikzlibrary{patterns}
+
+\begin{document}
+
+\CheapTitle{Domains and Fields}
+
+The integers have the following very nice ``zero product property'':
+
+\begin{center}
+\framebox{If $a$ and $b$ are integers and $ab = 0$, then either $a = 0$ or $b = 0$.}
+\end{center}
+
+Recall that $\ZZ/(n)$ does not necessarily have this property. For instance, in $\ZZ/(6)$ we have $2 \neq 0$ and $3 \neq 0$, but $2 \cdot 3 = 0$. In this case we say that $2$ and $3$ are zero divisors in $\ZZ/(6)$.
+
+\begin{dfn}#[Zero Divisor#]
+Let $R$ be a ring.
+\begin{itemize}
+\item We say that $r \in R$ is a \emph{zero divisor} if there is a nonzero element $s \in R$ such that $rs = 0$.
+\item We say that $R$ is an \emph{integral domain}, or simply \emph{domain}, if it does not contain any nonzero zero divisors.
+\end{itemize}
+\end{dfn}
+
+In a domain, as in a general ring, 
+
+\begin{prop}#[Cancellation#]
+Let $R$ be a domain with $r,s,t \in R$. If $rs = rt$, then $s = t$.
+\end{prop}
+
+
+\subsection*{Exercises}
+
+\begin{enumerate}
+\item Is the zero ring a domain?
+
+\item Show that if $R$ and $S$ are nontrivial rings, then $R \oplus S$ is not a domain.
+
+\item Show that every subring of a domain is a domain.
+
+\item Show that every subring of a field is a domain.
+
+\item \textbf{Nilpotence.} We say that an element $r$ in a ring $R$ is \emph{nilpotent} if $r^n = 0$ for some natural number $n$.
+\end{enumerate}
+
+\end{document}
