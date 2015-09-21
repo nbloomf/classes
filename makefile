@@ -192,6 +192,8 @@ ca: \
   ca/syllabus09.pdf \
   ca/h01-linear-equations.pdf \
   ca/h02-quadratic-equations.pdf \
+  ca/h03-lines-and-circles.pdf \
+  ca/a1-lines-and-circles.pdf \
   ca/r0-prereq.pdf \
   ca/r1-equations.pdf \
   ca/t1-equations.pdf
@@ -206,6 +208,12 @@ ca/h01-linear-equations.pdf: ca/fvl/homework/h01-linear-equations.fvl
 
 ca/h02-quadratic-equations.pdf: ca/fvl/homework/h02-quadratic-equations.fvl
 	$(call document,ca,homework,h02-quadratic-equations)
+
+ca/h03-lines-and-circles.pdf: ca/fvl/homework/h03-lines-and-circles.fvl
+	$(call document,ca,homework,h03-lines-and-circles)
+
+ca/a1-lines-and-circles.pdf: ca/fvl/activity/a1-lines-and-circles.fvl
+	$(call document,ca,activity,a1-lines-and-circles)
 
 ca/r0-prereq.pdf: ca/fvl/review/r0-prereq.fvl
 	$(call document,ca,review,r0-prereq)

@@ -1,0 +1,21 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{flexfig}
+
+\pagestyle{empty}
+
+[import (kreb-scout/ca/geom/lines.fvl)]#
+
+\begin{document}
+
+\ActivityTitle#[class={College Algebra}, number={1}, name={Lines and Circles}#]
+
+\begin{enumerate}
+\item [eval @linear.eqn.1] \vspace{5cm}
+
+\item [eval @find.slope.1] \vspace{5cm}
+
+\item [eval @plot.line.1]
+\end{enumerate}
+
+\end{document}
