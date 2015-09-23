@@ -5,6 +5,8 @@
 \pagestyle{empty}
 
 [import (kreb-scout/ca/geom/lines.fvl)]#
+[import (kreb-scout/ca/geom/circles.fvl)]#
+[import (kreb-scout/ca/eqn/systems/linear.fvl)]#
 
 \begin{document}
 
@@ -16,6 +18,16 @@
 \item [eval @find.slope.1] \vspace{5cm}
 
 \item [eval @plot.line.1]
+
+\newpage
+
+\item [eval @linear.2x2.1] \vspace{5cm}
+
+\item [eval @linear.2x2.2] \vspace{5cm}
+
+\item [eval @circle.eqn.1] \vspace{2cm}
+
+\item [eval @circle.eqn.2] \vspace{5cm}
 \end{enumerate}
 
 \end{document}
