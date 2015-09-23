@@ -81,6 +81,8 @@ aa: \
   abstract/14-subrings.pdf \
   abstract/13-direct-sums.pdf \
   abstract/15-domains-and-fields.pdf \
+  abstract/16-divisibility.pdf \
+  abstract/17-gcd-domains.pdf \
   abstract/zz-axioms-screen.pdf
 
 abstract/syllabus.pdf: abstract/fvl/syllabus/syllabus.fvl
@@ -134,6 +136,12 @@ abstract/13-direct-sums.pdf: abstract/fvl/notes/13-direct-sums.fvl
 
 abstract/15-domains-and-fields.pdf: abstract/fvl/notes/15-domains-and-fields.fvl
 	$(call document,abstract,notes,15-domains-and-fields)
+
+abstract/16-divisibility.pdf: abstract/fvl/notes/16-divisibility.fvl
+	$(call document,abstract,notes,16-divisibility)
+
+abstract/17-gcd-domains.pdf: abstract/fvl/notes/17-gcd-domains.fvl
+	$(call document,abstract,notes,17-gcd-domains)
 
 abstract/zz-axioms-screen.pdf: abstract/fvl/slides/zz-axioms.fvl
 	$(call slides,abstract,zz-axioms)

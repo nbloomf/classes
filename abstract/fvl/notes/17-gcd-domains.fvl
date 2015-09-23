@@ -1,0 +1,69 @@
+\documentclass{article}
+\usepackage{neb-macros}
+
+\begin{document}
+
+\CheapTitle{GCD Domains}
+
+\begin{dfn}
+Let $R$ be a domain, with $a,b \in R$. We say $d \in R$ is a \emph{greatest common divisor} of $a$ and $b$ if
+\begin{enumerate}
+\item $d|a$ and $d|b$, and
+\item If $c \in R$ such that $c|a$ and $c|b$, then $c|d$.
+\end{enumerate}
+We denote the set of all greatest common divisors of $a$ and $b$ by $\GCDR{a}{b}$. We say that $a$ and $b$ are \emph{relatively prime} if $1 \in \GCDR{a}{b}$.
+\end{dfn}
+
+It is important to note that in a general domain, gcds need not exist, and if they do, they need not be unique.
+
+\begin{prop}
+Let $R$ be a domain.
+\begin{enumerate}
+\item In fact, given $a,b \in R$, either $\GCDR{a}{b} = \varnothing$ or $\GCDR{a}{b}$ is an associate class.
+\item If $a|b$ then $a \in \GCDR{a}{b}$.
+\item $a \in \GCDR{a}{0}$ for all $a \in R$.
+\item If $u$ is a unit, then $1 \in \GCDR{u}{a}$ for all $a \in R$.
+\end{enumerate}
+\end{prop}
+
+For example, in $\ZZ$, $\GCDR{4}{6} = \{2, -2\}$.
+
+\begin{prop}
+Let $R$ be a domain. Provided all the appropriate gcds exist, we have the following.
+\begin{itemize}
+\item $\GCDR{a}{b} = \GCDR{b}{a}$
+\item $\GCDR{a}{\GCDR{b}{c}} = \GCDR{\GCDR{a}{b}}{c}$
+\item $\GCDR{ab}{ac} = a\GCDR{b}{c}$
+\item (Euclid's Lemma) If $a$ and $b$ are relatively prime and $a|bc$, then $a|c$.
+\item If $a$ and $b$ are relatively prime, then $\GCDR{a}{bc} = \GCDR{a}{c}$.
+\item If $d \in \GCDR{a}{b}$ and we write $a = da'$ and $b = db'$, then $1 \in \GCDR{a'}{b'}$.
+\item If $1 \in \GCDR{a}{b}$ then $\GCDR{ab}{c} = \GCDR{a}{c} \GCDR{b}{c}$.
+\item If $a$ and $b$ are relatively prime and $a$ and $c$ are relatively prime, then $a$ and $bc$ are relatively prime.
+\end{itemize}
+\end{prop}
+
+\begin{dfn}
+Let $R$ be a domain. We say that $R$ is a \emph{GCD domain} if any two elements of $R$ have a greatest common divisor.
+\end{dfn}
+
+\begin{prop}
+If $R$ is a GCD domain, then every irreducible element of $R$ is also prime.
+\end{prop}
+
+\begin{proof}
+Let $p$ be irreducible and suppose $p|ab$. Let $d \in \GCDR{a}{p}$, and write $a = da'$ and $p = dp'$. Since $p$ is irreducible, either $d$ or $p'$ is a unit. If $d$ is a unit, then we have $p|b$ by Euclid's lemma. If $p'$ is a unit, then $p|a$.
+\end{proof}
+
+\subsection*{A Domain which is not a GCD domain}
+
+Here we outline a proof that $\ZZ#[\sqrt{-3}#] = \{ a+b\sqrt{-3} \mid a,b \in \ZZ \}$ is a domain but not a GCD domain.
+
+\begin{enumerate}
+\item Show that the equation $a^2 + ab + b^2 = 2$ has no solutions in $\ZZ$.
+\item Show that $\ZZ#[\sqrt{-3}#]$ is a subring of $\mathcal{O}(\sqrt{-3})$ and thus a domain, and that no element of this subring has norm 2 (using the usual norm on $\mathcal{O}(\sqrt{-3})$).
+\item Show that 2 is irreducible in $\ZZ#[\sqrt{-3}#]$.
+\item Show that 2 divides $(1 + \sqrt{-3})(1 - \sqrt{-3})$ in $\ZZ#[\sqrt{-3}#]$, but that 2 does not divide $1 + \sqrt{-3}$ or $1 - \sqrt{-3}$. In particular, 2 is not prime in $\ZZ#[\sqrt{-3}#]$.
+\item Because $\ZZ#[\sqrt{-3}#]$ contains irreducible elements which are not prime, it cannot be a GCD domain.
+\end{enumerate}
+
+\end{document}
