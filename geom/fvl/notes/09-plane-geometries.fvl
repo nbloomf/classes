@@ -96,6 +96,10 @@ If $\Triangle{a}{b}{c}$ is isoceles with $\Segment{a}{b} \equiv \Segment{b}{c}$,
 We have two triangles, $\Triangle{b}{a}{c}$ and $\Triangle{b}{c}{a}$, such that $\Segment{b}{c}\equiv \Segment{b}{a}$, $\Segment{b}{a} \equiv \Segment{b}{c}$, and $\Angle{c}{b}{a} \equiv \Segment{a}{b}{c}$. By the SAS Theorem, $\Triangle{b}{a}{c} \equiv \Segment{b}{c}{a}$, and thus $\Angle{b}{a}{c} \equiv \Angle{b}{c}{a}$.
 \end{proof}
 
+\begin{cor}
+Every triangle which is equilateral is also equiangular; all three interior angles are congruent.
+\end{cor}
+
 \begin{construct}#[equilateral triangle with a given side#]
 Given distinct points $x$ and $y$, there exist points $z_1$ and $z_2$, on opposite sides of $\Line{x}{y}$, such that $\Triangle{x}{y}{z_1}$ and $\Triangle{x}{y}{z_2}$ are equilateral. In fact, we have $\Triangle{x}{y}{z_1} \equiv \Triangle{x}{y}{z_2}$.
 \end{construct}
