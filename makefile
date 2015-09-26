@@ -83,6 +83,8 @@ aa: \
   abstract/15-domains-and-fields.pdf \
   abstract/16-divisibility.pdf \
   abstract/17-gcd-domains.pdf \
+  abstract/18-factorization.pdf \
+  abstract/19-division-with-remainder.pdf \
   abstract/zz-axioms-screen.pdf
 
 abstract/syllabus.pdf: abstract/fvl/syllabus/syllabus.fvl
@@ -142,6 +144,12 @@ abstract/16-divisibility.pdf: abstract/fvl/notes/16-divisibility.fvl
 
 abstract/17-gcd-domains.pdf: abstract/fvl/notes/17-gcd-domains.fvl
 	$(call document,abstract,notes,17-gcd-domains)
+
+abstract/18-factorization.pdf: abstract/fvl/notes/18-factorization.fvl
+	$(call document,abstract,notes,18-factorization)
+
+abstract/19-division-with-remainder.pdf: abstract/fvl/notes/19-division-with-remainder.fvl
+	$(call document,abstract,notes,19-division-with-remainder)
 
 abstract/zz-axioms-screen.pdf: abstract/fvl/slides/zz-axioms.fvl
 	$(call slides,abstract,zz-axioms)
