@@ -85,6 +85,7 @@ aa: \
   abstract/17-gcd-domains.pdf \
   abstract/18-factorization.pdf \
   abstract/19-division-with-remainder.pdf \
+  abstract/20-localization.pdf \
   abstract/zz-axioms-screen.pdf
 
 abstract/syllabus.pdf: abstract/fvl/syllabus/syllabus.fvl
@@ -150,6 +151,9 @@ abstract/18-factorization.pdf: abstract/fvl/notes/18-factorization.fvl
 
 abstract/19-division-with-remainder.pdf: abstract/fvl/notes/19-division-with-remainder.fvl
 	$(call document,abstract,notes,19-division-with-remainder)
+
+abstract/20-localization.pdf: abstract/fvl/notes/20-localization.fvl
+	$(call document,abstract,notes,20-localization)
 
 abstract/zz-axioms-screen.pdf: abstract/fvl/slides/zz-axioms.fvl
 	$(call slides,abstract,zz-axioms)
