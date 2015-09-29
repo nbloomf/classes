@@ -1,0 +1,117 @@
+\documentclass{article}
+\usepackage{neb-macros}
+\usepackage{framed}
+
+\begin{document}
+
+\CheapTitle{Polynomials}
+
+We've been working with polynomials since taking algebra in middle school. But what is a polynomial, exactly? In this section, we will extend some of our ideas about rings to sets of polynomials. First, though, we need to have a better idea of what makes a polynomial a polynomial.
+
+It is easy enough to come up with some examples of polynomials as we'd see them in College Algebra.
+
+\#[ x^2 + x - 1 \quad\quad x^3 - 1 \quad\quad 7 \quad\quad \frac{1}{2}x^7 - \frac{2}{3}x^2 + 1 \quad\quad \pi x^3 + e x + \sqrt{2} \#]
+
+Just as important, we can come up with examples of things that sort of look like polynomials but aren't.
+
+\#[ x^{1/2} + 2x \quad\quad x^{-1} + x^{\sqrt{2}} \quad\quad x^2 + x = 7x^3  \quad\quad 1 + x + x^2 + \cdots \#]
+
+From here, let's try to generalize. A polynomial in the \textbf{variable} $x$ is an \textbf{expression} which can be written as a \textbf{finite sum} of things of the form $cx^k$, where $c$ is \textbf{some kind of number} and $k$ is a \textbf{natural number exponent}. The $c$s are called the coefficients of the polynomial.
+
+We can add polynomials by ``combining like terms'', such as
+\begin{eqnarray*}
+(x^2 + 2x + 1) + (3x^2 - 4x + 27) & = & (1+3)x^2 + (2 - 4)x + (1 + 27) \\
+ & = & 4x^2 - 2x + 28.
+\end{eqnarray*}
+And if a particular polynomial is ``missing'' a term, we can pretend it is there with coefficient zero.
+\begin{eqnarray*}
+(x^2 + 1) + (x + 1) & = & (x^2 + 0x + 1) + (0x^2 + x + 1) \\
+ & = & (1+0)x^2 + (0+1)x + (1+1) \\
+ & = & x^2 + x + 2
+\end{eqnarray*}
+
+We can even multiply polynomials by using the ``distributive property'' over and over again.
+
+\begin{center}
+\begin{tabular}{rrrrr}
+       &         & $+2x^2$ & $+3x$ & $+1$ \\
+       & $\cdot$ & $+1x^2$ & $-2x$ & $+2$ \\ \hline
+       &         & $+4x^2$ & $+6x$ & $+2$ \\
+       & $+3x^3$ & $-6x^2$ & $-2x$ &      \\
+$2x^4$ & $+3x^3$ & $+1x^2$ &       &      \\ \hline
+$2x^4$ & $+6x^3$ & $-1x^2$ & $+4x$ & $+2$
+\end{tabular}
+\end{center}
+
+As mathematicians, we might start to suspect that the ``variable'', $x$, is not so special, and really just serves as a placeholder to keep the coefficients separate. We may as well think of a polynomial as a list of coefficients, and really only need the variables to keep track of what position each coefficient takes in the list. This role could be played by a mapping from the natural numbers, say $f : \NN \rightarrow \QQ$ (if the coefficients are rational numbers), where $f(i)$ is the coefficient of $x^i$. Now the arithmetic of polynomials corresponds to a funny arithmetic on functions $\NN \rightarrow \QQ$. Note that to make the arithmetic on \emph{polynomials} work, we just need to have an arithmetic on \emph{coefficients} -- which is provided by a ring.
+
+\begin{dfn}
+Let $R$ be a ring. A mapping $a : \NN \rightarrow R$ is called a \emph{polynomial} with \emph{coefficients in $R$} if there is a natural number $M$ such that $a_i = 0$ whenever $i > M$.
+
+If $x$ is a symbol not belonging to $R$ (called an \emph{indeterminate}), we can write $a$ as a formal polynomial \emph{in} $x$:
+\begin{eqnarray*}
+a(x) & = & a_0 + a_1 x + a_2 x^2 + \cdots \\
+     & = & \sum_i a_i x^i 
+\end{eqnarray*}
+It is important to remember that the $+$ and $\sum$ in these expressions are \emph{not} interpreted in the arithmetic in $R$, but are \emph{formal symbols}.
+
+The set of all polynomials in $x$ with coefficients in $R$ is denoted $R#[x#]$.
+\end{dfn}
+
+\begin{prop}
+Let $R$ be a ring and $x$ an indeterminate. We define operations $+$ and $\cdot$ on $R#[x#]$ as follows: if $a,b \in R#[x#]$, then 
+\begin{eqnarray*}
+(a + b)(k) & = & a(k) + b(k) \\
+(a \cdot b)(k) & = & \sum_{i+j=k} a(i) b(j)
+\end{eqnarray*}
+where the arithmetic on the right hand sides takes place in $R$.
+\begin{enumerate}
+\item These operations make $R#[x#]$ into a ring.
+\item $R#[x#]$ is commutative if and only if $R$ is commutative.
+\item $R#[x#]$ is unital if and only if $R$ is unital. In this case $1_{R#[x#]}$ is the polynomial whose $0$th coefficient is $1_R$ and whose every other coefficient is $0_R$.
+\end{enumerate}
+\end{prop}
+
+To be clear: This is the usual polynomial arithmetic we know and love, but with coefficients coming from any fixed ring rather than from a ring of numbers.
+
+\subsection*{Examples}
+
+\begin{itemize}
+\item In $(\ZZ/(3))#[x#]$, let $p(x) = #[1#] + #[2#]x$ and $q(x) = #[2#] + x$. Find $p+q$ and $pq$.
+\item In $(\ZZ/(6))#[x#]$, let $p(x) = #[1#] + #[2#]x$ and $q(x) = #[1#] + x + #[3#]x^2$. Compute $pq$.\item In $\MAT{2}{\ZZ}#[x#]$, let \#[ p(x) = \begin{bmatrix} 1 & 1 \\ 1 & 0 \end{bmatrix} + \begin{bmatrix} 0 & 1 \\ 0 & 1 \end{bmatrix} x. \#] Find $p^2$.
+\end{itemize}
+
+\subsection*{Degree and the Leading Term}
+
+Let $a$ be a polynomial. Note that if $a \neq 0$, then there is a \emph{largest} natural number $d$ such that $a_d \neq 0$. This $d$ is called the \emph{degree} of $a$ and denoted $\deg{a}$. (The degree of the zero polynomial is undefined.) We call $a_d$ the \emph{leading coefficient} of $a$, and $a_d x^d$ is called the \emph{leading term}. If $R$ is unital and the leading coefficient of $a(x)$ is 1, we say that $a$ is \emph{monic}.
+
+\begin{prop}
+Let $R$ be a domain.
+\begin{enumerate}
+\item $R#[x#]$ is a domain.
+\item $\deg{ab} = \deg{a} + \deg{b}$ for all nonzero $a,b \in R$.
+\item $a \in R#[x#]$ is a unit if and only if $\deg{a} = 0$ and $a_0$ is a unit in $R$.
+\end{enumerate}
+\end{prop}
+
+\begin{cor}
+Let $F$ be a field. Then $N : F#[x#] \rightarrow \NN$ given by $N(a) = \deg{a}$ is a multiplicative norm.
+\end{cor}
+
+We will be concerned mostly with $R#[x#]$ when $R$ is a field or a domain. In this situation we will consider two basic questions:
+
+\begin{framed}
+\noindent Let $R$ be a domain.
+\begin{enumerate}
+\item How is the structure of $R$ reflected in the structure of $R#[x#]$? (Quite a bit, it turns out.)
+\item Given a polynomial $p(x) \in R#[x#]$, can we detect whether or not $p(x)$ is irreducible? (Sometimes.)
+\end{enumerate}
+\end{framed}
+
+\subsection*{Exercises}
+
+\begin{enumerate}
+\item (Formal power series: $R#[#[x#]#]$)
+\end{enumerate}
+
+\end{document}

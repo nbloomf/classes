@@ -69,4 +69,12 @@ $\ZZ#[i#]$ is a GCD domain and a UFD.
 
 Here is a worked example of the division algorithm in the Gaussian integers. Let $\alpha = 10+7i$ and $\beta = 3+2i$. Now \#[ \frac{\alpha}{\beta} = \frac{44}{13} + \frac{1}{13}i = (3 + \frac{5}{13}) + (0 + \frac{1}{13})i. \#] Let $t_1 = 3$ and $t_2 = 0$, so that $\gamma = 3$. Now $\delta = \alpha - \gamma\beta = 1+i$. We then have $10+7i = 3(3+2i) + (1+i)$ and $N(1+i) < N(3+2i)$.
 
+\subsection*{Exercises}
+
+\begin{enumerate}
+\item ($k$-stage Euclidean)
+
+\item (Factorization in $\ZZ#[i#]$)
+\end{enumerate}
+
 \end{document}
