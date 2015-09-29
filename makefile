@@ -86,7 +86,8 @@ aa: \
   abstract/18-factorization.pdf \
   abstract/19-division-with-remainder.pdf \
   abstract/20-localization.pdf \
-  abstract/zz-axioms-screen.pdf
+  abstract/zz-axioms-screen.pdf \
+  abstract/hw2.pdf
 
 abstract/syllabus.pdf: abstract/fvl/syllabus/syllabus.fvl
 	$(call copy,abstract,syllabus,nsulogo.png)
@@ -157,6 +158,9 @@ abstract/20-localization.pdf: abstract/fvl/notes/20-localization.fvl
 
 abstract/zz-axioms-screen.pdf: abstract/fvl/slides/zz-axioms.fvl
 	$(call slides,abstract,zz-axioms)
+
+abstract/hw2.pdf: abstract/fvl/homework/hw2.fvl
+	$(call document,abstract,homework,hw2)
 
 
 
