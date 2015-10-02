@@ -179,7 +179,9 @@ geo: \
   geom/07-congruence.pdf \
   geom/08-circles.pdf \
   geom/09-plane-geometries.pdf \
-  geom/10-transversals.pdf
+  geom/10-transversals.pdf \
+  geom/11-perpendiculars-and-tangents.pdf \
+  geom/a1-basic-constructions.pdf
 
 geom/syllabus.pdf: geom/fvl/syllabus/syllabus.fvl
 	$(call copy,geom,syllabus,nsulogo.png)
@@ -214,6 +216,12 @@ geom/09-plane-geometries.pdf: geom/fvl/notes/09-plane-geometries.fvl
 
 geom/10-transversals.pdf: geom/fvl/notes/10-transversals.fvl
 	$(call document,geom,notes,10-transversals)
+
+geom/11-perpendiculars-and-tangents.pdf: geom/fvl/notes/11-perpendiculars-and-tangents.fvl
+	$(call document,geom,notes,11-perpendiculars-and-tangents)
+
+geom/a1-basic-constructions.pdf: geom/fvl/activity/a1-basic-constructions.fvl
+	$(call document,geom,activity,a1-basic-constructions)
 
 
 ca: \
