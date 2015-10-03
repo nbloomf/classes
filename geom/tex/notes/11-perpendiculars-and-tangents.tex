@@ -56,7 +56,25 @@ Let $\ell$ be a line and $C$ a circle with center $o$ in a plane geometry. Then 
 \end{prop}
 
 \begin{proof}
+Suppose $\ell$ is tangent to $C$ at $p$. If $o \in \ell$, then $\ell \cap C$ contains a second point by Circle Separation; so in fact $o$ is not on $\ell$. Let $f$ be the foot of $o$ on $\ell$. If $f \neq p$, then $o$, $f$, and $p$ are noncollinear and form a triangle. Since $\Segment{o}{p} \equiv \Segment{o}{f}$ and $\Angle{o}{f}{p}$ is right, $\Angle{o}{p}{f}$ is also right by Pons Asinorum. But no triangle can have two right interior angles.
 
+Conversely, suppose $\ell$ does not contain $o$ and that the foot $f$ of $o$ on $\ell$ is on $C$. Suppose BWOC that there is a second point $g \in \ell \cap C$. Now $o$, $f$, and $g$ are noncollinear, and $\Segment{o}{f} \equiv \Segment{o}{g}$, and $\Angle{o}{f}{g}$ is right (by the definition of foot). So $\Angle{o}{g}{f}$ is right by Pons Asinorum, again a contradiction. So $C \cap \ell$ contains exactly one point as needed. 
+\end{proof}
+
+\begin{construct}[Tangent at a point]
+Let $C$ be a circle with center $o$ and let $p$ be a point on $C$. There exists a line $\ell$ which is tangent to $C$ at $p$.
+\end{construct}
+
+\begin{proof}
+Construct the line $\ell$ which is perpendicular to $\Line{o}{p}$ at $p$. Then $o$ is not on $\ell$, and $p$ is the foot of $o$ on $\ell$. So $\ell$ is tangent to $C$ at $p$.
+\end{proof}
+
+\begin{construct}[Second cut of line and circle]
+Let $\ell$ be a line and $C$ a circle with center $o$ in a plane geometry such that $\ell$ is not tangent to $C$. Suppose $p \in \ell \cap C$. We may construct the second point in $\ell \cap C$.
+\end{construct}
+
+\begin{proof}
+If $o$ is on $\ell$, use Circle Separation. If $o$ not on $\ell$, construct the foot $f$ of $o$ on $\ell$. Using Circle Separation, copy $\Segment{f}{p}$ onto the opposite side of $f$ from $p$ at the point $q$. Note that $\Triangle{o}{f}{p} \equiv \Triangle{o}{f}{q}$ by SAS, so that $\Segment{o}{p} \equiv \Segment{o}{q}$; thus $q \in \ell \cap C$ as needed.
 \end{proof}
 
 \end{document}

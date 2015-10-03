@@ -1,0 +1,1 @@
+* geom: betweenness should only make sense for triples of distinct points.
