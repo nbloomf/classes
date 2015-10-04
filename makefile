@@ -181,6 +181,7 @@ geo: \
   geom/09-plane-geometries.pdf \
   geom/10-transversals.pdf \
   geom/11-perpendiculars-and-tangents.pdf \
+  geom/15-hyperbolic-half-planes.pdf \
   geom/a1-basic-constructions.pdf
 
 geom/syllabus.pdf: geom/fvl/syllabus/syllabus.fvl
@@ -219,6 +220,9 @@ geom/10-transversals.pdf: geom/fvl/notes/10-transversals.fvl
 
 geom/11-perpendiculars-and-tangents.pdf: geom/fvl/notes/11-perpendiculars-and-tangents.fvl
 	$(call document,geom,notes,11-perpendiculars-and-tangents)
+
+geom/15-hyperbolic-half-planes.pdf: geom/fvl/notes/15-hyperbolic-half-planes.fvl
+	$(call document,geom,notes,15-hyperbolic-half-planes)
 
 geom/a1-basic-constructions.pdf: geom/fvl/activity/a1-basic-constructions.fvl
 	$(call document,geom,activity,a1-basic-constructions)
