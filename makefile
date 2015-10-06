@@ -234,6 +234,7 @@ ca: \
   ca/h02-quadratic-equations.pdf \
   ca/h03-lines-and-circles.pdf \
   ca/a1-lines-and-circles.pdf \
+  ca/a2-transformations.pdf \
   ca/r0-prereq.pdf \
   ca/r1-equations.pdf \
   ca/t1-equations.pdf
@@ -254,6 +255,9 @@ ca/h03-lines-and-circles.pdf: ca/fvl/homework/h03-lines-and-circles.fvl
 
 ca/a1-lines-and-circles.pdf: ca/fvl/activity/a1-lines-and-circles.fvl
 	$(call document,ca,activity,a1-lines-and-circles)
+
+ca/a2-transformations.pdf: ca/fvl/activity/a2-transformations.fvl
+	$(call document,ca,activity,a2-transformations)
 
 ca/r0-prereq.pdf: ca/fvl/review/r0-prereq.fvl
 	$(call document,ca,review,r0-prereq)
