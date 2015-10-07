@@ -47,8 +47,8 @@ In a plane geometry, a line and a circle can have at most two points in common.
 Let $\ell$ be a line and $\Circle{o}{a}$ a circle which have at least three points in common; say $x$, $y$, and $z$. Suppose WLOG that $\Between{x}{y}{z}$. Note that $o$ cannot also be on $\ell$, as in this case $z$ cannot be distinct from both $x$ and $y$ by the uniqueness of congruent segments on rays. Now $\Angle{o}{y}{x} \equiv \Angle{o}{x}{y}$, $\Angle{o}{y}{z} \equiv \Angle{o}{z}{y}$, and $\Angle{o}{x}{z} \equiv \Angle{o}{z}{x}$ by Pons Asinorum. In particular, $\Angle{o}{y}{x}$ is right, so that $\Triangle{o}{x}{y}$ has two right interior angles -- a contradiction.
 \end{proof}
 
-\begin{dfn}#[Tangent#]
-Let $\ell$ be a line and $C$ a circle in a plane geometry. We say that $\ell$ is \emph{tangent to} $C$ if $\ell$ and $C$ have exactly one point in common. Suppose this point is $t$; in this case we say that $\ell$ is tangent to $C$ \emph{at} $t$. 
+\begin{dfn}#[Tangent, Secant#]
+Let $\ell$ be a line and $C$ a circle in a plane geometry. We say that $\ell$ is \emph{tangent to} $C$ if $\ell$ and $C$ have exactly one point in common. Suppose this point is $t$; in this case we say that $\ell$ is tangent to $C$ \emph{at} $t$. Similarly, we say that $\ell$ is a \emph{secant} of $C$ if $\ell$ and $C$ have exactly two distinct points in common.
 \end{dfn}
 
 \begin{prop}
@@ -75,6 +75,31 @@ Let $\ell$ be a line and $C$ a circle with center $o$ in a plane geometry such t
 
 \begin{proof}
 If $o$ is on $\ell$, use Circle Separation. If $o$ not on $\ell$, construct the foot $f$ of $o$ on $\ell$. Using Circle Separation, copy $\Segment{f}{p}$ onto the opposite side of $f$ from $p$ at the point $q$. Note that $\Triangle{o}{f}{p} \equiv \Triangle{o}{f}{q}$ by SAS, so that $\Segment{o}{p} \equiv \Segment{o}{q}$; thus $q \in \ell \cap C$ as needed.
+\end{proof}
+
+\subsection*{Comparing Segments}
+
+\begin{dfn}
+Let $\Segment{a}{b}$ and $\Segment{c}{d}$ be segments in a plane geometry. We say that $\Segment{a}{b} \leq \Segment{c}{d}$ if there is a point $x \in \Segment{c}{d}$ such that $\Segment{a}{b} \equiv \Segment{c}{x}$.
+\end{dfn}
+
+\begin{prop} \mbox{}
+\begin{enumerate}
+\item If $\Segment{a_1}{b_1} \equiv \Segment{a_2}{b_2}$, $\Segment{c_1}{d_1} \equiv \Segment{c_2}{d_2}$, and $\Segment{a_1}{b_1} \leq \Segment{c_1}{d_1}$, then $\Segment{a_2}{b_2} \leq \Segment{c_2}{d_2}$.
+\item If $\Segment{a}{b} \leq \Segment{c}{d}$ and $\Segment{c}{d} \leq \Segment{e}{f}$, then $\Segment{a}{b} \leq \Segment{e}{f}$.
+\item If $\Between{a}{b}{c}$, then $\Segment{a}{b} \leq \Segment{a}{c}$. If $#[abcd#]$, then $\Segment{b}{c} \leq \Segment{a}{d}$.
+\item If $\Segment{a}{b} \leq \Segment{c}{d}$ and $\Segment{c}{d} \leq \Segment{a}{b}$, then $\Segment{a}{b} \equiv \Segment{c}{d}$.
+\end{enumerate}
+\end{prop}
+
+\begin{proof}
+\item There is a point $x \in \Segment{c_1}{d_1}$ such that $\Segment{a_1}{b_1} \equiv \Segment{c_1}{x}$. Now copy $\Segment{c_1}{x}$ onto $\Ray{c_2}{d_2}$ at the point $y$; note that $\Between{c_2}{y}{d_2}$, so that $y \in \Segment{c_2}{d_2}$. Now $\Segment{a_2}{b_2} \equiv \Segment{c_2}{y}$ as needed.
+
+\item There exists a point $x \in \Segment{c}{d}$ such that $\Segment{a}{b} \equiv \Segment{c}{x}$, and a point $y \in \Segment{e}{f}$ such that $\Segment{c}{d} \equiv \Segment{e}{y}$. Now copy $\Segment{c}{x}$ onto $\Ray{e}{y}$ at the point $z$; note that $\Between{e}{z}{y}$; in particular, $\Segment{a}{b} \equiv \Segment{e}{z}$.
+
+\item Clear.
+
+\item There exists a point $x \in \Segment{c}{d}$ such that $\Segment{c}{x} \equiv \Segment{a}{b}$. Now either $x = c$, $x = d$, or $\Between{c}{x}{d}$. If $x = c$, then $b = a$, and $d = c$, so that $\Segment{a}{b} \equiv \Segment{c}{d}$. Suppose $\Between{c}{x}{d}$. There is a point $y \in \Segment{a}{b}$ such that $\Segment{c}{y} \equiv \Segment{a}{b}$; but now $\Between{a}{b}{y}$, a contradiction. So we have $x = d$ as needed.
 \end{proof}
 
 \end{document}
