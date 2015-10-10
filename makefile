@@ -237,6 +237,7 @@ ca: \
   ca/a2-transformations.pdf \
   ca/r0-prereq.pdf \
   ca/r1-equations.pdf \
+  ca/r2-graphs-and-functions.pdf \
   ca/t1-equations.pdf
 
 ca/syllabus09.pdf: ca/fvl/syllabus/syllabus09.fvl ca/fvl/syllabus/syllabus10.fvl
@@ -264,6 +265,9 @@ ca/r0-prereq.pdf: ca/fvl/review/r0-prereq.fvl
 
 ca/r1-equations.pdf: ca/fvl/review/r1-equations.fvl
 	$(call document,ca,review,r1-equations)
+
+ca/r2-graphs-and-functions.pdf: ca/fvl/review/r2-graphs-and-functions.fvl
+	$(call document,ca,review,r2-graphs-and-functions)
 
 ca/t1-equations.pdf: ca/fvl/test/t1-equations.fvl
 	$(call document,ca,test,t1-equations)
