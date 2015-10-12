@@ -87,6 +87,7 @@ aa: \
   abstract/19-division-with-remainder.pdf \
   abstract/20-localization.pdf \
   abstract/21-polynomials.pdf \
+  abstract/22-long-division-and-roots.pdf \
   abstract/zz-axioms-screen.pdf \
   abstract/hw2.pdf
 
@@ -159,6 +160,9 @@ abstract/20-localization.pdf: abstract/fvl/notes/20-localization.fvl
 
 abstract/21-polynomials.pdf: abstract/fvl/notes/21-polynomials.fvl
 	$(call document,abstract,notes,21-polynomials)
+
+abstract/22-long-division-and-roots.pdf: abstract/fvl/notes/22-long-division-and-roots.fvl
+	$(call document,abstract,notes,22-long-division-and-roots)
 
 abstract/zz-axioms-screen.pdf: abstract/fvl/slides/zz-axioms.fvl
 	$(call slides,abstract,zz-axioms)
