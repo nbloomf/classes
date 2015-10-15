@@ -70,7 +70,7 @@ Let $R$ be a domain and $q(x) = \sum_{i=0}^n \in R#[x#]$. Suppose $p \in R$ is p
 \begin{proof}
 Suppose we have \#[ q(x) = b(x)c(x) = \left(\sum_{i}b_ix^i\right)\left(\sum_{j}c_jx^j\right) = \sum_{k}\left( \sum_{i+j = k}b_ic_j \right)x^k. \#] Note that $q_0 = b_0c_0$. Since $p | b_0c_0$ and $p^2 \not| b_0c_0$, $p$ divides exactly one of $b_0$ and $c_0$; suppose WLOG that $p|b_0$, so $p \not| c_0$. Letting $n = \deg{q}$, $h = \deg{b}$, and $k = \deg{c}$, we have $q_n = b_hc_k$, and since $p \not| q_n$, $p \not| b_h$. Let $i$ be minimal such that $p\not|b_i$. (Note that $0 < i \leq \deg{b} \leq n$.)
 
-We now have \#[ q_i = b_ic_0 + b_{i-1}c_1} + \cdots + b_{i-t}c_t \#] for some $t$. If $i < n$, then $p|q_i$, and by construction, $p|b_j$ for $j < i$. Thus $p|b_ic_0$, and since $p \not| c_0$ we have $p|b_i$ -- a contradiction. So $i = n$ and thus $\deg{b} = n = \deg{q}$. But $\deg{q} = \deg{b} + \deg{c}$, so that $\deg{c} = 0$; hence $c$ is a constant.
+We now have \#[ q_i = b_ic_0 + b_{i-1}c_1 + \cdots + b_{i-t}c_t \#] for some $t$. If $i < n$, then $p|q_i$, and by construction, $p|b_j$ for $j < i$. Thus $p|b_ic_0$, and since $p \not| c_0$ we have $p|b_i$ -- a contradiction. So $i = n$ and thus $\deg{b} = n = \deg{q}$. But $\deg{q} = \deg{b} + \deg{c}$, so that $\deg{c} = 0$; hence $c$ is a constant.
 \end{proof}
 
 \end{document}

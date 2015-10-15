@@ -88,6 +88,9 @@ aa: \
   abstract/20-localization.pdf \
   abstract/21-polynomials.pdf \
   abstract/22-long-division-and-roots.pdf \
+  abstract/23-over-a-gcd-domain-part-i.pdf \
+  abstract/24-over-a-gcd-domain-part-ii.pdf \
+  abstract/25-over-a-ufd.pdf \
   abstract/zz-axioms-screen.pdf \
   abstract/hw2.pdf
 
@@ -164,6 +167,15 @@ abstract/21-polynomials.pdf: abstract/fvl/notes/21-polynomials.fvl
 abstract/22-long-division-and-roots.pdf: abstract/fvl/notes/22-long-division-and-roots.fvl
 	$(call document,abstract,notes,22-long-division-and-roots)
 
+abstract/23-over-a-gcd-domain-part-i.pdf: abstract/fvl/notes/23-over-a-gcd-domain-part-i.fvl
+	$(call document,abstract,notes,23-over-a-gcd-domain-part-i)
+
+abstract/24-over-a-gcd-domain-part-ii.pdf: abstract/fvl/notes/24-over-a-gcd-domain-part-ii.fvl
+	$(call document,abstract,notes,24-over-a-gcd-domain-part-ii)
+
+abstract/25-over-a-ufd.pdf: abstract/fvl/notes/25-over-a-ufd.fvl
+	$(call document,abstract,notes,25-over-a-ufd)
+
 abstract/zz-axioms-screen.pdf: abstract/fvl/slides/zz-axioms.fvl
 	$(call slides,abstract,zz-axioms)
 
@@ -185,6 +197,7 @@ geo: \
   geom/09-plane-geometries.pdf \
   geom/10-transversals.pdf \
   geom/11-perpendiculars-and-tangents.pdf \
+  geom/12-incircles-and-excircles.pdf \
   geom/15-hyperbolic-half-planes.pdf \
   geom/a1-basic-constructions.pdf
 
@@ -224,6 +237,9 @@ geom/10-transversals.pdf: geom/fvl/notes/10-transversals.fvl
 
 geom/11-perpendiculars-and-tangents.pdf: geom/fvl/notes/11-perpendiculars-and-tangents.fvl
 	$(call document,geom,notes,11-perpendiculars-and-tangents)
+
+geom/12-incircles-and-excircles.pdf: geom/fvl/notes/12-incircles-and-excircles.fvl
+	$(call document,geom,notes,12-incircles-and-excircles)
 
 geom/15-hyperbolic-half-planes.pdf: geom/fvl/notes/15-hyperbolic-half-planes.fvl
 	$(call document,geom,notes,15-hyperbolic-half-planes)

@@ -5,3 +5,10 @@ I have had a hard time finding a geometry book I am comfortable with for my audi
 * Synthetic, meaning that definitions are in the language of set theory and proofs are (or can be) symbolic. (Taking the good parts from Hilbert and Tarski.)
 * The axioms should not depend on the real numbers. That means no distances or angle measurements, which can be discarded in favor of congruence. I consider the dependence on RR to be a huge flaw in the usual treatment of geometry. We can introduce metrics later, when they are actually useful.
 * Discuss the historical development of geometry without being mindlessly beholden to it. The history is interesting, to be sure. But for some reason geometry is nearly unique among undergraduate subjects in that books seem to spend *tons* of effort on history at the expense clear logical development. We don't do this in abstract algebra and we sure as hell don't do it in the service courses.
+
+
+
+NOTES
+
+* define sides (segments) and extended sides (lines) of a triangle.
+* define interior angles and exterior angles of a triangle.

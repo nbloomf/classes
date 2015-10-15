@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage{neb-macros}
+\usepackage{tikz}
+  \usetikzlibrary{patterns}
+
+\begin{document}
+
+\CheapTitle{Over a GCD Domain -- Part II}
+
+In this section we establish some important results about irreducibility and factorization for polynomials over a GCD domain.
+
+\begin{prop}[Gauss' Lemma -- Part II]
+Let $R$ be a GCD domain with field of fractions $F$, and let $p(x) \in R[x]$ have positive degree. Then $p(x)$ is irreducible in $R[x]$ if and only if $p(x)$ is irreducible in $F[x]$ and primitive in $R[x]$.
+\end{prop}
+
+\begin{proof}
+(type this)
+\end{proof}
+
+\begin{cor}
+If $p(x) \in R[x]$ ($R$ a GCD domain) is Eisenstein and primitive, then $p(x)$ is irreducible in $R[x]$.
+\end{cor}
+
+\begin{proof}
+Suppose $p(x) = a(x)b(x)$ with $a,b \in R[x]$. Since $p$ is Eisenstein, WLOG $a(x)$ is a constant; say $a(x) = a_0$. Now $a_0|p$ in $R[x]$, so that $a_0|\content{p}$ in $R$. Since $p(x)$ is primitive, $a$ is a unit in $R$, hence a unit in $R[x]$. So $p(x)$ is irreducible in $R[x]$.
+\end{proof}
+
+\begin{prop}[Rational Root Theorem]
+Let $R$ be a GCD domain with fraction field $F$. Suppose $p(x) \in R[x]$. Let $\frac{u}{v} \in F$ be a fraction in lowest terms; that is, $\GCD{u}{v} = 1$ in $R$. If $\frac{u}{v}$ is a root of $p(x)$, then $u$ divides the constant coefficient of $p$, and $v$ divides the leading coefficient of $p$.
+\end{prop}
+
+\subsection*{Exercises}
+
+\begin{enumerate}
+\item Let $R$ be a GCD domain with $p(x), q(x) \in R[x]$ so that $q$ is irreducible (hence prime), and let $k$ be a natural number. Show that $q^{k+1}$ divides $p$ in $R[x]$ iff $q|p$ and $q^k|p'$ in $R[x]$. In particular, show that $p$ is squarefree iff $\GCD{p}{p'} = 1$. 
+\end{enumerate}
+
+\end{document}

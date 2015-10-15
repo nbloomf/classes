@@ -1,0 +1,97 @@
+\documentclass{article}
+\usepackage{neb-macros}
+\usepackage{tikz}
+  \usetikzlibrary{patterns}
+
+\begin{document}
+
+\CheapTitle{Over a GCD Domain -- Part I}
+
+One of our big questions is to what extent the structure of $R$ is reflected in the structure of $R#[x#]$; if $R$ has more ``technology'' available, perhaps this can be used to say interesting things about the polynomials over $R$. In this section we will see that this is indeed the case if $R$ is a GCD domain.
+
+\begin{dfn}#[Content of a polynomial#]
+Let $R$ be a GCD domain and let $p(x) \in R#[x#]$ be a polynomial with coefficients $a_i$. We define the \emph{content} of $p(x)$ to be \#[ \content{p} = \left\{ \begin{array}{ll} 0 & \mathrm{if}\ p(x) = 0 \\ \GCDS{a_0,a_1,\ldots,a_d} & \mathrm{if}\ p(x) \neq 0, \mathrm{where}\ d = \deg{p}. \end{array} \right. \#] If $\content{p} = 1$, we say that $p(x)$ is \emph{primitive}.
+\end{dfn}
+
+For example, $\ZZ$ is a GCD Domain, and $\content{2x^3 + 4x - 6} = 2$. Every field $F$ is a GCD domain, and every nonzero polynomial over $F$ is primitive.
+
+\begin{prop}
+Let $R$ be a GCD domain.
+\begin{enumerate}
+\item Every polynomial $a(x) \in R#[x#]$ can be written as $a(x) = \content{a} \overline{a}(x)$, where $\overline{a}(x) \in R#[x#]$ is primitive.
+\item Let $d \in R$ and $a(x) \in R#[x#]$. Then the constant polynomial $d$ divides $a(x)$ in $R#[x#]$ if and only if $d$ divides $\content{a}$ in $R$.
+\item Let $d \in R$ and $a(x), b(x) \in R#[x#]$. If $d|\content{a+b}$ and $d|\content{a}$, then $d|\content{b}$.
+\item If $d \in R$ and $a(x) \in R#[x#]$, then $\content{da} = d\content{a}$.
+\item Let $F$ be the field of fractions of $R$ and let $q(x) \in F#[x#]$. Then there is a fraction $\frac{u}{v} \in F$ such that $p(x) = \frac{u}{v}q(x)$ is in $R#[x#]$ and is primitive there.
+
+\item $\content{x^n a(x)} = \content{a(x)}$.
+\end{enumerate}
+\end{prop}
+
+\begin{proof} \mbox{}
+\begin{enumerate}
+\item If $a(x) = 0$, set $\overline{a}(x) = 1$. Suppose $a(x) \neq 0$. Now $\content{a} = \GCDS{a_0,a_1,\ldots,a_n}$, and in particular for each $i$ we have $a_i = \content{a}\overline{a}_i$ for some $\overline{a}_i$, and $\GCDS{\overline{a}_0, \overline{a}_1, \ldots, \overline{a}_n} = 1$. Let $\overline{a}(x) = \sum_{i=0}^n \overline{a}_i x^i$.
+
+\item (write these)
+\end{enumerate}
+\end{proof}
+
+\begin{prop}#[Gauss' Lemma -- Part I#]
+Let $R$ be a GCD Domain with $a(x), b(x) \in R#[x#]$. Then we have the following.
+\begin{enumerate}
+\item If $a(x)$ and $b(x)$ are primitive, then $a(x)b(x)$ is primitive.
+\item $\content{ab} = \content{a}\content{b}$
+\item If $a(x)|b(x)$ in $R#[x#]$, then $\content{a}|\content{b}$ in $R$.
+\end{enumerate}
+\end{prop}
+
+\begin{proof} \mbox{}
+\begin{enumerate}
+\item We proceed by induction on the number $k$ of nonzero terms of $a$ and $b$ together.
+\begin{enumerate}
+\item \textbf{Base Case} ($k = 0$): If $a$ and $b$ together have no nonzero terms, then $a(x) = b(x) = 0$; neither is primitive.
+\item \textbf{Base Case} ($k = 1$): If $a$ and $b$ together have exactly one nonzero term, then either $a(x) = 0$ or $b(x) = 0$; one is not primitive.
+\item \textbf{Base Case} ($k = 2$): If $a(x)$ and $b(x)$ together have exactly two nonzero terms, then each must have exactly one. (Otherwise one is zero and thus not primitive.) Say $a(x) = a_n x^n$ and $b(x) = b_m x^m$. If both $a(x)$ and $b(x)$ are primitive, then $a_n = \content{a}$ and $b_m = \content{b}$ are units, so that $\content{ab} = a_nb_m$ is a unit; hence $a(x)b(x)$ is primitive.
+\item \textbf{Inductive Step:} Suppose the result holds for all pairs of primitive polynomials having less than $n > 2$ nonzero terms together, and suppose that $a(x)$ and $b(x)$ are primitive with exactly $n$ nonzero terms together. Say $\deg{a} = n$ and $\deg{b} = m$, so that the leading coefficients of $a$, $b$, and $ab$ are $a_n$, $b_m$, and $a_nb_m$, respectively. Now let $c = \content{ab}$, and suppose BWOC that $c$ is \emph{not} a unit. Note that $c|a_nb_m$. Now $\GCD{c}{a_n}$ and $\GCD{c}{b_m}$ cannot both be units in $R$. (If $\GCD{c}{a_n} = 1$, then by Euclid's lemma we have $c | \GCD{c}{b_m}$.) So suppose WLOG that $\GCD{c}{a_n} = d$ is not a unit.
+
+Now $d|\content{ab}$ in $R$, so that $d|a(x)b(x)$ in $R#[x#]$. Since $d|a_n$, we also have $d|a_nx^n$ in $R#[x#]$. Thus $d|b(x)(a(x) - a_nx^n)$ in $R#[x#]$, and thus \#[ d | \content{b(x)(a(x) - a_nx^n)} = \content{a(x) - a_nx^n}\content{b(x)p(x)}, \#] where $p(x) \in R#[x#]$ is primitive such that $a(x) - a_nx^n = \content{a(x) - a_nx^n}p(x)$. In particular, note that $p(x)$ and $a(x) - a_nx^n$ have the same number of nonzero terms which is one fewer than the number of nonzero terms of $a(x)$. Thus $b$ and $p$ have fewer than $n$ nonzero terms. Since $b$ and $p$ are both primitive, by the inductive hypothesis, $\content{bp} = 1$. Thus we have $d|\content{a(x) - a_nx^n}$. Since $d|\content{a_nx^n}$, by the lemma we have $d|\content{a}$. But $a$ is primitive, so that $d$ is a unit, a contradiction. So $a(x)b(x)$ must be primitive.
+\end{enumerate}
+
+\item We have
+\begin{eqnarray*}
+\content{a(x)b(x)} & = & \content{\content{a}\overline{a}\content{b}\overline{b}} \\
+ & = & \content{a}\content{b}\content{\overline{a}\overline{b}} \\
+ & = & \content{a}\content{b}
+\end{eqnarray*}
+
+\item Say $a(x)c(x) = b(x)$; then $\content{a}\content{c} = \content{b}$. \qedhere
+\end{enumerate}
+\end{proof}
+
+\begin{lem}
+Let $R$ be a GCD domain with field of fractions $F$.
+\begin{enumerate}
+\item If $p(x) \in R#[x#]$ is primitive, $r \in R$, and $a(x) \in R$ such that $p(x)|a(x)$ and $r|a(x)$ in $R#[x#]$, then $rp(x)|a(x)$ in $R#[x#]$.
+\item If $q(x) \in F#[x#]$ and $p(x) \in R#[x#]$ such that $p(x)$ is primitive and $p(x)q(x) \in R#[x#]$, then in fact $q(x) \in R#[x#]$.
+\end{enumerate}
+\end{lem}
+
+\begin{proof}
+(type this)
+\end{proof}
+
+\begin{prop}#[Gilmer-Parker#]
+If $R$ is a GCD Domain, then $R#[x#]$ is a GCD Domain.
+\end{prop}
+
+\begin{proof}
+(type this)
+\end{proof}
+
+\subsection*{Exercises}
+
+\begin{enumerate}
+\item Let $R$ be a GCD domain with $p(x), q(x) \in R#[x#]$ so that $q$ is irreducible (hence prime), and let $k$ be a natural number. Show that $q^{k+1}$ divides $p$ in $R#[x#]$ iff $q|p$ and $q^k|p'$ in $R#[x#]$. In particular, show that $p$ is squarefree iff $\GCD{p}{p'} = 1$. 
+\end{enumerate}
+
+\end{document}

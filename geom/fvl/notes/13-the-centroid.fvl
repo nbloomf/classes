@@ -1,0 +1,16 @@
+\documentclass{article}
+\usepackage{neb-macros}
+\usepackage{tikz}
+  \usetikzlibrary{calc,intersections}
+
+\begin{document}
+
+\CheapTitle{The Centroid of a Triangle}
+
+\begin{dfn}#[Median#]
+Let $A$, $B$, and $C$ be distinct points. If $M$ is the midpoint of $\Segment{B}{C}$, then $\Line{A}{M}$ is called the \emph{median} of $\Triangle{A}{B}{C}$ through $A$.
+\end{dfn}
+
+Every triangle has precisely three medians; one for each vertex.
+
+\end{document}
