@@ -47,6 +47,18 @@ Let $R$ be a commutative unital ring, with $p(x) \in R[x]$ and $a \in R$. Then $
 Certainly if $x-a$ divides $p(x)$ then $a$ is a root of $p$. Conversely, suppose $a$ is a root of $p(x)$. Now $b(x) = x - a$ is monic, so by the polynomial long division algorithm we have $q(x), r(x) \in R[x]$ such that $p(x) = q(x)(x-a) + r(x)$ and either $r(x) = 0$ or $\deg{r} < 1$. If $r(x) \neq 0$, then $r(x) = r_0$ is a constant. Evaluating at $a$ we have $p(a) = r_0$, a contradiction. So $r(x) = 0$ and $x-a$ divides $p(x)$.
 \end{proof}
 
+\begin{cor}
+Let $R$ be a domain with $p(x) \in R[x]$ a nonzero polynomial of degree $d$. Then $p(x)$ has at most $d$ roots in $R$, counting multiplicity.
+\end{cor}
+
+\begin{cor}
+Let $R$ be a domain with $p(x), q(x) \in R[x]$ polynomials of degree at most $d$. If there exist $d+1$ distinct elements $a_i \in R$ such that $p(a_i) = q(a_i)$, then $p(x) = q(x)$.
+\end{cor}
+
+\begin{proof}
+Let $s(x) = p(x) - q(x)$; note that $s$ has degree at most $d$. Now the $a_i$ are $d+1$ distinct roots of $s$. If $s(x) \neq 0$, this contradicts the previous corollary.
+\end{proof}
+
 \begin{prop}
 Let $R$ be a domain and $p(x) \in R[x]$ a polynomial of degree 2 or 3. Then $p(x)$ cannot be written as a product of nonconstants in $R[x]$ if and only if $p(x)$ does not have a root in $R$.
 \end{prop}

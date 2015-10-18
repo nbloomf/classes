@@ -9,6 +9,8 @@
 
 One of our big questions is to what extent the structure of $R$ is reflected in the structure of $R#[x#]$; if $R$ has more ``technology'' available, perhaps this can be used to say interesting things about the polynomials over $R$. In this section we will see that this is indeed the case if $R$ is a GCD domain.
 
+In fact, thanks to the polynomial long division algorithm, if $R$ is a domain then $R#[x#]$ is already sitting inside a Euclidean domain -- namely $F#[x#]$ where $F$ is the field of fractions of $R$. So it doesn't take much to get extra technology in $R#[x#]$.
+
 \begin{dfn}#[Content of a polynomial#]
 Let $R$ be a GCD domain and let $p(x) \in R#[x#]$ be a polynomial with coefficients $a_i$. We define the \emph{content} of $p(x)$ to be \#[ \content{p} = \left\{ \begin{array}{ll} 0 & \mathrm{if}\ p(x) = 0 \\ \GCDS{a_0,a_1,\ldots,a_d} & \mathrm{if}\ p(x) \neq 0, \mathrm{where}\ d = \deg{p}. \end{array} \right. \#] If $\content{p} = 1$, we say that $p(x)$ is \emph{primitive}.
 \end{dfn}
@@ -76,8 +78,18 @@ Let $R$ be a GCD domain with field of fractions $F$.
 \end{enumerate}
 \end{lem}
 
-\begin{proof}
-(type this)
+\begin{proof} \mbox{}
+\begin{enumerate}
+\item Write $a(x) = p(x)b(x)$ with $b(x) \in R#[x#]$. Since $r|a(x)$, we have $r|\content{a} = \content{p}\content{b} = \content{b}$, since $p$ is primitive. So $r|b(x)$ in $R#[x#]$. Say $b(x) = rc(x)$; then $a(x) = rp(x)c(x)$ as needed.
+
+\item We have $\frac{u}{v} \in F$ (in lowest terms) such that $\frac{u}{v}q(x) \in R#[x#]$ is primitive; say $\frac{u}{v}q(x) = s(x)$. Now $uq(x) = vs(x)$, and moreover $up(x)q(x) = vp(x)s(x) \in R#[x#]$. Now
+\begin{eqnarray*}
+u \cdot \content{pq} & = & \content{up(x)q(x)} \\
+ & = & \content{vp(x)s(x)} \\
+ & = & v \cdot \content{ps} = v,
+\end{eqnarray*}
+since $p$ and $s$ are primitive in $R#[x#]$. In particular, $u|v$. Since $\frac{u}{v}$ is in lowest terms, without loss of generality, $u = 1$, so that $\frac{1}{v}q(x) = s(x)$. Thus $q(x) = vs(x) \in R#[x#]$ as needed. \qedhere
+\end{enumerate}
 \end{proof}
 
 \begin{prop}#[Gilmer-Parker#]
@@ -85,7 +97,13 @@ If $R$ is a GCD Domain, then $R#[x#]$ is a GCD Domain.
 \end{prop}
 
 \begin{proof}
-(type this)
+Let $a(x), b(x) \in R#[x#]$. Let $k = \GCD{\content{a}}{\content{b}}$ (remember that $R$ is a GCD domain). Let $F$ be the field of fractions of $R$. Now $F#[x#]$ is a Euclidean domain, in particular a GCD domain, so that $a(x)$ and $b(x)$ have a greatest common divisor in $F#[x#]$. By the lemma, we can take an associate (in $F#[x#]$) of this gcd which is in $R#[x#]$ and primitive; say $t(x)$. We claim that $kt(x)$ is a gcd of $a$ and $b$ in $R#[x#]$.
+
+First note that $k|\content{a}$, so that $k|a{x}$. Now $t(x)|a(x)$ in $F#[x#]$, where $t$ and $a$ are in $R#[x#]$ and $t(x)$ is primitive. By the lemma, $t(x)|a(x)$ in $R#[x#]$, and again using the lemma, $kt(x)|a(x)$ in $R#[x#]$. Similarly, $kt(x)|b(x)$ in $R#[x#]$. So $kt(x)$ is a common divisor of $a(x)$ and $b(x)$ in $R#[x#]$.
+
+Now suppose that $e(x) \in R#[x#]$ is a common divisor of $a(x)$ and $b(x)$ over $R$. If $e(x)$ is constant, then $e(x) = e_0 | \GCD{\content{a}, \content{b}} = k$. Suppose instead that $e(x)$ has positive degree. Now $e(x)$ divides $a(x)$ and $b(x)$ in $F#[x#]$, which is a GCD domain, and thus $e(x)$ divides $t(x)$ in $F#[x#]$. Say $e(x)f(x) = t(x)$ where $f(x) \in F#[x#]$. By the lemma, we may write $f(x) = \frac{u}{v}g(x)$ where $g(x) \in R#[x#]$ is primitive and $\GCD{u}{v} = 1$. We have $ue(x)g(x) = vf(x) \in R#[x#]$. Now $\content{ue(x)g(x)} = \content{vt(x)}$, and since $g$ and $t$ are primitive over $R$, $u\content{e} = v$. By Euclid's lemma, $v|\content{e}$, so that $v|\content{a}$ and $v|\content{b}$, and thus $v|k$. In particular, we have $kf(x) = k\frac{u}{v}g(x) \in R#[x#]$, and thus $e(x) \cdot kf(x) = kt(x)$, so that $e(x)|kt(x)$ in $R#[x#]$.
+
+Thus $kt(x)$ is a greatest common divisor of $a(x)$ and $b(x)$ in $R#[x#]$.
 \end{proof}
 
 \subsection*{Exercises}

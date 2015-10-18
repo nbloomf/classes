@@ -91,6 +91,8 @@ aa: \
   abstract/23-over-a-gcd-domain-part-i.pdf \
   abstract/24-over-a-gcd-domain-part-ii.pdf \
   abstract/25-over-a-ufd.pdf \
+  abstract/26-irreducibility-criteria.pdf \
+  abstract/27-interpolation.pdf \
   abstract/zz-axioms-screen.pdf \
   abstract/hw2.pdf
 
@@ -176,6 +178,12 @@ abstract/24-over-a-gcd-domain-part-ii.pdf: abstract/fvl/notes/24-over-a-gcd-doma
 abstract/25-over-a-ufd.pdf: abstract/fvl/notes/25-over-a-ufd.fvl
 	$(call document,abstract,notes,25-over-a-ufd)
 
+abstract/26-irreducibility-criteria.pdf: abstract/fvl/notes/26-irreducibility-criteria.fvl
+	$(call document,abstract,notes,26-irreducibility-criteria)
+
+abstract/27-interpolation.pdf: abstract/fvl/notes/27-interpolation.fvl
+	$(call document,abstract,notes,27-interpolation)
+
 abstract/zz-axioms-screen.pdf: abstract/fvl/slides/zz-axioms.fvl
 	$(call slides,abstract,zz-axioms)
 
@@ -198,6 +206,7 @@ geo: \
   geom/10-transversals.pdf \
   geom/11-perpendiculars-and-tangents.pdf \
   geom/12-incircles-and-excircles.pdf \
+  geom/13-euclidean-planes.pdf \
   geom/15-hyperbolic-half-planes.pdf \
   geom/a1-basic-constructions.pdf
 
@@ -241,6 +250,9 @@ geom/11-perpendiculars-and-tangents.pdf: geom/fvl/notes/11-perpendiculars-and-ta
 geom/12-incircles-and-excircles.pdf: geom/fvl/notes/12-incircles-and-excircles.fvl
 	$(call document,geom,notes,12-incircles-and-excircles)
 
+geom/13-euclidean-planes.pdf: geom/fvl/notes/13-euclidean-planes.fvl
+	$(call document,geom,notes,13-euclidean-planes)
+
 geom/15-hyperbolic-half-planes.pdf: geom/fvl/notes/15-hyperbolic-half-planes.fvl
 	$(call document,geom,notes,15-hyperbolic-half-planes)
 
@@ -258,7 +270,8 @@ ca: \
   ca/r0-prereq.pdf \
   ca/r1-equations.pdf \
   ca/r2-graphs-and-functions.pdf \
-  ca/t1-equations.pdf
+  ca/t1-equations.pdf \
+  ca/t2-graphs-and-functions.pdf
 
 ca/syllabus09.pdf: ca/fvl/syllabus/syllabus09.fvl ca/fvl/syllabus/syllabus10.fvl
 	$(call copy,ca,syllabus,nsulogo.png)
@@ -291,3 +304,6 @@ ca/r2-graphs-and-functions.pdf: ca/fvl/review/r2-graphs-and-functions.fvl
 
 ca/t1-equations.pdf: ca/fvl/test/t1-equations.fvl
 	$(call document,ca,test,t1-equations)
+
+ca/t2-graphs-and-functions.pdf: ca/fvl/test/t2-graphs-and-functions.fvl
+	$(call document,ca,test,t2-graphs-and-functions)
