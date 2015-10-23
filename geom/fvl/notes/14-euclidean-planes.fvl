@@ -38,7 +38,7 @@ If $\ell_1 = \ell_2$ there's nothing to do. Otherwise $m$ is a transversal and t
 \end{proof}
 
 \begin{prop}
-If $\ell_1$ and $\ell_2$ are parallel, $m_1$ and $\ell_1$ are perpendicular, and $\m_2$ and $\ell_2$ are perpendicular, then $m_1$ and $m_2$ are parallel.
+If $\ell_1$ and $\ell_2$ are parallel, $m_1$ and $\ell_1$ are perpendicular, and $m_2$ and $\ell_2$ are perpendicular, then $m_1$ and $m_2$ are parallel.
 \end{prop}
 
 \begin{proof}
