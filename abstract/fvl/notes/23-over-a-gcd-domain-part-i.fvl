@@ -109,7 +109,9 @@ Thus $kt(x)$ is a greatest common divisor of $a(x)$ and $b(x)$ in $R#[x#]$.
 \subsection*{Exercises}
 
 \begin{enumerate}
-\item Let $R$ be a GCD domain with $p(x), q(x) \in R#[x#]$ so that $q$ is irreducible (hence prime), and let $k$ be a natural number. Show that $q^{k+1}$ divides $p$ in $R#[x#]$ iff $q|p$ and $q^k|p'$ in $R#[x#]$. In particular, show that $p$ is squarefree iff $\GCD{p}{p'} = 1$. 
+\item Let $R$ be a GCD domain with $p(x), q(x) \in R#[x#]$ so that $q$ is irreducible (hence prime), and let $k$ be a natural number. Show that $q^{k+1}$ divides $p$ in $R#[x#]$ iff $q|p$ and $q^k|p'$ in $R#[x#]$. In particular, show that $p$ is squarefree iff $\GCD{p}{p'} = 1$.
+
+\item Let $R$ be a GCD domain, with $p,q \in R#[x#]$ nonzero. Show that $p$ and $q$ have a common factor of positive degree in $R#[x#]$ if and only if there exist $a,b \in R#[x#]$, not zero, such that $\deg{a} < \deg{q}$, $\deg{b} < \deg{p}$, and $pa - qb = 0$. (Looking forward to univariate resultant.)
 \end{enumerate}
 
 \end{document}

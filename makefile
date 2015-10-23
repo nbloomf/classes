@@ -206,8 +206,9 @@ geo: \
   geom/10-transversals.pdf \
   geom/11-perpendiculars-and-tangents.pdf \
   geom/12-incircles-and-excircles.pdf \
-  geom/13-euclidean-planes.pdf \
-  geom/15-hyperbolic-half-planes.pdf \
+  geom/13-quadrilaterals.pdf \
+  geom/14-euclidean-planes.pdf \
+  geom/16-hyperbolic-half-planes.pdf \
   geom/a1-basic-constructions.pdf
 
 geom/syllabus.pdf: geom/fvl/syllabus/syllabus.fvl
@@ -250,11 +251,14 @@ geom/11-perpendiculars-and-tangents.pdf: geom/fvl/notes/11-perpendiculars-and-ta
 geom/12-incircles-and-excircles.pdf: geom/fvl/notes/12-incircles-and-excircles.fvl
 	$(call document,geom,notes,12-incircles-and-excircles)
 
-geom/13-euclidean-planes.pdf: geom/fvl/notes/13-euclidean-planes.fvl
-	$(call document,geom,notes,13-euclidean-planes)
+geom/13-quadrilaterals.pdf: geom/fvl/notes/13-quadrilaterals.fvl
+	$(call document,geom,notes,13-quadrilaterals)
 
-geom/15-hyperbolic-half-planes.pdf: geom/fvl/notes/15-hyperbolic-half-planes.fvl
-	$(call document,geom,notes,15-hyperbolic-half-planes)
+geom/14-euclidean-planes.pdf: geom/fvl/notes/14-euclidean-planes.fvl
+	$(call document,geom,notes,14-euclidean-planes)
+
+geom/16-hyperbolic-half-planes.pdf: geom/fvl/notes/16-hyperbolic-half-planes.fvl
+	$(call document,geom,notes,16-hyperbolic-half-planes)
 
 geom/a1-basic-constructions.pdf: geom/fvl/activity/a1-basic-constructions.fvl
 	$(call document,geom,activity,a1-basic-constructions)

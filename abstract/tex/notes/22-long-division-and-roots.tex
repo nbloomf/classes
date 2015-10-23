@@ -35,6 +35,12 @@ Suppose $F$ is a field.
 \end{enumerate}
 \end{cor}
 
+In particular, if $R$ is a domain, then $R[x]$ is a subring of a Euclidean domain: namely, $F[x]$, where $F$ is the field of fractions of $R$. This means that $R[x]$ immediately has a much stronger structure than the average integral domain. For example:
+
+\begin{prop}
+If $R$ is a domain and $a,b \in R[x]$ with $b(x) \neq 0$, then there exist $q,r \in R[x]$ and $k \in R$ such that $ka(x) = q(x)b(x) + r(x)$ and either $r = 0$ or $r \neq 0$ and $\deg{r} < \deg{b}$.
+\end{prop}
+
 \subsection*{The Evaluation Map}
 
 So far, we've been thinking of polynomials as objects in their own right. But we can also treat them like functions in the usual sense by ``plugging in'' ring elements for the variable. Given a polynomial $p(x) = \sum_{i=0}^n a_nx^n$ in $R[x]$, $R$ a commutative unital ring, we define the \emph{evaluation map} $\varepsilon_p : R \rightarrow R$ by $\varepsilon_p(r) = \sum_{i=0}^n a_i r^i$.
@@ -84,5 +90,11 @@ Suppose we have \[ q(x) = b(x)c(x) = \left(\sum_{i}b_ix^i\right)\left(\sum_{j}c_
 
 We now have \[ q_i = b_ic_0 + b_{i-1}c_1 + \cdots + b_{i-t}c_t \] for some $t$. If $i < n$, then $p|q_i$, and by construction, $p|b_j$ for $j < i$. Thus $p|b_ic_0$, and since $p \not| c_0$ we have $p|b_i$ -- a contradiction. So $i = n$ and thus $\deg{b} = n = \deg{q}$. But $\deg{q} = \deg{b} + \deg{c}$, so that $\deg{c} = 0$; hence $c$ is a constant.
 \end{proof}
+
+\subsection*{Exercises}
+
+\begin{enumerate}
+\item (Hensel's Lemma)
+\end{enumerate}
 
 \end{document}

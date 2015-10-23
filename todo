@@ -1,1 +1,4 @@
 * geom: betweenness should only make sense for triples of distinct points.
+* abstract: separate section about "polynomials as functions" after long div.
+    discuss evaluation, roots, factor theorem, composition.
+* number theory: need section (exercise?) on properties of min and max

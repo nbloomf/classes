@@ -108,7 +108,7 @@ Given distinct points $x$ and $y$, there exist points $z_1$ and $z_2$, on opposi
 Consider the line $\Line{x}{y}$. By the Interpolation property, there exists a point $u$ such that $\Between{u}{x}{y}$. By the Circle Separation property, there is a point $w \in \Circle{y}{x} \cap \Ray{x}{w}$. Note in particular that $\Between{w}{x}{y}$, and hence $w$ is exterior to the circle $\Circle{y}{x}$. Moreover, $w$ is on $\Circle{x}{y}$. Now $y$ is also on $\Circle{x}{y}$, and by definition, $y$ is interior to $\Circle{y}{x}$. By the Circle Cut property, there exist two points in $\Circle{x}{y} \cap \Circle{y}{x}$, say $z_1$ and $z_2$, which must be on opposite sides of $\Line{x}{y}$ by the uniqueness of circle cuts. Now $\Segment{x}{z_1} \equiv \Segment{x}{y} \equiv \Segment{y}{z_1}$ and $\Segment{x}{z_2} \equiv \Segment{x}{y} \equiv \Segment{y}{z_2}$ by the definition of circles, so that $\Triangle{x}{y}{z_1}$ and $\Triangle{x}{y}{z_2}$ are equilateral by definition. Moreover, $\Triangle{x}{y}{z_1} \equiv \Triangle{x}{y}{z_2}$ by the transitivity of segment congruence and the SSS Theorem.
 \end{proof}
 
-\begin{prop}
+\begin{prop}[Segment Addition Theorem]
 Suppose $\Between{a}{b}{c}$ and $\Between{x}{y}{z}$. If any two of $\Segment{a}{b} \equiv \Segment{x}{y}$, $\Segment{b}{c} \equiv \Segment{y}{z}$, and $\Segment{a}{c} \equiv \Segment{x}{z}$ hold, then so does the third.
 \end{prop}
 
@@ -146,6 +146,14 @@ Let $a$, $b$, $c$ be distinct noncollinear points, and let $x$, $y$, $z$ be dist
 
 \begin{proof}
 Copy $\Segment{y}{x}$ onto $\Ray{b}{a}$ at $d$. Note that $d$ and $a$ are on the same side of $\Line{b}{c}$. Moreover, we have $\Triangle{d}{b}{c} \equiv \Triangle{x}{y}{z}$ by the SAS Theorem, and so $\Angle{b}{c}{d} \equiv \Angle{y}{z}{x} \equiv \Angle{b}{c}{a}$. By AC7, we have $d \in \Ray{c}{a}$. Now $d$ is on both $\Line{b}{a}$ and $\Line{c}{a}$, and since $a$, $b$, and $c$ are not collinear, we must have $d = a$. So $\Triangle{a}{b}{c} \equiv \Triangle{x}{y}{z}$ as claimed.
+\end{proof}
+
+\begin{prop}[Angle Addition Theorem]
+Suppose $B \in \IntAngle{A}{O}{C}$ and $Y \in \IntAngle{X}{P}{Z}$. If any two of $\Angle{A}{O}{C} \equiv \Angle{X}{P}{Z}$, $\Angle{A}{O}{B} \equiv \Angle{X}{P}{Y}$, and $\Angle{B}{O}{C} \equiv \Angle{Y}{P}{Z}$ holds, then so does the third.
+\end{prop}
+
+\begin{proof}
+(write this. Uses SAS and segment addition.)
 \end{proof}
 
 \end{document}
