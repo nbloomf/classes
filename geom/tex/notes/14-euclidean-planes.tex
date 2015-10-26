@@ -66,7 +66,51 @@ For the angles, use AIA and converse of AIA. For the sides, construct a diagonal
 \end{proof}
 
 \begin{prop}[Thales' Theorem]
-Suppose $A$ and $B$ are the opposite endpoints of a diameter of a circle centered at $O$, and that $C$ is a point on this circle distinct from $A$ and $B$. Then $\Angle{A}{C}{B}$ is right.
+Suppose $A$ and $B$ are the opposite endpoints of a diameter of a circle centered at $O$, and that $C$ is a point on this circle distinct from $A$ and $B$. Then $\Angle{A}{C}{B}$ is right. Moreover, $\Angle{C}{A}{B}$ is congruent to the bisector of $\Angle{C}{O}{B}$.
 \end{prop}
+
+\begin{proof}
+Construct the point $D$ on the intersection of $\Circle{O}{A}$ and $\Line{O}{C}$ by the circle separation axiom. Now $\Segment{A}{C} \equiv \Segment{B}{D}$ using SAS, and similarly $\Segment{C}{B} \equiv \Segment{A}{D}$. Now $\Triangle{A}{B}{C} \equiv \Triangle{B}{A}{D}$ by SSS, so that $\Angle{C}{B}{A} \equiv \Angle{D}{A}{B}$. Thus $\Line{B}{C}$ and $\Line{A}{D}$ are parallel by AIA. Now $\Triangle{B}{A}{C} \equiv \Triangle{D}{C}{A}$ by SSS, so that $\Angle{B}{C}{A} \equiv \Angle{D}{A}{C}$. Now $\Angle{D}{A}{C}$ and $\Angle{B}{C}{A}$ are supplementary by the converse of AIA. So $\Angle{B}{C}{A}$ is right.
+
+Now let $M$ be the point on $\Segment{B}{C}$ such that $\Ray{O}{M}$ bisects $\Angle{C}{O}{B}$. (Use crossbar.) We have $\Angle{O}{C}{B} \equiv \Angle{O}{B}{C}$ by Pons Asinorum, so that $\Angle{O}{M}{C} \equiv \Angle{O}{M}{B}$ by ASA. Thus $\Angle{C}{M}{O}$ is right. By AIA, $\Line{O}{M}$ is parallel to $\Line{A}{C}$. By the converse of AIA, $\Angle{O}{C}{A} \equiv \Angle{C}{O}{M}$, and $\Angle{C}{A}{O} \equiv \Angle{C}{O}{M}$ by Pons Asinorum.
+\end{proof}
+
+\begin{prop}[Converse of Thales' Theorem]
+Let $A$, $B$, and $C$ be distinct points. If $\Angle{A}{C}{B}$ is right, then $C$ is on the circle centered at the midpoint of $A$ and $B$ and passing through $A$.
+\end{prop}
+
+\begin{proof}
+Let $M$ be the midpoint of $A$ and $B$, and copy $\Segment{M}{C}$ to the other side of $M$ at $D$ by circle separation. Now $\Segment{B}{C} \equiv \Segment{A}{D}$ by SAS, and similarly $\Segment{A}{C} \equiv \Segment{B}{D}$. So $\Triangle{A}{B}{C} \equiv \Triangle{B}{A}{D}$ by SSS. Now $\Line{B}{C}$ is parallel to $\Line{A}{D}$ by AIA, and so $\Angle{C}{A}{D} \equiv \Angle{A}{C}{B}$ using the converse of AIA. Now $\Triangle{C}{A}{D} \equiv \Triangle{A}{C}{B}$ by SAS, so that $\Segment{A}{B} \equiv \Segment{C}{D}$. Thus $\Segment{A}{M} \equiv \Segment{C}{M}$.
+\end{proof}
+
+(Here we used a lemma that if two segments are congruent, then their midsegments are congruent.)
+
+\begin{construct}
+Given a circle $\Circle{O}{A}$ and a point $B$ exterior to this circle, there exist two lines which are tangent to $\Circle{O}{A}$ and which pass through $B$.
+\end{construct}
+
+\begin{proof}
+Construct the midpoint $M$ of $\Segment{B}{O}$, and construct circle centered at $M$ and passing through $O$. By the circle cut axiom, $\Circle{M}{O} \cap \Circle{O}{A}$ contains exactly two points, $X$ and $Y$. Note that $\Angle{O}{X}{B}$ and $\Angle{O}{Y}{B}$ are inscribed on the diameter of a circle, and thus are right; so $\Line{B}{X}$ and $\Line{B}{Y}$ are tangent to $\Circle{O}{A}$.
+
+(still have to prove these are the only two.)
+\end{proof}
+
+\begin{prop}[Inscribed Angle Theorem]
+Let $A$ and $B$ be distinct points on a circle centered at $O$. If $C$ is a point on $C$ such that $C$ and $O$ are on the same side of $\Line{A}{B}$, then $\Angle{A}{C}{B}$ is congruent to a bisector of $\Angle{A}{O}{B}$. In particular, any two such points form congruent angles.
+\end{prop}
+
+\subsection*{Altitudes and the Orthocenter}
+
+\begin{dfn}
+Let $A$, $B$, and $C$ be distinct noncollinear points, and let $F$ be the foot of $A$ on $\Line{B}{C}$. Then $\Segment{A}{F}$ is called an \emph{altitude} of $\Triangle{A}{B}{C}$. 
+\end{dfn}
+
+\begin{prop}[Orthocenter Theorem]
+Let $A$, $B$, and $C$ be distinct noncollinear points. Then the lines containing the three altitudes of $\Triangle{A}{B}{C}$ are concurrent at a point $O$, called the \emph{orthocenter} of $\Triangle{A}{B}{C}$. 
+\end{prop}
+
+\begin{proof}
+
+\end{proof}
 
 \end{document}
