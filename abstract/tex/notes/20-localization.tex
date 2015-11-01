@@ -59,7 +59,7 @@ For example, $\QQ$ is properly defined as the field of fractions of $\ZZ$.
 \subsection*{Special things}
 
 \begin{prop}
-If $R$ is a UFD then $S^{-1}R$ is also a UFD.
+If $R$ is a UFD and $S \subseteq R$ any multiplicative set, then $S^{-1}R$ is also a UFD.
 \end{prop}
 
 \begin{proof}
@@ -67,7 +67,7 @@ If $R$ is a UFD then $S^{-1}R$ is also a UFD.
 \end{proof}
 
 \begin{prop}
-If $R$ is a Euclidean domain then $S^{-1}R$ is a Euclidean domain.
+If $R$ is a Euclidean domain and $S \subseteq R$ any multiplicative set, then $S^{-1}R$ is a Euclidean domain.
 \end{prop}
 
 \begin{proof}
@@ -80,6 +80,12 @@ If $R$ is a Euclidean domain then $S^{-1}R$ is a Euclidean domain.
 \item (do stuff in $\ZZ[\frac{1}{2}]$)
 
 \item (universal property of localization)
+
+\item Let $R$ be a GCD domain, with $F$ its field of fractions. An element $\frac{a}{b} \in F$ is said to be \emph{reduced} (or in \emph{lowest terms}) if $\GCD{a}{b} = 1$.
+\begin{enumerate}
+\item Show that every element of $F$ has a reduced representative.
+\item Show that reduced fractions are unique in the following sense: If $\frac{a}{b} = \frac{c}{d}$ are both reduced, then $c = au$ and $d = bu$ for some unit $u$.
+\end{enumerate}
 \end{enumerate}
 
 \end{document}

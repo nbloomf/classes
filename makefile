@@ -209,7 +209,8 @@ geo: \
   geom/13-quadrilaterals.pdf \
   geom/14-euclidean-planes.pdf \
   geom/16-hyperbolic-half-planes.pdf \
-  geom/a1-basic-constructions.pdf
+  geom/a1-basic-constructions.pdf \
+  geom/a2-hyperbolic-constructions.pdf
 
 geom/syllabus.pdf: geom/fvl/syllabus/syllabus.fvl
 	$(call copy,geom,syllabus,nsulogo.png)
@@ -263,6 +264,9 @@ geom/16-hyperbolic-half-planes.pdf: geom/fvl/notes/16-hyperbolic-half-planes.fvl
 geom/a1-basic-constructions.pdf: geom/fvl/activity/a1-basic-constructions.fvl
 	$(call document,geom,activity,a1-basic-constructions)
 
+geom/a2-hyperbolic-constructions.pdf: geom/fvl/activity/a2-hyperbolic-constructions.fvl
+	$(call document,geom,activity,a2-hyperbolic-constructions)
+
 
 ca: \
   ca/syllabus09.pdf \
@@ -271,6 +275,7 @@ ca: \
   ca/h03-lines-and-circles.pdf \
   ca/a1-lines-and-circles.pdf \
   ca/a2-transformations.pdf \
+  ca/a3-polynomials-1.pdf \
   ca/r0-prereq.pdf \
   ca/r1-equations.pdf \
   ca/r2-graphs-and-functions.pdf \
@@ -296,6 +301,9 @@ ca/a1-lines-and-circles.pdf: ca/fvl/activity/a1-lines-and-circles.fvl
 
 ca/a2-transformations.pdf: ca/fvl/activity/a2-transformations.fvl
 	$(call document,ca,activity,a2-transformations)
+
+ca/a3-polynomials-1.pdf: ca/fvl/activity/a3-polynomials-1.fvl
+	$(call document,ca,activity,a3-polynomials-1)
 
 ca/r0-prereq.pdf: ca/fvl/review/r0-prereq.fvl
 	$(call document,ca,review,r0-prereq)

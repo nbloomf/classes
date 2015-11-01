@@ -42,8 +42,8 @@ Let $R$ be a GCD domain.
 Let $R$ be a GCD Domain with $a(x), b(x) \in R#[x#]$. Then we have the following.
 \begin{enumerate}
 \item If $a(x)$ and $b(x)$ are primitive, then $a(x)b(x)$ is primitive.
-\item $\content{ab} = \content{a}\content{b}$
-\item If $a(x)|b(x)$ in $R#[x#]$, then $\content{a}|\content{b}$ in $R$.
+\item (N.B.: should be a corollary) $\content{ab} = \content{a}\content{b}$
+\item (N.B.: should be a corollary) If $a(x)|b(x)$ in $R#[x#]$, then $\content{a}|\content{b}$ in $R$.
 \end{enumerate}
 \end{prop}
 
