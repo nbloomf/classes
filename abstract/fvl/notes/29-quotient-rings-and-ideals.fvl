@@ -146,6 +146,22 @@ Let $R$ be a ring and $\Phi$ an equivalence on $R$. Then the following are equiv
 
 That is, the congruences on a ring are in bijective correspondence with special subsets called \emph{ideals}. It is much easier to directly describe ideals in a ring than congruences (although the two are equivalent). For this reason, if $\Phi$ is a congruence with associated ideal $I$, we will frequently abuse the notation and refer to the quotient ring $R/I$ rather than $R/\Phi$, with the understanding that $R/I$ is the quotient with respect to the congruence $y-x \in I$.
 
+\subsection*{The First Isomorphism Theorem}
+
+Defining a mapping on a quotient set is generally difficult, for the same reason that defining operations on a quotient set is difficult; the most natural thing to try is to define our mapping in terms of representatives, but this is generally not well-defined.
+
+The first important result about quotient rings gives us a standard way to construct homomorphisms on a quotient ring that bypasses this difficulty. This result, known as the First Isomorphism Theorem, is due to Emmy Noether, and is an important tool in ring theory.
+
+\begin{prop}#[First Isomorphism Theorem for Rings#]
+Let $R$ be a ring and $I$ an ideal of $R$.
+\begin{enumerate}
+\item The natural projection $\pi : R \rightarrow R/I$ given by $\pi(x) = x+I$ is a ring homomorphism, which is unital if $R$ is unital.
+\item If $\varphi : R \rightarrow S$ is a ring homomorphism such that $I \subseteq \KER{\varphi}$, then there is a ring homomorphism $\overline{\varphi} : R/I \rightarrow S$ such that $\overline{\varphi}(x + I) = \varphi(x)$. That is, $\varphi = \overline{\varphi} \circ \pi$.
+\end{enumerate}
+\end{prop}
+
+Another way to state FIT is as follows: If $\varphi$ is a ring homomorphism and $I$ an ideal contained in the kernel of $\varphi$, then $\varphi$ factors through the projection induced by $I$. This terminology is inspired by the commutative diagram associated to FIT, in which we literally have $\varphi = \overline{\varphi} \circ \pi$.
+
 \subsection*{Exercises}
 
 \begin{enumerate}
