@@ -60,6 +60,13 @@ $\ZZ/(n)$ is a field if and only if $n$ is prime.
 \item \textbf{Nilpotence.} We say that an element $r$ in a ring $R$ is \emph{nilpotent} if $r^n = 0$ for some natural number $n$.
 
 \item \textbf{Skew fields.}
+
+\item \textbf{Every finite domain is a field.} Let $R$ be a \emph{finite} integral domain. In this exercise we will show that $R$ must be a field.
+\begin{enumerate}
+\item Let $r \in R$ be a nonzero element and define a mapping $\varphi_r : R \rightarrow R$ by $\varphi_r(x) = rx$. Show that $\varphi_r$ must be injective.
+\item Deduce that $\varphi_r$ must be bijective.
+\item Deduce that $r$ must be a unit in $R$, and then that $R$ must be a field.
+\end{enumerate}
 \end{enumerate}
 
 \end{document}

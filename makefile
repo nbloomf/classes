@@ -93,6 +93,7 @@ aa: \
   abstract/25-over-a-ufd.pdf \
   abstract/26-irreducibility-criteria.pdf \
   abstract/27-interpolation.pdf \
+  abstract/29-quotient-rings-and-ideals.pdf \
   abstract/zz-axioms-screen.pdf \
   abstract/hw2.pdf
 
@@ -183,6 +184,9 @@ abstract/26-irreducibility-criteria.pdf: abstract/fvl/notes/26-irreducibility-cr
 
 abstract/27-interpolation.pdf: abstract/fvl/notes/27-interpolation.fvl
 	$(call document,abstract,notes,27-interpolation)
+
+abstract/29-quotient-rings-and-ideals.pdf: abstract/fvl/notes/29-quotient-rings-and-ideals.fvl
+	$(call document,abstract,notes,29-quotient-rings-and-ideals)
 
 abstract/zz-axioms-screen.pdf: abstract/fvl/slides/zz-axioms.fvl
 	$(call slides,abstract,zz-axioms)

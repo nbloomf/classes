@@ -88,4 +88,10 @@ If $R$ is a domain, then every prime element is also irreducible.
 Suppose $p \in R$ is prime, and factor $p$ as $p = ab$. In particular, $p|ab$, and since $p$ is prime, WLOG we have $p|a$. Say $a = pt$. Now $p = ab = ptb$, and by cancellation, $tb = 1$. In particular $b$ is a unit. Thus $p$ is irreducible.
 \end{proof}
 
+\subsection*{Exercises}
+
+\begin{enumerate}
+\item (Divisibility in noncommutative rings.)
+\end{enumerate}
+
 \end{document}
