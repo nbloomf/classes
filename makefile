@@ -284,6 +284,7 @@ ca: \
   ca/a1-lines-and-circles.pdf \
   ca/a2-transformations.pdf \
   ca/a3-polynomials-1.pdf \
+  ca/a4-polynomials-2.pdf \
   ca/r0-prereq.pdf \
   ca/r1-equations.pdf \
   ca/r2-graphs-and-functions.pdf \
@@ -312,6 +313,9 @@ ca/a2-transformations.pdf: ca/fvl/activity/a2-transformations.fvl
 
 ca/a3-polynomials-1.pdf: ca/fvl/activity/a3-polynomials-1.fvl
 	$(call document,ca,activity,a3-polynomials-1)
+
+ca/a4-polynomials-2.pdf: ca/fvl/activity/a4-polynomials-2.fvl
+	$(call document,ca,activity,a4-polynomials-2)
 
 ca/r0-prereq.pdf: ca/fvl/review/r0-prereq.fvl
 	$(call document,ca,review,r0-prereq)

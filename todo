@@ -6,3 +6,7 @@
 "[Due to the use of negative numbers] the Science of Algebra, or Universal Arithmetick, has been disgraced and rendered obscure and difficult, and disgusting to men of a just taste for accurate reasoning." - F. Maseres, Tracts on the Resolution of Affected Algebraick Equations (1800)
 
 abstract: local rings, classification of fin. comm. rings as direct sums of local rings. jacobson radical, annihilator, radical of an ideal, primary ideals
+
+geom:
+* euclidean planes
+  * inverse of a point (give the construction that works whether pt is inside or outside)
