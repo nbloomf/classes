@@ -218,7 +218,8 @@ geo: \
   geom/14-euclidean-planes.pdf \
   geom/16-hyperbolic-half-planes.pdf \
   geom/a1-basic-constructions.pdf \
-  geom/a2-hyperbolic-constructions.pdf
+  geom/a2-hyperbolic-constructions.pdf \
+  geom/a3-symmetries-of-the-square.pdf
 
 geom/syllabus.pdf: geom/fvl/syllabus/syllabus.fvl
 	$(call copy,geom,syllabus,nsulogo.png)
@@ -275,6 +276,9 @@ geom/a1-basic-constructions.pdf: geom/fvl/activity/a1-basic-constructions.fvl
 geom/a2-hyperbolic-constructions.pdf: geom/fvl/activity/a2-hyperbolic-constructions.fvl
 	$(call document,geom,activity,a2-hyperbolic-constructions)
 
+geom/a3-symmetries-of-the-square.pdf: geom/fvl/activity/a3-symmetries-of-the-square.fvl
+	$(call document,geom,activity,a3-symmetries-of-the-square)
+
 
 ca: \
   ca/syllabus09.pdf \
@@ -286,6 +290,7 @@ ca: \
   ca/a3-polynomials-1.pdf \
   ca/a4-polynomials-2.pdf \
   ca/a5-polynomials-3.pdf \
+  ca/a6-rational-functions.pdf \
   ca/r0-prereq.pdf \
   ca/r1-equations.pdf \
   ca/r2-graphs-and-functions.pdf \
@@ -320,6 +325,9 @@ ca/a4-polynomials-2.pdf: ca/fvl/activity/a4-polynomials-2.fvl
 
 ca/a5-polynomials-3.pdf: ca/fvl/activity/a5-polynomials-3.fvl
 	$(call document,ca,activity,a5-polynomials-3)
+
+ca/a6-rational-functions.pdf: ca/fvl/activity/a6-rational-functions.fvl
+	$(call document,ca,activity,a6-rational-functions)
 
 ca/r0-prereq.pdf: ca/fvl/review/r0-prereq.fvl
 	$(call document,ca,review,r0-prereq)
