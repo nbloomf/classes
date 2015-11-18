@@ -10,3 +10,6 @@ abstract: local rings, classification of fin. comm. rings as direct sums of loca
 geom:
 * euclidean planes
   * inverse of a point (give the construction that works whether pt is inside or outside)
+* tesselations
+* type isometry notes
+* linkages
