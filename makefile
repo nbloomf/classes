@@ -96,7 +96,8 @@ aa: \
   abstract/29-quotient-rings-and-ideals.pdf \
   abstract/30-ideal-arithmetic-and-generating-sets.pdf \
   abstract/zz-axioms-screen.pdf \
-  abstract/hw2.pdf
+  abstract/hw2.pdf \
+  abstract/final.pdf
 
 abstract/syllabus.pdf: abstract/fvl/syllabus/syllabus.fvl
 	$(call copy,abstract,syllabus,nsulogo.png)
@@ -198,6 +199,9 @@ abstract/zz-axioms-screen.pdf: abstract/fvl/slides/zz-axioms.fvl
 abstract/hw2.pdf: abstract/fvl/homework/hw2.fvl
 	$(call document,abstract,homework,hw2)
 
+abstract/final.pdf: abstract/fvl/homework/final.fvl
+	$(call document,abstract,homework,final)
+
 
 
 geo: \
@@ -294,6 +298,7 @@ ca: \
   ca/r0-prereq.pdf \
   ca/r1-equations.pdf \
   ca/r2-graphs-and-functions.pdf \
+  ca/r3-polynomials-and-conics.pdf \
   ca/t1-equations.pdf \
   ca/t2-graphs-and-functions.pdf
 
@@ -337,6 +342,9 @@ ca/r1-equations.pdf: ca/fvl/review/r1-equations.fvl
 
 ca/r2-graphs-and-functions.pdf: ca/fvl/review/r2-graphs-and-functions.fvl
 	$(call document,ca,review,r2-graphs-and-functions)
+
+ca/r3-polynomials-and-conics.pdf: ca/fvl/review/r3-polynomials-and-conics.fvl
+	$(call document,ca,review,r3-polynomials-and-conics)
 
 ca/t1-equations.pdf: ca/fvl/test/t1-equations.fvl
 	$(call document,ca,test,t1-equations)

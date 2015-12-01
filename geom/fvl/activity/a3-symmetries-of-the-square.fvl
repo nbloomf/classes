@@ -9,7 +9,7 @@
 
 \noindent In the last activity, we found eight different isometries of the square: three rotations, four reflections, and the identity. We can give these isometries names.
 \begin{itemize*}
-\item Let $R_{90}$, $R_{180}$, and $R_{270}$ denote the clockwise rotations by 90, 180, and 270 degrees, respectively.
+\item Let $R_{90}$, $R_{180}$, and $R_{270}$ denote the counterclockwise rotations by 90, 180, and 270 degrees, respectively.
 \item Let $H$ and $V$ denote the horizontal-axis and vertical-axis reflections, respectively.
 \item Let $F$ and $B$ denote the ``forward slash''-axis and ``backward slash''-axis reflections, respectively.
 \item Let $I$ denote the identity isometry.
