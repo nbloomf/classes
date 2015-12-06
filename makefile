@@ -300,7 +300,8 @@ ca: \
   ca/r2-graphs-and-functions.pdf \
   ca/r3-polynomials-and-conics.pdf \
   ca/t1-equations.pdf \
-  ca/t2-graphs-and-functions.pdf
+  ca/t2-graphs-and-functions.pdf \
+  ca/t3-polynomials-and-conics.pdf
 
 ca/syllabus09.pdf: ca/fvl/syllabus/syllabus09.fvl ca/fvl/syllabus/syllabus10.fvl
 	$(call copy,ca,syllabus,nsulogo.png)
@@ -351,3 +352,6 @@ ca/t1-equations.pdf: ca/fvl/test/t1-equations.fvl
 
 ca/t2-graphs-and-functions.pdf: ca/fvl/test/t2-graphs-and-functions.fvl
 	$(call document,ca,test,t2-graphs-and-functions)
+
+ca/t3-polynomials-and-conics.pdf: ca/fvl/test/t3-polynomials-and-conics.fvl
+	$(call document,ca,test,t3-polynomials-and-conics)
