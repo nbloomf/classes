@@ -1,0 +1,118 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{neb-macros}
+\usepackage{flexfig}
+
+\begin{document}
+
+\ActivityTitle[class=Calculus I, number=1, name=Limits (Solutions)]
+
+\begin{enumerate}
+\item Compute the following limit. \[ \lim_{x \rightarrow 3} \left( 2 x^2 + 6 x + 7 \right) \]
+
+\textbf{Solution:} Since this expression is a polynomial, we can find the limit as $x$ approaches 3 by evaluating at 3.
+
+\begin{eqnarray*}
+\lim_{x \rightarrow 3} \left( 2 x^2 + 6 x + 7 \right)
+ & = & 2 (3)^2 + 6 (3) + 7 \\
+ & = & 18 + 18 + 7 \\
+ & = & 43.
+\end{eqnarray*}
+
+
+  
+\vspace{1cm}
+
+\item Compute the following limit. \[ \displaystyle\lim_{x \rightarrow 2} \frac{x^2 + 3x - 10}{x - 2} \]
+
+\textbf{Solution:} Note that this rational function is not defined at $x = 2$. However, factoring the numerator we have 
+
+\begin{eqnarray*}
+\lim_{x \rightarrow 2} \frac{x^2 + 3x - 10}{x - 2}
+ & = & \lim_{x \rightarrow 2} \frac{(x - 2)(x + 5)}{x - 2} \\
+ & = & \lim_{x \rightarrow 2} \frac{\cancel{(x - 2)}(x + 5)}{\cancel{x - 2}} \\
+ & = & \lim_{x \rightarrow 2} (x + 5) \\
+ & = & 7. \\
+\end{eqnarray*}
+
+
+  
+\vspace{1cm}
+
+\item Compute the following limit. \[ \lim_{x \rightarrow 6} \frac{x^2 - 36}{x - 6} \]
+
+\textbf{Solution:} Note that this expression is not defined if $x = 6$. However, we can factor the numerator as a difference of squares and cancel.
+
+\[ \lim_{x \rightarrow 6} \frac{x^2 - 36}{x - 6} = \lim_{x \rightarrow 6} \frac{(x - 6)(x + 6)}{x - 6} = \lim_{x \rightarrow 6} (x + 6) = 12 \]
+
+
+  
+\vspace{1cm}
+
+\item Compute the following limit. \[ \lim_{x \rightarrow 16} \frac{x - 16}{\sqrt{x} - 4} \]
+
+\textbf{Solution:} Note that this expression is not defined if $x = 16$. However, we can factor the numerator as a difference of squares.
+
+\[ \lim_{x \rightarrow 16} \frac{x - 16}{\sqrt{x} - 4} = \lim_{x \rightarrow 16} \frac{(\sqrt{x} - 4)(\sqrt{x} + 4)}{\sqrt{x} - 4} = \lim_{x \rightarrow 16} (\sqrt{x} + 4) = 8 \]
+
+
+  
+\vspace{1cm}
+
+\item Compute the following limit. \[ \lim_{x \rightarrow 20} \frac{\sqrt{x - 4} - 4}{x - 20} \]
+
+\textbf{Solution:} Note that this expression is not defined if $x = 20$. But also note that if we multiply the numerator by its radical conjugate, something nice happens:
+\[ \left(\sqrt{x - 4} - 4\right)\left(\sqrt{x - 4} + 4\right) = x - 4 - 16 = x - 20. \]
+Let's try multiplying by 1, but write 1 as $\sqrt{x - 4} + 4$ over itself.
+\begin{eqnarray*}
+\lim_{x \rightarrow 20} \frac{\sqrt{x - 4} - 4}{x - 20} & = & \lim_{x \rightarrow 20} \left( \frac{\sqrt{x - 4} - 4}{x - 20} \cdot \frac{\sqrt{x - 4} + 4}{\sqrt{x - 4} + 4} \right) \\
+ & = & \lim_{x \rightarrow 20} \frac{x - 20}{(x - 20)(\sqrt{x - 4} + 4)} \\
+ & = & \lim_{x \rightarrow 20} \frac{1}{\sqrt{x - 4} + 4} \\
+ & = & \frac{1}{8}
+\end{eqnarray*}
+
+
+  
+\vspace{1cm}
+
+\item Compute the following limit. \[ \lim_{x \rightarrow 34} \frac{\sqrt{x - 9} - 5}{x - 34} \]
+
+\textbf{Solution:} Note that this expression is not defined if $x = 34$. But also note that if we multiply the numerator by its radical conjugate, something nice happens:
+\[ \left(\sqrt{x - 9} - 5\right)\left(\sqrt{x - 9} + 5\right) = x - 9 - 25 = x - 34. \]
+Let's try multiplying by 1, but write 1 as $\sqrt{x - 9} + 5$ over itself.
+\begin{eqnarray*}
+\lim_{x \rightarrow 34} \frac{\sqrt{x - 9} - 5}{x - 34} & = & \lim_{x \rightarrow 34} \left( \frac{\sqrt{x - 9} - 5}{x - 34} \cdot \frac{\sqrt{x - 9} + 5}{\sqrt{x - 9} + 5} \right) \\
+ & = & \lim_{x \rightarrow 34} \frac{x - 34}{(x - 34)(\sqrt{x - 9} + 5)} \\
+ & = & \lim_{x \rightarrow 34} \frac{1}{\sqrt{x - 9} + 5} \\
+ & = & \frac{1}{10}
+\end{eqnarray*}
+
+
+  
+\vspace{1cm}
+
+\item Compute the following limit. \[ \lim_{x \rightarrow 5} \frac{x^3 - 5x^2 - 4x + 20}{x - 5} \]
+
+\textbf{Solution:} Note that this rational function is not defined if $x = 5$. However, $5$ is a root of both the numerator and the denominator, so we can factor (either by grouping or using long or synthetic division) and cancel.
+\begin{eqnarray*}
+\lim_{x \rightarrow 5} \frac{x^3 - 5x^2 - 4x + 20}{x - 5} & = & \lim_{x \rightarrow 5} \frac{x^2(x - 5) - 4(x - 5)}{x - 5} \\
+ & = & \lim_{x \rightarrow 5} \frac{(x - 5)(x^2 - 4)}{x - 5} \\
+ & = & \lim_{x \rightarrow 5} (x^2 - 4) \\
+ & = & 21
+\end{eqnarray*}
+
+
+  
+\vspace{1cm}
+
+\item Compute the following limit. \[ \lim_{x \rightarrow 2} \frac{x^3 - 6x^2 + 11x - 6}{x - 2} \]
+
+\textbf{Solution:} Note that this rational function is not defined if $x = 2$. However, $2$ is a root of both the numerator and the denominator, so we can factor (using either long or synthetic division) and cancel.
+\[ \lim_{x \rightarrow 2} \frac{x^3 - 6x^2 + 11x - 6}{x - 2} = \lim_{x \rightarrow 2} \frac{(x - 2)(x^2 - 4x + 3)}{x - 2} = \lim_{x \rightarrow 2} (x^2 - 4x + 3) = -1 \]
+
+
+  
+\vspace{1cm}
+\end{enumerate}
+
+\end{document}

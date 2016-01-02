@@ -1,0 +1,105 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{neb-macros}
+\usepackage{flexfig}
+
+\begin{document}
+
+\ActivityTitle[class=Calculus I, number=2, name=Continuity (Solutions)]
+
+\begin{enumerate}
+\item Compute the limit of the difference quotient \[ \lim_{x \rightarrow t} \frac{f(x) - f(t)}{x - t} \] when $f(x) = 9 x + 12$ and $t = 7$.
+
+\textbf{Solution:} We have
+\begin{eqnarray*}
+\lim_{x \rightarrow 7} \frac{f(x) - f(7)}{x - 7} & = & \lim_{x \rightarrow 7} \frac{(9 x + 12) - (9 \cdot 7 + 12)}{x - 7} \\
+ & = & \lim_{x \rightarrow 7} \frac{9 x - 9 \cdot 7}{x - 7} \\
+ & = & \lim_{x \rightarrow 7} \frac{9(x - 7)}{x - 7} \\
+ & = & \lim_{x \rightarrow 7} 9 \\
+ & = & 9 \\
+\end{eqnarray*}
+
+
+  
+
+\item Compute the limit of the difference quotient \[ \lim_{x \rightarrow t} \frac{f(x) - f(t)}{x - t} \] when $f(x) = 12 x^2 + 11 x + 9$ and $t = 7$.
+
+\textbf{Solution:} We have
+\begin{eqnarray*}
+\lim_{x \rightarrow 7} \frac{f(x) - f(7)}{x - 7} & = & \lim_{x \rightarrow 7} \frac{(12 x^2 + 11 x + 9) - (12 (7)^2 + 11(7) + 9)}{x - 7} \\
+ & = & \lim_{x \rightarrow 7} \frac{12 x^2 - 12(7)^2 + 11 x - 11(7) + 9 - 9}{x - 7} \\
+ & = & \lim_{x \rightarrow 7} \frac{12(x^2 - 7^2) + 11(x - 7)}{x - 7} \\
+ & = & \lim_{x \rightarrow 7} \frac{12(x - 7)(x + 7) + 11(x - 7)}{x - 7} \\
+ & = & \lim_{x \rightarrow 7} \frac{(x - 7)(12(x + 7) + 11)}{x - 7} \\
+ & = & \lim_{x \rightarrow 7} \left( 12(x + 7) + 11 \right) \\
+ & = & 12(7 + 7) + 11\\
+ & = & 179
+\end{eqnarray*}
+
+
+  
+
+\item Compute the limit of the difference quotient \[ \lim_{x \rightarrow t} \frac{f(x) - f(t)}{x - t} \] when $f(x) = \sqrt{x + 2}$ and $t = 1$.
+
+\textbf{Solution:} We have
+\begin{eqnarray*}
+\lim_{x \rightarrow 1} \frac{f(x) - f(1)}{x - 1} & = & \lim_{x \rightarrow 1} \frac{\sqrt{x + 2} - \sqrt{3}}{x - 1} \\
+ & = & \lim_{x \rightarrow 1} \left( \frac{\sqrt{x + 2} - \sqrt{3}}{x - 1} \cdot \frac{\sqrt{x + 2} + \sqrt{3}}{\sqrt{x + 2} + \sqrt{3}} \right) \\
+ & = & \lim_{x \rightarrow 1} \frac{(x + 2) - (3)}{(x - 1)\left( \sqrt{x + 2} + \sqrt{3} \right)} \\
+ & = & \lim_{x \rightarrow 1} \frac{x - 1}{(x - 1)\left( \sqrt{x + 2} + \sqrt{3} \right)} \\
+ & = & \lim_{x \rightarrow 1} \frac{1}{\sqrt{x + 2} + \sqrt{3}} \\
+ & = & \frac{1}{2\sqrt{3}} \\
+\end{eqnarray*}
+
+
+  
+
+\item Compute the following limit. \[ \lim_{x \rightarrow 0} \frac{\sin(2 x)}{x} \]
+
+\textbf{Solution:} Note that
+\begin{eqnarray*}
+\lim_{x \rightarrow 0} \frac{\sin(2 x)}{x}
+ & = & \lim_{x \rightarrow 0} \frac{k\sin(2 x)}{2 x} \\
+ & = & 2 \lim_{x \rightarrow 0} \frac{\sin(2 x)}{2 x} \\
+ & = & 2 \lim_{x \rightarrow 0} \sinc(2 x) \\
+ & = & 2 \sinc\left( \lim_{x \rightarrow 0} 2 x \right) \quad \mathrm{(since}\ \sinc\ \mathrm{is\ continuous)} \\
+ & = & 2 \sinc(0) \\
+ & = & 2.
+\end{eqnarray*}
+
+
+  
+
+\item Compute the following limit. \[ \lim_{x \rightarrow 0} \frac{7 x^2 + 8 x + \sin x}{x} \]
+
+\textbf{Solution:} This expression is not defined if $x = 0$. However, we can split this fraction like so:
+
+\begin{eqnarray*}
+\lim_{x \rightarrow 0} \frac{7 x^2 + 8 x + \sin(x)}{x}
+ & = & \lim_{x \rightarrow 0} \left( \frac{7 x^2 + 8 x}{x} + \frac{\sin x}{x} \right) \\
+ & = & \lim_{x \rightarrow 0} \left( 7 x + 8 + \frac{\sin x}{x} \right). \\
+\end{eqnarray*}
+
+Recall that the limit of a sum is the sum of limits, \emph{provided} the limit of each summand exists. In this case they do, and we have
+
+\begin{eqnarray*}
+ & = & \lim_{x \rightarrow 0} \left( 7 x + 8 \right) + \lim_{x \rightarrow 0} \frac{\sin x}{x} \\
+ & = & 8 + 1 \\
+ & = & 9. \\
+\end{eqnarray*}
+
+
+  
+
+\item Let $f(x)$ be the function \[ f(x) = \left\{ \begin{array}{ll} \frac{x-b}{b + 3} & \mathrm{if}\ x < 0 \\ & \\ x^2 + b & \mathrm{if}\ x \geq 0. \end{array}\right. \] Find the value(s) of the constant $b$ such that $f(x)$ is continuous everywhere.
+
+\textbf{Solution:} Remember that $\dlim_{x \rightarrow 0} f(x)$ exists precisely when the one-sided limits $\dlim_{x \rightarrow 0^+} f(x)$ and $\dlim_{x \rightarrow 0^-} f(x)$ exist and are equal to one another. In this case, we have \[ \lim_{x \rightarrow 0^+} f(x) = \lim_{x \rightarrow 0^+} (x^2 + b) = b \] and \[ \lim_{x \rightarrow 0^-} f(x) = \lim_{x \rightarrow 0^+} \frac{x-b}{b + 3} = \frac{-b}{b + 3}. \]
+Setting these equal, we have \[ b = \frac{-b}{b + 3}. \]
+The values for $b$ we want are precisely the solutions of this equation.
+Clearing denominators, we have \[ b^2 + 3 b = -b, \] and solving for zero we have \[ b^2 + 4b = 0 \quad\quad \mathrm{which\ factors\ as}\ \quad\quad b (b + 4) = 0. \]
+So $b = 0$ or $b = -4$.
+
+  
+\end{enumerate}
+
+\end{document}

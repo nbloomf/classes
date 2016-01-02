@@ -1,0 +1,117 @@
+\documentclass{article}
+\usepackage{flexfig}
+\usepackage{neb-titles}
+
+\SetClassName{Calculus I}
+\SetClassNumber{Math 2614}
+\SetClassCRN{30086}
+\SetClassSection{2}
+\SetInstructor{Nathan Bloomfield}
+\SetOffice{SC 252}
+\SetOfficeHours{MWF 11--12, Tu 9--10, 11--3}
+\SetEmail{bloomfie#@nsuok.edu}
+\SetInstitution{NSU}
+\SetLocation{SC 246}
+\SetTerm{Spring}
+\SetYear{2015}
+\SetClassTime{10:00--10:50 MWF}
+
+\begin{document}
+
+\SyllabusTitle
+
+\begin{enumerate}
+\item \textbf{Prerequisites.} Math 2113.
+
+
+\item \textbf{Catalog Description of Course.} Functions, limits, derivatives, applications of the derivative, the definite integral, the Fundamental Theorem of Calculus and applications of integration.
+
+
+\item \textbf{Course Purpose.} This course provides the mathematical development of functions, limits, derivatives, applications of the derivative, the definite integral, the Fundamental Theorem of Calculus and applications of integration.
+
+
+\item \textbf{Student Learning Outcomes.} The student will be expected to achieve the following objectives:
+\begin{itemize*}
+\item Communicate with appropriate mathematical symbols;
+\item Learn Functions;
+\item Limits;
+\item Derivatives;
+\item Applications of the derivative;
+\item The definite integral;
+\item The Fundamental Theorem of Calculus; and
+\item Applications of integration. 
+\end{itemize*}
+
+
+\item \textbf{Instructional Materials.}
+\begin{itemize*}
+\item \emph{Calculus}, 13\textsuperscript{th} edition, by Thomas.
+\item A basic scientific calculator is recommended but not required.
+\end{itemize*}
+
+
+\item \textbf{Course Topics.} We will cover the following sections in the textbook.
+\begin{itemize*}
+\item Chapter 2: Limits and Continuity, Sections 2.1--2.6
+\item Chapter 3: Derivatives, Sections 3.1--3.9
+\item Chapter 4: Applications of Derivatives, Sections 4.1--4.7
+\item Chapter 5: Integrals, Sections 5.1--5.6
+\end{itemize*}
+
+
+\item \textbf{Instructional Procedures.} This is a primarily lecture-based course. Some class meetings will also include an activity assignment which will be worked on in small groups.
+
+
+\item \textbf{Student Performance Activities (Attendance/Punctuality):} I do not give points for attendance. However, many class meetings will include graded assignments. It is to your benefit to come to class every day. If you are unable to come to class, plan to get notes and handouts from another student.
+
+
+\item \textbf{Assignment Due Dates.} The exams are tentatively scheduled as follows. I will announce any changes in class.
+\begin{center}
+\begin{tabular}{rl}
+Test 1     & Jan 30     \\
+Test 2     & Feb 27     \\
+Test 3     & Apr 3      \\
+Final Exam & Final week \\
+\end{tabular}
+\end{center}
+
+
+\item \textbf{Student Evaluation.} Grades will be based on the following assignments.
+\begin{itemize*}
+\item#[(100 pts.)#] \textbf{Quizzes:} There will be several short quizzes, worth 10 points each. I will only count the best 10 scores.
+\item#[(100 pts.)#] \textbf{Activities:} We will work several problem sets in class, each worth 10 points, and I will take the best 10. These will be graded for completion on a 0-5-10 scale; 0 points for no submission, 5 points for a partial submission, and 10 points for a complete submission.
+\item#[(500 pts.)#] \textbf{Exams:} There will be 3 chapter tests during the semester, worth 100 points each, and a comprehensive final exam worth 200 points.
+\item#[(100 pts.)#] \textbf{Exam Reviews:} Each test will be preceded by a test review, worth 25 points each.
+\end{itemize*}
+In each section I will also assign some homework problems for practice. These will not be graded, but it is strongly recommended that you work them.
+
+There are 800 points available, and all points are created equal: the final grade, as a percentage, will be computed as follows: \#[ \textrm{Number of points earned}/8.\#] A final grade of 90 or better is an A; a grade in the interval $#[80,90)$ is a B, et cetera. I reserve the right to adjust the cutoffs between letter grades downward at my discretion.
+
+
+\item \textbf{Calculator Policy.} Any dedicated non-CAS calculator may be used in this course. For instance, that means no smartphones.
+
+
+\item \textbf{Make-up Policy:} There will be no make-up exams without a good, documented reason. What counts as a ``good'' reason is up to my discretion. If you know in advance that you will miss an exam (e.g. due to travel) let me know as soon as possible so we can schedule an alternative testing time.
+
+
+\item \textbf{Free Tutoring!} Free tutoring is available from the Mathematics Department tutor in SC 264. Check the math department website for hours.
+
+
+\item \textbf{Additional Information.} Please go to 
+
+\begin{center}
+\texttt{http://offices.nsuok.edu/academicaffairs/SyllabiInformation.aspx}
+\end{center}
+
+for important information pertaining to:
+
+\begin{itemize*}
+\item Academic Misconduct
+\item Americans with Disabilities Act (ADA) Compliance
+\item Inclement Weather/Disaster Policy
+\item Teach Act
+\item Release of Confidential Information (FERPA)
+\end{itemize*}
+\end{enumerate}
+
+\end{document}

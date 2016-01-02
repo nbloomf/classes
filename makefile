@@ -64,6 +64,22 @@ ca: FORCE
 	$(call document,ca,test,t3-polynomials-and-conics)
 
 
+calc: FORCE
+	# Activities
+	$(call document,calc,activity,a01-limits)
+	$(call document,calc,activity,a02-continuity)
+	$(call document,calc,activity,a03-differentiation-1)
+	$(call document,calc,activity,a04-differentiation-2)
+
+	$(call solution,calc,activity,a01-limits)
+	$(call solution,calc,activity,a02-continuity)
+	$(call solution,calc,activity,a03-differentiation-1)
+	$(call solution,calc,activity,a04-differentiation-2)
+
+
+stat: FORCE
+
+
 FORCE:
 
 
@@ -84,6 +100,28 @@ define document
   rm -f error
 
   echo -e "\033[1;32mSuccessfully built $(1)/fvl/$(2)/$(3)\033[0m"
+endef
+
+
+
+define solution
+  # Run through feivel
+  cat $(1)/fvl/$(2)/$(3).fvl \
+   | sed 's/@SHOWSOLN := #f/@SHOWSOLN := #t/' \
+   | feivel \
+   | tee error \
+   > $(1)/tex/$(2)/$(3)-sol.tex
+
+  # Generate pdfs
+  pdflatex -interaction=batchmode $(1)/tex/$(2)/$(3)-sol.tex
+  pdflatex -interaction=batchmode $(1)/tex/$(2)/$(3)-sol.tex
+  mv $(3)-sol.pdf $(1)
+
+  # Clean up
+  rm $(3)-sol.aux $(3)-sol.log
+  rm -f error
+
+  echo -e "\033[1;32mSuccessfully built $(1)/fvl/$(2)/$(3)-sol\033[0m"
 endef
 
 

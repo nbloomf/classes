@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{flexfig}
+
+\begin{document}
+
+\ActivityTitle#[class=Calculus I, number=5, name=Differentiation III#]
+
+\begin{enumerate}
+\item Are there any points on the curve $y = \frac{x}{2} + \frac{1}{2x-4}$ where the tangent line has slope -3/2? If so, find them.
+
+\item Find the points on the curve $y = 2x^3 - 3x^2 - 12x + 20$ where the tangent line is
+\begin{enumerate}
+\item horizontal.
+\item perpendicular to $y = 1 - \frac{x}{24}$.
+\item parallel to $y = \sqrt{2} - 12x$.
+\end{enumerate}
+
+\item Find equations for the tangent and normal lines to the curve $xy + 2x - 5y = 2$ at $(3,2)$.
+
+\item Find $\ddx{y}$ for the following functions by implicit differentiation.
+\begin{enumerate}
+\item $\sqrt{xy} = 1$
+\item $y^2 = \dfrac{x}{x+1}$
+\item $y^3 + 4xy - 3x^2 = 2$
+\end{enumerate}
+
+\item Suppose $y$ is a twice-differentiable function defined implicitly by $x^3 + y^3 = 1$. Find a formula for $\ddxII{y}$.
+
+\end{enumerate}
+
+\end{document}

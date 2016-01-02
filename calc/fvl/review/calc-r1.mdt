@@ -1,0 +1,55 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{flexfig}
+
+\begin{document}
+
+\ReviewTitle#[class={Calculus 1}, for={Test 1}#]
+
+\begin{enumerate}
+
+[shuffle
+
+[\item [input ("calc/lim/poly/deg2.mdt")]
+]
+
+[\item [input ("calc/lim/rat/sqrt.mdt")]
+]
+
+[\item [input ("calc/lim/rat/nonmonic2.mdt")]
+]
+
+[\item [input ("calc/lim/infinity/sqrt1.mdt")]
+]
+
+[\item [input ("calc/lim/rat/sqrt2.mdt")]
+]
+
+[\item [input ("calc/lim/rat/diffcube.mdt")]
+]
+
+[\item [input ("calc/lim/rat/monic3b.mdt")]
+]
+
+[\item [input ("calc/lim/infinity/rat/deg1.mdt")]
+]
+
+[\item [input ("calc/lim/diffquot/quadratic.mdt")]
+]
+
+[\item [input ("calc/lim/diffquot/linear.mdt")]
+]
+
+[\item [input ("calc/lim/trig/sinx-over-x/quad.mdt")]
+]
+
+[\item [input ("calc/lim/cts/findconst/lin-quad.mdt")]
+]
+
+[\item [input ("calc/lim/trig/composite/monic2.mdt")]
+]
+
+endshuffle]
+\end{enumerate}
+
+\end{document}
