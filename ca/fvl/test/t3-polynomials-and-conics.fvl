@@ -3,6 +3,9 @@
 \usepackage{neb-formulas}
 \usepackage{flexfig}
 
+\usepackage{graphicx}
+
+
 [import (kreb-scout/ca/poly/endbehavior.fvl)]#
 [import (kreb-scout/ca/poly/division.fvl)]#
 [import (kreb-scout/ca/poly/factor/synthdiv.fvl)]#
@@ -43,6 +46,20 @@
 \item [eval @long.term.asymptote.1] \vspace{6cm}
 
 \item [eval @plot.parabola.1] \vspace{1cm}
+
+\newpage
+
+\item Suppose you and your friends create a catapult and launch a coconut with it.
+\begin{enumerate}
+\item The height of the coconut $t$ seconds after launch is given by $f(t)=128t-16t^2$. How long will the coconut be in the air? (Here we assume it will hit the ground when the height is $0$).
+\vspace{1in}
+\item Viewing a graph of this function below, estimate the maximum height the coconut achieves. \vspace{.25in}\\ 
+Maximum Height: \\ \vspace{.25in}
+\begin{center}
+\includegraphics#[scale=.5#]{ca/tex/coconut.png}
+\end{center}
+\item Recalling that the function of the height of the coconut is $f(t)=128t-16t^2$, use your knowledge about quadratic functions to determine the actual maximum height the coconut achieves.
+\end{enumerate}
 \end{enumerate}
 
 \end{document}
