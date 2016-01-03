@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{flexfig}
+
+\begin{document}
+
+\ActivityTitle#[class=Statistics, number=4, name={Normal Random Variables}#]
+
+\begin{enumerate}
+\item Suppose healthy human body temperatures are normally distributed with mean $98.20^\circ$ F and standard deviation $0.62^\circ$ F.
+\begin{enumerate}
+\item A hospital uses $100.6^\circ$ F as the lowest temperature considered to be a fever. What percentage of healthy people would be considered to have a fever by this definition? Does this percentage suggest that this cutoff is appropriate? \vspace{4cm}
+
+\item Suppose the doctors at this hospital wish to revise their definition of ``fever'' to have a 5\% false positive rate; that is, to choose a new cutoff temperature such that 5\% of healthy peoples' temperatures exceed it. What should the cutoff be? \vspace{4cm}
+\end{enumerate}
+
+\item From 1964 to 1998, US quarters were manufactured so that their weights were normally distributed with mean 5.67 g and standard deviation 0.06 g. Some vending machines allow the operator to adjust the weights of the coins which are accepted; if a large number of slugs are found in the machine, the acceptable weight threshold can be narrowed so that more slugs (and more real quarters) are rejected.
+\begin{enumerate}
+\item Suppose the machine is set to accept coins weighing between 5.64 g and 5.70 g. What percentage of real quarters are rejected? Is this too high? \vspace{4cm}
+
+\newpage
+
+\item Suppose we wish to set the machine so that all real quarters are accepted except those in the top 2.5\% and the bottom 2.5\% by weight. What should the cutoff weights be? \vspace{4cm}
+\end{enumerate}
+
+\item Scores on the 2014 SAT were normally distributed with mean 1511 and standard deviation 312; scores on the 2014 ACT were normally distributed with mean 21.1 and standard deviation 5.1. Assume that the two tests use different scales to measure the same aptitude.
+
+If someone got a 2100 on the SAT in 2014, find their equivalent ACT score. \vspace{4cm}
+
+\item Standing eye heights of women are normally distributed with mean 1516 mm and standard deviation 63 mm.
+\begin{enumerate}
+\item A door peephole is placed at a height that is uncomfortable for women with standing eye heights greater than 1605 mm. What percentage of women will find that height uncomfortable? \vspace{4cm}
+
+\item An architect wants to design a door with a peephole which is comfortable for the highest 99\% of standing eye heights of women. What standing eye height separates the top 99\% of women from the bottom 1\%?
+\end{enumerate} 
+\end{enumerate}
+
+\end{document}

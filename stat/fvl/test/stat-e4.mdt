@@ -1,0 +1,52 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{flexfig}
+
+\begin{document}
+
+\TestTitle#[class=Statistics, name={Test 4}, date={27 Apr}, term=Spring, year=2015, form=A, honor=yes#]
+
+\begin{enumerate}
+\item (10 pts.) Listed here is a random sample of recent salaries of five CEOs of Fortune 500 companies in thousands of dollars.
+
+\#[ 17688 \quad 0.001 \quad 19629 \quad 12408 \quad 14765 \#]
+
+Construct a 95\% confidence interval for the mean annual salary of all CEOs of Fortune 500s.
+
+\vspace{9cm}
+
+\item (10 pts.) In a recent survey of 1003 people, 59\% said that they have never hesitated to give a handshake due to a fear of germs. Construct a 95\% confidence interval for the proportion of all people who have never hesitated to give a handshake due to a fear of germs.
+
+\newpage
+
+\item (10 pts.) During a given 11 year period in Hidalgo County, Texas, 870 people were selected for grand jury duty, and 39\% of them were Americans of Mexican descent. Among the people in Hidalgo county who were eligible for grand jury duty, 79.1\% were Americans of Mexican descent. Use a significance level of $\alpha = 0.01$ to test the claim that Americans of Mexican descent are underrepresented among grand jury members.
+
+\vspace{9cm}
+
+\item (10 pts.) A simple random sample of 1862 newborn Chinese babies had a mean birth weight of 3171 g and a standard deviation of 428 g. Using a significance level of $\alpha = 0.01$, test the claim that the mean birth weight of Chinese babies is less than the mean birth weight of 3369 g for American babies.
+
+\newpage
+
+\item (60 pts.) \textbf{Excel Exercise.} In this exercise, you will find some data on your own and perform some basic analysis on it.
+\begin{itemize}
+\item Find some data; preferably data which interests you. You do not need to collect or measure this data yourself (although you certainly could if you wish). Rather, I suggest seeking out a data set online. Here are some good places to start looking.
+
+\begin{itemize}
+\item#[#] \texttt{http://lib.stat.cmu.edu/datasets/}
+\item#[#] \texttt{http://www.data.gov/}
+\item#[#] \texttt{https://github.com/caesar0301/awesome-public-datasets}
+\end{itemize}
+
+\item Once you have found a good set of data, put it into a spreadsheet. Give your spreadsheet a descriptive title, including your name. \textbf{Clearly label the columns of your data as appropriate and include a reference to your source.}
+
+\item Now formulate a hypothesis about the population mean or population proportion of your data. For example, if your data set consists of the masses of clams caught in the Hudson Bay, your hypothesis might be ``the mean mass of clams in the Hudson Bay is at least 50 g'' or ``at least 30\% of the clams in the Hudson Bay have mass greater than 40 g''. \textbf{State your hypothesis clearly. Then formulate it as a null hypothesis} $H_0$ \textbf{and an alternative hypothesis} $H_1$.
+
+\item Test your hypothesis using an appropriate hypothesis testing method. Choose a significance level ($\alpha = 0.01$ or $\alpha = 0.05$ are reasonable choices). Perform your computations in your spreadsheet. \textbf{Clearly label any numbers or formulas used.}
+
+\item Clearly state the conclusion of your hypothesis test in English.
+
+\item \textbf{Send your clearly named spreadsheet, including your data, your computations, and your conclusions, to me at} \texttt{bloomfie#@nsuok.edu}.
+\end{itemize}
+\end{enumerate}
+
+\end{document}

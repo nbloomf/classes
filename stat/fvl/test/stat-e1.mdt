@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{flexfig}
+
+\begin{document}
+
+\TestTitle#[class=Statistics, name={Test 1}, date={16 Feb}, term=Spring, year=2015, form=A#]
+
+\StatsFacts#[#]
+
+\begin{enumerate}
+\item [input ("stat/compute/zscore/binomial1.mdt")]
+
+\item [input ("stat/match/sampling.mdt")]
+
+\item [input ("stat/prob/dice/d12a.mdt")]
+
+\item [input ("stat/prob/algebra/sum1.mdt")]
+
+\newpage
+
+\item [input ("stat/match/vocab.mdt")]
+
+\item [input ("stat/prob/dice/d6a.mdt")]
+
+\item [input ("stat/prob/dice/2d6a.mdt")]
+
+\item [input ("stat/prob/cards/single.mdt")]
+
+\item [input ("stat/prob/algebra/card1.mdt")]
+
+\item [input ("stat/prob/conditional/study.mdt")]
+
+\newpage
+
+\item#[Bonus:#] [input ("stat/prob/cards/hand2.mdt")]
+\end{enumerate}
+
+\end{document}

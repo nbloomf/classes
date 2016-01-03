@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{flexfig}
+
+\begin{document}
+
+\ActivityTitle#[class=Statistics, number=4, name={Normal Random Variables}#]
+
+\begin{enumerate}
+\item An opinion poll found that out of 1005 American respondents, 543 said that they felt safer knowing that the U.S. has nuclear weapons. Construct an 80\% confidence interval for the true proportion of Americans who feel safer with nuclear weapons.
+
+\vspace{4cm}
+
+\item A survey of 427 women found that 29\% purchase books online.
+\begin{enumerate}
+\item Among the 427 women surveyed, how many purchased books online? \vspace{1cm}
+\item Construct a 95\% confidence interval for the percentage of all women who purchase books online. \vspace{3cm}
+\end{enumerate}
+
+\item A recent survey of 1002 people found that 70\% voted in the last presidential election. Voting records show that 61\% of eligible voters actually did vote.
+\begin{enumerate}
+\item Using the survey data, find a 98\% confidence interval for the proportion of people who claim to have voted. \vspace{4cm}
+\item Are the survey results consistent with the actual voter turnout of 61\%? Why or why not? \vspace{2cm}
+\end{enumerate}
+
+\newpage
+
+\item An experiment has been conducted to test the effectiveness of garlic at lowing cholesterol. 49 subjects are treated with raw garlic, and LDL cholersterol levels are measured before and after treatment. The change in cholesterol have a mean of 0.4 and standard deviation of 21.0. Construct a 98\% confidence interval to estimate the mean net change in LDL cholesterol. Does this confidence interval suggest anything about the effectiveness of garlic as a treatment for high cholesterol?
+
+\vspace{4cm}
+
+\item A clinical trial was conducted to test the effectiveness of the drug zopiclone for treating insomnia in older patients. Before treatment, 16 subjects had a mean wake time of 102.8 min. After treatment, the 16 subjects had a mean wake time of 98.9 min with standard deviation 42.3 min. Construct a 98\% confidence interval for the mean wake time of all patients treated for insomnia with zopiclone. Does your result suggest anything about the effectiveness of zopiclone at treating insomnia?
+\end{enumerate}
+
+\end{document}
