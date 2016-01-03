@@ -1,5 +1,2 @@
 # Generated Files
-*/pdf/*
-*/tex/*
-
-*.pdf
+*/*.pdf
