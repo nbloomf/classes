@@ -68,6 +68,10 @@ ca: FORCE
 
 
 calc: FORCE
+	# Syllabus
+	$(call copy,calc,syllabus,nsulogo.png)
+	$(call document,calc,syllabus,calc-syllabus)
+
 	# Activities
 	$(call document,calc,activity,a01-limits)
 	$(call document,calc,activity,a02-continuity)
@@ -114,7 +118,7 @@ endef
 
 
 define solution
-  # Run through feivel
+  # Run through feivel after changing SHOWSOLN flag
   cat $(1)/fvl/$(2)/$(3).fvl \
    | sed 's/@SHOWSOLN := #f/@SHOWSOLN := #t/' \
    | feivel \

@@ -1,0 +1,115 @@
+\documentclass{article}
+\usepackage{mdwlist}
+\usepackage#[margin=2cm#]{geometry}
+\usepackage{graphicx}
+
+\begin{document}
+
+\begin{center}
+\includegraphics#[width=6cm#]{ca/tex/syllabus/nsulogo} \\ \vspace{0.5cm}
+College of Science and Health Professions \\
+Department of Mathematics and Computer Science \\
+Fall 2015
+\end{center}
+
+\begin{itemize}
+\item#[#] \textbf{\Large MATH 2614-(CRN), Calculus 1}
+
+\item \textbf{Instructor:} Nathan Bloomfield, Ph.D.
+\begin{itemize}
+\item#[#] \textbf{Email:} \texttt{bloomfie#@nsuok.edu}
+\item#[#] \textbf{Office Location:} SC 252 
+\item#[#] \textbf{Office Hours:} MWF 11--12, MW 8:30--9, 2--4
+\item#[#] \textbf{Website:} \texttt{nbloomf.github.io}
+\end{itemize}
+
+
+\item \textbf{Course Delivery Mode:} Face-to-face
+
+
+\item \textbf{Class Days and Times:} (FIND THIS OUT)
+
+
+\item \textbf{Course Prerequisites and/or Corequisites:} Math 2113.
+
+
+\item \textbf{Catalog Description:} Functions, limits, derivatives, applications of the derivative, the definite integral, the Fundamental Theorem of Calculus and applications of integration.
+
+
+\item \textbf{Course Purpose and Goals:} This course provides the mathematical development of functions, limits, derivatives, applications of the derivative, the definite integral, the Fundamental Theorem of Calculus and applications of integration.
+
+
+\item \textbf{Course Topics:} We will cover the following sections in the textbook.
+\begin{itemize*}
+\item Chapter 2: Limits and Continuity, Sections 2.1--2.6
+\item Chapter 3: Derivatives, Sections 3.1--3.9
+\item Chapter 4: Applications of Derivatives, Sections 4.1--4.7
+\item Chapter 5: Integrals, Sections 5.1--5.6
+\end{itemize*}
+
+
+\item \textbf{Student Learning Outcomes:} The student will be expected to achieve the following objectives:
+\begin{enumerate*}
+\item Communicate with appropriate mathematical symbols;
+\item Compute with and apply functions;
+\item Compute limits;
+\item Compute and apply derivatives;
+\item Compute and apply definite integrals.
+\end{enumerate*}
+
+
+\item \textbf{Instructional Methods:} This is a primarily lecture and demonstration-based course. However, many class meetings will include an activity assignment which will be worked on in small groups.
+
+
+\item \textbf{Learning Outcome Assessment Methods:} Grades will be based on the following assignments.
+\begin{itemize*}
+\item#[20\%.#] \textbf{Activities:} We will work several problem sets in class, each worth 10 points, and I will take the best 10. These will be graded for completion on a 0-5-10 scale; 0 points for no submission, 5 points for a partial submission, and 10 points for a complete submission.
+\item#[60\%.#] \textbf{Exams:} There will be 4 exams throughout the semester, all weighted equally.
+\item#[20\%.#] \textbf{Exam Reviews:} Each test will be preceded by a test review. You are strongly encouraged to complete these before each exam.
+\end{itemize*}
+In each section I will also assign some homework problems for practice. These will not be graded, but it is strongly recommended that you work them.
+
+A final percentage of 90 or better is an A; a percentage in the interval $#[80,90)$ is a B, et cetera. I reserve the right to adjust the cutoffs between letter grades downward at my discretion.
+
+
+\item \textbf{Instructional Materials.} 
+\begin{itemize*}
+\item Required Text: \emph{Calculus}, 13\textsuperscript{th} edition, by Thomas.
+\item A basic scientific calculator is recommended but not required.
+\end{itemize*}
+
+
+\item \textbf{Class and Instructor Policies:}
+\begin{itemize}
+\item \textbf{Attendance:} I do not give points for attendance. However, many class meetings will include graded assignments. It is to your benefit to come to class every day. If you are unable to come to class, plan to get notes and handouts from another student.
+
+\item \textbf{Calculators:} Only a scientific, non-graphing, non-pretty-printing, dedicated calculator will be permitted on exams and quizzes. For instance, that means no TI-8x calculators or smartphones. \textbf{If you are not sure whether your calculator will be allowed on tests, ask me.} For all other non-exam and non-quiz work you are welcome to use whatever calculator you wish unless otherwise stated.
+
+\item \textbf{Make-ups:} There will be no make-up tests without a good, documented reason. What counts as a ``good'' reason is up to me. If you know in advance that you will miss an exam (e.g. due to travel) let me know as soon as possible so we can schedule an alternative testing time.
+\end{itemize}
+
+
+\item \textbf{Academic Policies and Required Information:} Please go to 
+
+\begin{center}
+\texttt{http://offices.nsuok.edu/academicaffairs/SyllabiInformation.aspx}
+\end{center}
+
+for important information pertaining to:
+
+\begin{itemize*}
+\item Academic Misconduct
+\item Americans with Disabilities Act (ADA) Compliance
+\item Inclement Weather/Disaster Policy
+\item Teach Act
+\item Release of Confidential Information (FERPA)
+\item Student Handbook
+\item Textbook Information
+\item Title IX
+\end{itemize*}
+
+
+\item \textbf{Class Calendar:} Test dates are to be determined. I will announce each test in class at least a week in advance.
+\end{itemize}
+
+\end{document}

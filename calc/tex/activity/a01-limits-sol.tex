@@ -8,42 +8,42 @@
 \ActivityTitle[class=Calculus I, number=1, name=Limits (Solutions)]
 
 \begin{enumerate}
-\item Compute the following limit. \[ \lim_{x \rightarrow 5} \left( 5 x^2 + 2 x + 8 \right) \]
+\item Compute the following limit. \[ \lim_{x \rightarrow 2} \left( 4 x^2 + 7 x + 7 \right) \]
 
-\textbf{Solution:} Since this expression is a polynomial, we can find the limit as $x$ approaches 5 by evaluating at 5.
+\textbf{Solution:} Since this expression is a polynomial, we can find the limit as $x$ approaches 2 by evaluating at 2.
 
 \begin{eqnarray*}
-\lim_{x \rightarrow 5} \left( 5 x^2 + 2 x + 8 \right)
- & = & 5 (5)^2 + 2 (5) + 8 \\
- & = & 125 + 10 + 8 \\
- & = & 143.
+\lim_{x \rightarrow 2} \left( 4 x^2 + 7 x + 7 \right)
+ & = & 4 (2)^2 + 7 (2) + 7 \\
+ & = & 16 + 14 + 7 \\
+ & = & 37.
 \end{eqnarray*}
 
 
   
 \vspace{1cm}
 
-\item Compute the following limit. \[ \displaystyle\lim_{x \rightarrow 4} \frac{x^2 - 6x + 8}{x - 4} \]
+\item Compute the following limit. \[ \displaystyle\lim_{x \rightarrow 2} \frac{x^2 + 4x - 12}{x - 2} \]
 
-\textbf{Solution:} Note that this rational function is not defined at $x = 4$. However, factoring the numerator we have 
+\textbf{Solution:} Note that this rational function is not defined at $x = 2$. However, factoring the numerator we have 
 
 \begin{eqnarray*}
-\lim_{x \rightarrow 4} \frac{x^2 - 6x + 8}{x - 4}
- & = & \lim_{x \rightarrow 4} \frac{(x - 4)(x - 2)}{x - 4} \\
- & = & \lim_{x \rightarrow 4} \frac{\cancel{(x - 4)}(x - 2)}{\cancel{x - 4}} \\
- & = & \lim_{x \rightarrow 4} (x - 2) \\
- & = & 2. \\
+\lim_{x \rightarrow 2} \frac{x^2 + 4x - 12}{x - 2}
+ & = & \lim_{x \rightarrow 2} \frac{(x - 2)(x + 6)}{x - 2} \\
+ & = & \lim_{x \rightarrow 2} \frac{\cancel{(x - 2)}(x + 6)}{\cancel{x - 2}} \\
+ & = & \lim_{x \rightarrow 2} (x + 6) \\
+ & = & 8. \\
 \end{eqnarray*}
 
 
   
 \vspace{1cm}
 
-\item Compute the following limit. \[ \lim_{x \rightarrow 4} \frac{x^2 - 16}{x - 4} \]
+\item Compute the following limit. \[ \lim_{x \rightarrow 7} \frac{x^2 - 49}{x - 7} \]
 
-\textbf{Solution:} Note that this expression is not defined if $x = 4$. However, we can factor the numerator as a difference of squares and cancel.
+\textbf{Solution:} Note that this expression is not defined if $x = 7$. However, we can factor the numerator as a difference of squares and cancel.
 
-\[ \lim_{x \rightarrow 4} \frac{x^2 - 16}{x - 4} = \lim_{x \rightarrow 4} \frac{(x - 4)(x + 4)}{x - 4} = \lim_{x \rightarrow 4} (x + 4) = 8 \]
+\[ \lim_{x \rightarrow 7} \frac{x^2 - 49}{x - 7} = \lim_{x \rightarrow 7} \frac{(x - 7)(x + 7)}{x - 7} = \lim_{x \rightarrow 7} (x + 7) = 14 \]
 
 
   
@@ -54,22 +54,6 @@
 \textbf{Solution:} Note that this expression is not defined if $x = 4$. However, we can factor the numerator as a difference of squares.
 
 \[ \lim_{x \rightarrow 4} \frac{x - 4}{\sqrt{x} - 2} = \lim_{x \rightarrow 4} \frac{(\sqrt{x} - 2)(\sqrt{x} + 2)}{\sqrt{x} - 2} = \lim_{x \rightarrow 4} (\sqrt{x} + 2) = 4 \]
-
-
-  
-\vspace{1cm}
-
-\item Compute the following limit. \[ \lim_{x \rightarrow 7} \frac{\sqrt{x - 3} - 2}{x - 7} \]
-
-\textbf{Solution:} Note that this expression is not defined if $x = 7$. But also note that if we multiply the numerator by its radical conjugate, something nice happens:
-\[ \left(\sqrt{x - 3} - 2\right)\left(\sqrt{x - 3} + 2\right) = x - 3 - 4 = x - 7. \]
-Let's try multiplying by 1, but write 1 as $\sqrt{x - 3} + 2$ over itself.
-\begin{eqnarray*}
-\lim_{x \rightarrow 7} \frac{\sqrt{x - 3} - 2}{x - 7} & = & \lim_{x \rightarrow 7} \left( \frac{\sqrt{x - 3} - 2}{x - 7} \cdot \frac{\sqrt{x - 3} + 2}{\sqrt{x - 3} + 2} \right) \\
- & = & \lim_{x \rightarrow 7} \frac{x - 7}{(x - 7)(\sqrt{x - 3} + 2)} \\
- & = & \lim_{x \rightarrow 7} \frac{1}{\sqrt{x - 3} + 2} \\
- & = & \frac{1}{4}
-\end{eqnarray*}
 
 
   
@@ -91,6 +75,22 @@ Let's try multiplying by 1, but write 1 as $\sqrt{x - 7} + 4$ over itself.
   
 \vspace{1cm}
 
+\item Compute the following limit. \[ \lim_{x \rightarrow 8} \frac{\sqrt{x - 4} - 2}{x - 8} \]
+
+\textbf{Solution:} Note that this expression is not defined if $x = 8$. But also note that if we multiply the numerator by its radical conjugate, something nice happens:
+\[ \left(\sqrt{x - 4} - 2\right)\left(\sqrt{x - 4} + 2\right) = x - 4 - 4 = x - 8. \]
+Let's try multiplying by 1, but write 1 as $\sqrt{x - 4} + 2$ over itself.
+\begin{eqnarray*}
+\lim_{x \rightarrow 8} \frac{\sqrt{x - 4} - 2}{x - 8} & = & \lim_{x \rightarrow 8} \left( \frac{\sqrt{x - 4} - 2}{x - 8} \cdot \frac{\sqrt{x - 4} + 2}{\sqrt{x - 4} + 2} \right) \\
+ & = & \lim_{x \rightarrow 8} \frac{x - 8}{(x - 8)(\sqrt{x - 4} + 2)} \\
+ & = & \lim_{x \rightarrow 8} \frac{1}{\sqrt{x - 4} + 2} \\
+ & = & \frac{1}{4}
+\end{eqnarray*}
+
+
+  
+\vspace{1cm}
+
 \item Compute the following limit. \[ \lim_{x \rightarrow 3} \frac{x^3 - 3x^2 - x + 3}{x - 3} \]
 
 \textbf{Solution:} Note that this rational function is not defined if $x = 3$. However, $3$ is a root of both the numerator and the denominator, so we can factor (either by grouping or using long or synthetic division) and cancel.
@@ -105,10 +105,10 @@ Let's try multiplying by 1, but write 1 as $\sqrt{x - 7} + 4$ over itself.
   
 \vspace{1cm}
 
-\item Compute the following limit. \[ \lim_{x \rightarrow 3} \frac{x^3 - 2x^2 - 5x + 6}{x - 3} \]
+\item Compute the following limit. \[ \lim_{x \rightarrow 1} \frac{x^3 + 4x^2 + x - 6}{x - 1} \]
 
-\textbf{Solution:} Note that this rational function is not defined if $x = 3$. However, $3$ is a root of both the numerator and the denominator, so we can factor (using either long or synthetic division) and cancel.
-\[ \lim_{x \rightarrow 3} \frac{x^3 - 2x^2 - 5x + 6}{x - 3} = \lim_{x \rightarrow 3} \frac{(x - 3)(x^2 + x - 2)}{x - 3} = \lim_{x \rightarrow 3} (x^2 + x - 2) = 10 \]
+\textbf{Solution:} Note that this rational function is not defined if $x = 1$. However, $1$ is a root of both the numerator and the denominator, so we can factor (using either long or synthetic division) and cancel.
+\[ \lim_{x \rightarrow 1} \frac{x^3 + 4x^2 + x - 6}{x - 1} = \lim_{x \rightarrow 1} \frac{(x - 1)(x^2 + 5x + 6)}{x - 1} = \lim_{x \rightarrow 1} (x^2 + 5x + 6) = 12 \]
 
 
   
