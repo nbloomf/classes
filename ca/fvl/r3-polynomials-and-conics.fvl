@@ -1,0 +1,45 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{flexfig}
+
+[import (kreb-scout/ca/poly/endbehavior.fvl)]#
+[import (kreb-scout/ca/poly/division.fvl)]#
+[import (kreb-scout/ca/poly/factor/synthdiv.fvl)]#
+[import (kreb-scout/ca/poly/factor/conjugate.fvl)]#
+[import (kreb-scout/ca/ratfun/asymptotes.fvl)]#
+[import (kreb-scout/ca/geom/parabolas.fvl)]#
+[import (kreb-scout/ca/geom/ellipses.fvl)]#
+
+\begin{document}
+
+\ReviewTitle#[class={College Algebra}, for={Test 3}#]
+
+\begin{enumerate}
+\item [eval @algebraic.end.behavior.1] \vspace{1cm}
+
+\item [eval @given.roots.1] \vspace{6cm}
+
+\item [eval @construct.from.roots.1] \vspace{5cm}
+
+\newpage
+
+\item [eval @given.quadratic.root.3] \vspace{9cm}
+
+\item [eval @std.form.parabola.1] \vspace{6cm}
+
+\item [eval @parabolic.eqn.1] \vspace{2cm}
+
+\newpage
+
+\item [eval @find.domain.1] \vspace{5cm}
+
+\item [eval @plot.ellipse.1] \vspace{1cm}
+
+\newpage
+
+\item [eval @long.term.asymptote.1] \vspace{6cm}
+
+\item [eval @plot.parabola.1] \vspace{1cm}
+\end{enumerate}
+
+\end{document}

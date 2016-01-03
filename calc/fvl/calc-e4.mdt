@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{flexfig}
+
+\begin{document}
+
+\TestTitle#[class=Calculus I, name={Test 4}, date={27 Apr}, term=Spring, year=2015, form=A, honor=yes#]
+
+\begin{enumerate}
+\item Compute the derivatives of the following functions.
+\begin{enumerate}
+\item (6 pts.) $f(x) = \frac{x-1}{x+1}$ \vspace{4cm}
+\item (6 pts.) $g(x) = e^{\frac{x-1}{x+1}}$ \vspace{4cm}
+\end{enumerate}
+
+\item (6 pts.) Compute the following limit. \#[ \lim_{h \rightarrow 0} \frac{(x+h)^3 - x^3}{h} \#] \vspace{5cm}
+
+\item (10 pts.) Find the points at which the line tangent to the following function is horizontal. \#[ q(x) = (x+3)^4(2x-1)^7 \#] \vspace{6cm}
+
+\item (5 pts.) Compute the derivative of the following function. \#[ y(x) = \sqrt{\ln \sqrt{x}} \#] \vspace{6cm}
+
+\item (10 pts.) Compute the following indefinite integral. \#[ \int \frac{2x}{x^2 - 25} \wrt{x} \#] \vspace{6cm}
+
+\item (10 pts.) Evaluate the following indefinite integral. \#[ \int x\cos(x^2 - 1) \, \wrt{x} \#] \vspace{5cm}
+
+\item (10 pts.) Evaluate the following indefinite integral. \#[ \int \frac{\sec(x) \tan(x)}{2 + \sec{x}} \wrt{x} \#] \vspace{5cm}
+
+\item (10 pts.) Compute the following. (Hint: break up the integral.) \#[ \int_{-3}^3 |x^3 - 4x| \, \wrt{x} \#] \vspace{8cm}
+
+\item (15 pts.) Solve the following system of equations for $f$. \#[ \left\{ \begin{array}{l} f^\prime(x) = \cos(x) + 3x^2 \\ f(0) = 1 \end{array}\right. \#] \vspace{8cm}
+
+\newpage
+
+\item (12 pts.) A silo is to be constructed in the shape of a cylinder (not including the bases) surmounted by a hemisphere. If we neglect the thickness of the silo's walls and losses due to waste, we can assume the cost of construction depends on the surface area of the silo. Suppose the cost per square unit for the hemispherical part is twice the cost per square unit for the cylindrical part. (Manufacturing spheres is more difficult than manufacturing cylinders.) Suppose also that we need this silo to hold a volume of 2000 cubic meters. What dimensions (radius and height) will minimize the cost of construction?
+
+\begin{center}
+\Silo#[#]
+\end{center}
+\end{enumerate}
+
+\end{document}

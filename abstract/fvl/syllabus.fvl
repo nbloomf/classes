@@ -1,0 +1,113 @@
+\documentclass{article}
+\usepackage{mdwlist}
+\usepackage#[margin=2cm#]{geometry}
+\usepackage{graphicx}
+
+\begin{document}
+
+\begin{center}
+\includegraphics#[width=6cm#]{abstract/tex/nsulogo} \\ \vspace{0.5cm}
+College of Science and Health Professions \\
+Department of Mathematics and Computer Science \\
+Fall 2015
+\end{center}
+
+\begin{itemize}
+\item#[#] \textbf{\Large MATH 3713-20224, Abstract Algebra}
+
+\item \textbf{Instructor:} Nathan Bloomfield, Ph.D.
+\begin{itemize}
+\item#[#] \textbf{Email:} \texttt{bloomfie#@nsuok.edu}
+\item#[#] \textbf{Office Location:} SC 252 
+\item#[#] \textbf{Office Hours:} MWF 11--12, MW 8:30--9, 2--4
+\item#[#] \textbf{Website:} \texttt{nbloomf.github.io}
+\end{itemize}
+
+
+\item \textbf{Course Delivery Mode:} Face-to-face
+
+
+\item \textbf{Class Days and Times:} MWF 12--1 in SC 246
+
+
+\item \textbf{Course Prerequisites and/or Corequisites:} Math 3703; Introduction to Proof.
+
+
+\item \textbf{Catalog Description:} Equivalences, congruences, logic, sets, groups, rings, and fields.
+
+
+\item \textbf{Course Purpose and Goals:} In Abstract Algebra I students invesigate examples, properties, interactions, and structure of rings and fields.
+
+
+\item \textbf{Course Topics:} We will cover (roughly) the following sections in the textbook.
+\begin{itemize*}
+\item Chapter 2: The Integers
+\item Chapter 16: Rings
+\item Chapter 17: Polynomials
+\item Chapter 18: Integral Domains
+\end{itemize*}
+With supplementary material as time permits.
+
+
+\item \textbf{Student Learning Outcomes:} The student will be expected to achieve the following objectives.
+\begin{itemize*}
+\item Understand the motivation for the definitions of ring, integral domain, and field;
+\item Prove various properties of rings and ideals;
+\item Perform computations in specific rings including the integers and rings of polynomials;
+\item Obtain a greater appreciation for the interplay between the abstract and the concrete in mathematics;
+\item Obtain a more confident understanding of proof and counterexample.
+\end{itemize*}
+
+
+\item \textbf{Instructional Methods:} This is a primarily lecture-based course.
+
+
+\item \textbf{Learning Outcome Assessment Methods:} Grades will be based on the following assignments.
+\begin{itemize*}
+\item#[(60\%)#] \textbf{Exams:} We will have some tests; the exact number is to be determined.
+\item#[(40\%)#] \textbf{Homework:} We will have some homework problems; the exact number is to be determined.
+\end{itemize*}
+
+The final grade will be the weighted average of the grades in each assignment category above. A final grade of 90 or better is an A; a grade in the interval $#[80,90)$ is a B, et cetera. I reserve the right to adjust the cutoffs between letter grades downward at my discretion.
+
+
+\item \textbf{Instructional Materials:} \emph{Abstract Algebra: Theory and Applications}, by Judson. This is a free textbook; both PDF and (cheap!) printed copies are available at the text's website:
+\begin{center}
+\texttt{abstract.pugetsound.edu}
+\end{center}
+The text will be heavily supplemented by my lecture notes.
+
+
+\item \textbf{Class and Instructor Policies:}
+\begin{itemize}
+\item \textbf{Attendance:} I do not give points for attendance. However, we will move quickly. If you are unable to come to class, plan to get notes and handouts from another student. You are responsible for \emph{all} assigned material, even if it is not discussed in class.
+
+\item \textbf{Make-ups:} There will be no make-up tests without a good, documented reason. What counts as a ``good'' reason is up to me. If you know in advance that you will miss an exam (e.g. due to travel) let me know as soon as possible so we can schedule an alternative testing time.
+\end{itemize}
+
+
+\item \textbf{Academic Policies and Required Information:} Please go to 
+
+\begin{center}
+\texttt{http://offices.nsuok.edu/academicaffairs/SyllabiInformation.aspx}
+\end{center}
+
+for important information pertaining to:
+
+\begin{itemize*}
+\item Academic Misconduct
+\item Americans with Disabilities Act (ADA) Compliance
+\item Inclement Weather/Disaster Policy
+\item Teach Act
+\item Release of Confidential Information (FERPA)
+\item Student Handbook
+\item Textbook Information
+\item Title IX
+\end{itemize*}
+
+
+\item \textbf{Class Calendar:} Test dates are to be determined. I will announce each test in class at least a week in advance.
+\end{itemize}
+
+\end{document}
+
