@@ -1,0 +1,47 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{flexfig}
+
+[define bool @SHOWSOLN := #f]#
+
+[import (kreb-scout/stat/probability.fvl)]#
+
+\begin{document}
+
+[define str @TITLE := "Probability" ++ (if (@SHOWSOLN) then " (Solutions)" else "")]#
+
+\ActivityTitle#[class=Statistics, number=2, name={@TITLE}#]
+
+\begin{enumerate}
+\item [eval @prob.dice.d20.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item [eval @prob.cards.sum.1 (bool @show.solution := #t)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item [eval @prob.dice.d6.1 (bool @show.solution := #t)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item [eval @prob.dice.d12.1 (bool @show.solution := #t)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item [eval @prob.dice.2d6.1 (bool @show.solution := #t)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item [eval @prob.cards.single.1 (bool @show.solution := #t)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item [eval @prob.coins.4flips (bool @show.solution := #t)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item [eval @prob.cards.sum.2 (bool @show.solution := #t)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item [eval @prob.cards.hand.2 (bool @show.solution := #t)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item [eval @prob.cards.hand.1 (bool @show.solution := #t)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+\end{enumerate}
+
+\end{document}

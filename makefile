@@ -7,6 +7,9 @@ all: FORCE
 	#   make stat - Statistics
 
 
+courses: aa ca geom calc stat
+
+
 aa: FORCE
 	# Syllabus
 	$(call copy,abstract,syllabus,nsulogo.png)
@@ -78,6 +81,12 @@ calc: FORCE
 
 
 stat: FORCE
+	# Activities
+	$(call document,stat,activity,a01-basic-parameters)
+	$(call document,stat,activity,a02-probability)
+
+	$(call solution,stat,activity,a01-basic-parameters)
+	$(call solution,stat,activity,a02-probability)
 
 
 FORCE:

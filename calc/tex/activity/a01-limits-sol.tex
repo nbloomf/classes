@@ -8,107 +8,107 @@
 \ActivityTitle[class=Calculus I, number=1, name=Limits (Solutions)]
 
 \begin{enumerate}
-\item Compute the following limit. \[ \lim_{x \rightarrow 5} \left( 3 x^2 + 2 x + 8 \right) \]
+\item Compute the following limit. \[ \lim_{x \rightarrow 5} \left( 5 x^2 + 2 x + 8 \right) \]
 
 \textbf{Solution:} Since this expression is a polynomial, we can find the limit as $x$ approaches 5 by evaluating at 5.
 
 \begin{eqnarray*}
-\lim_{x \rightarrow 5} \left( 3 x^2 + 2 x + 8 \right)
- & = & 3 (5)^2 + 2 (5) + 8 \\
- & = & 75 + 10 + 8 \\
- & = & 93.
+\lim_{x \rightarrow 5} \left( 5 x^2 + 2 x + 8 \right)
+ & = & 5 (5)^2 + 2 (5) + 8 \\
+ & = & 125 + 10 + 8 \\
+ & = & 143.
 \end{eqnarray*}
 
 
   
 \vspace{1cm}
 
-\item Compute the following limit. \[ \displaystyle\lim_{x \rightarrow 6} \frac{x^2 - 2x - 24}{x - 6} \]
+\item Compute the following limit. \[ \displaystyle\lim_{x \rightarrow 4} \frac{x^2 - 6x + 8}{x - 4} \]
 
-\textbf{Solution:} Note that this rational function is not defined at $x = 6$. However, factoring the numerator we have 
+\textbf{Solution:} Note that this rational function is not defined at $x = 4$. However, factoring the numerator we have 
 
 \begin{eqnarray*}
-\lim_{x \rightarrow 6} \frac{x^2 - 2x - 24}{x - 6}
- & = & \lim_{x \rightarrow 6} \frac{(x - 6)(x + 4)}{x - 6} \\
- & = & \lim_{x \rightarrow 6} \frac{\cancel{(x - 6)}(x + 4)}{\cancel{x - 6}} \\
- & = & \lim_{x \rightarrow 6} (x + 4) \\
- & = & 10. \\
+\lim_{x \rightarrow 4} \frac{x^2 - 6x + 8}{x - 4}
+ & = & \lim_{x \rightarrow 4} \frac{(x - 4)(x - 2)}{x - 4} \\
+ & = & \lim_{x \rightarrow 4} \frac{\cancel{(x - 4)}(x - 2)}{\cancel{x - 4}} \\
+ & = & \lim_{x \rightarrow 4} (x - 2) \\
+ & = & 2. \\
 \end{eqnarray*}
 
 
   
 \vspace{1cm}
 
-\item Compute the following limit. \[ \lim_{x \rightarrow 2} \frac{x^2 - 4}{x - 2} \]
+\item Compute the following limit. \[ \lim_{x \rightarrow 4} \frac{x^2 - 16}{x - 4} \]
 
-\textbf{Solution:} Note that this expression is not defined if $x = 2$. However, we can factor the numerator as a difference of squares and cancel.
+\textbf{Solution:} Note that this expression is not defined if $x = 4$. However, we can factor the numerator as a difference of squares and cancel.
 
-\[ \lim_{x \rightarrow 2} \frac{x^2 - 4}{x - 2} = \lim_{x \rightarrow 2} \frac{(x - 2)(x + 2)}{x - 2} = \lim_{x \rightarrow 2} (x + 2) = 4 \]
-
-
-  
-\vspace{1cm}
-
-\item Compute the following limit. \[ \lim_{x \rightarrow 64} \frac{x - 64}{\sqrt{x} - 8} \]
-
-\textbf{Solution:} Note that this expression is not defined if $x = 64$. However, we can factor the numerator as a difference of squares.
-
-\[ \lim_{x \rightarrow 64} \frac{x - 64}{\sqrt{x} - 8} = \lim_{x \rightarrow 64} \frac{(\sqrt{x} - 8)(\sqrt{x} + 8)}{\sqrt{x} - 8} = \lim_{x \rightarrow 64} (\sqrt{x} + 8) = 16 \]
+\[ \lim_{x \rightarrow 4} \frac{x^2 - 16}{x - 4} = \lim_{x \rightarrow 4} \frac{(x - 4)(x + 4)}{x - 4} = \lim_{x \rightarrow 4} (x + 4) = 8 \]
 
 
   
 \vspace{1cm}
 
-\item Compute the following limit. \[ \lim_{x \rightarrow 14} \frac{\sqrt{x - 5} - 3}{x - 14} \]
+\item Compute the following limit. \[ \lim_{x \rightarrow 4} \frac{x - 4}{\sqrt{x} - 2} \]
 
-\textbf{Solution:} Note that this expression is not defined if $x = 14$. But also note that if we multiply the numerator by its radical conjugate, something nice happens:
-\[ \left(\sqrt{x - 5} - 3\right)\left(\sqrt{x - 5} + 3\right) = x - 5 - 9 = x - 14. \]
-Let's try multiplying by 1, but write 1 as $\sqrt{x - 5} + 3$ over itself.
+\textbf{Solution:} Note that this expression is not defined if $x = 4$. However, we can factor the numerator as a difference of squares.
+
+\[ \lim_{x \rightarrow 4} \frac{x - 4}{\sqrt{x} - 2} = \lim_{x \rightarrow 4} \frac{(\sqrt{x} - 2)(\sqrt{x} + 2)}{\sqrt{x} - 2} = \lim_{x \rightarrow 4} (\sqrt{x} + 2) = 4 \]
+
+
+  
+\vspace{1cm}
+
+\item Compute the following limit. \[ \lim_{x \rightarrow 7} \frac{\sqrt{x - 3} - 2}{x - 7} \]
+
+\textbf{Solution:} Note that this expression is not defined if $x = 7$. But also note that if we multiply the numerator by its radical conjugate, something nice happens:
+\[ \left(\sqrt{x - 3} - 2\right)\left(\sqrt{x - 3} + 2\right) = x - 3 - 4 = x - 7. \]
+Let's try multiplying by 1, but write 1 as $\sqrt{x - 3} + 2$ over itself.
 \begin{eqnarray*}
-\lim_{x \rightarrow 14} \frac{\sqrt{x - 5} - 3}{x - 14} & = & \lim_{x \rightarrow 14} \left( \frac{\sqrt{x - 5} - 3}{x - 14} \cdot \frac{\sqrt{x - 5} + 3}{\sqrt{x - 5} + 3} \right) \\
- & = & \lim_{x \rightarrow 14} \frac{x - 14}{(x - 14)(\sqrt{x - 5} + 3)} \\
- & = & \lim_{x \rightarrow 14} \frac{1}{\sqrt{x - 5} + 3} \\
- & = & \frac{1}{6}
+\lim_{x \rightarrow 7} \frac{\sqrt{x - 3} - 2}{x - 7} & = & \lim_{x \rightarrow 7} \left( \frac{\sqrt{x - 3} - 2}{x - 7} \cdot \frac{\sqrt{x - 3} + 2}{\sqrt{x - 3} + 2} \right) \\
+ & = & \lim_{x \rightarrow 7} \frac{x - 7}{(x - 7)(\sqrt{x - 3} + 2)} \\
+ & = & \lim_{x \rightarrow 7} \frac{1}{\sqrt{x - 3} + 2} \\
+ & = & \frac{1}{4}
 \end{eqnarray*}
 
 
   
 \vspace{1cm}
 
-\item Compute the following limit. \[ \lim_{x \rightarrow 8} \frac{\sqrt{x - 7} - 1}{x - 8} \]
+\item Compute the following limit. \[ \lim_{x \rightarrow 23} \frac{\sqrt{x - 7} - 4}{x - 23} \]
 
-\textbf{Solution:} Note that this expression is not defined if $x = 8$. But also note that if we multiply the numerator by its radical conjugate, something nice happens:
-\[ \left(\sqrt{x - 7} - 1\right)\left(\sqrt{x - 7} + 1\right) = x - 7 - 1 = x - 8. \]
-Let's try multiplying by 1, but write 1 as $\sqrt{x - 7} + 1$ over itself.
+\textbf{Solution:} Note that this expression is not defined if $x = 23$. But also note that if we multiply the numerator by its radical conjugate, something nice happens:
+\[ \left(\sqrt{x - 7} - 4\right)\left(\sqrt{x - 7} + 4\right) = x - 7 - 16 = x - 23. \]
+Let's try multiplying by 1, but write 1 as $\sqrt{x - 7} + 4$ over itself.
 \begin{eqnarray*}
-\lim_{x \rightarrow 8} \frac{\sqrt{x - 7} - 1}{x - 8} & = & \lim_{x \rightarrow 8} \left( \frac{\sqrt{x - 7} - 1}{x - 8} \cdot \frac{\sqrt{x - 7} + 1}{\sqrt{x - 7} + 1} \right) \\
- & = & \lim_{x \rightarrow 8} \frac{x - 8}{(x - 8)(\sqrt{x - 7} + 1)} \\
- & = & \lim_{x \rightarrow 8} \frac{1}{\sqrt{x - 7} + 1} \\
- & = & \frac{1}{2}
+\lim_{x \rightarrow 23} \frac{\sqrt{x - 7} - 4}{x - 23} & = & \lim_{x \rightarrow 23} \left( \frac{\sqrt{x - 7} - 4}{x - 23} \cdot \frac{\sqrt{x - 7} + 4}{\sqrt{x - 7} + 4} \right) \\
+ & = & \lim_{x \rightarrow 23} \frac{x - 23}{(x - 23)(\sqrt{x - 7} + 4)} \\
+ & = & \lim_{x \rightarrow 23} \frac{1}{\sqrt{x - 7} + 4} \\
+ & = & \frac{1}{8}
 \end{eqnarray*}
 
 
   
 \vspace{1cm}
 
-\item Compute the following limit. \[ \lim_{x \rightarrow 3} \frac{x^3 - 3x^2 - 4x + 12}{x - 3} \]
+\item Compute the following limit. \[ \lim_{x \rightarrow 3} \frac{x^3 - 3x^2 - x + 3}{x - 3} \]
 
 \textbf{Solution:} Note that this rational function is not defined if $x = 3$. However, $3$ is a root of both the numerator and the denominator, so we can factor (either by grouping or using long or synthetic division) and cancel.
 \begin{eqnarray*}
-\lim_{x \rightarrow 3} \frac{x^3 - 3x^2 - 4x + 12}{x - 3} & = & \lim_{x \rightarrow 3} \frac{x^2(x - 3) - 4(x - 3)}{x - 3} \\
- & = & \lim_{x \rightarrow 3} \frac{(x - 3)(x^2 - 4)}{x - 3} \\
- & = & \lim_{x \rightarrow 3} (x^2 - 4) \\
- & = & 5
+\lim_{x \rightarrow 3} \frac{x^3 - 3x^2 - x + 3}{x - 3} & = & \lim_{x \rightarrow 3} \frac{x^2(x - 3) - 1(x - 3)}{x - 3} \\
+ & = & \lim_{x \rightarrow 3} \frac{(x - 3)(x^2 - 1)}{x - 3} \\
+ & = & \lim_{x \rightarrow 3} (x^2 - 1) \\
+ & = & 8
 \end{eqnarray*}
 
 
   
 \vspace{1cm}
 
-\item Compute the following limit. \[ \lim_{x \rightarrow -4} \frac{x^3 + 9x^2 + 26x + 24}{x + 4} \]
+\item Compute the following limit. \[ \lim_{x \rightarrow 3} \frac{x^3 - 2x^2 - 5x + 6}{x - 3} \]
 
-\textbf{Solution:} Note that this rational function is not defined if $x = -4$. However, $-4$ is a root of both the numerator and the denominator, so we can factor (using either long or synthetic division) and cancel.
-\[ \lim_{x \rightarrow -4} \frac{x^3 + 9x^2 + 26x + 24}{x + 4} = \lim_{x \rightarrow -4} \frac{(x + 4)(x^2 + 5x + 6)}{x + 4} = \lim_{x \rightarrow -4} (x^2 + 5x + 6) = 2 \]
+\textbf{Solution:} Note that this rational function is not defined if $x = 3$. However, $3$ is a root of both the numerator and the denominator, so we can factor (using either long or synthetic division) and cancel.
+\[ \lim_{x \rightarrow 3} \frac{x^3 - 2x^2 - 5x + 6}{x - 3} = \lim_{x \rightarrow 3} \frac{(x - 3)(x^2 + x - 2)}{x - 3} = \lim_{x \rightarrow 3} (x^2 + x - 2) = 10 \]
 
 
   
