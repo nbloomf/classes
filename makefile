@@ -1,13 +1,14 @@
 all: FORCE
 	# TARGETS:
-	#   make aa   - Abstract Algebra
-	#   make ca   - College Algebra
-	#   make geom - College Geometry
-	#   make calc - Calculus 1
-	#   make stat - Statistics
+	#   make coal    - College Algebra
+	#   make stat    - Statistics
+	#   make calc    - Calculus 1
+	#   make geom    - College Geometry
+	#   make aa      - Abstract Algebra (Rings)
+	#   make courses - Everything
 
 
-courses: aa ca geom calc stat
+courses: aa coal geom calc stat
 
 
 aa: FORCE
@@ -46,41 +47,41 @@ geom: FORCE
 	rm -rf geom/tex
 
 
-ca: FORCE
-	mkdir -p ca/tex
+coal: FORCE
+	mkdir -p coal/tex
 
 	# Syllabus
-	$(call copy,ca,nsulogo.png)
-	$(call document,ca,syllabus09)
-	$(call document,ca,syllabus10)
+	$(call copy,coal,nsulogo.png)
+	$(call document,coal,syllabus09)
+	$(call document,coal,syllabus10)
 
 	# Homework
-	$(call document,ca,h01-linear-equations)
-	$(call document,ca,h02-quadratic-equations)
-	$(call document,ca,h03-lines-and-circles)
+	$(call document,coal,h01-linear-equations)
+	$(call document,coal,h02-quadratic-equations)
+	$(call document,coal,h03-lines-and-circles)
 
 	# Activities
-	$(call document,ca,a1-lines-and-circles)
-	$(call document,ca,a2-transformations)
-	$(call document,ca,a3-polynomials-1)
-	$(call document,ca,a4-polynomials-2)
-	$(call document,ca,a5-polynomials-3)
-	$(call document,ca,a6-rational-functions)
+	$(call document,coal,a1-lines-and-circles)
+	$(call document,coal,a2-transformations)
+	$(call document,coal,a3-polynomials-1)
+	$(call document,coal,a4-polynomials-2)
+	$(call document,coal,a5-polynomials-3)
+	$(call document,coal,a6-rational-functions)
 
 	# Reviews
-	$(call document,ca,r0-prereq)
-	$(call document,ca,r1-equations)
-	$(call document,ca,r2-graphs-and-functions)
-	$(call document,ca,r3-polynomials-and-conics)
+	$(call document,coal,r0-prereq)
+	$(call document,coal,r1-equations)
+	$(call document,coal,r2-graphs-and-functions)
+	$(call document,coal,r3-polynomials-and-conics)
 
 	# Tests
-	$(call document,ca,t1-equations)
-	$(call document,ca,t2-graphs-and-functions)
-	$(call copy,ca,coconut.png)
-	$(call document,ca,t3-polynomials-and-conics)
+	$(call document,coal,t1-equations)
+	$(call document,coal,t2-graphs-and-functions)
+	$(call copy,coal,coconut.png)
+	$(call document,coal,t3-polynomials-and-conics)
 
 	# Remove generated files
-	rm -rf ca/tex
+	rm -rf coal/tex
 
 
 calc: FORCE
@@ -107,6 +108,11 @@ calc: FORCE
 
 stat: FORCE
 	mkdir -p stat/tex
+
+	# Syllabus
+	$(call copy,stat,nsulogo.png)
+	$(call document,stat,syllabus9)
+	$(call document,stat,syllabus1)
 
 	# Activities
 	$(call document,stat,a01-basic-parameters)

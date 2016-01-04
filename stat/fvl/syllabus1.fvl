@@ -1,0 +1,134 @@
+\documentclass{article}
+\usepackage{mdwlist}
+\usepackage#[margin=2cm#]{geometry}
+\usepackage{graphicx}
+
+\begin{document}
+
+\begin{center}
+\includegraphics#[width=6cm#]{stat/tex/nsulogo} \\ \vspace{0.5cm}
+College of Science and Health Professions \\
+Department of Mathematics and Computer Science \\
+Fall 2015
+\end{center}
+
+\begin{itemize}
+\item#[#] \textbf{\Large MATH 3513, Statistical Methods}
+
+\item \textbf{Instructor:} Nathan Bloomfield, Ph.D.
+\begin{itemize}
+\item#[#] \textbf{Email:} \texttt{bloomfie#@nsuok.edu}
+\item#[#] \textbf{Office Location:} SC 252 
+\item#[#] \textbf{Office Hours:} MWF 8:30--9, 11--12; T 9--10, 11--2
+\item#[#] \textbf{Website:} \texttt{nbloomf.github.io}
+\end{itemize}
+
+
+\item \textbf{Course Delivery Mode:} Face-to-face
+
+
+\item \textbf{Class Days and Times:} MWF 1:00--1:50 in SC 145
+
+
+\item \textbf{Course Prerequisites and/or Corequisites:} MATH 1473, 1513, or 1715.
+
+
+\item \textbf{Catalog Description:} Analysis of data using descriptive and inferential statistics. Topics will include graphical descriptors, numerical measures, probability distributions, sampling distributions, parameter estimation, hypothesis testing and regression and correlation. Spreadsheet software will be used. Students may not receive credit in both MATH 3513 and BADM 3933. No credit for both this course and MATH 3623 in the mathematics major.
+
+
+\item \textbf{Course Purpose and Goals:} This course meets the quantitative analysis requirement of general education. Statistics is arequired course for students majoring in Biology, Chemistry, Mathematics Education, and some business programs.
+
+
+\item \textbf{Course Topics:} We will cover the following sections in the textbook.
+\begin{itemize*}
+\item#[$\cdot$#] Chapter 1: Introduction to Statistics
+\item#[$\cdot$#] Chapter 2: Summarizing and Graphing Data
+\item#[$\cdot$#] Chapter 3: Statistics for Describing, Exploring, and Comparing Data
+\item#[$\cdot$#] Chapter 4: Probability
+\item#[$\cdot$#] Chapter 5: Discrete Probability Distributions
+\item#[$\cdot$#] Chapter 6: Normal Probability Distributions
+\item#[$\cdot$#] Chapter 7: Estimates and Sample Sizes
+\item#[$\cdot$#] Chapter 8: Hypothesis Testing
+\end{itemize*}
+
+
+\item \textbf{Student Learning Outcomes:} The student will be expected to achieve the following objectives:
+\begin{itemize*}
+\item#[$\cdot$#] Given a data set be able to organize, analyze and summarize the data effectively using the following descriptive statistics tools: frequency distributions, measures of central tendency (mean, median, mode), measures of variability (range, variance, standard deviation), appropriate graphs (histogram, bar charts, pie charts, line charts). 
+\item#[$\cdot$#] Define probability and understand probability concepts. Calculate probabilities from contingency table data. Apply a tree diagram to organize and compute probabilities.
+\item#[$\cdot$#] Understand the concepts of random variable and probability distribution. Describe some common distributions (Binomial, Poisson, Normal) and their application in statistical analysis. Calculate the mean, variance and standard deviation for a discrete probability distribution. 
+\item#[$\cdot$#] Explain the role of sampling in statistical data analysis, discuss rudimentary issues in data collection including types of samples and non-random sampling error. Understand and apply the Central Limit Theorem
+\item#[$\cdot$#] Estimate parameters for populations based on information obtained from samples. 
+\item#[$\cdot$#] Test hypotheses about population parameters based on information obtained from samples.
+\item#[$\cdot$#] Develop and use a simple linear regression model to explore the relationships between dependent and independent variables.
+\item#[$\cdot$#] Apply the gained knowledge to the solution of practical problems through evaluation and selection of appropriate statistical techniques.
+\item#[$\cdot$#] Use statistical software, such as Microsoft® Excel, to solve problems. Be able to read and interpret computer-generated statistical outputs.
+\end{itemize*}
+
+
+\item \textbf{General Education Learning Outcomes:} Specific educational objectives for the Quantitative Analysis category include the following.
+\begin{enumerate*}
+\item Solving problems using basic arithmetic and algebra;
+\item Reasoning logically;
+\item Communicating with symbols;
+\item Drawing valid inferences from data presented in the form of a graph; and
+\item Creatively applying known results to new situations.
+\end{enumerate*}
+
+
+\item \textbf{Instructional Methods:} This is a primarily lecture and demonstration-based course. However, many class meetings will include an activity assignment which will be worked on in small groups.
+
+
+\item \textbf{Learning Outcome Assessment Methods:} Grades will be based on the following assignments.
+\begin{itemize*}
+\item#[20\%.#] \textbf{Activities:} We will work several problem sets either in class or outside of class. These may include computation problems or data collection and analysis. These will be graded for completion on a 0-5-10 scale; 0 points for no submission, 5 points for a partial submission, and 10 points for a complete submission.
+\item#[60\%.#] \textbf{Exams:} There will be 4 exams during the semester.
+\item#[20\%.#] \textbf{Exam Reviews:} Each test will be preceded by a test review. You are strongly encouraged to complete these before each exam.
+\end{itemize*}
+I will also assign some homework problems in class for practice. These will not be graded, but it is strongly recommended that you work them.
+
+A final percentage of 90 or better is an A; a percentage in the interval $#[80,90)$ is a B, et cetera. I reserve the right to adjust the cutoffs between letter grades downward at my discretion.
+
+
+\item \textbf{Instructional Materials.} 
+\begin{itemize*}
+\item#[$\cdot$#] \emph{Elementary Statistics using Excel}, 5\textsuperscript{th} edition, by Triola.
+\item#[$\cdot$#] (Recommended) A graphing calculator, preferably a TI-83 or TI-84.
+\item#[$\cdot$#] Access to spreadsheet software such as Excel. (Excel is available on all NSU network computers, so you do not have to have a personal copy.) If you intend to use software other than Excel, let me know.
+\end{itemize*}
+
+
+\item \textbf{Class and Instructor Policies:}
+\begin{itemize}
+\item \textbf{Attendance:} I do not give points for attendance. However, many class meetings will include graded assignments. It is to your benefit to come to class every day. If you are unable to come to class, plan to get notes and handouts from another student.
+
+\item \textbf{Calculators:} Any dedicated non-CAS calculator may be used in this course. For instance, that means no smartphones.
+
+\item \textbf{Make-ups:} There will be no make-up tests without a good, documented reason. What counts as a ``good'' reason is up to me. If you know in advance that you will miss an exam (e.g. due to travel) let me know as soon as possible so we can schedule an alternative testing time.
+\end{itemize}
+
+
+\item \textbf{Academic Policies and Required Information:} Please go to 
+
+\begin{center}
+\texttt{http://offices.nsuok.edu/academicaffairs/SyllabiInformation.aspx}
+\end{center}
+
+for important information pertaining to:
+
+\begin{itemize*}
+\item Academic Misconduct
+\item Americans with Disabilities Act (ADA) Compliance
+\item Inclement Weather/Disaster Policy
+\item Teach Act
+\item Release of Confidential Information (FERPA)
+\item Student Handbook
+\item Textbook Information
+\item Title IX
+\end{itemize*}
+
+
+\item \textbf{Class Calendar:} Test dates are to be determined. I will announce each test in class at least a week in advance.
+\end{itemize}
+
+\end{document}

@@ -56,7 +56,7 @@
 \item Viewing a graph of this function below, estimate the maximum height the coconut achieves. \vspace{.25in}\\ 
 Maximum Height: \\ \vspace{.25in}
 \begin{center}
-\includegraphics#[scale=.5#]{ca/tex/coconut.png}
+\includegraphics#[scale=.5#]{coal/tex/coconut.png}
 \end{center}
 \item Recalling that the function of the height of the coconut is $f(t)=128t-16t^2$, use your knowledge about quadratic functions to determine the actual maximum height the coconut achieves.
 \end{enumerate}

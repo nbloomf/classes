@@ -6,14 +6,14 @@
 \begin{document}
 
 \begin{center}
-\includegraphics#[width=6cm#]{ca/tex/nsulogo} \\ \vspace{0.5cm}
+\includegraphics#[width=6cm#]{coal/tex/nsulogo} \\ \vspace{0.5cm}
 College of Science and Health Professions \\
 Department of Mathematics and Computer Science \\
 Fall 2015
 \end{center}
 
 \begin{itemize}
-\item#[#] \textbf{\Large MATH 1513-20139, College Algebra}
+\item#[#] \textbf{\Large MATH 1513-20140, College Algebra}
 
 \item \textbf{Instructor:} Nathan Bloomfield, Ph.D.
 \begin{itemize}
@@ -27,7 +27,7 @@ Fall 2015
 \item \textbf{Course Delivery Mode:} Face-to-face
 
 
-\item \textbf{Class Days and Times:} MWF 9--10 in SC 261
+\item \textbf{Class Days and Times:} MWF 10--11 in SC 261
 
 
 \item \textbf{Course Prerequisites and/or Corequisites:} Placement and enrollment in this course is based on ACT and/or CPT scores, or a combination of ACT and high school grades in mathematics.
