@@ -106,12 +106,17 @@ calc: FORCE
 
 
 stat: FORCE
+	mkdir -p stat/tex
+
 	# Activities
 	$(call document,stat,a01-basic-parameters)
 	$(call document,stat,a02-probability)
 
 	$(call solution,stat,a01-basic-parameters)
 	$(call solution,stat,a02-probability)
+
+	# Remove generated files
+	rm -rf stat/tex
 
 
 FORCE:
