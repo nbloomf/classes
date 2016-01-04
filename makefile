@@ -19,7 +19,7 @@ aa: FORCE
 	$(call document,abstract,syllabus)
 
 	# Slides
-	$(call slides,abstract,zz-axioms)
+	$(call slides,abstract,slides-zz-axioms)
 
 	# Homework
 	$(call document,abstract,hw2)
@@ -109,8 +109,9 @@ calc: FORCE
 stat: FORCE
 	mkdir -p stat/tex
 
+	cp -r stat/fvl/gfx/ stat/tex/
+
 	# Syllabus
-	$(call copy,stat,nsulogo.png)
 	$(call document,stat,syllabus9)
 	$(call document,stat,syllabus1)
 
@@ -120,6 +121,10 @@ stat: FORCE
 
 	$(call solution,stat,a01-basic-parameters)
 	$(call solution,stat,a02-probability)
+
+	# Slides
+	$(call slides,stat,slides-binomial-rv)
+	$(call slides,stat,slides-misleading-graphs)
 
 	# Remove generated files
 	rm -rf stat/tex
@@ -187,11 +192,11 @@ define slides
   # Generate pdfs
   pdflatex -interaction=batchmode $(1)/tex/$(2)-print.tex
   pdflatex -interaction=batchmode $(1)/tex/$(2)-print.tex
-  mv $(2)-print.pdf $(1)/$(1)-$(2)-print.pdf
+  mv $(2)-print.pdf $(1)/$(1)-print-$(2).pdf
 
   pdflatex -interaction=batchmode $(1)/tex/$(2)-screen.tex
   pdflatex -interaction=batchmode $(1)/tex/$(2)-screen.tex
-  mv $(2)-screen.pdf $(1)/$(1)-$(2)-screen.pdf
+  mv $(2)-screen.pdf $(1)/$(1)-screen-$(2).pdf
 
   # Clean up
   rm -- $(2)-print.aux $(2)-print.log

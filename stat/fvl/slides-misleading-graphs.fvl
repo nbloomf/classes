@@ -1,0 +1,183 @@
+\documentclass{beamer}
+\usepackage{graphicx}
+\usetheme{Warsaw}
+\usecolortheme{default}
+
+\begin{document}
+
+\title#[#]{Misleading Graphs}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Bar Graphs: Misleading Baseline}
+Does the Times have more than double the full price sales of the Daily Telegraph?
+
+\begin{center}
+\includegraphics#[scale=0.6#]{stat/tex/gfx/misleading-graphs/baseline-paper-sales.jpg}
+\end{center}
+
+\pause
+
+\#[ \frac{485,720}{446,954} \approx 1.086 \#]
+
+About an 8.6\% increase.
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Bar Graphs: Misleading Baseline}
+
+Will the top tax rate increase sixfold?
+
+\begin{center}
+\includegraphics#[scale=0.3#]{stat/tex/gfx/misleading-graphs/baseline-tax-cuts.jpg}
+\end{center}
+
+\pause
+
+\#[ \frac{39.6}{35} \approx 1.13 \#]
+
+About a 13\% increase.
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Bar Graphs: Misleading Baseline}
+
+Are there four times as many people on welfare as working full time?
+
+\begin{center}
+\includegraphics#[scale=0.3#]{stat/tex/gfx/misleading-graphs/baseline-welfare.jpg}
+\end{center}
+
+\pause
+
+\only<2>{
+\#[ \frac{108.6}{101.7} \approx 1.067 \#]
+
+About a 6.7\% increase.
+}
+
+\pause
+
+\only<3>{Also, these populations are not mutually exclusive: A full-time, minimum wage worker (\$7.25) can make as little as \$15,080 per year, and the poverty threshold in 2014 (which determines eligibility for social services) was \$23,850.}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{More Misleading Baselines}
+
+\begin{center}
+\includegraphics#[scale=0.5#]{stat/tex/gfx/misleading-graphs/baseline-unemployment.jpg}
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{More Misleading Baselines}
+
+\begin{center}
+\includegraphics#[scale=0.2#]{stat/tex/gfx/misleading-graphs/baseline-poverty.jpg}
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{More Misleading Baselines}
+
+\begin{center}
+\includegraphics#[scale=0.2#]{stat/tex/gfx/misleading-graphs/baseline-baseball.jpg}
+\end{center}
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{Pictographs: Inconsistent Proportions}
+
+How many medals does each graphic medal represent?
+
+\begin{center}
+\includegraphics#[scale=0.4#]{stat/tex/gfx/misleading-graphs/pictograph-proportions.jpg}
+\end{center}
+
+\pause
+
+\begin{center}
+US: 329, Russia: 199, Britain: 153, France: 174, Germany: 249
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Inconsistent Scale}
+
+How much time passes between consecutive bars?
+
+\begin{center}
+\includegraphics#[scale=0.3#]{stat/tex/gfx/misleading-graphs/inconsistent-scale-facebook.jpg}
+\end{center}
+
+\pause
+
+23 days, then 55, 12, 26, 54, 16, 14, 13, 10, 18. 
+
+(p.s. check the baseline.)
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Inconsistent Scale}
+
+\begin{center}
+\includegraphics#[scale=0.4#]{stat/tex/gfx/misleading-graphs/inconsistent-scale-gas.jpg}
+\end{center}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Just Wrong: No Labels}
+
+\begin{center}
+\includegraphics#[scale=0.5#]{stat/tex/gfx/misleading-graphs/no-labels.jpg}
+\end{center}
+
+This graph contains no information!
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Just Wrong: The Numbers Don't Add Up}
+
+\begin{center}
+\includegraphics#[scale=0.4#]{stat/tex/gfx/misleading-graphs/percentages-dont-add-up.jpg}
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Just Wrong: ???}
+
+\begin{center}
+\includegraphics#[scale=0.4#]{stat/tex/gfx/misleading-graphs/just-wrong-time-series.jpg}
+\end{center}
+\end{frame}
+
+\end{document}
