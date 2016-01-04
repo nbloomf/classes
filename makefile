@@ -3,32 +3,33 @@ all: FORCE
 	#   make coal    - College Algebra
 	#   make stat    - Statistics
 	#   make calc    - Calculus 1
+        #   make prfs    - Intro to Proof
 	#   make geom    - College Geometry
-	#   make aa      - Abstract Algebra (Rings)
+	#   make ring    - Abstract Algebra (Rings)
 	#   make courses - Everything
 
 
-courses: aa coal geom calc stat
+courses: ring coal geom calc stat prfs
 
 
-aa: FORCE
-	mkdir -p abstract/tex
+ring: FORCE
+	mkdir -p ring/tex
 
 	# Syllabus
-	$(call copy,abstract,nsulogo.png)
-	$(call document,abstract,syllabus)
+	$(call copy,ring,nsulogo.png)
+	$(call document,ring,syllabus)
 
 	# Slides
-	$(call slides,abstract,slides-zz-axioms)
+	$(call slides,ring,slides-zz-axioms)
 
 	# Homework
-	$(call document,abstract,hw2)
+	$(call document,ring,hw2)
 
 	# Tests
-	$(call document,abstract,final)
+	$(call document,ring,final)
 
 	# Remove generated files
-	rm -rf abstract/tex
+	rm -rf ring/tex
 
 
 geom: FORCE
@@ -108,7 +109,6 @@ calc: FORCE
 
 stat: FORCE
 	mkdir -p stat/tex
-
 	cp -r stat/fvl/gfx/ stat/tex/
 
 	# Syllabus
@@ -128,6 +128,14 @@ stat: FORCE
 
 	# Remove generated files
 	rm -rf stat/tex
+
+
+prfs: FORCE
+	mkdir -p prfs/tex
+	cp -r prfs/fvl/gfx/ prfs/tex/
+
+	# Syllabus
+	$(call document,prfs,syllabus)
 
 
 FORCE:
