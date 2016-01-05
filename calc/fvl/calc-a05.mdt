@@ -7,7 +7,7 @@
 \ActivityTitle#[class=Calculus I, number=5, name=Differentiation III#]
 
 \begin{enumerate}
-\item Are there any points on the curve $y = \frac{x}{2} + \frac{1}{2x-4}$ where the tangent line has slope -3/2? If so, find them.
+\item [eval @tangent.to.rat.fun.1 (bool @show.solution := @SHOWSOLN)]
 
 \item Find the points on the curve $y = 2x^3 - 3x^2 - 12x + 20$ where the tangent line is
 \begin{enumerate}
