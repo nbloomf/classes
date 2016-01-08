@@ -53,8 +53,7 @@ coal: FORCE
 
 	# Syllabus
 	$(call copy,coal,nsulogo.png)
-	$(call document,coal,syllabus09)
-	$(call document,coal,syllabus10)
+	$(call document,coal,syllabus)
 
 	# Homework
 	$(call document,coal,h01-linear-equations)
@@ -112,8 +111,7 @@ stat: FORCE
 	cp -r stat/fvl/gfx/ stat/tex/
 
 	# Syllabus
-	$(call document,stat,syllabus9)
-	$(call document,stat,syllabus1)
+	$(call document,stat,syllabus)
 
 	# Activities
 	$(call document,stat,a01-basic-parameters)
