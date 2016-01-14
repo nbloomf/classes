@@ -56,29 +56,31 @@ coal: FORCE
 	$(call document,coal,syllabus)
 
 	# Homework
-	$(call document,coal,h01-linear-equations)
-	$(call document,coal,h02-quadratic-equations)
-	$(call document,coal,h03-lines-and-circles)
+	# (call document,coal,h01-linear-equations)
+	# (call document,coal,h02-quadratic-equations)
+	# (call document,coal,h03-lines-and-circles)
 
 	# Activities
-	$(call document,coal,a1-lines-and-circles)
-	$(call document,coal,a2-transformations)
-	$(call document,coal,a3-polynomials-1)
-	$(call document,coal,a4-polynomials-2)
-	$(call document,coal,a5-polynomials-3)
-	$(call document,coal,a6-rational-functions)
+	$(call document,coal,a01-linear-ish-equations)
+	# (call document,coal,a2-transformations)
+	# (call document,coal,a3-polynomials-1)
+	# (call document,coal,a4-polynomials-2)
+	# (call document,coal,a5-polynomials-3)
+	# (call document,coal,a6-rational-functions)
+
+	$(call solution,coal,a01-linear-ish-equations)
 
 	# Reviews
-	$(call document,coal,r0-prereq)
-	$(call document,coal,r1-equations)
-	$(call document,coal,r2-graphs-and-functions)
-	$(call document,coal,r3-polynomials-and-conics)
+	# (call document,coal,r0-prereq)
+	# (call document,coal,r1-equations)
+	# (call document,coal,r2-graphs-and-functions)
+	# (call document,coal,r3-polynomials-and-conics)
 
 	# Tests
-	$(call document,coal,t1-equations)
-	$(call document,coal,t2-graphs-and-functions)
-	$(call copy,coal,coconut.png)
-	$(call document,coal,t3-polynomials-and-conics)
+	# (call document,coal,t1-equations)
+	# (call document,coal,t2-graphs-and-functions)
+	# (call copy,coal,coconut.png)
+	# (call document,coal,t3-polynomials-and-conics)
 
 	# Remove generated files
 	rm -rf coal/tex
