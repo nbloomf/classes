@@ -135,6 +135,9 @@ prfs: FORCE
 	# Syllabus
 	$(call document,prfs,syllabus)
 
+	# Remove generated files
+	rm -rf prfs/tex
+
 
 FORCE:
 
