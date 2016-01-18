@@ -62,8 +62,12 @@ calc: FORCE
 
 	# Activities
 	$(call document,calc,a01-limits)
+	$(call document,calc,a02-continuity)
+	$(call document,calc,a03-differentiation-1)
 
 	$(call solution,calc,a01-limits)
+	$(call solution,calc,a02-continuity)
+	$(call solution,calc,a03-differentiation-1)
 
 	# Remove generated files
 	rm -rf calc/tex

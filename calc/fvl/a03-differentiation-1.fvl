@@ -1,4 +1,5 @@
 \documentclass{article}
+\usepackage{amsmath}
 \usepackage{neb-titles}
 \usepackage{flexfig}
 
@@ -20,19 +21,21 @@
 \item [eval @poly.deg2.1 (bool @show.solution := @SHOWSOLN)]
 [if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
 
-\item [eval @laurent.3term.1]
+\item [eval @laurent.3term.1 (bool @show.solution := @SHOWSOLN)]
 [if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
 
-\item [eval @tangent.laurent.1]
+\item [eval @tangent.laurent.1 (bool @show.solution := @SHOWSOLN)]
 [if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
 
-\item [eval @chain.sin.1]
+[if (@SHOWSOLN) then [] else [\newpage]]
+
+\item [eval @chain.sin.1 (bool @show.solution := @SHOWSOLN)]
 [if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
 
-\item [eval @quot.rat.1]
+\item [eval @quot.rat.1 (bool @show.solution := @SHOWSOLN)]
 [if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
 
-\item [eval @tangent.horizontal.1]
+\item [eval @tangent.horizontal.1 (bool @show.solution := @SHOWSOLN)]
 [if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
 \end{enumerate}
 
