@@ -76,6 +76,9 @@ prfs: FORCE
 	# Syllabus
 	$(call document,prfs,syllabus)
 
+	# Homework
+	$(call document,prfs,h01-statements-and-quantifiers)
+
 	# Remove generated files
 	rm -rf prfs/tex
 

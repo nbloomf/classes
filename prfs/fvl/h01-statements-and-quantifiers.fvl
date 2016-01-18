@@ -1,0 +1,51 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{flexfig}
+
+\begin{document}
+
+\HomeworkTitle#[class={Intro to Proof}, number={1}, name={Statements and Quantifiers}#]
+
+Write all your answers neatly on one or more separate sheets of paper.
+
+\begin{enumerate}
+\item Use truth tables (as we did in class) to establish the following rules of inference.
+\begin{enumerate}
+\item $(P \vee Q) \vee R \Leftrightarrow P \vee (Q \vee R)$
+\item $P \rightarrow Q \Leftrightarrow \neg Q \rightarrow \neg P$
+\item $P \leftrightarrow Q \Leftrightarrow (P \rightarrow Q) \wedge (Q \rightarrow P)$
+\item $\neg (P \wedge Q) \Leftrightarrow \neg P \vee \neg Q$
+\end{enumerate}
+
+\vspace{1cm}
+
+
+\item Determine whether each of the following arguments is valid. If so, give a derivation; if not, find a counterexample.
+\begin{enumerate}
+\item \begin{tabular}#[t#]{l} $P \wedge Q$ \\ $(P \vee Q) \rightarrow R$ \\ \hline $R$ \end{tabular}
+
+\item \begin{tabular}#[t#]{l} $\neg X \rightarrow Y$ \\ $\neg X \rightarrow Z$ \\ \hline $\neg Z \rightarrow \neg Y$ \end{tabular}
+
+\item \begin{tabular}#[t#]{l} $\neg A \rightarrow (B \rightarrow \neg C)$ \\ $C \rightarrow \neg A$ \\ $(\neg D \vee A) \rightarrow \neg \neg C$ \\ $\neg D$ \\ \hline $\neg B$ \end{tabular}
+\end{enumerate}
+
+\vspace{1cm}
+
+
+\item Let $P(x)$, $Q(x)$, and $R(x)$ be statements defined as follows.
+\begin{eqnarray*}
+P(x) & = & x\ \mathrm{has\ [alt opt [green] opt [purple] opt [blue]]\ hair} \\
+Q(x) & = & x\ \mathrm{likes\ [alt opt [pickles] opt [kiwifruit] opt [haggis]]} \\
+R(x) & = & x\ \mathrm{has\ a\ pet\ [alt opt [frog] opt [duck] opt [pig]]}
+\end{eqnarray*}
+Translate the following statements into natural language.
+\begin{enumerate}
+\item $\forall x. P(x)$
+\item $\exists x. Q(x)$
+\item $\forall x. (P(x) \wedge R(x))$
+\item $\exists x. (P(x) \rightarrow Q(x))$
+\item $\forall x. (R(x) \leftrightarrow \neg P(x))$
+\end{enumerate}
+\end{enumerate}
+
+\end{document}
