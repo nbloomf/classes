@@ -1,15 +1,99 @@
-all: FORCE
+help: FORCE
 	# TARGETS:
-	#   make coal    - College Algebra
-	#   make stat    - Statistics
-	#   make calc    - Calculus 1
-        #   make prfs    - Intro to Proof
-	#   make geom    - College Geometry
-	#   make ring    - Abstract Algebra (Rings)
-	#   make courses - Everything
+	#   make coal - College Algebra
+	#   make stat - Statistics
+	#   make calc - Calculus 1
+        #   make prfs - Intro to Proof
+	#   make geom - College Geometry
+	#   make ring - Abstract Algebra (Rings)
+	#   make all  - Everything
 
 
-courses: ring coal geom calc stat prfs
+s15: coal stat calc
+
+all: coal stat calc prfs geom ring
+
+
+coal: FORCE
+	mkdir -p coal/tex
+
+	# Syllabus
+	$(call copy,coal,nsulogo.png)
+	$(call document,coal,syllabus)
+
+	# Activities
+	$(call document,coal,a01-linear-ish-equations)
+
+	$(call solution,coal,a01-linear-ish-equations)
+
+	# Reviews
+
+	# Tests
+
+	# Remove generated files
+	rm -rf coal/tex
+
+
+stat: FORCE
+	mkdir -p stat/tex
+	cp -r stat/fvl/gfx/ stat/tex/
+
+	# Syllabus
+	$(call document,stat,syllabus)
+
+	# Activities
+	$(call document,stat,a01-basic-parameters)
+
+	$(call solution,stat,a01-basic-parameters)
+
+	# Slides
+	$(call slides,stat,slides-misleading-graphs)
+
+	# Remove generated files
+	rm -rf stat/tex
+
+
+calc: FORCE
+	mkdir -p calc/tex
+
+	# Syllabus
+	$(call copy,calc,nsulogo.png)
+	$(call document,calc,syllabus)
+
+	# Activities
+	$(call document,calc,a01-limits)
+
+	$(call solution,calc,a01-limits)
+
+	# Remove generated files
+	rm -rf calc/tex
+
+
+prfs: FORCE
+	mkdir -p prfs/tex
+	cp -r prfs/fvl/gfx/ prfs/tex/
+
+	# Syllabus
+	$(call document,prfs,syllabus)
+
+	# Remove generated files
+	rm -rf prfs/tex
+
+
+geom: FORCE
+	mkdir -p geom/tex
+
+	# Syllabus
+	$(call copy,geom,nsulogo.png)
+	$(call document,geom,syllabus)
+
+	# Activities
+	$(call document,geom,a1-basic-constructions)
+	$(call document,geom,a2-hyperbolic-constructions)
+	$(call document,geom,a3-symmetries-of-the-square)
+
+	# Remove generated files
+	rm -rf geom/tex
 
 
 ring: FORCE
@@ -30,115 +114,6 @@ ring: FORCE
 
 	# Remove generated files
 	rm -rf ring/tex
-
-
-geom: FORCE
-	mkdir -p geom/tex
-
-	# Syllabus
-	$(call copy,geom,nsulogo.png)
-	$(call document,geom,syllabus)
-
-	# Activities
-	$(call document,geom,a1-basic-constructions)
-	$(call document,geom,a2-hyperbolic-constructions)
-	$(call document,geom,a3-symmetries-of-the-square)
-
-	# Remove generated files
-	rm -rf geom/tex
-
-
-coal: FORCE
-	mkdir -p coal/tex
-
-	# Syllabus
-	$(call copy,coal,nsulogo.png)
-	$(call document,coal,syllabus)
-
-	# Homework
-	# (call document,coal,h01-linear-equations)
-	# (call document,coal,h02-quadratic-equations)
-	# (call document,coal,h03-lines-and-circles)
-
-	# Activities
-	$(call document,coal,a01-linear-ish-equations)
-	# (call document,coal,a2-transformations)
-	# (call document,coal,a3-polynomials-1)
-	# (call document,coal,a4-polynomials-2)
-	# (call document,coal,a5-polynomials-3)
-	# (call document,coal,a6-rational-functions)
-
-	$(call solution,coal,a01-linear-ish-equations)
-
-	# Reviews
-	# (call document,coal,r0-prereq)
-	# (call document,coal,r1-equations)
-	# (call document,coal,r2-graphs-and-functions)
-	# (call document,coal,r3-polynomials-and-conics)
-
-	# Tests
-	# (call document,coal,t1-equations)
-	# (call document,coal,t2-graphs-and-functions)
-	# (call copy,coal,coconut.png)
-	# (call document,coal,t3-polynomials-and-conics)
-
-	# Remove generated files
-	rm -rf coal/tex
-
-
-calc: FORCE
-	mkdir -p calc/tex
-
-	# Syllabus
-	$(call copy,calc,nsulogo.png)
-	$(call document,calc,syllabus)
-
-	# Activities
-	$(call document,calc,a01-limits)
-	$(call document,calc,a02-continuity)
-	$(call document,calc,a03-differentiation-1)
-	$(call document,calc,a04-differentiation-2)
-
-	$(call solution,calc,a01-limits)
-	$(call solution,calc,a02-continuity)
-	$(call solution,calc,a03-differentiation-1)
-	$(call solution,calc,a04-differentiation-2)
-
-	# Remove generated files
-	rm -rf calc/tex
-
-
-stat: FORCE
-	mkdir -p stat/tex
-	cp -r stat/fvl/gfx/ stat/tex/
-
-	# Syllabus
-	$(call document,stat,syllabus)
-
-	# Activities
-	$(call document,stat,a01-basic-parameters)
-	$(call document,stat,a02-probability)
-
-	$(call solution,stat,a01-basic-parameters)
-	$(call solution,stat,a02-probability)
-
-	# Slides
-	$(call slides,stat,slides-binomial-rv)
-	$(call slides,stat,slides-misleading-graphs)
-
-	# Remove generated files
-	rm -rf stat/tex
-
-
-prfs: FORCE
-	mkdir -p prfs/tex
-	cp -r prfs/fvl/gfx/ prfs/tex/
-
-	# Syllabus
-	$(call document,prfs,syllabus)
-
-	# Remove generated files
-	rm -rf prfs/tex
 
 
 FORCE:

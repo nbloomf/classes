@@ -22,23 +22,29 @@
 \item [eval @mean.binomial.1 (bool @show.solution := @SHOWSOLN)]
 [if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
 
+[if (@SHOWSOLN) then [] else [\newpage]]
+
 \item [eval @mean.deviation.uniform.1 (bool @show.solution := @SHOWSOLN)]
-[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{6cm}]]
 
 \item [eval @mean.deviation.binomial.1 (bool @show.solution := @SHOWSOLN)]
-[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{6cm}]]
 
 \item [eval @standard.deviation.uniform.1 (bool @show.solution := @SHOWSOLN)]
-[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{6cm}]]
+
+[if (@SHOWSOLN) then [] else [\newpage]]
 
 \item [eval @zscore.uniform.1 (bool @show.solution := @SHOWSOLN)]
-[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{9cm}]]
 
 \item [eval @zscore.binomial.1 (bool @show.solution := @SHOWSOLN)]
 [if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
 
+[if (@SHOWSOLN) then [] else [\newpage]]
+
 \item [eval @coef.var.uniform.1 (bool @show.solution := @SHOWSOLN)]
-[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{9cm}]]
 
 \item [eval @coef.var.binomial.1 (bool @show.solution := @SHOWSOLN)]
 [if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]

@@ -60,9 +60,7 @@ Are there four times as many people on welfare as working full time?
 \pause
 
 \only<2>{
-\#[ \frac{108.6}{101.7} \approx 1.067 \#]
-
-About a 6.7\% increase.
+\#[ 108.6/101.7 \approx 1.067, \quad \mathrm{a\ 6.7\%\ increase.} \#]
 }
 
 \pause

@@ -19,22 +19,26 @@
 [if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
 
 \item [eval @lim.rat.monic2 (bool @show.solution := @SHOWSOLN)]
-[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{6cm}]]
 
 \item [eval @lim.rat.diffsq (bool @show.solution := @SHOWSOLN)]
-[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{6cm}]]
+
+[if (@SHOWSOLN) then [] else [\newpage]]
 
 \item [eval @lim.rat.sqrt.1 (bool @show.solution := @SHOWSOLN)]
-[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{6cm}]]
 
 \item [eval @lim.rat.sqrt.2 (bool @show.solution := @SHOWSOLN)]
-[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{6cm}]]
 
 \item [eval @lim.rat.sqrt.2 (bool @show.solution := @SHOWSOLN)]
-[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{6cm}]]
+
+[if (@SHOWSOLN) then [] else [\newpage]]
 
 \item [eval @lim.rat.monic3a (bool @show.solution := @SHOWSOLN)]
-[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{8cm}]]
 
 \item [eval @lim.rat.monic3b (bool @show.solution := @SHOWSOLN)]
 [if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
