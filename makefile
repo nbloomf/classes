@@ -128,6 +128,8 @@ FORCE:
 
 
 define document
+  @echo "Attempting to build $(1)/fvl/$(2)" | doppler lightblue
+
   # Run through feivel
   feivel -t $(1)/fvl/$(2).fvl \
    | tee error \
@@ -142,12 +144,14 @@ define document
   rm $(2).aux $(2).log
   rm -f error
 
-  echo -e "\033[1;32mSuccessfully built $(1)/fvl/$(2)\033[0m"
+  @echo "Successfully built $(1)/fvl/$(2)" | doppler lightgreen
 endef
 
 
 
 define solution
+  @echo "Attempting to build $(1)/fvl/soln-$(2)" | doppler lightblue
+
   # Run through feivel after changing SHOWSOLN flag
   cat $(1)/fvl/$(2).fvl \
    | sed 's/@SHOWSOLN := #f/@SHOWSOLN := #t/' \
@@ -164,12 +168,14 @@ define solution
   rm soln-$(2).aux soln-$(2).log
   rm -f error
 
-  echo -e "\033[1;32mSuccessfully built $(1)/fvl/soln-$(2)\033[0m"
+  @echo "Successfully built $(1)/fvl/soln-$(2)" | doppler lightgreen
 endef
 
 
 
 define slides
+  @echo "Attempting to build $(1)/fvl/$(2)" | doppler lightblue
+
   # Run through feivel
   feivel -t $(1)/fvl/$(2).fvl \
    | tee error \
@@ -199,7 +205,7 @@ define slides
   rm -- $(2)-screen.nav $(2)-screen.out $(2)-screen.snm $(2)-screen.toc
   rm error
 
-  echo -e "\033[1;32mSuccessfully built $(1)/fvl/$(2)\033[0m"
+  @echo "Successfully built $(1)/fvl/$(2)" | doppler lightgreen
 endef
 
 
