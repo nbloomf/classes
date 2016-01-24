@@ -23,8 +23,10 @@ coal: FORCE
 
 	# Activities
 	$(call document,coal,a01-linear-ish-equations)
+	$(call document,coal,a02-some-geometry)
 
 	$(call solution,coal,a01-linear-ish-equations)
+	$(call solution,coal,a02-some-geometry)
 
 	# Reviews
 
@@ -32,6 +34,8 @@ coal: FORCE
 
 	# Remove generated files
 	rm -rf coal/tex
+
+	@echo "Done!" | doppler lightgreen
 
 
 stat: FORCE
@@ -51,6 +55,8 @@ stat: FORCE
 
 	# Remove generated files
 	rm -rf stat/tex
+
+	@echo "Done!" | doppler lightgreen
 
 
 calc: FORCE
@@ -72,6 +78,8 @@ calc: FORCE
 	# Remove generated files
 	rm -rf calc/tex
 
+	@echo "Done!" | doppler lightgreen
+
 
 prfs: FORCE
 	mkdir -p prfs/tex
@@ -85,6 +93,8 @@ prfs: FORCE
 
 	# Remove generated files
 	rm -rf prfs/tex
+
+	@echo "Done!" | doppler lightgreen
 
 
 geom: FORCE
@@ -101,6 +111,8 @@ geom: FORCE
 
 	# Remove generated files
 	rm -rf geom/tex
+
+	@echo "Done!" | doppler lightgreen
 
 
 ring: FORCE
@@ -121,6 +133,8 @@ ring: FORCE
 
 	# Remove generated files
 	rm -rf ring/tex
+
+	@echo "Done!" | doppler lightgreen
 
 
 FORCE:
