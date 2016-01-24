@@ -13,23 +13,33 @@
 
 [define str @TITLE := "Continuity" ++ (if (@SHOWSOLN) then " (Solutions)" else "")]#
 
-\ActivityTitle#[class=Calculus I, number=2, name=@TITLE#]
+\ActivityTitle#[class=Calculus I, number=2, name={@TITLE}#]
 
 \begin{enumerate}
+\item [eval @lim.abs.poly.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item [eval @lim.abs.rat.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
 \item [eval @lim.diffquot.linear.1 (bool @show.solution := @SHOWSOLN)]
 [if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+[if (@SHOWSOLN) then [] else [\newpage]]
 
 \item [eval @lim.diffquot.quad.1 (bool @show.solution := @SHOWSOLN)]
 [if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
 
 \item [eval @lim.diffquot.sqrt.1 (bool @show.solution := @SHOWSOLN)]
-[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{6cm}]]
 
 \item [eval @lim.trig.sinx.over.x.kx (bool @show.solution := @SHOWSOLN)]
 [if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
 
+[if (@SHOWSOLN) then [] else [\newpage]]
+
 \item [eval @lim.trig.sinx.over.x.quad (bool @show.solution := @SHOWSOLN)]
-[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{7cm}]]
 
 \item [eval @lim.find.const.lin.quad (bool @show.solution := @SHOWSOLN)]
 [if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
