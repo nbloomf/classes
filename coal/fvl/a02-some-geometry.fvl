@@ -29,11 +29,25 @@
 
 [if (@SHOWSOLN) then [] else [\newpage]]
 
+\item [eval @find.slope.2 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{4cm}]]
+
+\item [eval @find.midpoint.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{4cm}]]
+
 \item [eval @circle.eqn.1 (bool @show.solution := @SHOWSOLN)]
 [if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{5cm}]]
 
 \item [eval @circle.eqn.2 (bool @show.solution := @SHOWSOLN)]
 [if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{5cm}]]
+
+[if (@SHOWSOLN) then [] else [\newpage]]
+
+\item [eval @line.through.points.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{6cm}]]
+
+\item [eval @line.convert.std.to.slopeint.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{6cm}]]
 \end{enumerate}
 
 \end{document}
