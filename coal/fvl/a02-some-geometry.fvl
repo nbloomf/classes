@@ -49,7 +49,7 @@
 \item [eval @line.convert.std.to.slopeint.1 (bool @show.solution := @SHOWSOLN)]
 [if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{6cm}]]
 
-[eval @find.eqn.parallel.line.1 (bool @show.solution := @SHOWSOLN)]
+\item [eval @find.eqn.parallel.line.1 (bool @show.solution := @SHOWSOLN)]
 \end{enumerate}
 
 \end{document}
