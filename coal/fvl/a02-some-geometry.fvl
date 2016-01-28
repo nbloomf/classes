@@ -12,7 +12,7 @@
 
 [define str @TITLE := "Some Geometry" ++ (if (@SHOWSOLN) then " (Solutions)" else "")]#
 
-\ActivityTitle#[class={College Algebra}, number={1}, name={@TITLE}#]
+\ActivityTitle#[class={College Algebra}, number={2}, name={@TITLE}#]
 
 \begin{enumerate}
 \item [eval @linear.eqn.1 (bool @show.solution := @SHOWSOLN)]
