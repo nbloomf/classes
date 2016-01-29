@@ -1,0 +1,98 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{flexfig}
+\usepackage{amsmath}
+\usepackage{neb-formulas}
+
+[define bool @SHOWSOLN := #f]#
+
+[import (kreb-scout/ca/eqn/abs/linear.fvl)]#
+[import (kreb-scout/ca/eqn/rat/linear.fvl)]#
+[import (kreb-scout/ca/geom/lines.fvl)]#
+[import (kreb-scout/ca/geom/circles.fvl)]#
+[import (kreb-scout/ca/eqn/quad/int.fvl)]#
+[import (kreb-scout/ca/eqn/quad/quad-type.fvl)]#
+
+\begin{document}
+
+\ReviewTitle#[class={College Algebra}, for={Test 1}#]
+
+\begin{enumerate}
+\item [eval @linear.abs.3 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{5cm}]]
+
+\item [eval @line.through.points.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{6cm}]]
+
+\item [eval @line.convert.std.to.slopeint.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{6cm}]]
+
+
+[if (@SHOWSOLN) then [] else [\newpage]]
+
+
+\item [eval @linear.rat.2 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{5cm}]]
+
+\item [eval @linear.rat.3 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{5cm}]]
+
+\item [eval @cubic.zero.root.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{6cm}]]
+
+
+[if (@SHOWSOLN) then [] else [\newpage]]
+
+
+\item [eval @biquadratic.with.lc (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{6cm}]]
+
+\item [eval @circle.eqn.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{5cm}]]
+
+\item [eval @find.midpoint.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{4cm}]]
+
+\item [eval @monic.int.roots.2 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{6cm}]]
+
+
+[if (@SHOWSOLN) then [] else [\newpage]]
+
+
+\item [eval @linear.eqn.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{3cm}]]
+
+\item [eval @linear.rat.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{5cm}]]
+
+\item [eval @plot.line.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{5cm}]]
+
+
+[if (@SHOWSOLN) then [] else [\newpage]]
+
+
+\item [eval @find.distance.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{3cm}]]
+
+\item [eval @linear.abs.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{5cm}]]
+
+\item [eval @find.eqn.parallel.line.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{6cm}]]
+
+\item [eval @monic.int.roots.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{6cm}]]
+
+
+[if (@SHOWSOLN) then [] else [\newpage]]
+
+
+\item [eval @linear.abs.2 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{5cm}]]
+
+\item [eval @abs.monic.1 (bool @show.solution := @SHOWSOLN)]
+\end{enumerate}
+
+\end{document}

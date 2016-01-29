@@ -11,6 +11,7 @@
 [import (kreb-scout/ca/geom/lines.fvl)]#
 [import (kreb-scout/ca/geom/circles.fvl)]#
 [import (kreb-scout/ca/eqn/quad/int.fvl)]#
+[import (kreb-scout/ca/eqn/quad/quad-type.fvl)]#
 
 \begin{document}
 
@@ -87,6 +88,14 @@
 
 \item [eval @quad.radical.roots.1 (bool @show.solution := @SHOWSOLN)]
 [if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{6cm}]]
+
+\item [eval @cubic.zero.root.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{6cm}]]
+
+\item [eval @biquadratic.with.lc (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{6cm}]]
+
+\item [eval @abs.monic.1 (bool @show.solution := @SHOWSOLN)]
 \end{enumerate}
 
 \end{document}

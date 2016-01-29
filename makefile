@@ -29,6 +29,9 @@ coal: FORCE
 	$(call solution,coal,a02-some-geometry)
 
 	# Reviews
+	$(call document,coal,r1-equations-and-geometry)
+
+	$(call solution,coal,r1-equations-and-geometry)
 
 	# Tests
 	$(call document,coal,t1-equations-and-geometry)
