@@ -31,6 +31,9 @@ coal: FORCE
 	# Reviews
 
 	# Tests
+	$(call document,coal,t1-equations-and-geometry)
+
+	$(call solution,coal,t1-equations-and-geometry)
 
 	# Remove generated files
 	rm -rf coal/tex
