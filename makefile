@@ -53,8 +53,10 @@ stat: FORCE
 
 	# Activities
 	$(call document,stat,a01-basic-parameters)
+	$(call document,stat,a02-probability)
 
 	$(call solution,stat,a01-basic-parameters)
+	$(call solution,stat,a02-probability)
 
 	# Slides
 	$(call slides,stat,slides-misleading-graphs)
