@@ -1,0 +1,102 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{flexfig}
+\usepackage{amsmath}
+\usepackage{neb-formulas}
+\usepackage{neb-macros}
+
+[define bool @SHOWSOLN := #f]#
+
+[import (kreb-scout/calc/lim/poly.fvl)]#
+[import (kreb-scout/calc/lim/rat.fvl)]#
+[import (kreb-scout/calc/lim/diffquot.fvl)]#
+[import (kreb-scout/calc/lim/cts.fvl)]#
+[import (kreb-scout/calc/lim/trig.fvl)]#
+[import (kreb-scout/calc/diff/laurent.fvl)]#
+[import (kreb-scout/calc/diff/tangent.fvl)]#
+[import (kreb-scout/calc/diff/chain.fvl)]#
+[import (kreb-scout/calc/diff/poly.fvl)]#
+[import (kreb-scout/calc/diff/quot.fvl)]#
+
+\begin{document}
+
+\ReviewTitle#[class={Calculus 1}, for={Test 1}#]
+
+\begin{enumerate}
+\item [eval @lim.poly.deg2 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item [eval @lim.rat.monic2 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{6cm}]]
+
+\item [eval @lim.rat.diffsq (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{6cm}]]
+
+[if (@SHOWSOLN) then [] else [\newpage]]
+
+\item [eval @lim.rat.sqrt.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{6cm}]]
+
+\item [eval @lim.rat.sqrt.2 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{6cm}]]
+
+\item [eval @lim.rat.sqrt.2 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{6cm}]]
+
+[if (@SHOWSOLN) then [] else [\newpage]]
+
+\item [eval @lim.rat.monic3a (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{8cm}]]
+
+\item [eval @lim.rat.monic3b (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item [eval @lim.abs.poly.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+[if (@SHOWSOLN) then [] else [\newpage]]
+
+\item [eval @lim.abs.rat.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item [eval @lim.diffquot.linear.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item [eval @lim.diffquot.quad.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+[if (@SHOWSOLN) then [] else [\newpage]]
+
+\item [eval @lim.diffquot.sqrt.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{6cm}]]
+
+\item [eval @lim.trig.sinx.over.x.kx (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item [eval @lim.trig.sinx.over.x.quad (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{7cm}]]
+
+[if (@SHOWSOLN) then [] else [\newpage]]
+
+\item [eval @lim.find.const.lin.quad (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item [eval @poly.deg2.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item [eval @laurent.3term.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+[if (@SHOWSOLN) then [] else [\newpage]]
+
+\item [eval @tangent.laurent.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item [eval @quot.rat.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item [eval @tangent.horizontal.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+\end{enumerate}
+
+\end{document}

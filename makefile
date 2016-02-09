@@ -58,6 +58,11 @@ stat: FORCE
 	$(call solution,stat,a01-basic-parameters)
 	$(call solution,stat,a02-probability)
 
+	# Reviews
+	$(call document,stat,r1-parameters-and-probability)
+
+	$(call solution,stat,r1-parameters-and-probability)
+
 	# Slides
 	$(call slides,stat,slides-misleading-graphs)
 
@@ -82,6 +87,11 @@ calc: FORCE
 	$(call solution,calc,a01-limits)
 	$(call solution,calc,a02-continuity)
 	$(call solution,calc,a03-differentiation-1)
+
+	# Reviews
+	$(call document,calc,r1-limits-and-derivatives)
+
+	$(call solution,calc,r1-limits-and-derivatives)
 
 	# Remove generated files
 	rm -rf calc/tex

@@ -1,0 +1,61 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{flexfig}
+\usepackage{amsmath}
+\usepackage{neb-formulas}
+\usepackage{neb-macros}
+
+[define bool @SHOWSOLN := #f]#
+
+[import (kreb-scout/stat/compute.fvl)]#
+[import (kreb-scout/stat/probability.fvl)]#
+[import (kreb-scout/stat/word.fvl)]#
+
+\begin{document}
+
+\ReviewTitle#[class={Calculus 1}, for={Test 1}#]
+
+\begin{enumerate}
+\item [eval @mean.uniform.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item [eval @mean.binomial.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item [eval @mean.deviation.binomial.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{6cm}]]
+
+[if (@SHOWSOLN) then [] else [\newpage]]
+
+\item [eval @standard.deviation.uniform.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{6cm}]]
+
+\item [eval @zscore.uniform.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{6cm}]]
+
+\item [eval @zscore.binomial.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+[if (@SHOWSOLN) then [] else [\newpage]]
+
+\item [eval @coef.var.uniform.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item [eval @prob.dice.d20.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item [eval @prob.cards.sum.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+[if (@SHOWSOLN) then [] else [\newpage]]
+
+\item [eval @prob.dice.d6.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item [eval @prob.dice.2d6.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item [eval @prob.word.study.group (bool @show.solution := @SHOWSOLN)]
+\end{enumerate}
+
+\end{document}
