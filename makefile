@@ -24,9 +24,11 @@ coal: FORCE
 	# Activities
 	$(call document,coal,a01-linear-ish-equations)
 	$(call document,coal,a02-some-geometry)
+	$(call document,coal,a03-compound-equations)
 
 	$(call solution,coal,a01-linear-ish-equations)
 	$(call solution,coal,a02-some-geometry)
+	$(call solution,coal,a03-compound-equations)
 
 	# Reviews
 	$(call document,coal,r1-equations-and-geometry)
