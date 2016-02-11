@@ -10,10 +10,11 @@
 [import (kreb-scout/stat/compute.fvl)]#
 [import (kreb-scout/stat/probability.fvl)]#
 [import (kreb-scout/stat/word.fvl)]#
+[import (kreb-scout/stat/match.fvl)]#
 
 \begin{document}
 
-\ReviewTitle#[class={Calculus 1}, for={Test 1}#]
+\ReviewTitle#[class={Statistics}, for={Test 1}#]
 
 \begin{enumerate}
 \item [eval @mean.uniform.1 (bool @show.solution := @SHOWSOLN)]
@@ -56,6 +57,11 @@
 [if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
 
 \item [eval @prob.word.study.group (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+[if (@SHOWSOLN) then [] else [\newpage]]
+
+\item [eval @stat.match.sampling (bool @show.solution := @SHOWSOLN)]
 \end{enumerate}
 
 \end{document}

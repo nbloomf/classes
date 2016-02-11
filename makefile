@@ -63,6 +63,9 @@ stat: FORCE
 
 	$(call solution,stat,r1-parameters-and-probability)
 
+	# Tests
+	$(call document,stat,t1-parameters-and-probability)
+
 	# Slides
 	$(call slides,stat,slides-misleading-graphs)
 
@@ -92,6 +95,9 @@ calc: FORCE
 	$(call document,calc,r1-limits-and-derivatives)
 
 	$(call solution,calc,r1-limits-and-derivatives)
+
+	# Tests
+	$(call document,calc,t1-limits-and-derivatives)
 
 	# Remove generated files
 	rm -rf calc/tex

@@ -1,0 +1,63 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{flexfig}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{neb-formulas}
+\usepackage{neb-macros}
+
+[define bool @SHOWSOLN := #f]#
+
+[import (kreb-scout/stat/compute.fvl)]#
+[import (kreb-scout/stat/probability.fvl)]#
+[import (kreb-scout/stat/word.fvl)]#
+[import (kreb-scout/stat/match.fvl)]#
+
+\begin{document}
+
+\TestTitle#[class={Statistics}, name={Test 1}, term={Spring}, date={Feb. 12}, year={2016}, form={A}#]
+
+\StatsFacts
+
+\begin{enumerate}
+\item (10 pts.) [eval @mean.binomial.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item (10 pts.) Suppose we flip a coin three times in a row.
+\begin{enumerate}
+\item What is the sample space of this experiment?
+\item What is the probability that we flip tails exactly twice?
+\end{enumerate}
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item (10 pts.) [eval @mean.deviation.binomial.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{6cm}]]
+
+[if (@SHOWSOLN) then [] else [\newpage]]
+
+\item (10 pts.) [eval @standard.deviation.uniform.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{6cm}]]
+
+\item (10 pts.) [eval @prob.cards.sum.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item (10 pts.) [eval @zscore.binomial.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+[if (@SHOWSOLN) then [] else [\newpage]]
+
+\item (10 pts.) [eval @prob.dice.d6.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item (10 pts.) [eval @prob.dice.2d6.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item (10 pts.) [eval @prob.word.study.group (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+[if (@SHOWSOLN) then [] else [\newpage]]
+
+\item (10 pts.) [eval @stat.match.sampling (bool @show.solution := @SHOWSOLN)]
+\end{enumerate}
+
+\end{document}

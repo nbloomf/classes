@@ -1,0 +1,66 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{flexfig}
+\usepackage{amsmath}
+\usepackage{neb-formulas}
+
+[define bool @SHOWSOLN := #f]#
+
+[import (kreb-scout/calc/lim/poly.fvl)]#
+[import (kreb-scout/calc/lim/rat.fvl)]#
+[import (kreb-scout/calc/lim/diffquot.fvl)]#
+[import (kreb-scout/calc/lim/cts.fvl)]#
+[import (kreb-scout/calc/lim/trig.fvl)]#
+[import (kreb-scout/calc/diff/laurent.fvl)]#
+[import (kreb-scout/calc/diff/tangent.fvl)]#
+[import (kreb-scout/calc/diff/chain.fvl)]#
+[import (kreb-scout/calc/diff/poly.fvl)]#
+[import (kreb-scout/calc/diff/quot.fvl)]#
+
+\begin{document}
+
+\TestTitle#[class={Calculus 1}, name={Test 1}, term={Spring}, date={Feb. 5}, year={2016}, form={A}#]
+
+\begin{enumerate}
+\item (10 pts.) [eval @lim.trig.sinx.over.x.quad (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{7cm}]]
+
+\item (10 pts.) [eval @lim.rat.monic2 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{6cm}]]
+
+\item (10 pts.) [eval @lim.rat.monic3b (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+[if (@SHOWSOLN) then [] else [\newpage]]
+
+\item (10 pts.) [eval @lim.rat.sqrt.2 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{6cm}]]
+
+\item (10 pts.) [eval @lim.diffquot.linear.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item (10 pts.) [eval @poly.deg2.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+[if (@SHOWSOLN) then [] else [\newpage]]
+
+\item (10 pts.) [eval @lim.find.const.lin.quad (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item (10 pts.) [eval @laurent.3term.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item (10 pts.) [eval @tangent.horizontal.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+[if (@SHOWSOLN) then [] else [\newpage]]
+
+\item (10 pts.) [eval @tangent.laurent.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item#[Bonus.#] [eval @quot.rat.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\end{enumerate}
+
+\end{document}
