@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{flexfig}
+\usepackage{amssymb}
+
+\begin{document}
+
+\HomeworkTitle#[class={Intro to Proof}, number={2}, name={Union and Intersection}#]
+
+Write all your answers neatly on one or more separate sheets of paper.
+
+\begin{enumerate}
+\item Define sets $A$, $B$, and $C$ as follows.
+\begin{eqnarray*}
+A & = & \{ a, b, c, d, e, f \} \\
+B & = & \{ a, c, e \} \\
+C & = & \{ d, e, f \} \\
+D & = & \{ a, b \}
+\end{eqnarray*}
+Now find each of the following sets.
+\begin{enumerate}
+\item $D \cap (B \cup C)$
+\item $(D \cap B) \cup C$
+\item $A \cup (B \cap D)$
+\end{enumerate}
+
+
+\vspace{1cm}
+
+
+\item Suppose $A$, $B$, and $C$ are sets such that $A \subseteq B$, $B \subseteq C$, and $C \subseteq A$. Show that $A = B = C$.
+
+
+\vspace{1cm}
+
+
+\item Can you find two specific sets $A$ and $B$ such that $A \in B$ and $A \subseteq B$ are both true?
+
+
+\vspace{1cm}
+
+
+\item Show that for all sets $A$ and $B$, we have $A \cup (A \cap B) = A$.
+
+
+\vspace{1cm}
+
+
+\item Define two sets $A$ and $B$ as follows.
+\begin{eqnarray*}
+A & = & \{ n \in \mathbb{N} \mid n = 2m\ \mathrm{for\ some}\ m \in \mathbb{N} \} \\
+B & = & \{ n \in \mathbb{N} \mid n = 3m\ \mathrm{for\ some}\ m \in \mathbb{N} \} \\
+\end{eqnarray*}
+Show that \#[ A \cap B = \{ n \in \mathbb{N} \mid n = 6m\ \mathrm{for\ some}\ m \in \mathbb{N} \}. \#]
+\end{enumerate}
+
+\end{document}

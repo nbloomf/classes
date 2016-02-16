@@ -116,6 +116,7 @@ prfs: FORCE
 
 	# Homework
 	$(call document,prfs,h01-statements-and-quantifiers)
+	$(call document,prfs,h02-union-and-intersection)
 
 	# Remove generated files
 	rm -rf prfs/tex
