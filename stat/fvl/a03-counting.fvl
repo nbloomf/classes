@@ -1,0 +1,55 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{flexfig}
+
+[define bool @SHOWSOLN := #f]#
+
+
+
+\begin{document}
+
+[define str @TITLE := "Counting" ++ (if (@SHOWSOLN) then " (Solutions)" else "")]#
+
+\ActivityTitle#[class=Statistics, number=3, name={@TITLE}#]
+
+\begin{enumerate}
+\item Suppose we flip a coin 12 times in a row. In how many ways can the coin come up heads exactly four times?
+
+\vspace{4cm}
+
+\item A standard-issue Oklahoma state license plate for a car or truck consists of six characters; three numerals followed by three letters. How many different license plates can Oklahoma issue using this scheme?
+
+\vspace{4cm}
+
+\item How many different 4-card hands can be drawn from a standard deck?
+
+\vspace{4cm}
+
+\item Suppose we roll two 4-sided dice and then draw two cards from a standard deck. How many possible outcomes does this experiment have?
+
+\newpage
+
+\item As of 2016 the U.S. Senate includes 20 women and 80 men.
+\begin{enumerate}
+\item Suppose three senators are selected at random. What is the probability that all three are women?
+\item Suppose three senators are selected to form a committee, consisting of a chair, vice chair, and ranking member. In how many ways can this committee be formed?
+\end{enumerate}
+
+\vspace{7cm}
+
+\item The Powerball lottery winner is decided by drawing 5 white balls and 1 red ball from a drum. There are 69 white balls, labeled 1 through 69, and 26 red balls, labeled 1 through 26. To win the jackpot you must correctly guess the numbers on the five white balls (in any order) as well as the red ball.
+\begin{enumerate}
+\item How many different Powerball draws are there?
+\item What is the probability of winning the jackpot with a single lottery ticket?
+\end{enumerate}
+
+\newpage
+
+\item A particular aptitude test consists of 10 true-false questions. To get a passing score, you must correctly answer at least 7 questions.
+\begin{enumerate}
+\item If you decide to answer the questions at random (by flipping a coin, say) what is the probability that you will get a passing score?
+\item Your friend claims to have answered the questions at random and correctly answered 8 of them. Do you believe them? Why or why not?
+\end{enumerate}
+\end{enumerate}
+
+\end{document}

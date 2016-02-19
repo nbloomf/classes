@@ -25,10 +25,12 @@ coal: FORCE
 	$(call document,coal,a01-linear-ish-equations)
 	$(call document,coal,a02-some-geometry)
 	$(call document,coal,a03-compound-equations)
+	$(call document,coal,a04-functions)
 
 	$(call solution,coal,a01-linear-ish-equations)
 	$(call solution,coal,a02-some-geometry)
 	$(call solution,coal,a03-compound-equations)
+	$(call solution,coal,a04-functions)
 
 	# Reviews
 	$(call document,coal,r1-equations-and-geometry)
@@ -56,6 +58,7 @@ stat: FORCE
 	# Activities
 	$(call document,stat,a01-basic-parameters)
 	$(call document,stat,a02-probability)
+	$(call document,stat,a03-counting)
 
 	$(call solution,stat,a01-basic-parameters)
 	$(call solution,stat,a02-probability)
@@ -88,10 +91,12 @@ calc: FORCE
 	$(call document,calc,a01-limits)
 	$(call document,calc,a02-continuity)
 	$(call document,calc,a03-differentiation-1)
+	$(call document,calc,a04-differentiation-2)
 
 	$(call solution,calc,a01-limits)
 	$(call solution,calc,a02-continuity)
 	$(call solution,calc,a03-differentiation-1)
+	$(call solution,calc,a04-differentiation-2)
 
 	# Reviews
 	$(call document,calc,r1-limits-and-derivatives)
