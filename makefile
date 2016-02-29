@@ -123,6 +123,9 @@ prfs: FORCE
 	$(call document,prfs,h01-statements-and-quantifiers)
 	$(call document,prfs,h02-union-and-intersection)
 
+	# Tests
+	$(call document,prfs,t01-sets)
+
 	# Remove generated files
 	rm -rf prfs/tex
 

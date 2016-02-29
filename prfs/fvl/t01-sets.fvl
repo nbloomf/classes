@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{flexfig}
+\usepackage{amssymb}
+
+\begin{document}
+
+\TestTitle#[class={Intro to Proof}, name={Test 1}, term={Spring}, date={Feb. 29}, year={2016}, form={A}#]
+
+Write all your answers neatly on one or more separate sheets of paper.
+
+\begin{enumerate}
+\item We say that an integer $n$ is \emph{treven} if we have $n = 3k$ for some integer $k$. Similarly, we say that $n$ is \emph{spiffy} if $n = 3k+1$ for some integer $k$, and that $n$ is \emph{righto} if $n = 3k+2$ for some integer $k$. Use these definitions to prove the following.
+\begin{enumerate}
+\item If $n$ is spiffy and $m$ is righto, then $m+n$ is treven.
+\item If $n$ is treven and $m$ is any integer, then $mn$ is treven.
+\end{enumerate}
+
+\vspace{1cm}
+
+\item Prove that for all nonempty sets $A$, $B$, $C$, and $D$, we have \#[ (A \cap B) \times (C \cap D) = (A \times C) \cap (B \times D). \#]
+
+\vspace{1cm}
+
+\item Recall that in class we defined the \emph{symmetric difference} of two sets $A$ and $B$ to be \#[ A \vartriangle B = (A \setminus B) \cup (B \setminus A). \#] Prove that for all sets $X$, $Y$, and $Z$, we have \#[ X \vartriangle (Y \vartriangle Z) = (X \vartriangle Y) \vartriangle Z. \#]
+
+\vspace{1cm}
+
+\item Let $A$, $B$, and $E$ be nonempty sets. Show that if $A \times E = B \times E$, then $A = B$.
+\end{enumerate}
+
+\end{document}
