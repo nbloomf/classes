@@ -62,6 +62,15 @@
 
 \item [eval @algebraically.detect.symmetry.1 (bool @show.solution := @SHOWSOLN)]
 [if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{5cm}]]
+
+\newpage
+
+\item Let $f(x) = x^2 + 1$ and $g(x) = 3x - 2$. Find the following.
+\begin{enumerate}
+\item $(f \circ g)(2)$ \vspace{1cm}
+\item $(g \circ f)(2)$ \vspace{1cm}
+\item $(f \circ g)(x)$ \vspace{1cm}
+\end{enumerate}
 \end{enumerate}
 
 \end{document}
