@@ -1,0 +1,66 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{flexfig}
+\usepackage{amsmath}
+\usepackage{neb-formulas}
+\usepackage{neb-macros}
+
+[define bool @SHOWSOLN := #f]#
+
+[import (kreb-scout/calc/diff/tangent.fvl)]#
+[import (kreb-scout/calc/diff/chain.fvl)]#
+[import (kreb-scout/calc/diff/2nd.fvl)]#
+[import (kreb-scout/calc/diff/quot.fvl)]#
+
+\begin{document}
+
+\ReviewTitle#[class={Calculus 1}, for={Test 2}#]
+
+\begin{enumerate}
+\item [eval @chain.poly.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item [eval @chain.sin.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item [eval @quot.trig.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+[if (@SHOWSOLN) then [] else [\newpage]]
+
+\item [eval @quot.trig.2 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item [eval @chain.root.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item [eval @chain1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+[if (@SHOWSOLN) then [] else [\newpage]]
+
+\item [eval @tangent.root.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item [eval @tangent.to.rat.fun.1 (bool @show.solution := @SHOWSOLN)]
+
+\vspace{7cm}
+
+\newpage
+
+\item Consider the equation \#[ y^2 + xy + x = 1. \#] Suppose $y$ is a function of $x$ defined implicitly by this equation.
+\begin{enumerate}
+\item If $x = 3$, what are the possible values of $y(x)$?
+\item Suppose further that $y$ is differentiable. Find equations for the lines tangent to this curve when $x = 3$.
+\end{enumerate}
+
+\vspace{7cm}
+
+\item Use implicit differentiation to find a formula for $\frac{dy}{dx}$ in terms of $x$ and $y$, where $y$ is defined implicitly by the following equation. \#[ 2y^5 + x^3y^2 - x^3 = 1 \#]
+
+\newpage
+
+\item Suppose $y$ is a twice-differentiable function defined implicitly by $x^5 + y^5 = 1$. Find a formula for $\frac{d^2y}{dx^2}$.
+\end{enumerate}
+
+\end{document}

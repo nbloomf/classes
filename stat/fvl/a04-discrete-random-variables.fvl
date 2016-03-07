@@ -2,9 +2,15 @@
 \usepackage{neb-titles}
 \usepackage{flexfig}
 
+[define bool @SHOWSOLN := #f]#
+
+
+
 \begin{document}
 
-\ActivityTitle#[class=Statistics, number=3, name={Discrete Random Variables I}#]
+[define str @TITLE := "Discrete Random Variables" ++ (if (@SHOWSOLN) then " (Solutions)" else "")]#
+
+\ActivityTitle#[class=Statistics, number=4, name={@TITLE}#]
 
 \begin{enumerate}
 \item Compute the mean and standard deviation of the following discrete random variable.
@@ -24,7 +30,7 @@ $P(x)$ & 3/20 & 3/10 & 1/5 & 1/5 & 3/20 \\
 \item Compute the expected value of this game.
 \end{enumerate}
 
-\vspace{4cm}
+\newpage
 
 \item The Acme Casino has started offering a new card game: 52-card pickup with a twist. A standard 52-card deck is thrown into the air and the cards allowed to land on the floor. The ``dealer'' then counts how many cards landed face up; this is the Winning Number. To play 52-card pickup, you buy a guess at what the Winning Number will be (between 0 and 52). If you guess correctly, you win \$10,000; otherwise you get nothing. The amount you pay depends on what number you guess.
 \begin{enumerate}
@@ -32,9 +38,9 @@ $P(x)$ & 3/20 & 3/10 & 1/5 & 1/5 & 3/20 \\
 \item Suppose it costs \$1.50 to guess that 13 cards will land face up, but \$1350 to guess that 26 cards will land face up. What is the expected value of each of these bets?
 \end{enumerate}
 
-\newpage
+\vspace{7cm}
 
-\item As of Feb 26, 2015, the Powerball lottery jackpot is \$80 million, and a single ticket costs \$2. The \textbf{odds} of winning the jackpot with a single ticket are 1 in 175,223,510.
+\item As of March 1, 2016, the Powerball lottery jackpot is \$292 million, and a single ticket costs \$2. The \textbf{odds} of winning the jackpot with a single ticket are 1 in 175,223,510.
 \begin{enumerate}
 \item What is the \textbf{probability} of winning the Powerball jackpot with a single ticket?
 \item Ignoring any prizes other than the jackpot, what is the expected value of a Powerball ticket?

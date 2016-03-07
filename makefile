@@ -1,4 +1,4 @@
-help: FORCE
+targets: FORCE
 	# TARGETS:
 	#   make coal - College Algebra
 	#   make stat - Statistics
@@ -26,14 +26,17 @@ coal: FORCE
 	$(call document,coal,a02-some-geometry)
 	$(call document,coal,a03-compound-equations)
 	$(call document,coal,a04-functions)
+	$(call document,coal,a05-transformations)
 
 	$(call solution,coal,a01-linear-ish-equations)
 	$(call solution,coal,a02-some-geometry)
 	$(call solution,coal,a03-compound-equations)
 	$(call solution,coal,a04-functions)
+	$(call solution,coal,a05-transformations)
 
 	# Reviews
 	$(call document,coal,r1-equations-and-geometry)
+	$(call document,coal,r2-functions)
 
 	$(call solution,coal,r1-equations-and-geometry)
 
@@ -59,12 +62,14 @@ stat: FORCE
 	$(call document,stat,a01-basic-parameters)
 	$(call document,stat,a02-probability)
 	$(call document,stat,a03-counting)
+	$(call document,stat,a04-discrete-random-variables)
 
 	$(call solution,stat,a01-basic-parameters)
 	$(call solution,stat,a02-probability)
 
 	# Reviews
 	$(call document,stat,r1-parameters-and-probability)
+	$(call document,stat,r2-counting-and-drvs)
 
 	$(call solution,stat,r1-parameters-and-probability)
 
@@ -92,6 +97,8 @@ calc: FORCE
 	$(call document,calc,a02-continuity)
 	$(call document,calc,a03-differentiation-1)
 	$(call document,calc,a04-differentiation-2)
+	$(call document,calc,a05-differentiation-3)
+	$(call document,calc,a06-monotonicity-and-concavity)
 
 	$(call solution,calc,a01-limits)
 	$(call solution,calc,a02-continuity)
@@ -100,6 +107,7 @@ calc: FORCE
 
 	# Reviews
 	$(call document,calc,r1-limits-and-derivatives)
+	$(call document,calc,r2-differentiation)
 
 	$(call solution,calc,r1-limits-and-derivatives)
 
