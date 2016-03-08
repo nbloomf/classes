@@ -1,0 +1,66 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{flexfig}
+\usepackage{amsmath}
+\usepackage{neb-formulas}
+
+[define bool @SHOWSOLN := #f]#
+
+[import (kreb-scout/calc/diff/tangent.fvl)]#
+[import (kreb-scout/calc/diff/chain.fvl)]#
+[import (kreb-scout/calc/diff/2nd.fvl)]#
+[import (kreb-scout/calc/diff/quot.fvl)]#
+
+\begin{document}
+
+\TestTitle#[class={Calculus 1}, name={Test 2}, term={Spring}, date={Mar. 11}, year={2016}, form={A}#]
+
+\begin{enumerate}
+\item (10 pts.) [eval @chain.poly.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item (10 pts.) [eval @chain.sin.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item (10 pts.) [eval @quot.trig.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+[if (@SHOWSOLN) then [] else [\newpage]]
+
+\item (10 pts.) [eval @quot.trig.2 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item (10 pts.) [eval @chain.root.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item (10 pts.) [eval @chain1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+[if (@SHOWSOLN) then [] else [\newpage]]
+
+\item (10 pts.) [eval @tangent.root.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{1cm}] else [\vspace{5cm}]]
+
+\item (10 pts.) [eval @tangent.to.rat.fun.1 (bool @show.solution := @SHOWSOLN)]
+
+\vspace{7cm}
+
+\newpage
+
+% This would be a good template: y^2 + xy + cx = c^2.
+\item (10 pts.) Consider the equation \#[ y^2 + xy + x = 1. \#] Suppose $y$ is a function of $x$ defined implicitly by this equation.
+\begin{enumerate}
+\item If $x = 4$, what are the possible values of $y(x)$?
+\item Suppose further that $y$ is differentiable. Find equations for the lines tangent to this curve when $x = 4$.
+\end{enumerate}
+
+\vspace{7cm}
+
+\item (10 pts.) Use implicit differentiation to find a formula for $\frac{dy}{dx}$ in terms of $x$ and $y$, where $y$ is defined implicitly by the following equation. \#[ 2y^6 + x^3y^3 - x^2 = 2 \#]
+
+\newpage
+
+\item#[Bonus.#] Suppose $y$ is a twice-differentiable function defined implicitly by $x^4 + y^6 = 1$. Find a formula for $\frac{d^2y}{dx^2}$ in terms of $x$ and $y$.
+\end{enumerate}
+
+\end{document}

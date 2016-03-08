@@ -34,9 +34,9 @@
 
 \newpage
 
-\item (10 pts.) The weights of adult men are normally distributed with mean 182.9 lb and standard deviation 40.8 lb. The Bombardier Dash 8 is a small aircraft capable of carrying 37 passengers with a weight capacity of 6200 lb. If this plane is loaded to capacity with adult male passengers, what is the probability that their mean weight exceeds 6200 lb/37 = 167.6 lb? \vspace{5cm}
-
 \item (10 pts.) There is an 80\% chance that a prospective employer will check the educational background of a job applicant. 64 job applications are randomly selected. Find the probability that at least 50 of the applicants will have their educational backgrounds checked. \vspace{5cm}
+
+\item (10 pts.) The weights of adult men are normally distributed with mean 182.9 lb and standard deviation 40.8 lb. The Bombardier Dash 8 is a small aircraft capable of carrying 37 passengers with a weight capacity of 6200 lb. If this plane is loaded to capacity with adult male passengers, what is the probability that their mean weight exceeds 6200 lb/37 = 167.6 lb? \vspace{5cm}
 
 \item Birth weights in the USA are normally distributed with mean 3369 g and standard deviation 567 g.
 \begin{enumerate}

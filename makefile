@@ -42,6 +42,7 @@ coal: FORCE
 
 	# Tests
 	$(call document,coal,t1-equations-and-geometry)
+	$(call document,coal,t2-functions)
 
 	$(call solution,coal,t1-equations-and-geometry)
 
@@ -75,6 +76,7 @@ stat: FORCE
 
 	# Tests
 	$(call document,stat,t1-parameters-and-probability)
+	$(call document,stat,t2-counting-and-drvs)
 
 	# Slides
 	$(call slides,stat,slides-misleading-graphs)
@@ -113,6 +115,7 @@ calc: FORCE
 
 	# Tests
 	$(call document,calc,t1-limits-and-derivatives)
+	$(call document,calc,t2-differentiation)
 
 	# Remove generated files
 	rm -rf calc/tex

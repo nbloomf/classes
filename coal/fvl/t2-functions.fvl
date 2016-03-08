@@ -1,0 +1,66 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{flexfig}
+\usepackage{amsmath}
+\usepackage{neb-formulas}
+
+[define bool @SHOWSOLN := #f]#
+
+[import (kreb-scout/ca/ineq/abs.fvl)]#
+[import (kreb-scout/ca/func/domain.fvl)]#
+[import (kreb-scout/ca/func/eval.fvl)]#
+[import (kreb-scout/ca/eqn/transform/graph.fvl)]#
+
+\begin{document}
+
+\TestTitle#[class={College Algebra}, name={Test 2}, term={Spring}, date={Mar. 11}, year={2016}, form={A}#]
+
+\AlgebraFacts#[geom=show,transform=show#]
+
+\begin{enumerate}
+\item (10 pts.) [eval @graphically.detect.symmetry.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{3cm}]]
+
+\item (10 pts.) [eval @func.eval.2 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{3cm}]]
+
+\item (10 pts.) [eval @interpret.transformed.eqn.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{1cm}]]
+
+[if (@SHOWSOLN) then [] else [\newpage]]
+
+\item (10 pts.) [eval @func.domain.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{5cm}]]
+
+\item (10 pts.) [eval @algebraically.detect.symmetry.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{5cm}]]
+
+[if (@SHOWSOLN) then [] else [\newpage]]
+
+\item (10 pts.) [eval @in.linear.abs.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{7cm}]]
+
+\item (10 pts.) Let $f(x) = x^2 - 3$ and $g(x) = 2x - 5$. Find the following.
+\begin{enumerate}
+\item $(f \circ g)(3)$ \vspace{1cm}
+\item $(g \circ f)(3)$ \vspace{1cm}
+\item $(f \circ g)(x)$ \vspace{2cm}
+\end{enumerate}
+
+\item (10 pts.) [eval @graphically.transform.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{1cm}]]
+
+[if (@SHOWSOLN) then [] else [\newpage]]
+
+\item (10 pts.) [eval @interpret.transformed.eqn.2 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{1cm}]]
+
+\item (10 pts.) [eval @in.linear.abs.4 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{5cm}]]
+
+[if (@SHOWSOLN) then [] else [\newpage]]
+
+\item#[(Bonus.)#] [eval @func.domain.4 (bool @show.solution := @SHOWSOLN)]
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,88 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{flexfig}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{neb-formulas}
+\usepackage{neb-macros}
+
+[define bool @SHOWSOLN := #f]#
+
+
+
+\begin{document}
+
+\TestTitle#[class={Statistics}, name={Test 2}, term={Spring}, date={Mar. 11}, year={2016}, form={A}#]
+
+\StatsFacts
+
+\begin{enumerate}
+\item (10 pts.) You have an opportunity to play a dice game for \$5. You will roll two 20-sided dice (of different colors); if the sum of the numbers on the dice is exactly 13, you win \$40, and otherwise you get nothing.
+\begin{enumerate}
+\item Make a table to represent this game as a discrete random variable. What are the possible outcomes? What is the net value of each outcome? What is the probability of each outcome?
+\item Compute the expected value of this game.
+\end{enumerate}
+
+\vspace{6cm}
+
+\item (10 pts.) Suppose we flip a coin 20 times in a row. In how many ways can the coin come up heads exactly nine times?
+
+\vspace{4cm}
+
+\item (10 pts.) In how many ways can the letters in the word BOOKKEEPER be rearranged?
+
+\vspace{4cm}
+
+\item (10 pts.) Suppose we roll two 20-sided dice and then draw four cards from a standard deck. How many possible outcomes does this experiment have?
+
+\newpage
+
+\item (10 pts.) A particular aptitude test consists of 15 true-false questions. To get a passing score, you must correctly answer at least 12 questions.
+\begin{enumerate}
+\item If you decide to answer the questions at random (by flipping a coin, say) what is the probability that you will get a passing score?
+\item Your friend claims to have answered the questions at random and correctly answered 13 of them. Do you believe them? Why or why not?
+\end{enumerate}
+
+\vspace{6cm}
+
+\item (10 pts.) The Greatball lottery winner is decided by drawing 5 white balls and 3 red balls from a drum. There are 51 white balls, labeled 1 through 51, and 15 red balls, labeled 1 through 15. To win the jackpot you must correctly guess the numbers on the five white balls (in any order) as well as the numbers on the red balls (in any order).
+\begin{enumerate}
+\item How many different Greatball draws are there?
+\item What is the probability of winning the jackpot with a single lottery ticket?
+\end{enumerate}
+
+\vspace{6cm}
+
+\item A standard-issue California state license plate for a car or truck consists of seven characters; a numeral, followed by three letters, followed by three more numerals. How many different license plates can California issue using this scheme?
+
+\vspace{4cm}
+
+\item How many different 6-card hands can be drawn from a standard deck?
+
+\vspace{4cm}
+
+
+\newpage
+
+\item As of 2016 the U.S. Senate includes 20 women and 80 men.
+\begin{enumerate}
+\item Suppose three senators are selected at random. What is the probability that all three are men?
+\item Suppose four senators are selected to form a committee, consisting of a chair, vice chair, ranking member, and quartermaster. In how many ways can this committee be formed?
+\end{enumerate}
+
+\vspace{7cm}
+
+\item Compute the mean and standard deviation of the following discrete random variable.
+
+\begin{center}
+\begin{tabular}{c|ccccc}
+$x$    & 0    & 1    & 2   & 3   & 4    \\ \hline
+$P(x)$ & 3/20 & 3/10 & 1/5 & 1/5 & 3/20 \\
+\end{tabular}
+\end{center}
+
+\vspace{4cm}
+
+\end{enumerate}
+
+\end{document}
