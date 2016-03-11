@@ -9,12 +9,10 @@
 [define bool @SHOWSOLN := #f]#
 
 
-
 \begin{document}
 
 \TestTitle#[class={Statistics}, name={Test 2}, term={Spring}, date={Mar. 11}, year={2016}, form={A}#]
 
-\StatsFacts
 
 \begin{enumerate}
 \item (10 pts.) You have an opportunity to play a dice game for \$5. You will roll two 20-sided dice (of different colors); if the sum of the numbers on the dice is exactly 13, you win \$40, and otherwise you get nothing.
@@ -51,38 +49,28 @@
 \item What is the probability of winning the jackpot with a single lottery ticket?
 \end{enumerate}
 
-\vspace{6cm}
-
-\item A standard-issue California state license plate for a car or truck consists of seven characters; a numeral, followed by three letters, followed by three more numerals. How many different license plates can California issue using this scheme?
-
-\vspace{4cm}
-
-\item How many different 6-card hands can be drawn from a standard deck?
-
-\vspace{4cm}
-
-
 \newpage
 
-\item As of 2016 the U.S. Senate includes 20 women and 80 men.
+\item (10 pts.) As of 2016 the U.S. House of Representatives includes 84 women and 351 men.
 \begin{enumerate}
-\item Suppose three senators are selected at random. What is the probability that all three are men?
-\item Suppose four senators are selected to form a committee, consisting of a chair, vice chair, ranking member, and quartermaster. In how many ways can this committee be formed?
+\item Suppose three congresspeople are selected at random. What is the probability that all three are women?
+\item Suppose three congresspeople are selected to form a committee, consisting of a chair, vice chair, and ranking member. In how many ways can this committee be formed?
 \end{enumerate}
 
 \vspace{7cm}
 
-\item Compute the mean and standard deviation of the following discrete random variable.
+\item (10 pts.) Compute the mean and standard deviation of the following discrete random variable.
 
 \begin{center}
 \begin{tabular}{c|ccccc}
-$x$    & 0    & 1    & 2   & 3   & 4    \\ \hline
-$P(x)$ & 3/20 & 3/10 & 1/5 & 1/5 & 3/20 \\
+$x$    & 0    & 1   & 2    & 3   & 4    \\ \hline
+$P(x)$ & 2/15 & 1/3 & 1/15 & 1/5 & 4/15 \\
 \end{tabular}
 \end{center}
 
 \vspace{4cm}
 
+\item (10 pts.) An District of Columbia license plate consists of two letters followed by four digits. How many different license plates can be issued using this scheme?
 \end{enumerate}
 
 \end{document}
