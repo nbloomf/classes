@@ -1,39 +1,3 @@
-\documentclass{article}
-\usepackage{neb-titles}
-\usepackage{flexfig}
-
-\begin{document}
-
-\TestTitle#[class=Calculus I, name={Test 2}, date={6 Mar}, term=Spring, year=2015, form=A#]
-
-\begin{enumerate}
-\item (10 pts.) [input ("calc/diff/laurent/3term.mdt")]
-
-\item (10 pts.) [input ("calc/diff/tangent/laurent1.mdt")]
-
-\item (10 pts.) [input ("calc/diff/chain/sin1.mdt")]
-
-\newpage
-
-\item (10 pts.) [input ("calc/diff/quot/rat1.mdt")]
-
-\item (10 pts.) [input ("calc/diff/chain/root1.mdt")]
-
-\item (10 pts.) [input ("calc/diff/2nd/chain1.mdt")]
-
-\item (10 pts.) [input ("calc/diff/tangent/root1.mdt")]
-
-\item (10 pts.) [input ("calc/diff/tangent/cubic1.mdt")]
-
-\newpage
-
-\item (10 pts.) [input ("calc/diff/tangent/laurent2.mdt")]
-
-\vspace{3cm}
-
-\item (10 pts.) [input ("calc/diff/implicit/fraclinear1.mdt")]
-
-\newpage
 
 \item#[Bonus:#] (10 pts.) Suppose $y$ is a function of $x$ defined implicitly by the equation \#[ x^4 + y^4 = 16. \#] The graph of this equation is as follows.
 

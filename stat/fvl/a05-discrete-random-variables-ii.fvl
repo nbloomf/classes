@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{flexfig}
+
+[define bool @SHOWSOLN := #f]#
+
+
+
+\begin{document}
+
+[define str @TITLE := "Discrete Random Variables II" ++ (if (@SHOWSOLN) then " (Solutions)" else "")]#
+
+\ActivityTitle#[class=Statistics, number=5, name={@TITLE}#]
+
+\begin{enumerate}
+\item A recent survey found that 30\% of adults prefer vanilla ice cream. Suppose we select 40 adults. What is the probability that only 8 of them prefer vanilla ice cream?
+
+\vspace{4cm}
+
+\item You are taking a quiz consisting of 10 multiple choice questions. Each question has 3 possible responses, only one of which is correct. Having forgotten to study, you will be answering the questions at random. The number of questions you answer correctly can be modeled by a binomial random variable.
+\begin{enumerate}
+\item Make a table of the probability distribution function for the possible numbers of correct responses, from 0 to 10. That is, find the probability of answering 0 correct, 1, correct, and so on, up to 10.
+
+\item Find the probability of answering at least 6 questions correctly.
+\end{enumerate}
+
+\vspace{4cm}
+
+\item A jar of jelly beans contains 120 red beans, 150 green beans, 115 yellow beans, and 160 purple beans. If we take 10 beans from the jar, what is the probability that 5 of them are red? (Hint: model the number of red beans taken as a binomial random variable.)
+
+\newpage
+
+\item  Over the course of a year (365 days), there were 426 bird-turbine collisions at the Fairlight Wind Farm. Assuming the number of collisions at the farm is modeled by a Poisson random variable, what is the probability that on any given day there will be at least one bird-turbine collision?
+
+\vspace{6cm}
+
+\item Last year at NSU, 30 desktop computers had to be replaced due to equipment failure. Find the probability that in any given month at least two computers will need to be replaced due to failure.
+\end{enumerate}
+
+\end{document}

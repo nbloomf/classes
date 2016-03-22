@@ -1,8 +1,10 @@
 \documentclass{article}
 \usepackage{neb-titles}
+\usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{flexfig}
 
-\pagestyle{empty}
+[define bool @SHOWSOLN := #f]#
 
 [import (kreb-scout/ca/poly/endbehavior.fvl)]#
 [import (kreb-scout/ca/poly/division.fvl)]#
@@ -10,7 +12,9 @@
 
 \begin{document}
 
-\ActivityTitle#[class={College Algebra}, number={3}, name={Polynomials 1}#]
+[define str @TITLE := "Transformations" ++ (if (@SHOWSOLN) then " (Solutions)" else "")]#
+
+\ActivityTitle#[class={College Algebra}, number={5}, name={@TITLE}#]
 
 \begin{enumerate}
 \item [eval @algebraic.end.behavior.1] \vspace{1cm}
@@ -21,11 +25,15 @@
 
 \newpage
 
-\item [eval @given.roots.1] \vspace{7cm}
-
-\item [eval @given.roots.2] \vspace{7cm}
+\item Compute the following products.
+\begin{enumerate}
+\item $(x-1)(x-1)(x+1)$ \vspace{3cm}
+\item $(x-2)(x+3)(2x-1)$ \vspace{3cm}
+\end{enumerate}
 
 \item [eval @construct.from.roots.1] \vspace{7cm}
+
+\item Construct a polynomial whose roots are $1$, $-2$, and $1/2$.
 \end{enumerate}
 
 \end{document}

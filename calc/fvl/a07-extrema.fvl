@@ -2,9 +2,13 @@
 \usepackage{neb-titles}
 \usepackage{flexfig}
 
+[define bool @SHOWSOLN := #f]#
+
+
+
 \begin{document}
 
-\ActivityTitle#[class=Calculus I, number=7, name=Extrema#]
+\ActivityTitle#[class=Calculus I, number=7, name={Extrema}#]
 
 \begin{enumerate}
 \item Find the global extrema of the following functions on the indicated domain.
@@ -35,5 +39,4 @@ Find the value of $x$ which maximizes the volume of the tray.
 \item Does the number of extrema you found in (2) agree with your conjecture in (1)? If not, why not? \vspace{1cm}
 \end{enumerate}
 \end{enumerate}
-
 \end{document}
