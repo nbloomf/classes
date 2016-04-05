@@ -2,9 +2,15 @@
 \usepackage{neb-titles}
 \usepackage{flexfig}
 
+[define bool @SHOWSOLN := #f]#
+
+
+
 \begin{document}
 
-\ActivityTitle#[class=Statistics, number=4, name={Normal Random Variables}#]
+[define str @TITLE := "Normal Random Variables" ++ (if (@SHOWSOLN) then " (Solutions)" else "")]#
+
+\ActivityTitle#[class=Statistics, number=6, name={@TITLE}#]
 
 \begin{enumerate}
 \item Suppose healthy human body temperatures are normally distributed with mean $98.20^\circ$ F and standard deviation $0.62^\circ$ F.
@@ -18,10 +24,10 @@
 \begin{enumerate}
 \item Suppose the machine is set to accept coins weighing between 5.64 g and 5.70 g. What percentage of real quarters are rejected? Is this too high? \vspace{4cm}
 
-\newpage
-
 \item Suppose we wish to set the machine so that all real quarters are accepted except those in the top 2.5\% and the bottom 2.5\% by weight. What should the cutoff weights be? \vspace{4cm}
 \end{enumerate}
+
+\newpage
 
 \item Scores on the 2014 SAT were normally distributed with mean 1511 and standard deviation 312; scores on the 2014 ACT were normally distributed with mean 21.1 and standard deviation 5.1. Assume that the two tests use different scales to measure the same aptitude.
 
@@ -32,7 +38,7 @@ If someone got a 2100 on the SAT in 2014, find their equivalent ACT score. \vspa
 \item A door peephole is placed at a height that is uncomfortable for women with standing eye heights greater than 1605 mm. What percentage of women will find that height uncomfortable? \vspace{4cm}
 
 \item An architect wants to design a door with a peephole which is comfortable for the highest 99\% of standing eye heights of women. What standing eye height separates the top 99\% of women from the bottom 1\%?
-\end{enumerate} 
+\end{enumerate}
 \end{enumerate}
 
 \end{document}

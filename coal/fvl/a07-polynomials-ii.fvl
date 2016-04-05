@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{flexfig}
+
+[define bool @SHOWSOLN := #f]#
+
+[import (kreb-scout/ca/poly/factor/synthdiv.fvl)]#
+
+\begin{document}
+
+[define str @TITLE := "Polynomials II" ++ (if (@SHOWSOLN) then " (Solutions)" else "")]#
+
+\ActivityTitle#[class={College Algebra}, number={7}, name={@TITLE}#]
+
+\begin{enumerate}
+\item [eval @given.roots.1]
+
+\vspace{8cm}
+
+\item [eval @given.roots.2]
+
+\newpage
+
+\item [eval @rational.root.test.candidates.1]
+
+\vspace{3cm}
+
+\item [eval @rational.root.test.factor.1]
+
+\newpage
+
+\item [eval @rational.root.test.factor.2]
+\end{enumerate}
+
+\end{document}

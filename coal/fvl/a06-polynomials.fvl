@@ -12,9 +12,9 @@
 
 \begin{document}
 
-[define str @TITLE := "Transformations" ++ (if (@SHOWSOLN) then " (Solutions)" else "")]#
+[define str @TITLE := "Polynomials" ++ (if (@SHOWSOLN) then " (Solutions)" else "")]#
 
-\ActivityTitle#[class={College Algebra}, number={5}, name={@TITLE}#]
+\ActivityTitle#[class={College Algebra}, number={6}, name={@TITLE}#]
 
 \begin{enumerate}
 \item [eval @algebraic.end.behavior.1] \vspace{1cm}

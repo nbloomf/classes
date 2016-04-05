@@ -1,0 +1,28 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{flexfig}
+
+[define bool @SHOWSOLN := #f]#
+
+
+
+\begin{document}
+
+\ActivityTitle#[class=Calculus I, number=8, name={Applications}#]
+
+\begin{enumerate}
+\item Use Newton's Method to find a rational approximation to $\sqrt{7}$ which is accurate to 8 decimal digits.
+
+\vspace{8cm}
+
+\item Use Newton's Method to find a solution of the following equation to within 5 decimal digits: \#[ \cos(x) = 2x \#]
+
+\newpage
+
+\item We know from trigonometry that $\pi$ is the only solution of the equation $\tan(x) = 0$ in the interval $(\pi/2,3\pi/2)$. Use Newton's method to find an approximation of $\pi$ which is accurate to 12 decimal digits. You may find it easiest to use a spreadsheet to do this.
+
+\vspace{8cm}
+
+\item Find the best degree 8 polynomial approximation of $f(x) = \cos(x)$ near $x = 0$. Graph both $f$ and your approximating polynomial on the same set of axes (use a computer). Over what interval does it appear that the approximation "good"?
+\end{enumerate}
+\end{document}
