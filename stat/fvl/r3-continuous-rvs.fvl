@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{flexfig}
+\usepackage{amsmath}
+\usepackage{neb-formulas}
+\usepackage{neb-macros}
+
+
+
+\begin{document}
+
+\ReviewTitle#[class={Statistics}, for={Test 3}#]
+
+\begin{enumerate}
+\item Adult women's heights are normally distributed with mean 63.8 in and standard deviation 2.6 in. Find the quartiles of this data; that is, what height separates the bottom 25\%, the bottom 50\%, and the bottom 75\%. \vspace{6cm}
+
+\item The \emph{sitting knee height} of a person is the distance from the bottom of the feet to the top of the knees while sitting. Adult males have sitting knee heights which are normally distributed with mean 21.4 in and standard deviation 1.2 in; adult females have sitting knee heights which are normally distributed with mean 19.6 in and standard deviation 1.1 in.
+\begin{enumerate}
+\item A particular desk has a clearance of 23.5 in between the floor and the bottom of the desktop. What percentage of adult men can sit comfortably at this desk? What percentage of adult women? \vspace{6cm}
+\item We are designing a desk and wish it to be usable by all but the top 5\% of men by sitting knee height. How much clearance should the desk have?
+\end{enumerate}
+
+\newpage
+
+\item Find the area under the standard normal curve over the following intervals.
+\begin{enumerate}
+\item $(-0.36, 1.42)$ \vspace{3cm}
+\item $(-\infty, -0.7)$ \vspace{3cm}
+\item $(0.8, \infty)$ \vspace{4cm}
+\end{enumerate}
+
+\item The head circumferences of adult women are normally distributed with mean 22.65 in and standard deviation 0.80 in.
+\begin{enumerate}
+\item The Hats by Leko company produces women's hats designed to fit a head circumference between 21 in and 25 in. What percentage of adult women can wear these hats? \vspace{5cm}
+
+\item Suppose the company decides to redesign its hats so that they will fit all adult women except the top 2.5\% and the bottom 2.5\% by head circumference. What range of head circumferences should be accommodated? \vspace{5cm}
+\end{enumerate}
+\end{enumerate}
+
+\end{document}

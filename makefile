@@ -39,12 +39,14 @@ coal: FORCE
 	# Reviews
 	$(call document,coal,r1-equations-and-geometry)
 	$(call document,coal,r2-functions)
+	$(call document,coal,r3-polynomials)
 
 	$(call solution,coal,r1-equations-and-geometry)
 
 	# Tests
 	$(call document,coal,t1-equations-and-geometry)
 	$(call document,coal,t2-functions)
+	$(call document,coal,t3-polynomials)
 
 	$(call solution,coal,t1-equations-and-geometry)
 
@@ -75,12 +77,14 @@ stat: FORCE
 	# Reviews
 	$(call document,stat,r1-parameters-and-probability)
 	$(call document,stat,r2-counting-and-drvs)
+	$(call document,stat,r3-continuous-rvs)
 
 	$(call solution,stat,r1-parameters-and-probability)
 
 	# Tests
 	$(call document,stat,t1-parameters-and-probability)
 	$(call document,stat,t2-counting-and-drvs)
+	$(call document,stat,t3-continuous-rvs)
 
 	# Slides
 	$(call slides,stat,slides-misleading-graphs)
@@ -122,6 +126,7 @@ calc: FORCE
 	# Tests
 	$(call document,calc,t1-limits-and-derivatives)
 	$(call document,calc,t2-differentiation)
+	$(call document,calc,t3-differentiation-ii)
 
 	# Remove generated files
 	rm -rf calc/tex

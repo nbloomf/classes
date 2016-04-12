@@ -6,9 +6,7 @@
 \usepackage{graphicx}
 
 
-[import (kreb-scout/ca/poly/endbehavior.fvl)]#
-[import (kreb-scout/ca/poly/division.fvl)]#
-[import (kreb-scout/ca/poly/factor/synthdiv.fvl)]#
+
 [import (kreb-scout/ca/poly/factor/conjugate.fvl)]#
 [import (kreb-scout/ca/ratfun/asymptotes.fvl)]#
 [import (kreb-scout/ca/geom/parabolas.fvl)]#
@@ -21,11 +19,6 @@
 \AlgebraFacts#[geom={show}#]
 
 \begin{enumerate}
-\item [eval @algebraic.end.behavior.1] \vspace{1cm}
-
-\item [eval @given.roots.1] \vspace{6cm}
-
-\item [eval @construct.from.roots.1] \vspace{5cm}
 
 \newpage
 

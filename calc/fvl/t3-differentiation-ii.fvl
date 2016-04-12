@@ -1,0 +1,47 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{flexfig}
+\usepackage{amsmath}
+\usepackage{neb-formulas}
+
+
+
+\begin{document}
+
+\TestTitle#[class={Calculus 1}, name={Test 3}, term={Spring}, date={Apr. 15}, year={2016}, form={A}#]
+
+\begin{enumerate}
+\item Find the interval(s) over which the following function is increasing or decreasing. \#[ f(x) = x - 5\sqrt{x-2} \#] \vspace{6cm}
+
+\item Find the interval(s) over which the following function is concave up or concave down. \#[ f(x) = x^3 - x \#] What are the inflection points of the graph of $f$? \vspace{6cm}
+
+\item Find the global extrema of $g(x) = (x+2)^2 + 4$ on $D = #[-4,1#]$. \vspace{5cm}
+
+\newpage
+
+\item Use Newton's Method to find a rational approximation to $\sqrt{11}$ which is accurate to 8 decimal digits. (Since $3^2 < 11 < 4^2$, 3 is a reasonable initial guess.) \vspace{7cm}
+
+\item A rectangular sheet of aluminum, measuring 35 cm by 50 cm, is to have squares of side length $x$ cut out of its corners. Then the sheet will be folded along the gray lines to form a rectangular tray as shown in the following diagram.
+
+\begin{center}
+\raisebox{-0.5\height}{\CutRectangleA#[x=$x$, h=50, w=35#]}
+\quad $\rightarrow$ fold $\rightarrow$ \quad
+\raisebox{-0.5\height}{\RectangularTray#[#]}
+\end{center}
+
+Find the value of $x$ which maximizes the volume of the tray.
+
+\newpage
+
+\item Compute the following antiderivative. \#[ \int x^3 + \sin(x) \ \mathrm{d}x \#] \vspace{4cm}
+
+\item Find the best degree 6 polynomial approximation of $f(x) = \sin(x) + \cos(2x)$ near $x = 0$. Plot both $f$ and your approximating polynomial on the same set of axes using a graphing utility, and attach the printed plot to your exam. \vspace{8cm}
+
+\newpage
+
+\item Let \#[ f(x) = x^4 - 10x^2 + 1. \#] Since $f$ is a degree 4 polynomial, we know that it should have 4 roots (up to multiplicity). Use Newton's Method with a spreadsheet to approximate all four roots of $f$ to 8 decimal digits. Attach a printout of your spreadsheet to this exam. \vspace{6cm}
+
+\item#[Bonus:#] Find the exact roots of the function $f$ in problem 8.
+\end{enumerate}
+
+\end{document}

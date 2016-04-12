@@ -1,0 +1,59 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{flexfig}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{neb-formulas}
+\usepackage{neb-macros}
+
+
+\begin{document}
+
+\TestTitle#[class={Statistics}, name={Test 3}, term={Spring}, date={Apr. 15}, year={2016}, form={A}#]
+
+
+\begin{enumerate}
+\item (5 pts. each) Find the area under the standard normal curve over the following intervals.
+\begin{enumerate}
+\item $(-0.24, 1.57)$ \vspace{3cm}
+\item $(-\infty, -0.6)$ \vspace{3cm}
+\item $(0.75, \infty)$ \vspace{4cm}
+\end{enumerate}
+
+\item (10 pts.) Imperial regulations, by decree of Emperor Palpatine, require that stormtroopers be adult males between 1.75 m and 1.85 m tall. (It is easier to mass-produce their plastic armor that way.) On the planet of Alderaan, which was destroyed with all inhabitants by the Death Star, the heights of adult males were normally distributed with mean 1.76 m and standard deviation 0.06 m. What percentage of Alderaan's adult males would have met the stormtroopers' height requirement, and thus been eligible for conscription, had they not been lost with Alderaan? \vspace{5cm}
+
+\newpage
+
+
+
+\item Birth weights in the USA are normally distributed with mean 3369 g and standard deviation 567 g.
+\begin{enumerate}
+\item (5 pts.) One definition of a premature baby is one whose birth weight is below 2500 g. Find the probability that a randomly selected baby has birth weight below 2500 g. \vspace{4cm}
+
+\item (5 pts.) Another definition of a premature baby is one in the bottom 10\% by birth weight. Find the cutoff weight separating the bottom 10\% from the top 90\%. \vspace{4cm}
+\end{enumerate}
+
+\item The lengths of human pregnancies are normally distributed with a mean of 268 days and standard deviation 15 days.
+\begin{enumerate}
+\item (5 pts.) What is the probability that a pregnancy will be 308 days or longer? \vspace{4cm}
+
+\item (5 pts.) Yet another definition of a premature baby is one whose pregnancy is in the shortest 3\%. Find the pregnancy length that separates the shortest 3\% from the rest.
+\end{enumerate}
+
+\newpage
+
+\item Adult men's heights are normally distributed with mean 69.5 in and standard deviation 2.4 in, and adult women's heights are normally distributed with mean 63.8 in and standard deviation 2.6 in. The U.S. Navy requires that fighter pilots have heights between 62 in and 78 in.
+\begin{enumerate}
+\item (10 pts.) What percentage of adult men do not meet this requirement? What percentage of adult women do not meet the requirement? \vspace{8cm}
+
+\item (10 pts.) Suppose the Navy decides to change its height requirements so that only the shortest 3\% of women and the tallest 3\% of men are excluded. What are the new height requirements?
+\end{enumerate}
+
+\newpage
+
+
+
+\item (5 pts.) Plain M\&M candies have a mean mass of 0.8565 g with standard deviation 0.0518 g. A selected bag of M\&Ms was found to contain 465 candies and have a claimed mass of 396.9 g. We may assume that the masses of M\&Ms are normally distributed. If one M\&M is selected, find the probability that its mass is greater than 0.8535 g. \vspace{4cm}
+\end{enumerate}
+
+\end{document}
