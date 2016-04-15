@@ -60,6 +60,9 @@ stat: FORCE
 	mkdir -p stat/tex
 	cp -r stat/fvl/gfx/ stat/tex/
 
+	# Tables
+	$(call plaintex,stat,tables,z-score-table)
+
 	# Syllabus
 	$(call document,stat,syllabus)
 
@@ -195,6 +198,22 @@ ring: FORCE
 
 
 FORCE:
+
+
+
+define plaintex
+  @echo "Attempting to build $(1)/$(2)/$(3)" | doppler lightblue
+
+  # Generate pdfs
+  pdflatex -interaction=batchmode $(1)/$(2)/$(3).tex
+  pdflatex -interaction=batchmode $(1)/$(2)/$(3).tex
+  mv $(3).pdf $(1)/$(1)-$(3).pdf
+
+  # Clean up
+  rm $(3).aux $(3).log
+
+  @echo "Successfully built $(1)/$(2)/$(3)" | doppler lightgreen
+endef
 
 
 
