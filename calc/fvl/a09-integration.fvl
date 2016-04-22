@@ -1,0 +1,27 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{neb-macros}
+\usepackage{flexfig}
+
+[define bool @SHOWSOLN := #f]#
+
+
+
+\begin{document}
+
+\ActivityTitle#[class=Calculus I, number=9, name={Integration}#]
+
+\begin{enumerate}
+\item Compute the following indefinite integral. \#[ \int \frac{2x}{x^2 - 25} \wrt{x} \#] \vspace{6cm}
+
+\item Evaluate the following indefinite integral. \#[ \int x\cos(x^2 - 1) \, \wrt{x} \#] \vspace{5cm}
+
+\item Evaluate the following indefinite integral. \#[ \int \frac{\sec(x) \tan(x)}{2 + \sec{x}} \wrt{x} \#] \vspace{5cm}
+
+\newpage
+
+\item Compute the following. (Hint: break up the integral.) \#[ \int_{-3}^3 |x^3 - 4x| \, \wrt{x} \#] \vspace{8cm}
+
+\item Solve the following system of equations for $f$. \#[ \left\{ \begin{array}{l} f^\prime(x) = \cos(x) + 3x^2 \\ f(0) = 1 \end{array}\right. \#] \vspace{8cm}
+\end{enumerate}
+\end{document}

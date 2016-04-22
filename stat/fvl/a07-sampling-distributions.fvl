@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{flexfig}
+
+[define bool @SHOWSOLN := #f]#
+
+
+
+\begin{document}
+
+[define str @TITLE := "Sampling Distributions" ++ (if (@SHOWSOLN) then " (Solutions)" else "")]#
+
+\ActivityTitle#[class=Statistics, number=7, name={@TITLE}#]
+
+\begin{enumerate}
+\item Plain M\&M candies have a mean mass of 0.8565 g with standard deviation 0.0518 g. A selected bag of M\&Ms was found to contain 465 candies and have a claimed mass of 396.9 g. We may assume that the masses of M\&Ms are normally distributed.
+\begin{enumerate}
+\item If one M\&M is selected, find the probability that its mass is greater than 0.8535 g. \vspace{7cm}
+
+\item If 465 M\&Ms are selected, find the probability that their mean weight is greater than 0.8535 g. (Hint: Use a sampling distribution.) \vspace{4cm}
+\end{enumerate}
+
+\newpage
+
+\item There is an 80\% chance that a prospective employer will check the educational background of a job applicant. 64 job applications are randomly selected. Find the probability that at least 50 of the applicants will have their educational backgrounds checked. (Hint: use a sampling distribution of sample proportions.) \vspace{9cm}
+
+\item The weights of adult men are normally distributed with mean 182.9 lb and standard deviation 40.8 lb. The Bombardier Dash 8 is a small aircraft capable of carrying 37 passengers with a weight capacity of 6200 lb. If this plane is loaded to capacity with adult male passengers, what is the probability that their mean weight exceeds 6200 lb/37 = 167.6 lb? \vspace{5cm}
+\end{enumerate}
+
+\end{document}

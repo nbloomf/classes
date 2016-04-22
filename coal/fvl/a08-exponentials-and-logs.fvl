@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{flexfig}
+
+[define bool @SHOWSOLN := #f]#
+
+[import (kreb-scout/ca/poly/factor/synthdiv.fvl)]#
+
+\begin{document}
+
+[define str @TITLE := "Exponentials and Logs" ++ (if (@SHOWSOLN) then " (Solutions)" else "")]#
+
+\ActivityTitle#[class={College Algebra}, number={8}, name={@TITLE}#]
+
+\begin{enumerate}
+\item Solve the following equation. \#[ 3^{2x-1} = 27^{x+2} \#] \vspace{5cm}
+
+\item Solve the following equation using logarithms. \#[ 3 = 2^{x+1} \#] \vspace{5cm}
+
+\item Suppose \$20,000 is invested at a 0.5\% APR, compounded quarterly, for 5 years. Using the equation \#[ A = P\left(1 - \frac{r}{n}\right)^{nt} \#] find the final value of this account. \vspace{4cm}
+
+\newpage
+
+\item Suppose \$20,000 is invested at a 0.5\% APR, compounded quarterly. How many years will it take for this account to be worth \$25,000? \vspace{8cm}
+
+\item Suppose $P$ dollars are invested at 0.7\% APR, compounded monthly. How many months will it take for the value of this account to double?
+\end{enumerate}
+
+\end{document}

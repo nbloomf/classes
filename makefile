@@ -29,6 +29,7 @@ coal: FORCE
 	$(call document,coal,a05-transformations)
 	$(call document,coal,a06-polynomials)
 	$(call document,coal,a07-polynomials-ii)
+	$(call document,coal,a08-exponentials-and-logs)
 
 	$(call solution,coal,a01-linear-ish-equations)
 	$(call solution,coal,a02-some-geometry)
@@ -73,6 +74,7 @@ stat: FORCE
 	$(call document,stat,a04-discrete-random-variables)
 	$(call document,stat,a05-discrete-random-variables-ii)
 	$(call document,stat,a06-normal-random-variables)
+	$(call document,stat,a07-sampling-distributions)
 
 	$(call solution,stat,a01-basic-parameters)
 	$(call solution,stat,a02-probability)
@@ -114,6 +116,7 @@ calc: FORCE
 	$(call document,calc,a06-monotonicity-and-concavity)
 	$(call document,calc,a07-extrema)
 	$(call document,calc,a08-applications)
+	$(call document,calc,a09-integration)
 
 	$(call solution,calc,a01-limits)
 	$(call solution,calc,a02-continuity)

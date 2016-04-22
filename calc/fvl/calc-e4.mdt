@@ -19,15 +19,7 @@
 
 \item (5 pts.) Compute the derivative of the following function. \#[ y(x) = \sqrt{\ln \sqrt{x}} \#] \vspace{6cm}
 
-\item (10 pts.) Compute the following indefinite integral. \#[ \int \frac{2x}{x^2 - 25} \wrt{x} \#] \vspace{6cm}
 
-\item (10 pts.) Evaluate the following indefinite integral. \#[ \int x\cos(x^2 - 1) \, \wrt{x} \#] \vspace{5cm}
-
-\item (10 pts.) Evaluate the following indefinite integral. \#[ \int \frac{\sec(x) \tan(x)}{2 + \sec{x}} \wrt{x} \#] \vspace{5cm}
-
-\item (10 pts.) Compute the following. (Hint: break up the integral.) \#[ \int_{-3}^3 |x^3 - 4x| \, \wrt{x} \#] \vspace{8cm}
-
-\item (15 pts.) Solve the following system of equations for $f$. \#[ \left\{ \begin{array}{l} f^\prime(x) = \cos(x) + 3x^2 \\ f(0) = 1 \end{array}\right. \#] \vspace{8cm}
 
 \newpage
 
