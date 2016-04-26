@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{flexfig}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{neb-formulas}
+\usepackage{neb-macros}
+
+
+\begin{document}
+
+\TestTitle#[class={Statistics}, name={Test 4}, term={Spring}, date={}, year={2016}, form={A}#]
+
+
+\begin{enumerate}
+\item (10 pts.) In a recent survey of 1003 people, 59\% said that they have never hesitated to give a handshake due to a fear of germs. Construct a 95\% confidence interval for the proportion of all people who have never hesitated to give a handshake due to a fear of germs. \vspace{7cm}
+
+\item (10 pts.) During a given 11 year period in Hidalgo County, Texas, 870 people were selected for grand jury duty, and 39\% of them were Americans of Mexican descent.
+\begin{enumerate}
+\item Assuming that grand jury members are representative of the larger county population, construct a 99\% confidence interval for the proportion of Hidalgo county residents who are of Mexican descent. \vspace{6cm}
+
+\item Among the people in Hidalgo county who were eligible for grand jury duty, 79.1\% were Americans of Mexican descent. What, if anything, does this suggest about the result of part (a)?
+\end{enumerate}
+
+\newpage
+
+\item (10 pts.) A survey of 427 women found that 29\% purchase books online.
+\begin{enumerate}
+\item Among the 427 women surveyed, how many purchased books online? \vspace{1cm}
+\item Construct a 95\% confidence interval for the percentage of all women who purchase books online. \vspace{6cm}
+\end{enumerate}
+
+\item (10 pts.) An opinion poll found that out of 1005 American respondents, 543 said that they felt safer knowing that the U.S. has nuclear weapons. Construct an 80\% confidence interval for the true proportion of Americans who feel safer with nuclear weapons.
+
+\newpage
+
+\item (10 pts.) A recent survey of 1002 people found that 70\% voted in the last presidential election. Voting records show that 61\% of eligible voters actually did vote.
+\begin{enumerate}
+\item Using the survey data, find a 98\% confidence interval for the proportion of people who claim to have voted. \vspace{6cm}
+\item Are the survey results consistent with the actual voter turnout of 61\%? Why or why not? \vspace{2cm}
+\end{enumerate}
+
+\item (10 pts.) Hispanic voters are an increasingly important demographic in U.S. national elections. In 2012, President Obama won this group with 71\% of the vote. A recent poll of 1204 Hispanic adults found that 77\% had an unfavorable view of presidential candidate Donald Trump. Construct a 95\% confidence interval for the true percentage of Hispanic adults who have an unfavorable view of Donald Trump.
+\end{enumerate}
+
+\end{document}

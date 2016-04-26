@@ -90,6 +90,7 @@ stat: FORCE
 	$(call document,stat,t1-parameters-and-probability)
 	$(call document,stat,t2-counting-and-drvs)
 	$(call document,stat,t3-continuous-rvs)
+	$(call document,stat,t4-inference)
 
 	# Slides
 	$(call slides,stat,slides-misleading-graphs)
