@@ -19,21 +19,6 @@
 
 \newpage
 
-\item A rectangular sheet of cardboard, measuring 10 inches by 16 inches, is to have squares of side length $x$ cut out of its corners. Then the sheet will be folded along the gray lines to form a rectangular tray as shown in the following diagram.
-
-\begin{center}
-\raisebox{-0.5\height}{\CutRectangleA#[x=$x$, h=16, w=10, scale=0.8#]}
-\quad $\rightarrow$ fold $\rightarrow$ \quad
-\raisebox{-0.5\height}{\RectangularTray#[#]}
-\end{center}
-
-\begin{enumerate}
-\item (6 pts.) Write down an equation that expresses the volume $V$ of the tray as a function of $x$. \vspace{3cm}
-\item (4 pts.) In the context of this problem, what is the interval of possible values for $x$? \vspace{2cm}
-\item (8 pts.) Find the value of $x$ which maximizes the \emph{volume} of the tray. \vspace{7cm}
-\item (4 pts.) What is the maximum volume? \vspace{3cm}
-\end{enumerate}
-
 \newpage
 
 \item (10 pts.) The sum of two nonnegative numbers $x$ and $y$ is 36. Find $x$ and $y$ such that $\sqrt{x} + \sqrt{y}$ is as large as possible. \vspace{5cm}

@@ -100,44 +100,132 @@ stat: FORCE
 	@echo "Done!" | doppler lightgreen
 
 
-calc: FORCE
-	mkdir -p calc/tex
 
-	# Syllabus
+
+
+calc: \
+  calc/calc-syllabus.pdf \
+  calc-activities \
+  calc-reviews \
+  calc-tests
+
+
+
+calc/calc-syllabus.pdf: calc/fvl/syllabus.fvl
+	mkdir -p calc/tex
 	$(call copy,calc,nsulogo.png)
 	$(call document,calc,syllabus)
-
-	# Activities
-	$(call document,calc,a01-limits)
-	$(call document,calc,a02-continuity)
-	$(call document,calc,a03-differentiation-1)
-	$(call document,calc,a04-differentiation-2)
-	$(call document,calc,a05-differentiation-3)
-	$(call document,calc,a06-monotonicity-and-concavity)
-	$(call document,calc,a07-extrema)
-	$(call document,calc,a08-applications)
-	$(call document,calc,a09-integration)
-
-	$(call solution,calc,a01-limits)
-	$(call solution,calc,a02-continuity)
-	$(call solution,calc,a03-differentiation-1)
-	$(call solution,calc,a04-differentiation-2)
-
-	# Reviews
-	$(call document,calc,r1-limits-and-derivatives)
-	$(call document,calc,r2-differentiation)
-
-	$(call solution,calc,r1-limits-and-derivatives)
-
-	# Tests
-	$(call document,calc,t1-limits-and-derivatives)
-	$(call document,calc,t2-differentiation)
-	$(call document,calc,t3-differentiation-ii)
-
-	# Remove generated files
 	rm -rf calc/tex
 
-	@echo "Done!" | doppler lightgreen
+
+
+calc-activities: \
+  calc/calc-a01-limits.pdf \
+  calc/calc-a02-continuity.pdf \
+  calc/calc-a03-differentiation-1.pdf \
+  calc/calc-a04-differentiation-2.pdf \
+  calc/calc-a05-differentiation-3.pdf \
+  calc/calc-a06-monotonicity-and-concavity.pdf \
+  calc/calc-a07-extrema.pdf \
+  calc/calc-a08-applications.pdf \
+  calc/calc-a09-integration.pdf
+
+calc/calc-a01-limits.pdf: calc/fvl/a01-limits.fvl
+	mkdir -p calc/tex
+	$(call document,calc,a01-limits)
+	$(call solution,calc,a01-limits)
+	rm -rf calc/tex
+
+calc/calc-a02-continuity.pdf: calc/fvl/a02-continuity.fvl
+	mkdir -p calc/tex
+	$(call document,calc,a02-continuity)
+	$(call solution,calc,a02-continuity)
+	rm -rf calc/tex
+
+calc/calc-a03-differentiation-1.pdf: calc/fvl/a03-differentiation-1.fvl
+	mkdir -p calc/tex
+	$(call document,calc,a03-differentiation-1)
+	$(call solution,calc,a03-differentiation-1)
+	rm -rf calc/tex
+
+calc/calc-a04-differentiation-2.pdf: calc/fvl/a04-differentiation-2.fvl
+	mkdir -p calc/tex
+	$(call document,calc,a04-differentiation-2)
+	$(call solution,calc,a04-differentiation-2)
+	rm -rf calc/tex
+
+calc/calc-a05-differentiation-3.pdf: calc/fvl/a05-differentiation-3.fvl
+	mkdir -p calc/tex
+	$(call document,calc,a05-differentiation-3)
+	rm -rf calc/tex
+
+calc/calc-a06-monotonicity-and-concavity.pdf: calc/fvl/a06-monotonicity-and-concavity.fvl
+	mkdir -p calc/tex
+	$(call document,calc,a06-monotonicity-and-concavity)
+	rm -rf calc/tex
+
+calc/calc-a07-extrema.pdf: calc/fvl/a07-extrema.fvl
+	mkdir -p calc/tex
+	$(call document,calc,a07-extrema)
+	rm -rf calc/tex
+
+calc/calc-a08-applications.pdf: calc/fvl/a08-applications.fvl
+	mkdir -p calc/tex
+	$(call document,calc,a08-applications)
+	rm -rf calc/tex
+
+calc/calc-a09-integration.pdf: calc/fvl/a09-integration.fvl
+	mkdir -p calc/tex
+	$(call document,calc,a09-integration)
+	rm -rf calc/tex
+
+
+
+calc-reviews: \
+  calc/calc-r1-limits-and-derivatives.pdf \
+  calc/calc-r2-differentiation.pdf
+
+calc/calc-r1-limits-and-derivatives.pdf: calc/fvl/r1-limits-and-derivatives.fvl
+	mkdir -p calc/tex
+	$(call document,calc,r1-limits-and-derivatives)
+	$(call solution,calc,r1-limits-and-derivatives)
+	rm -rf calc/tex
+
+calc/calc-r2-differentiation.pdf: calc/fvl/r2-differentiation.fvl
+	mkdir -p calc/tex
+	$(call document,calc,r2-differentiation)
+	rm -rf calc/tex
+
+
+
+calc-tests: \
+  calc/calc-t1-limits-and-derivatives.pdf \
+  calc/calc-t2-differentiation.pdf \
+  calc/calc-t3-differentiation-ii.pdf \
+  calc/calc-t4-integration.pdf
+
+calc/calc-t1-limits-and-derivatives.pdf: calc/fvl/t1-limits-and-derivatives.fvl
+	mkdir -p calc/tex
+	$(call document,calc,t1-limits-and-derivatives)
+	rm -rf calc/tex
+
+calc/calc-t2-differentiation.pdf: calc/fvl/t2-differentiation.fvl
+	mkdir -p calc/tex
+	$(call document,calc,t2-differentiation)
+	rm -rf calc/tex
+
+calc/calc-t3-differentiation-ii.pdf: calc/fvl/t3-differentiation-ii.fvl
+	mkdir -p calc/tex
+	$(call document,calc,t3-differentiation-ii)
+	rm -rf calc/tex
+
+calc/calc-t4-integration.pdf: calc/fvl/t4-integration.fvl
+	mkdir -p calc/tex
+	$(call document,calc,t4-integration)
+	rm -rf calc/tex
+
+
+
 
 
 prfs: FORCE

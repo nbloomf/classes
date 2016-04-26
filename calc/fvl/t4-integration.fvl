@@ -1,0 +1,34 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{flexfig}
+\usepackage{amsmath}
+\usepackage{neb-formulas}
+\usepackage{neb-macros}
+
+
+
+\begin{document}
+
+\TestTitle#[class={Calculus 1}, name={Test 4}, term={Spring}, date={}, year={2016}, form={A}#]
+
+\begin{enumerate}
+\item (10 pts.) Compute the following indefinite integral. \#[ \int \frac{3x^2}{x^3 - 1} + e^x \wrt{x} \#] \vspace{5cm}
+
+\item (10 pts.) Compute the following indefinite integral. \#[ \int 3x^2\cos(x^3+1) \wrt{x} \#] \vspace{5cm}
+
+\item (10 pts.) Compute the following indefinite integral. \#[ \int \frac{x^5 + 2x^2 - 1}{x^4} \wrt{x} \#]
+
+\newpage
+
+\item (10 pts.) Compute the following indefinite integral. \#[ \int \frac{x^3 + 2x^2 - 9x - 18}{x-3} \wrt{x} \#] \vspace{7cm}
+
+\item (10 pts.) Compute the following definite integral. \#[ \int_{-4}^{4} |2x^2-8| \wrt{x} \#]
+
+\newpage
+
+\item (10 pts.) Compute the following definite integral \emph{exactly}. \#[ \int_{-\pi/4}^{\pi/4} 6x^2 - \sec(x)\tan(x) \wrt{x} \#] \vspace{8cm}
+
+\item (10 pts.) Find the value(s) of $k$ such that \#[ \int_{0}^{k} 3x^2 - 6x - 4 \wrt{x} = -12. \#]
+\end{enumerate}
+
+\end{document}
