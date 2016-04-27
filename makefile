@@ -14,47 +14,142 @@ s15: coal stat calc
 all: coal stat calc prfs geom ring
 
 
-coal: FORCE
-	mkdir -p coal/tex
 
-	# Syllabus
+
+
+coal: \
+  coal/coal-syllabus.pdf \
+  coal-activities \
+  coal-reviews \
+  coal-tests
+
+
+
+coal/coal-syllabus.pdf: coal/fvl/syllabus.fvl
+	mkdir -p coal/tex
 	$(call copy,coal,nsulogo.png)
 	$(call document,coal,syllabus)
-
-	# Activities
-	$(call document,coal,a01-linear-ish-equations)
-	$(call document,coal,a02-some-geometry)
-	$(call document,coal,a03-compound-equations)
-	$(call document,coal,a04-functions)
-	$(call document,coal,a05-transformations)
-	$(call document,coal,a06-polynomials)
-	$(call document,coal,a07-polynomials-ii)
-	$(call document,coal,a08-exponentials-and-logs)
-
-	$(call solution,coal,a01-linear-ish-equations)
-	$(call solution,coal,a02-some-geometry)
-	$(call solution,coal,a03-compound-equations)
-	$(call solution,coal,a04-functions)
-	$(call solution,coal,a05-transformations)
-
-	# Reviews
-	$(call document,coal,r1-equations-and-geometry)
-	$(call document,coal,r2-functions)
-	$(call document,coal,r3-polynomials)
-
-	$(call solution,coal,r1-equations-and-geometry)
-
-	# Tests
-	$(call document,coal,t1-equations-and-geometry)
-	$(call document,coal,t2-functions)
-	$(call document,coal,t3-polynomials)
-
-	$(call solution,coal,t1-equations-and-geometry)
-
-	# Remove generated files
 	rm -rf coal/tex
 
-	@echo "Done!" | doppler lightgreen
+
+
+coal-activities: \
+  coal/coal-a01-linear-ish-equations.pdf \
+  coal/coal-a02-some-geometry.pdf \
+  coal/coal-a03-compound-equations.pdf \
+  coal/coal-a04-functions.pdf \
+  coal/coal-a05-transformations.pdf \
+  coal/coal-a06-polynomials.pdf \
+  coal/coal-a07-polynomials-ii.pdf \
+  coal/coal-a08-exponentials-and-logs.pdf
+
+
+
+coal/coal-a01-linear-ish-equations.pdf: coal/fvl/a01-linear-ish-equations.fvl
+	mkdir -p coal/tex
+	$(call document,coal,a01-linear-ish-equations)
+	$(call solution,coal,a01-linear-ish-equations)
+	rm -rf coal/tex
+
+coal/coal-a02-some-geometry.pdf: coal/fvl/a02-some-geometry.fvl
+	mkdir -p coal/tex
+	$(call document,coal,a02-some-geometry)
+	$(call solution,coal,a02-some-geometry)
+	rm -rf coal/tex
+
+coal/coal-a03-compound-equations.pdf: coal/fvl/a03-compound-equations.fvl
+	mkdir -p coal/tex
+	$(call document,coal,a03-compound-equations)
+	$(call solution,coal,a03-compound-equations)
+	rm -rf coal/tex
+
+coal/coal-a04-functions.pdf: coal/fvl/a04-functions.fvl
+	mkdir -p coal/tex
+	$(call document,coal,a04-functions)
+	$(call solution,coal,a04-functions)
+	rm -rf coal/tex
+
+coal/coal-a05-transformations.pdf: coal/fvl/a05-transformations.fvl
+	mkdir -p coal/tex
+	$(call document,coal,a05-transformations)
+	$(call solution,coal,a05-transformations)
+	rm -rf coal/tex
+
+coal/coal-a06-polynomials.pdf: coal/fvl/a06-polynomials.fvl
+	mkdir -p coal/tex
+	$(call document,coal,a06-polynomials)
+	rm -rf coal/tex
+
+coal/coal-a07-polynomials-ii.pdf: coal/fvl/a07-polynomials-ii.fvl
+	mkdir -p coal/tex
+	$(call document,coal,a07-polynomials-ii)
+	rm -rf coal/tex
+
+coal/coal-a08-exponentials-and-logs.pdf: coal/fvl/a08-exponentials-and-logs.fvl
+	mkdir -p coal/tex
+	$(call document,coal,a08-exponentials-and-logs)
+	rm -rf coal/tex
+
+
+
+coal-reviews: \
+  coal/coal-r1-equations-and-geometry.pdf \
+  coal/coal-r2-functions.pdf \
+  coal/coal-r3-polynomials.pdf \
+  coal/coal-r4-exponentials-and-logs.pdf
+
+coal/coal-r1-equations-and-geometry.pdf: coal/fvl/r1-equations-and-geometry.fvl
+	mkdir -p coal/tex
+	$(call document,coal,r1-equations-and-geometry)
+	$(call solution,coal,r1-equations-and-geometry)
+	rm -rf coal/tex
+
+coal/coal-r2-functions.pdf: coal/fvl/r2-functions.fvl
+	mkdir -p coal/tex
+	$(call document,coal,r2-functions)
+	rm -rf coal/tex
+
+coal/coal-r3-polynomials.pdf: coal/fvl/r3-polynomials.fvl
+	mkdir -p coal/tex
+	$(call document,coal,r3-polynomials)
+	rm -rf coal/tex
+
+coal/coal-r4-exponentials-and-logs.pdf: coal/fvl/r4-exponentials-and-logs.fvl
+	mkdir -p coal/tex
+	$(call document,coal,r4-exponentials-and-logs)
+	rm -rf coal/tex
+
+
+
+coal-tests: \
+  coal/coal-t1-equations-and-geometry.pdf \
+  coal/coal-t2-functions.pdf \
+  coal/coal-t3-polynomials.pdf \
+  coal/coal-t4-exponentials-and-logs.pdf
+
+coal/coal-t1-equations-and-geometry.pdf: coal/fvl/t1-equations-and-geometry.fvl
+	mkdir -p coal/tex
+	$(call document,coal,t1-equations-and-geometry)
+	$(call solution,coal,t1-equations-and-geometry)
+	rm -rf coal/tex
+
+coal/coal-t2-functions.pdf: coal/fvl/t2-functions.fvl
+	mkdir -p coal/tex
+	$(call document,coal,t2-functions)
+	rm -rf coal/tex
+
+coal/coal-t3-polynomials.pdf: coal/fvl/t3-polynomials.fvl
+	mkdir -p coal/tex
+	$(call document,coal,t3-polynomials)
+	rm -rf coal/tex
+
+coal/coal-t4-exponentials-and-logs.pdf: coal/fvl/t4-exponentials-and-logs.fvl
+	mkdir -p coal/tex
+	$(call document,coal,t4-exponentials-and-logs)
+	rm -rf coal/tex
+
+
+
 
 
 stat: FORCE
