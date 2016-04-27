@@ -1,0 +1,28 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{flexfig}
+\usepackage{amssymb}
+
+\begin{document}
+
+\TestTitle#[class={Intro to Proof}, name={Test 2}, term={Spring}, date={Feb. 29}, year={2016}, form={A}#]
+
+Write all your answers neatly on one or more separate sheets of paper.
+
+\begin{enumerate}
+\item Compute the greatest common divisors of the following pairs of natural numbers using the Euclidean algorithm.
+\begin{enumerate}
+\item 104 and 21
+\item 343 and 280
+\item 578 and 442
+\item 100083 and 10001
+\end{enumerate}
+
+\item Use induction to prove that the following identity holds for all natural numbers $n$. \#[ \sum_{k=1}^n k = \frac{n(n+1)}{2} \#]
+
+\item Use induction to prove that the following identity holds for all natural numbers $n$. (You may find it helpful to use the identity in (2).) \#[ \sum_{k=1}^n k^3 = \left( \sum_{k=1}^n k \right)^2 \#]
+
+\item Use induction to show that $(n+1)(n+2)(n+3)$ is divisible by 6 for all natural numbers $n$.
+\end{enumerate}
+
+\end{document}

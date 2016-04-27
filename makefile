@@ -337,6 +337,8 @@ prfs: FORCE
 
 	# Tests
 	$(call document,prfs,t01-sets)
+	$(call document,prfs,t02-numbers)
+
 
 	# Remove generated files
 	rm -rf prfs/tex
