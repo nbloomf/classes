@@ -6,7 +6,10 @@ targets: FORCE
         #   make prfs - Intro to Proof
 	#   make geom - College Geometry
 	#   make ring - Abstract Algebra (Rings)
+	#   make ssem - Senior Seminar
 	#   make all  - Everything
+	#
+	#   tickle.me to force rebuild a course
 
 
 s15: coal stat calc
@@ -14,7 +17,13 @@ s15: coal stat calc
 all: coal stat calc prfs geom ring
 
 
-
+#  _______  _______  _______  ___     
+# |       ||       ||   _   ||   |    
+# |       ||   _   ||  |_|  ||   |    
+# |       ||  | |  ||       ||   |    
+# |      _||  |_|  ||       ||   |___ 
+# |     |_ |       ||   _   ||       |
+# |_______||_______||__| |__||_______|
 
 
 coal: \
@@ -24,12 +33,16 @@ coal: \
   coal-tests
 
 
+coal/that.tickles: coal/tickle.me
+	@echo "That tickles!" | doppler lightred
+	@touch coal/that.tickles
+
 
 coal/coal-syllabus.pdf: coal/fvl/syllabus.fvl
-	mkdir -p coal/tex
+	@mkdir -p coal/tex
 	$(call copy,coal,nsulogo.png)
 	$(call document,coal,syllabus)
-	rm -rf coal/tex
+	@rm -rf coal/tex
 
 
 
@@ -45,50 +58,50 @@ coal-activities: \
 
 
 
-coal/coal-a01-linear-ish-equations.pdf: coal/fvl/a01-linear-ish-equations.fvl
-	mkdir -p coal/tex
+coal/coal-a01-linear-ish-equations.pdf: coal/fvl/a01-linear-ish-equations.fvl coal/that.tickles
+	@mkdir -p coal/tex
 	$(call document,coal,a01-linear-ish-equations)
 	$(call solution,coal,a01-linear-ish-equations)
-	rm -rf coal/tex
+	@rm -rf coal/tex
 
-coal/coal-a02-some-geometry.pdf: coal/fvl/a02-some-geometry.fvl
-	mkdir -p coal/tex
+coal/coal-a02-some-geometry.pdf: coal/fvl/a02-some-geometry.fvl coal/that.tickles
+	@mkdir -p coal/tex
 	$(call document,coal,a02-some-geometry)
 	$(call solution,coal,a02-some-geometry)
-	rm -rf coal/tex
+	@rm -rf coal/tex
 
-coal/coal-a03-compound-equations.pdf: coal/fvl/a03-compound-equations.fvl
-	mkdir -p coal/tex
+coal/coal-a03-compound-equations.pdf: coal/fvl/a03-compound-equations.fvl coal/that.tickles
+	@mkdir -p coal/tex
 	$(call document,coal,a03-compound-equations)
 	$(call solution,coal,a03-compound-equations)
-	rm -rf coal/tex
+	@rm -rf coal/tex
 
-coal/coal-a04-functions.pdf: coal/fvl/a04-functions.fvl
-	mkdir -p coal/tex
+coal/coal-a04-functions.pdf: coal/fvl/a04-functions.fvl coal/that.tickles
+	@mkdir -p coal/tex
 	$(call document,coal,a04-functions)
 	$(call solution,coal,a04-functions)
-	rm -rf coal/tex
+	@rm -rf coal/tex
 
-coal/coal-a05-transformations.pdf: coal/fvl/a05-transformations.fvl
-	mkdir -p coal/tex
+coal/coal-a05-transformations.pdf: coal/fvl/a05-transformations.fvl coal/that.tickles
+	@mkdir -p coal/tex
 	$(call document,coal,a05-transformations)
 	$(call solution,coal,a05-transformations)
-	rm -rf coal/tex
+	@rm -rf coal/tex
 
-coal/coal-a06-polynomials.pdf: coal/fvl/a06-polynomials.fvl
-	mkdir -p coal/tex
+coal/coal-a06-polynomials.pdf: coal/fvl/a06-polynomials.fvl coal/that.tickles
+	@mkdir -p coal/tex
 	$(call document,coal,a06-polynomials)
-	rm -rf coal/tex
+	@rm -rf coal/tex
 
-coal/coal-a07-polynomials-ii.pdf: coal/fvl/a07-polynomials-ii.fvl
-	mkdir -p coal/tex
+coal/coal-a07-polynomials-ii.pdf: coal/fvl/a07-polynomials-ii.fvl coal/that.tickles
+	@mkdir -p coal/tex
 	$(call document,coal,a07-polynomials-ii)
-	rm -rf coal/tex
+	@rm -rf coal/tex
 
-coal/coal-a08-exponentials-and-logs.pdf: coal/fvl/a08-exponentials-and-logs.fvl
-	mkdir -p coal/tex
+coal/coal-a08-exponentials-and-logs.pdf: coal/fvl/a08-exponentials-and-logs.fvl coal/that.tickles
+	@mkdir -p coal/tex
 	$(call document,coal,a08-exponentials-and-logs)
-	rm -rf coal/tex
+	@rm -rf coal/tex
 
 
 
@@ -98,23 +111,23 @@ coal-reviews: \
   coal/coal-r3-polynomials.pdf \
   coal/coal-r4-exponentials-and-logs.pdf
 
-coal/coal-r1-equations-and-geometry.pdf: coal/fvl/r1-equations-and-geometry.fvl
+coal/coal-r1-equations-and-geometry.pdf: coal/fvl/r1-equations-and-geometry.fvl coal/that.tickles
 	mkdir -p coal/tex
 	$(call document,coal,r1-equations-and-geometry)
 	$(call solution,coal,r1-equations-and-geometry)
 	rm -rf coal/tex
 
-coal/coal-r2-functions.pdf: coal/fvl/r2-functions.fvl
+coal/coal-r2-functions.pdf: coal/fvl/r2-functions.fvl coal/that.tickles
 	mkdir -p coal/tex
 	$(call document,coal,r2-functions)
 	rm -rf coal/tex
 
-coal/coal-r3-polynomials.pdf: coal/fvl/r3-polynomials.fvl
+coal/coal-r3-polynomials.pdf: coal/fvl/r3-polynomials.fvl coal/that.tickles
 	mkdir -p coal/tex
 	$(call document,coal,r3-polynomials)
 	rm -rf coal/tex
 
-coal/coal-r4-exponentials-and-logs.pdf: coal/fvl/r4-exponentials-and-logs.fvl
+coal/coal-r4-exponentials-and-logs.pdf: coal/fvl/r4-exponentials-and-logs.fvl coal/that.tickles
 	mkdir -p coal/tex
 	$(call document,coal,r4-exponentials-and-logs)
 	rm -rf coal/tex
@@ -127,29 +140,36 @@ coal-tests: \
   coal/coal-t3-polynomials.pdf \
   coal/coal-t4-exponentials-and-logs.pdf
 
-coal/coal-t1-equations-and-geometry.pdf: coal/fvl/t1-equations-and-geometry.fvl
+coal/coal-t1-equations-and-geometry.pdf: coal/fvl/t1-equations-and-geometry.fvl coal/that.tickles
 	mkdir -p coal/tex
 	$(call document,coal,t1-equations-and-geometry)
 	$(call solution,coal,t1-equations-and-geometry)
 	rm -rf coal/tex
 
-coal/coal-t2-functions.pdf: coal/fvl/t2-functions.fvl
+coal/coal-t2-functions.pdf: coal/fvl/t2-functions.fvl coal/that.tickles
 	mkdir -p coal/tex
 	$(call document,coal,t2-functions)
 	rm -rf coal/tex
 
-coal/coal-t3-polynomials.pdf: coal/fvl/t3-polynomials.fvl
+coal/coal-t3-polynomials.pdf: coal/fvl/t3-polynomials.fvl coal/that.tickles
 	mkdir -p coal/tex
 	$(call document,coal,t3-polynomials)
 	rm -rf coal/tex
 
-coal/coal-t4-exponentials-and-logs.pdf: coal/fvl/t4-exponentials-and-logs.fvl
+coal/coal-t4-exponentials-and-logs.pdf: coal/fvl/t4-exponentials-and-logs.fvl coal/that.tickles
 	mkdir -p coal/tex
 	$(call document,coal,t4-exponentials-and-logs)
 	rm -rf coal/tex
 
 
 
+#  _______  _______  _______  _______ 
+# |       ||       ||   _   ||       |
+# |  _____||_     _||  |_|  ||_     _|
+# | |_____   |   |  |       |  |   |  
+# |_____  |  |   |  |       |  |   |  
+#  _____| |  |   |  |   _   |  |   |  
+# |_______|  |___|  |__| |__|  |___|  
 
 
 stat: FORCE
@@ -197,6 +217,13 @@ stat: FORCE
 
 
 
+#  _______  _______  ___      _______ 
+# |       ||   _   ||   |    |       |
+# |       ||  |_|  ||   |    |       |
+# |       ||       ||   |    |       |
+# |      _||       ||   |___ |      _|
+# |     |_ |   _   ||       ||     |_ 
+# |_______||__| |__||_______||_______|
 
 
 calc: \
@@ -266,14 +293,14 @@ calc/calc-a07-extrema.pdf: calc/fvl/a07-extrema.fvl
 	rm -rf calc/tex
 
 calc/calc-a08-applications.pdf: calc/fvl/a08-applications.fvl
-	mkdir -p calc/tex
+	@mkdir -p calc/tex
 	$(call document,calc,a08-applications)
-	rm -rf calc/tex
+	@rm -rf calc/tex
 
 calc/calc-a09-integration.pdf: calc/fvl/a09-integration.fvl
-	mkdir -p calc/tex
+	@mkdir -p calc/tex
 	$(call document,calc,a09-integration)
-	rm -rf calc/tex
+	@rm -rf calc/tex
 
 
 
@@ -282,15 +309,15 @@ calc-reviews: \
   calc/calc-r2-differentiation.pdf
 
 calc/calc-r1-limits-and-derivatives.pdf: calc/fvl/r1-limits-and-derivatives.fvl
-	mkdir -p calc/tex
+	@mkdir -p calc/tex
 	$(call document,calc,r1-limits-and-derivatives)
 	$(call solution,calc,r1-limits-and-derivatives)
-	rm -rf calc/tex
+	@rm -rf calc/tex
 
 calc/calc-r2-differentiation.pdf: calc/fvl/r2-differentiation.fvl
-	mkdir -p calc/tex
+	@mkdir -p calc/tex
 	$(call document,calc,r2-differentiation)
-	rm -rf calc/tex
+	@rm -rf calc/tex
 
 
 
@@ -301,32 +328,39 @@ calc-tests: \
   calc/calc-t4-integration.pdf
 
 calc/calc-t1-limits-and-derivatives.pdf: calc/fvl/t1-limits-and-derivatives.fvl
-	mkdir -p calc/tex
+	@mkdir -p calc/tex
 	$(call document,calc,t1-limits-and-derivatives)
-	rm -rf calc/tex
+	@rm -rf calc/tex
 
 calc/calc-t2-differentiation.pdf: calc/fvl/t2-differentiation.fvl
-	mkdir -p calc/tex
+	@mkdir -p calc/tex
 	$(call document,calc,t2-differentiation)
-	rm -rf calc/tex
+	@rm -rf calc/tex
 
 calc/calc-t3-differentiation-ii.pdf: calc/fvl/t3-differentiation-ii.fvl
-	mkdir -p calc/tex
+	@mkdir -p calc/tex
 	$(call document,calc,t3-differentiation-ii)
-	rm -rf calc/tex
+	@rm -rf calc/tex
 
 calc/calc-t4-integration.pdf: calc/fvl/t4-integration.fvl
-	mkdir -p calc/tex
+	@mkdir -p calc/tex
 	$(call document,calc,t4-integration)
-	rm -rf calc/tex
+	@rm -rf calc/tex
 
 
 
+#  _______  ______    _______  _______ 
+# |       ||    _ |  |       ||       |
+# |    _  ||   | ||  |    ___||  _____|
+# |   |_| ||   |_||_ |   |___ | |_____ 
+# |    ___||    __  ||    ___||_____  |
+# |   |    |   |  | ||   |     _____| |
+# |___|    |___|  |_||___|    |_______|
 
 
 prfs: FORCE
-	mkdir -p prfs/tex
-	cp -r prfs/fvl/gfx/ prfs/tex/
+	@mkdir -p prfs/tex
+	@cp -r prfs/fvl/gfx/ prfs/tex/
 
 	# Syllabus
 	$(call document,prfs,syllabus)
@@ -341,13 +375,23 @@ prfs: FORCE
 
 
 	# Remove generated files
-	rm -rf prfs/tex
+	@rm -rf prfs/tex
 
 	@echo "Done!" | doppler lightgreen
 
 
+
+#  _______  _______  _______  __   __ 
+# |       ||       ||       ||  |_|  |
+# |    ___||    ___||   _   ||       |
+# |   | __ |   |___ |  | |  ||       |
+# |   ||  ||    ___||  |_|  ||       |
+# |   |_| ||   |___ |       || ||_|| |
+# |_______||_______||_______||_|   |_|
+
+
 geom: FORCE
-	mkdir -p geom/tex
+	@mkdir -p geom/tex
 
 	# Syllabus
 	$(call copy,geom,nsulogo.png)
@@ -359,13 +403,23 @@ geom: FORCE
 	$(call document,geom,a3-symmetries-of-the-square)
 
 	# Remove generated files
-	rm -rf geom/tex
+	@rm -rf geom/tex
 
 	@echo "Done!" | doppler lightgreen
 
 
+
+#  ______    ___   __    _  _______ 
+# |    _ |  |   | |  |  | ||       |
+# |   | ||  |   | |   |_| ||    ___|
+# |   |_||_ |   | |       ||   | __ 
+# |    __  ||   | |  _    ||   ||  |
+# |   |  | ||   | | | |   ||   |_| |
+# |___|  |_||___| |_|  |__||_______|
+
+
 ring: FORCE
-	mkdir -p ring/tex
+	@mkdir -p ring/tex
 
 	# Syllabus
 	$(call copy,ring,nsulogo.png)
@@ -381,9 +435,22 @@ ring: FORCE
 	$(call document,ring,final)
 
 	# Remove generated files
-	rm -rf ring/tex
+	@rm -rf ring/tex
 
 	@echo "Done!" | doppler lightgreen
+
+
+
+#  _______  _______  _______  __   __ 
+# |       ||       ||       ||  |_|  |
+# |  _____||  _____||    ___||       |
+# | |_____ | |_____ |   |___ |       |
+# |_____  ||_____  ||    ___||       |
+#  _____| | _____| ||   |___ | ||_|| |
+# |_______||_______||_______||_|   |_|
+
+
+ssem: FORCE
 
 
 FORCE:
@@ -394,12 +461,12 @@ define plaintex
   @echo "Attempting to build $(1)/$(2)/$(3)" | doppler lightblue
 
   # Generate pdfs
-  pdflatex -interaction=batchmode $(1)/$(2)/$(3).tex
-  pdflatex -interaction=batchmode $(1)/$(2)/$(3).tex
-  mv $(3).pdf $(1)/$(1)-$(3).pdf
+  @pdflatex -interaction=batchmode $(1)/$(2)/$(3).tex > /dev/null
+  @pdflatex -interaction=batchmode $(1)/$(2)/$(3).tex > /dev/null
+  @mv $(3).pdf $(1)/$(1)-$(3).pdf
 
   # Clean up
-  rm $(3).aux $(3).log
+  @rm $(3).aux $(3).log
 
   @echo "Successfully built $(1)/$(2)/$(3)" | doppler lightgreen
 endef
@@ -410,18 +477,18 @@ define document
   @echo "Attempting to build $(1)/fvl/$(2)" | doppler lightblue
 
   # Run through feivel
-  feivel -t $(1)/fvl/$(2).fvl \
+  @feivel -t $(1)/fvl/$(2).fvl \
    | tee error \
    > $(1)/tex/$(2).tex
 
   # Generate pdfs
-  pdflatex -interaction=batchmode $(1)/tex/$(2).tex
-  pdflatex -interaction=batchmode $(1)/tex/$(2).tex
-  mv $(2).pdf $(1)/$(1)-$(2).pdf
+  @pdflatex -interaction=batchmode $(1)/tex/$(2).tex > /dev/null
+  @pdflatex -interaction=batchmode $(1)/tex/$(2).tex > /dev/null
+  @mv $(2).pdf $(1)/$(1)-$(2).pdf
 
   # Clean up
-  rm $(2).aux $(2).log
-  rm -f error
+  @rm $(2).aux $(2).log
+  @rm -f error
 
   @echo "Successfully built $(1)/fvl/$(2)" | doppler lightgreen
 endef
@@ -432,20 +499,20 @@ define solution
   @echo "Attempting to build $(1)/fvl/soln-$(2)" | doppler lightblue
 
   # Run through feivel after changing SHOWSOLN flag
-  cat $(1)/fvl/$(2).fvl \
+  @cat $(1)/fvl/$(2).fvl \
    | sed 's/@SHOWSOLN := #f/@SHOWSOLN := #t/' \
    | feivel \
    | tee error \
    > $(1)/tex/soln-$(2).tex
 
   # Generate pdfs
-  pdflatex -interaction=batchmode $(1)/tex/soln-$(2).tex
-  pdflatex -interaction=batchmode $(1)/tex/soln-$(2).tex
-  mv soln-$(2).pdf $(1)/$(1)-soln-$(2).pdf
+  @pdflatex -interaction=batchmode $(1)/tex/soln-$(2).tex > /dev/null
+  @pdflatex -interaction=batchmode $(1)/tex/soln-$(2).tex > /dev/null
+  @mv soln-$(2).pdf $(1)/$(1)-soln-$(2).pdf
 
   # Clean up
-  rm soln-$(2).aux soln-$(2).log
-  rm -f error
+  @rm soln-$(2).aux soln-$(2).log
+  @rm -f error
 
   @echo "Successfully built $(1)/fvl/soln-$(2)" | doppler lightgreen
 endef
@@ -456,33 +523,33 @@ define slides
   @echo "Attempting to build $(1)/fvl/$(2)" | doppler lightblue
 
   # Run through feivel
-  feivel -t $(1)/fvl/$(2).fvl \
+  @feivel -t $(1)/fvl/$(2).fvl \
    | tee error \
    > $(1)/tex/$(2).tex
 
   # Split into screen and print versions
-  cat $(1)/tex/$(2).tex \
+  @cat $(1)/tex/$(2).tex \
     | sed s/class\{beamer\}/class\[handout\]\{beamer\}/ \
     | sed s/colortheme\{default\}/colortheme\{dove\}/ \
     > $(1)/tex/$(2)-print.tex
-  mv $(1)/tex/$(2).tex $(1)/tex/$(2)-screen.tex
+  @mv $(1)/tex/$(2).tex $(1)/tex/$(2)-screen.tex
 
   # Generate pdfs
-  pdflatex -interaction=batchmode $(1)/tex/$(2)-print.tex
-  pdflatex -interaction=batchmode $(1)/tex/$(2)-print.tex
-  mv $(2)-print.pdf $(1)/$(1)-print-$(2).pdf
+  @pdflatex -interaction=batchmode $(1)/tex/$(2)-print.tex > /dev/null
+  @pdflatex -interaction=batchmode $(1)/tex/$(2)-print.tex > /dev/null
+  @mv $(2)-print.pdf $(1)/$(1)-print-$(2).pdf
 
-  pdflatex -interaction=batchmode $(1)/tex/$(2)-screen.tex
-  pdflatex -interaction=batchmode $(1)/tex/$(2)-screen.tex
-  mv $(2)-screen.pdf $(1)/$(1)-screen-$(2).pdf
+  @pdflatex -interaction=batchmode $(1)/tex/$(2)-screen.tex > /dev/null
+  @pdflatex -interaction=batchmode $(1)/tex/$(2)-screen.tex > /dev/null
+  @mv $(2)-screen.pdf $(1)/$(1)-screen-$(2).pdf
 
   # Clean up
-  rm -- $(2)-print.aux $(2)-print.log
-  rm -- $(2)-print.nav $(2)-print.out $(2)-print.snm $(2)-print.toc
+  @rm -- $(2)-print.aux $(2)-print.log
+  @rm -- $(2)-print.nav $(2)-print.out $(2)-print.snm $(2)-print.toc
 
-  rm -- $(2)-screen.aux $(2)-screen.log
-  rm -- $(2)-screen.nav $(2)-screen.out $(2)-screen.snm $(2)-screen.toc
-  rm error
+  @rm -- $(2)-screen.aux $(2)-screen.log
+  @rm -- $(2)-screen.nav $(2)-screen.out $(2)-screen.snm $(2)-screen.toc
+  @rm error
 
   @echo "Successfully built $(1)/fvl/$(2)" | doppler lightgreen
 endef
@@ -490,5 +557,5 @@ endef
 
 
 define copy
-  cp $(1)/fvl/$(2) $(1)/tex/$(2)
+  @cp $(1)/fvl/$(2) $(1)/tex/$(2)
 endef
