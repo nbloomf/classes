@@ -1,17 +1,28 @@
 targets: FORCE
-	@echo 'TARGETS:' | doppler lightblue
-	@echo '  make coal - College Algebra' | doppler lightblue
-	@echo '  make stat - Statistics' | doppler lightblue
-	@echo '  make calc - Calculus 1' | doppler lightblue
-	@echo '  make prfs - Intro to Proof' | doppler lightblue
-	@echo '  make geom - College Geometry' | doppler lightblue
-	@echo '  make ring - Modern Algebra (Rings)' | doppler lightblue
-	@echo '  make ssem - Senior Seminar' | doppler lightblue
-	@echo '  make all  - Everything' | doppler lightblue
+	@echo 'TARGETS:'                                 | doppler lightblue
+	@echo '  make coal  - College Algebra'           | doppler lightblue
+	@echo '  make stat  - Statistics'                | doppler lightblue
+	@echo '  make calc  - Calculus 1'                | doppler lightblue
+	@echo '  make prfs  - Intro to Proof'            | doppler lightblue
+	@echo '  make geom  - College Geometry'          | doppler lightblue
+	@echo '  make ring  - Modern Algebra (Rings)'    | doppler lightblue
+	@echo '  make ssem  - Senior Seminar'            | doppler lightblue
+	@echo '  make all   - Everything'                | doppler lightblue
+	@echo '  make clean - Delete generated files'    | doppler lightblue
 	@echo
-	@echo 'edit foo/tickle.me to force rebuild foo' | doppler lightblue
+	@echo 'edit foo/tickle.me to force build foo'    | doppler lightblue
+	@echo 'edit tickle.me to force build everything' | doppler lightblue
 
 all: coal stat calc prfs geom ring ssem
+
+clean: FORCE
+	@(rm calc/pdf/* || true) 2> /dev/null
+	@(rm coal/pdf/* || true) 2> /dev/null
+	@(rm stat/pdf/* || true) 2> /dev/null
+	@(rm prfs/pdf/* || true) 2> /dev/null
+	@(rm geom/pdf/* || true) 2> /dev/null
+	@(rm ring/pdf/* || true) 2> /dev/null
+	@(rm ssem/pdf/* || true) 2> /dev/null
 
 
 
