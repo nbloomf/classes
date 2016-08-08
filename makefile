@@ -1,21 +1,24 @@
 targets: FORCE
-	# TARGETS:
-	#   make coal - College Algebra
-	#   make stat - Statistics
-	#   make calc - Calculus 1
-        #   make prfs - Intro to Proof
-	#   make geom - College Geometry
-	#   make ring - Abstract Algebra (Rings)
-	#   make ssem - Senior Seminar
-	#   make all  - Everything
-	#
-	#   tickle.me to force rebuild a course
-
-
-s15: coal stat calc
+	@echo 'TARGETS:' | doppler lightblue
+	@echo '  make coal - College Algebra' | doppler lightblue
+	@echo '  make stat - Statistics' | doppler lightblue
+	@echo '  make calc - Calculus 1' | doppler lightblue
+	@echo '  make prfs - Intro to Proof' | doppler lightblue
+	@echo '  make geom - College Geometry' | doppler lightblue
+	@echo '  make ring - Modern Algebra (Rings)' | doppler lightblue
+	@echo '  make ssem - Senior Seminar' | doppler lightblue
+	@echo '  make all  - Everything' | doppler lightblue
+	@echo
+	@echo 'edit foo/tickle.me to force rebuild foo' | doppler lightblue
 
 all: coal stat calc prfs geom ring ssem
 
+
+
+
+that.tickles: tickle.me
+	@echo "That tickles!" | doppler lightred
+	@touch that.tickles
 
 
 coal: \
@@ -23,13 +26,13 @@ coal: \
   coal-activities \
   coal-reviews \
   coal-tests
-	#  _______  _______  _______  ___     
-	# |       ||       ||   _   ||   |    
-	# |       ||   _   ||  |_|  ||   |    
-	# |       ||  | |  ||       ||   |    
-	# |      _||  |_|  ||       ||   |___ 
-	# |     |_ |       ||   _   ||       |
-	# |_______||_______||__| |__||_______|
+	@echo ' _______  _______  _______  ___     ' | doppler green
+	@echo '|       ||       ||   _   ||   |    ' | doppler green
+	@echo '|       ||   _   ||  |_|  ||   |    ' | doppler green
+	@echo '|       ||  | |  ||       ||   |    ' | doppler green
+	@echo '|      _||  |_|  ||       ||   |___ ' | doppler green
+	@echo '|     |_ |       ||   _   ||       |' | doppler green
+	@echo '|_______||_______||__| |__||_______|' | doppler green
 
 
 coal/that.tickles: coal/tickle.me
@@ -59,7 +62,8 @@ coal-activities: \
 
 coal/coal-a01-linear-ish-equations.pdf: \
   coal/fvl/a01-linear-ish-equations.fvl \
-  coal/that.tickles
+  coal/that.tickles \
+  that.tickles
 	@mkdir -p coal/tex
 	$(call document,coal,a01-linear-ish-equations)
 	$(call solution,coal,a01-linear-ish-equations)
@@ -67,7 +71,8 @@ coal/coal-a01-linear-ish-equations.pdf: \
 
 coal/coal-a02-some-geometry.pdf: \
   coal/fvl/a02-some-geometry.fvl \
-  coal/that.tickles
+  coal/that.tickles \
+  that.tickles
 	@mkdir -p coal/tex
 	$(call document,coal,a02-some-geometry)
 	$(call solution,coal,a02-some-geometry)
@@ -75,7 +80,8 @@ coal/coal-a02-some-geometry.pdf: \
 
 coal/coal-a03-compound-equations.pdf: \
   coal/fvl/a03-compound-equations.fvl \
-  coal/that.tickles
+  coal/that.tickles \
+  that.tickles
 	@mkdir -p coal/tex
 	$(call document,coal,a03-compound-equations)
 	$(call solution,coal,a03-compound-equations)
@@ -83,7 +89,8 @@ coal/coal-a03-compound-equations.pdf: \
 
 coal/coal-a04-functions.pdf: \
   coal/fvl/a04-functions.fvl \
-  coal/that.tickles
+  coal/that.tickles \
+  that.tickles
 	@mkdir -p coal/tex
 	$(call document,coal,a04-functions)
 	$(call solution,coal,a04-functions)
@@ -91,7 +98,8 @@ coal/coal-a04-functions.pdf: \
 
 coal/coal-a05-transformations.pdf: \
   coal/fvl/a05-transformations.fvl \
-  coal/that.tickles
+  coal/that.tickles \
+  that.tickles
 	@mkdir -p coal/tex
 	$(call document,coal,a05-transformations)
 	$(call solution,coal,a05-transformations)
@@ -99,21 +107,24 @@ coal/coal-a05-transformations.pdf: \
 
 coal/coal-a06-polynomials.pdf: \
   coal/fvl/a06-polynomials.fvl \
-  coal/that.tickles
+  coal/that.tickles \
+  that.tickles
 	@mkdir -p coal/tex
 	$(call document,coal,a06-polynomials)
 	@rm -rf coal/tex
 
 coal/coal-a07-polynomials-ii.pdf: \
   coal/fvl/a07-polynomials-ii.fvl \
-  coal/that.tickles
+  coal/that.tickles \
+  that.tickles
 	@mkdir -p coal/tex
 	$(call document,coal,a07-polynomials-ii)
 	@rm -rf coal/tex
 
 coal/coal-a08-exponentials-and-logs.pdf: \
   coal/fvl/a08-exponentials-and-logs.fvl \
-  coal/that.tickles
+  coal/that.tickles \
+  that.tickles
 	@mkdir -p coal/tex
 	$(call document,coal,a08-exponentials-and-logs)
 	@rm -rf coal/tex
@@ -128,7 +139,8 @@ coal-reviews: \
 
 coal/coal-r1-equations-and-geometry.pdf: \
   coal/fvl/r1-equations-and-geometry.fvl \
-  coal/that.tickles
+  coal/that.tickles \
+  that.tickles
 	mkdir -p coal/tex
 	$(call document,coal,r1-equations-and-geometry)
 	$(call solution,coal,r1-equations-and-geometry)
@@ -136,21 +148,24 @@ coal/coal-r1-equations-and-geometry.pdf: \
 
 coal/coal-r2-functions.pdf: \
   coal/fvl/r2-functions.fvl \
-  coal/that.tickles
+  coal/that.tickles \
+  that.tickles
 	mkdir -p coal/tex
 	$(call document,coal,r2-functions)
 	rm -rf coal/tex
 
 coal/coal-r3-polynomials.pdf: \
   coal/fvl/r3-polynomials.fvl \
-  coal/that.tickles
+  coal/that.tickles \
+  that.tickles
 	mkdir -p coal/tex
 	$(call document,coal,r3-polynomials)
 	rm -rf coal/tex
 
 coal/coal-r4-exponentials-and-logs.pdf: \
   coal/fvl/r4-exponentials-and-logs.fvl \
-  coal/that.tickles
+  coal/that.tickles \
+  that.tickles
 	mkdir -p coal/tex
 	$(call document,coal,r4-exponentials-and-logs)
 	rm -rf coal/tex
@@ -165,7 +180,8 @@ coal-tests: \
 
 coal/coal-t1-equations-and-geometry.pdf: \
   coal/fvl/t1-equations-and-geometry.fvl \
-  coal/that.tickles
+  coal/that.tickles \
+  that.tickles
 	mkdir -p coal/tex
 	$(call document,coal,t1-equations-and-geometry)
 	$(call solution,coal,t1-equations-and-geometry)
@@ -173,77 +189,201 @@ coal/coal-t1-equations-and-geometry.pdf: \
 
 coal/coal-t2-functions.pdf: \
   coal/fvl/t2-functions.fvl \
-  coal/that.tickles
+  coal/that.tickles \
+  that.tickles
 	mkdir -p coal/tex
 	$(call document,coal,t2-functions)
 	rm -rf coal/tex
 
 coal/coal-t3-polynomials.pdf: \
   coal/fvl/t3-polynomials.fvl \
-  coal/that.tickles
+  coal/that.tickles \
+  that.tickles
 	mkdir -p coal/tex
 	$(call document,coal,t3-polynomials)
 	rm -rf coal/tex
 
 coal/coal-t4-exponentials-and-logs.pdf: \
   coal/fvl/t4-exponentials-and-logs.fvl \
-  coal/that.tickles
+  coal/that.tickles \
+  that.tickles
 	mkdir -p coal/tex
 	$(call document,coal,t4-exponentials-and-logs)
 	rm -rf coal/tex
 
 
 
-stat: FORCE
-	mkdir -p stat/tex
-	cp -r stat/fvl/gfx/ stat/tex/
 
-	# Tables
-	$(call plaintex,stat,tables,z-score-table)
 
-	# Syllabus
+
+
+
+stat: \
+  stat/stat-syllabus.pdf \
+  stat/stat-z-score-table.pdf \
+  stat-activities \
+  stat-tests \
+  stat-slides
+	@echo ' _______  _______  _______  _______ ' | doppler green
+	@echo '|       ||       ||   _   ||       |' | doppler green
+	@echo '|  _____||_     _||  |_|  ||_     _|' | doppler green
+	@echo '| |_____   |   |  |       |  |   |  ' | doppler green
+	@echo '|_____  |  |   |  |       |  |   |  ' | doppler green
+	@echo ' _____| |  |   |  |   _   |  |   |  ' | doppler green
+	@echo '|_______|  |___|  |__| |__|  |___|  ' | doppler green
+
+
+stat/that.tickles: stat/tickle.me
+	@echo "That tickles!" | doppler lightred
+	@touch stat/that.tickles
+
+stat/stat-syllabus.pdf: \
+  stat/fvl/syllabus.fvl \
+  stat/that.tickles \
+  that.tickles
+	@mkdir -p stat/tex/gfx
+	$(call copy,stat,gfx/nsulogo.png)
 	$(call document,stat,syllabus)
+	@rm -rf stat/tex
 
-	# Activities
+stat/stat-z-score-table.pdf: \
+  stat/tables/z-score-table.tex \
+  stat/that.tickles \
+  that.tickles
+	mkdir -p stat/tex
+	$(call plaintex,stat,tables,z-score-table)
+	@rm -rf stat/tex
+
+
+stat-activities: \
+  stat/stat-a01-basic-parameters.pdf \
+  stat/stat-a02-probability.pdf \
+  stat/stat-a03-counting.pdf \
+  stat/stat-a04-discrete-random-variables.pdf \
+  stat/stat-a05-discrete-random-variables-ii.pdf \
+  stat/stat-a06-normal-random-variables.pdf \
+  stat/stat-a07-sampling-distributions.pdf
+
+stat/stat-a01-basic-parameters.pdf: \
+  stat/fvl/a01-basic-parameters.fvl \
+  stat/that.tickles \
+  that.tickles
+	@mkdir -p stat/tex
 	$(call document,stat,a01-basic-parameters)
-	$(call document,stat,a02-probability)
-	$(call document,stat,a03-counting)
-	$(call document,stat,a04-discrete-random-variables)
-	$(call document,stat,a05-discrete-random-variables-ii)
-	$(call document,stat,a06-normal-random-variables)
-	$(call document,stat,a07-sampling-distributions)
-
 	$(call solution,stat,a01-basic-parameters)
+	@rm -rf stat/tex
+
+stat/stat-a02-probability.pdf: \
+  stat/fvl/a02-probability.fvl \
+  stat/that.tickles \
+  that.tickles
+	@mkdir -p stat/tex
+	$(call document,stat,a02-probability)
 	$(call solution,stat,a02-probability)
+	@rm -rf stat/tex
 
-	# Reviews
+stat/stat-a03-counting.pdf: \
+  stat/fvl/a03-counting.fvl \
+  stat/that.tickles \
+  that.tickles
+	@mkdir -p stat/tex
+	$(call document,stat,a03-counting)
+	@rm -rf stat/tex
+
+stat/stat-a04-discrete-random-variables.pdf: \
+  stat/fvl/a04-discrete-random-variables.fvl \
+  stat/that.tickles \
+  that.tickles
+	@mkdir -p stat/tex
+	$(call document,stat,a04-discrete-random-variables)
+	@rm -rf stat/tex
+
+stat/stat-a05-discrete-random-variables-ii.pdf: \
+  stat/fvl/a05-discrete-random-variables-ii.fvl \
+  stat/that.tickles \
+  that.tickles
+	@mkdir -p stat/tex
+	$(call document,stat,a05-discrete-random-variables-ii)
+	@rm -rf stat/tex
+
+stat/stat-a06-normal-random-variables.pdf: \
+  stat/fvl/a06-normal-random-variables.fvl \
+  stat/that.tickles \
+  that.tickles
+	@mkdir -p stat/tex
+	$(call document,stat,a06-normal-random-variables)
+	@rm -rf stat/tex
+
+stat/stat-a07-sampling-distributions.pdf: \
+  stat/fvl/a07-sampling-distributions.fvl \
+  stat/that.tickles \
+  that.tickles
+	@mkdir -p stat/tex
+	$(call document,stat,a07-sampling-distributions)
+	@rm -rf stat/tex
+
+
+
+stat-tests: \
+  stat/stat-t1-parameters-and-probability.pdf \
+  stat/stat-t2-counting-and-drvs.pdf \
+  stat/stat-t3-continuous-rvs.pdf
+
+stat/stat-t1-parameters-and-probability.pdf: \
+  stat/fvl/t1-parameters-and-probability.fvl \
+  stat/that.tickles \
+  that.tickles
+	@mkdir -p stat/tex
 	$(call document,stat,r1-parameters-and-probability)
-	$(call document,stat,r2-counting-and-drvs)
-	$(call document,stat,r3-continuous-rvs)
-
 	$(call solution,stat,r1-parameters-and-probability)
-
-	# Tests
 	$(call document,stat,t1-parameters-and-probability)
+	@rm -rf stat/tex
+
+stat/stat-t2-counting-and-drvs.pdf: \
+  stat/fvl/t2-counting-and-drvs.fvl \
+  stat/that.tickles \
+  that.tickles
+	@mkdir -p stat/tex
+	$(call document,stat,r2-counting-and-drvs)
 	$(call document,stat,t2-counting-and-drvs)
+	@rm -rf stat/tex
+
+stat/stat-t3-continuous-rvs.pdf: \
+  stat/fvl/t3-continuous-rvs.fvl \
+  stat/that.tickles \
+  that.tickles
+	@mkdir -p stat/tex
+	$(call document,stat,r3-continuous-rvs)
 	$(call document,stat,t3-continuous-rvs)
+	@rm -rf stat/tex
+
+stat/stat-t4-inference.pdf: \
+  stat/fvl/t4-inference.fvl \
+  stat/that.tickles \
+  that.tickles
+	@mkdir -p stat/tex
 	$(call document,stat,t4-inference)
+	@rm -rf stat/tex
 
-	# Slides
+stat-slides: \
+  stat/stat-print-slides-misleading-graphs.pdf
+
+stat/stat-print-slides-misleading-graphs.pdf: \
+  stat/fvl/slides-misleading-graphs.fvl \
+  stat/that.tickles \
+  that.tickles
+	@mkdir -p stat/tex/gfx
+	$(call copy,stat,gfx/misleading-graphs/)
 	$(call slides,stat,slides-misleading-graphs)
+	@rm -rf stat/tex
 
-	# Remove generated files
-	rm -rf stat/tex
 
-	#  _______  _______  _______  _______ 
-	# |       ||       ||   _   ||       |
-	# |  _____||_     _||  |_|  ||_     _|
-	# | |_____   |   |  |       |  |   |  
-	# |_____  |  |   |  |       |  |   |  
-	#  _____| |  |   |  |   _   |  |   |  
-	# |_______|  |___|  |__| |__|  |___|  
 
-	@echo "Done!" | doppler lightgreen
+
+
+
+
+
 
 
 
@@ -252,17 +392,25 @@ calc: \
   calc-activities \
   calc-reviews \
   calc-tests
-	#  _______  _______  ___      _______ 
-	# |       ||   _   ||   |    |       |
-	# |       ||  |_|  ||   |    |       |
-	# |       ||       ||   |    |       |
-	# |      _||       ||   |___ |      _|
-	# |     |_ |   _   ||       ||     |_ 
-	# |_______||__| |__||_______||_______|
+	@echo ' _______  _______  ___      _______ ' | doppler green
+	@echo '|       ||   _   ||   |    |       |' | doppler green
+	@echo '|       ||  |_|  ||   |    |       |' | doppler green
+	@echo '|       ||       ||   |    |       |' | doppler green
+	@echo '|      _||       ||   |___ |      _|' | doppler green
+	@echo '|     |_ |   _   ||       ||     |_ ' | doppler green
+	@echo '|_______||__| |__||_______||_______|' | doppler green
+
+
+calc/that.tickles: calc/tickle.me
+	@echo "That tickles!" | doppler lightred
+	@touch calc/that.tickles
 
 
 
-calc/calc-syllabus.pdf: calc/fvl/syllabus.fvl
+calc/calc-syllabus.pdf: \
+  calc/fvl/syllabus.fvl \
+  calc/that.tickles \
+  that.tickles
 	mkdir -p calc/tex
 	$(call copy,calc,nsulogo.png)
 	$(call document,calc,syllabus)
@@ -281,51 +429,78 @@ calc-activities: \
   calc/calc-a08-applications.pdf \
   calc/calc-a09-integration.pdf
 
-calc/calc-a01-limits.pdf: calc/fvl/a01-limits.fvl
+calc/calc-a01-limits.pdf: \
+  calc/fvl/a01-limits.fvl \
+  calc/that.tickles \
+  that.tickles
 	mkdir -p calc/tex
 	$(call document,calc,a01-limits)
 	$(call solution,calc,a01-limits)
 	rm -rf calc/tex
 
-calc/calc-a02-continuity.pdf: calc/fvl/a02-continuity.fvl
+calc/calc-a02-continuity.pdf: \
+  calc/fvl/a02-continuity.fvl \
+  calc/that.tickles \
+  that.tickles
 	mkdir -p calc/tex
 	$(call document,calc,a02-continuity)
 	$(call solution,calc,a02-continuity)
 	rm -rf calc/tex
 
-calc/calc-a03-differentiation-1.pdf: calc/fvl/a03-differentiation-1.fvl
+calc/calc-a03-differentiation-1.pdf: \
+  calc/fvl/a03-differentiation-1.fvl \
+  calc/that.tickles \
+  that.tickles
 	mkdir -p calc/tex
 	$(call document,calc,a03-differentiation-1)
 	$(call solution,calc,a03-differentiation-1)
 	rm -rf calc/tex
 
-calc/calc-a04-differentiation-2.pdf: calc/fvl/a04-differentiation-2.fvl
+calc/calc-a04-differentiation-2.pdf: \
+  calc/fvl/a04-differentiation-2.fvl \
+  calc/that.tickles \
+  that.tickles
 	mkdir -p calc/tex
 	$(call document,calc,a04-differentiation-2)
 	$(call solution,calc,a04-differentiation-2)
 	rm -rf calc/tex
 
-calc/calc-a05-differentiation-3.pdf: calc/fvl/a05-differentiation-3.fvl
+calc/calc-a05-differentiation-3.pdf: \
+  calc/fvl/a05-differentiation-3.fvl \
+  calc/that.tickles \
+  that.tickles
 	mkdir -p calc/tex
 	$(call document,calc,a05-differentiation-3)
 	rm -rf calc/tex
 
-calc/calc-a06-monotonicity-and-concavity.pdf: calc/fvl/a06-monotonicity-and-concavity.fvl
+calc/calc-a06-monotonicity-and-concavity.pdf: \
+  calc/fvl/a06-monotonicity-and-concavity.fvl \
+  calc/that.tickles \
+  that.tickles
 	mkdir -p calc/tex
 	$(call document,calc,a06-monotonicity-and-concavity)
 	rm -rf calc/tex
 
-calc/calc-a07-extrema.pdf: calc/fvl/a07-extrema.fvl
+calc/calc-a07-extrema.pdf: \
+  calc/fvl/a07-extrema.fvl \
+  calc/that.tickles \
+  that.tickles
 	mkdir -p calc/tex
 	$(call document,calc,a07-extrema)
 	rm -rf calc/tex
 
-calc/calc-a08-applications.pdf: calc/fvl/a08-applications.fvl
+calc/calc-a08-applications.pdf: \
+  calc/fvl/a08-applications.fvl \
+  calc/that.tickles \
+  that.tickles
 	@mkdir -p calc/tex
 	$(call document,calc,a08-applications)
 	@rm -rf calc/tex
 
-calc/calc-a09-integration.pdf: calc/fvl/a09-integration.fvl
+calc/calc-a09-integration.pdf: \
+  calc/fvl/a09-integration.fvl \
+  calc/that.tickles \
+  that.tickles
 	@mkdir -p calc/tex
 	$(call document,calc,a09-integration)
 	@rm -rf calc/tex
@@ -336,13 +511,19 @@ calc-reviews: \
   calc/calc-r1-limits-and-derivatives.pdf \
   calc/calc-r2-differentiation.pdf
 
-calc/calc-r1-limits-and-derivatives.pdf: calc/fvl/r1-limits-and-derivatives.fvl
+calc/calc-r1-limits-and-derivatives.pdf: \
+  calc/fvl/r1-limits-and-derivatives.fvl \
+  calc/that.tickles \
+  that.tickles
 	@mkdir -p calc/tex
 	$(call document,calc,r1-limits-and-derivatives)
 	$(call solution,calc,r1-limits-and-derivatives)
 	@rm -rf calc/tex
 
-calc/calc-r2-differentiation.pdf: calc/fvl/r2-differentiation.fvl
+calc/calc-r2-differentiation.pdf: \
+  calc/fvl/r2-differentiation.fvl \
+  calc/that.tickles \
+  that.tickles
 	@mkdir -p calc/tex
 	$(call document,calc,r2-differentiation)
 	@rm -rf calc/tex
@@ -355,56 +536,118 @@ calc-tests: \
   calc/calc-t3-differentiation-ii.pdf \
   calc/calc-t4-integration.pdf
 
-calc/calc-t1-limits-and-derivatives.pdf: calc/fvl/t1-limits-and-derivatives.fvl
+calc/calc-t1-limits-and-derivatives.pdf: \
+  calc/fvl/t1-limits-and-derivatives.fvl \
+  calc/that.tickles \
+  that.tickles
 	@mkdir -p calc/tex
 	$(call document,calc,t1-limits-and-derivatives)
 	@rm -rf calc/tex
 
-calc/calc-t2-differentiation.pdf: calc/fvl/t2-differentiation.fvl
+calc/calc-t2-differentiation.pdf: \
+  calc/fvl/t2-differentiation.fvl \
+  calc/that.tickles \
+  that.tickles
 	@mkdir -p calc/tex
 	$(call document,calc,t2-differentiation)
 	@rm -rf calc/tex
 
-calc/calc-t3-differentiation-ii.pdf: calc/fvl/t3-differentiation-ii.fvl
+calc/calc-t3-differentiation-ii.pdf: \
+  calc/fvl/t3-differentiation-ii.fvl \
+  calc/that.tickles \
+  that.tickles
 	@mkdir -p calc/tex
 	$(call document,calc,t3-differentiation-ii)
 	@rm -rf calc/tex
 
-calc/calc-t4-integration.pdf: calc/fvl/t4-integration.fvl
+calc/calc-t4-integration.pdf: \
+  calc/fvl/t4-integration.fvl \
+  calc/that.tickles \
+  that.tickles
 	@mkdir -p calc/tex
 	$(call document,calc,t4-integration)
 	@rm -rf calc/tex
 
 
 
-prfs: FORCE
-	@mkdir -p prfs/tex
-	@cp -r prfs/fvl/gfx/ prfs/tex/
 
-	# Syllabus
+
+
+
+
+prfs: \
+  prfs/prfs-syllabus.pdf \
+  prfs-homework \
+  prfs-tests
+	@echo ' _______  ______    _______  _______ ' | doppler green
+	@echo '|       ||    _ |  |       ||       |' | doppler green
+	@echo '|    _  ||   | ||  |    ___||  _____|' | doppler green
+	@echo '|   |_| ||   |_||_ |   |___ | |_____ ' | doppler green
+	@echo '|    ___||    __  ||    ___||_____  |' | doppler green
+	@echo '|   |    |   |  | ||   |     _____| |' | doppler green
+	@echo '|___|    |___|  |_||___|    |_______|' | doppler green
+
+
+prfs/that.tickles: prfs/tickle.me
+	@echo "That tickles!" | doppler lightred
+	@touch prfs/that.tickles
+
+
+
+prfs/prfs-syllabus.pdf: \
+  prfs/fvl/syllabus.fvl \
+  prfs/that.tickles \
+  that.tickles
+	@mkdir -p prfs/tex/gfx
+	$(call copy,prfs,gfx/nsulogo.png)
 	$(call document,prfs,syllabus)
-
-	# Homework
-	$(call document,prfs,h01-statements-and-quantifiers)
-	$(call document,prfs,h02-union-and-intersection)
-
-	# Tests
-	$(call document,prfs,t01-sets)
-	$(call document,prfs,t02-numbers)
-
-
-	# Remove generated files
 	@rm -rf prfs/tex
 
-	#  _______  ______    _______  _______ 
-	# |       ||    _ |  |       ||       |
-	# |    _  ||   | ||  |    ___||  _____|
-	# |   |_| ||   |_||_ |   |___ | |_____ 
-	# |    ___||    __  ||    ___||_____  |
-	# |   |    |   |  | ||   |     _____| |
-	# |___|    |___|  |_||___|    |_______|
+prfs-homework: \
+  prfs/prfs-h01-statements-and-quantifiers.pdf \
+  prfs/prfs-h02-union-and-intersection.pdf
 
-	@echo "Done!" | doppler lightgreen
+prfs/prfs-h01-statements-and-quantifiers.pdf: \
+  prfs/fvl/h01-statements-and-quantifiers.fvl \
+  prfs/that.tickles \
+  that.tickles
+	@mkdir -p prfs/tex
+	$(call document,prfs,h01-statements-and-quantifiers)
+	@rm -rf prfs/tex
+
+prfs/prfs-h02-union-and-intersection.pdf: \
+  prfs/fvl/h02-union-and-intersection.fvl \
+  prfs/that.tickles \
+  that.tickles
+	@mkdir -p prfs/tex
+	$(call document,prfs,h02-union-and-intersection)
+	@rm -rf prfs/tex
+
+prfs-tests: \
+  prfs/prfs-t1-sets.pdf \
+  prfs/prfs-t2-numbers.pdf
+
+prfs/prfs-t1-sets.pdf: \
+  prfs/fvl/t1-sets.fvl \
+  prfs/that.tickles \
+  that.tickles
+	@mkdir -p prfs/tex
+	$(call document,prfs,t1-sets)
+	@rm -rf prfs/tex
+
+prfs/prfs-t2-numbers.pdf: \
+  prfs/fvl/t2-numbers.fvl \
+  prfs/that.tickles \
+  that.tickles
+	@mkdir -p prfs/tex
+	$(call document,prfs,t2-numbers)
+	@rm -rf prfs/tex
+
+
+
+
+
+
 
 
 
@@ -412,20 +655,23 @@ prfs: FORCE
 geom: \
   geom/geom-syllabus.pdf \
   geom-activities
-	#  _______  _______  _______  __   __ 
-	# |       ||       ||       ||  |_|  |
-	# |    ___||    ___||   _   ||       |
-	# |   | __ |   |___ |  | |  ||       |
-	# |   ||  ||    ___||  |_|  ||       |
-	# |   |_| ||   |___ |       || ||_|| |
-	# |_______||_______||_______||_|   |_|
+	@echo ' _______  _______  _______  __   __ ' | doppler green
+	@echo '|       ||       ||       ||  |_|  |' | doppler green
+	@echo '|    ___||    ___||   _   ||       |' | doppler green
+	@echo '|   | __ |   |___ |  | |  ||       |' | doppler green
+	@echo '|   ||  ||    ___||  |_|  ||       |' | doppler green
+	@echo '|   |_| ||   |___ |       || ||_|| |' | doppler green
+	@echo '|_______||_______||_______||_|   |_|' | doppler green
 
 
 geom/that.tickles: geom/tickle.me
 	@echo "That tickles!" | doppler lightred
 	@touch geom/that.tickles
 
-geom/geom-syllabus.pdf: geom/fvl/syllabus.fvl geom/that.tickles
+geom/geom-syllabus.pdf: \
+  geom/fvl/syllabus.fvl \
+  geom/that.tickles \
+  that.tickles
 	@mkdir -p geom/tex
 	$(call copy,geom,nsulogo.png)
 	$(call document,geom,syllabus)
@@ -438,66 +684,116 @@ geom-activities: \
 
 geom/geom-a1-basic-constructions.pdf: \
   geom/fvl/a1-basic-constructions.fvl \
-  geom/that.tickles
+  geom/that.tickles \
+  that.tickles
 	@mkdir -p geom/tex
 	$(call document,geom,a1-basic-constructions)
 	@rm -rf geom/tex
 
 geom/geom-a2-hyperbolic-constructions.pdf: \
   geom/fvl/a2-hyperbolic-constructions.fvl \
-  geom/that.tickles
+  geom/that.tickles \
+  that.tickles
 	@mkdir -p geom/tex
 	$(call document,geom,a2-hyperbolic-constructions)
 	@rm -rf geom/tex
 
 geom/geom-a3-symmetries-of-the-square.pdf: \
   geom/fvl/a3-symmetries-of-the-square.fvl \
-  geom/that.tickles
+  geom/that.tickles \
+  that.tickles
 	@mkdir -p geom/tex
 	$(call document,geom,a3-symmetries-of-the-square)
 	@rm -rf geom/tex
 
 
 
-ring: FORCE
-	@mkdir -p ring/tex
 
-	# Syllabus
+
+
+
+
+ring: \
+  ring/ring-syllabus.pdf \
+  ring-slides \
+  ring-homework \
+  ring-tests
+	@echo ' ______    ___   __    _  _______ ' | doppler green
+	@echo '|    _ |  |   | |  |  | ||       |' | doppler green
+	@echo '|   | ||  |   | |   |_| ||    ___|' | doppler green
+	@echo '|   |_||_ |   | |       ||   | __ ' | doppler green
+	@echo '|    __  ||   | |  _    ||   ||  |' | doppler green
+	@echo '|   |  | ||   | | | |   ||   |_| |' | doppler green
+	@echo '|___|  |_||___| |_|  |__||_______|' | doppler green
+
+
+ring/that.tickles: ring/tickle.me
+	@echo "That tickles!" | doppler lightred
+	@touch ring/that.tickles
+
+ring/ring-syllabus.pdf: \
+  ring/fvl/syllabus.fvl \
+  ring/that.tickles \
+  that.tickles
+	@mkdir -p ring/tex
 	$(call copy,ring,nsulogo.png)
 	$(call document,ring,syllabus)
-
-	# Slides
-	$(call slides,ring,slides-zz-axioms)
-
-	# Homework
-	$(call document,ring,hw2)
-
-	# Tests
-	$(call document,ring,final)
-
-	# Remove generated files
 	@rm -rf ring/tex
 
-	#  ______    ___   __    _  _______ 
-	# |    _ |  |   | |  |  | ||       |
-	# |   | ||  |   | |   |_| ||    ___|
-	# |   |_||_ |   | |       ||   | __ 
-	# |    __  ||   | |  _    ||   ||  |
-	# |   |  | ||   | | | |   ||   |_| |
-	# |___|  |_||___| |_|  |__||_______|
 
-	@echo "Done!" | doppler lightgreen
+ring-slides: \
+  ring/ring-screen-slides-zz-axioms.pdf
+
+
+ring/ring-screen-slides-zz-axioms.pdf: \
+  ring/fvl/slides-zz-axioms.fvl \
+  ring/that.tickles \
+  that.tickles
+	@mkdir -p ring/tex
+	$(call slides,ring,slides-zz-axioms)
+	@rm -rf ring/tex
+
+ring-homework: \
+  ring/ring-hw2.pdf
+
+ring/ring-hw2.pdf: \
+  ring/fvl/hw2.fvl \
+  ring/that.tickles \
+  that.tickles
+	@mkdir -p ring/tex
+	$(call document,ring,hw2)
+	@rm -rf ring/tex
+
+ring-tests: \
+  ring/ring-final.pdf
+
+ring/ring-final.pdf: \
+  ring/fvl/final.fvl \
+  ring/that.tickles \
+  that.tickles
+	@mkdir -p ring/tex
+	$(call document,ring,final)
+	@rm -rf ring/tex
+
+
+
+
+
 
 
 
 ssem: FORCE
-	#  _______  _______  _______  __   __ 
-	# |       ||       ||       ||  |_|  |
-	# |  _____||  _____||    ___||       |
-	# | |_____ | |_____ |   |___ |       |
-	# |_____  ||_____  ||    ___||       |
-	#  _____| | _____| ||   |___ | ||_|| |
-	# |_______||_______||_______||_|   |_|
+	@echo ' _______  _______  _______  __   __ ' | doppler green
+	@echo '|       ||       ||       ||  |_|  |' | doppler green
+	@echo '|  _____||  _____||    ___||       |' | doppler green
+	@echo '| |_____ | |_____ |   |___ |       |' | doppler green
+	@echo '|_____  ||_____  ||    ___||       |' | doppler green
+	@echo ' _____| | _____| ||   |___ | ||_|| |' | doppler green
+	@echo '|_______||_______||_______||_|   |_|' | doppler green
+
+ssem/that.tickles: ssem/tickle.me
+	@echo "That tickles!" | doppler lightred
+	@touch ssem/that.tickles
 
 
 FORCE:
@@ -604,5 +900,5 @@ endef
 
 
 define copy
-  @cp $(1)/fvl/$(2) $(1)/tex/$(2)
+  @cp -r $(1)/fvl/$(2) $(1)/tex/$(2)
 endef
