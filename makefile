@@ -37,7 +37,7 @@ coal/that.tickles: coal/tickle.me
 	@touch coal/that.tickles
 
 
-coal/coal-syllabus.pdf: coal/fvl/syllabus.fvl
+coal/coal-syllabus.pdf: coal/fvl/syllabus.fvl coal/that.tickles
 	@mkdir -p coal/tex
 	$(call copy,coal,nsulogo.png)
 	$(call document,coal,syllabus)
@@ -57,47 +57,63 @@ coal-activities: \
 
 
 
-coal/coal-a01-linear-ish-equations.pdf: coal/fvl/a01-linear-ish-equations.fvl coal/that.tickles
+coal/coal-a01-linear-ish-equations.pdf: \
+  coal/fvl/a01-linear-ish-equations.fvl \
+  coal/that.tickles
 	@mkdir -p coal/tex
 	$(call document,coal,a01-linear-ish-equations)
 	$(call solution,coal,a01-linear-ish-equations)
 	@rm -rf coal/tex
 
-coal/coal-a02-some-geometry.pdf: coal/fvl/a02-some-geometry.fvl coal/that.tickles
+coal/coal-a02-some-geometry.pdf: \
+  coal/fvl/a02-some-geometry.fvl \
+  coal/that.tickles
 	@mkdir -p coal/tex
 	$(call document,coal,a02-some-geometry)
 	$(call solution,coal,a02-some-geometry)
 	@rm -rf coal/tex
 
-coal/coal-a03-compound-equations.pdf: coal/fvl/a03-compound-equations.fvl coal/that.tickles
+coal/coal-a03-compound-equations.pdf: \
+  coal/fvl/a03-compound-equations.fvl \
+  coal/that.tickles
 	@mkdir -p coal/tex
 	$(call document,coal,a03-compound-equations)
 	$(call solution,coal,a03-compound-equations)
 	@rm -rf coal/tex
 
-coal/coal-a04-functions.pdf: coal/fvl/a04-functions.fvl coal/that.tickles
+coal/coal-a04-functions.pdf: \
+  coal/fvl/a04-functions.fvl \
+  coal/that.tickles
 	@mkdir -p coal/tex
 	$(call document,coal,a04-functions)
 	$(call solution,coal,a04-functions)
 	@rm -rf coal/tex
 
-coal/coal-a05-transformations.pdf: coal/fvl/a05-transformations.fvl coal/that.tickles
+coal/coal-a05-transformations.pdf: \
+  coal/fvl/a05-transformations.fvl \
+  coal/that.tickles
 	@mkdir -p coal/tex
 	$(call document,coal,a05-transformations)
 	$(call solution,coal,a05-transformations)
 	@rm -rf coal/tex
 
-coal/coal-a06-polynomials.pdf: coal/fvl/a06-polynomials.fvl coal/that.tickles
+coal/coal-a06-polynomials.pdf: \
+  coal/fvl/a06-polynomials.fvl \
+  coal/that.tickles
 	@mkdir -p coal/tex
 	$(call document,coal,a06-polynomials)
 	@rm -rf coal/tex
 
-coal/coal-a07-polynomials-ii.pdf: coal/fvl/a07-polynomials-ii.fvl coal/that.tickles
+coal/coal-a07-polynomials-ii.pdf: \
+  coal/fvl/a07-polynomials-ii.fvl \
+  coal/that.tickles
 	@mkdir -p coal/tex
 	$(call document,coal,a07-polynomials-ii)
 	@rm -rf coal/tex
 
-coal/coal-a08-exponentials-and-logs.pdf: coal/fvl/a08-exponentials-and-logs.fvl coal/that.tickles
+coal/coal-a08-exponentials-and-logs.pdf: \
+  coal/fvl/a08-exponentials-and-logs.fvl \
+  coal/that.tickles
 	@mkdir -p coal/tex
 	$(call document,coal,a08-exponentials-and-logs)
 	@rm -rf coal/tex
@@ -110,23 +126,31 @@ coal-reviews: \
   coal/coal-r3-polynomials.pdf \
   coal/coal-r4-exponentials-and-logs.pdf
 
-coal/coal-r1-equations-and-geometry.pdf: coal/fvl/r1-equations-and-geometry.fvl coal/that.tickles
+coal/coal-r1-equations-and-geometry.pdf: \
+  coal/fvl/r1-equations-and-geometry.fvl \
+  coal/that.tickles
 	mkdir -p coal/tex
 	$(call document,coal,r1-equations-and-geometry)
 	$(call solution,coal,r1-equations-and-geometry)
 	rm -rf coal/tex
 
-coal/coal-r2-functions.pdf: coal/fvl/r2-functions.fvl coal/that.tickles
+coal/coal-r2-functions.pdf: \
+  coal/fvl/r2-functions.fvl \
+  coal/that.tickles
 	mkdir -p coal/tex
 	$(call document,coal,r2-functions)
 	rm -rf coal/tex
 
-coal/coal-r3-polynomials.pdf: coal/fvl/r3-polynomials.fvl coal/that.tickles
+coal/coal-r3-polynomials.pdf: \
+  coal/fvl/r3-polynomials.fvl \
+  coal/that.tickles
 	mkdir -p coal/tex
 	$(call document,coal,r3-polynomials)
 	rm -rf coal/tex
 
-coal/coal-r4-exponentials-and-logs.pdf: coal/fvl/r4-exponentials-and-logs.fvl coal/that.tickles
+coal/coal-r4-exponentials-and-logs.pdf: \
+  coal/fvl/r4-exponentials-and-logs.fvl \
+  coal/that.tickles
 	mkdir -p coal/tex
 	$(call document,coal,r4-exponentials-and-logs)
 	rm -rf coal/tex
@@ -139,23 +163,31 @@ coal-tests: \
   coal/coal-t3-polynomials.pdf \
   coal/coal-t4-exponentials-and-logs.pdf
 
-coal/coal-t1-equations-and-geometry.pdf: coal/fvl/t1-equations-and-geometry.fvl coal/that.tickles
+coal/coal-t1-equations-and-geometry.pdf: \
+  coal/fvl/t1-equations-and-geometry.fvl \
+  coal/that.tickles
 	mkdir -p coal/tex
 	$(call document,coal,t1-equations-and-geometry)
 	$(call solution,coal,t1-equations-and-geometry)
 	rm -rf coal/tex
 
-coal/coal-t2-functions.pdf: coal/fvl/t2-functions.fvl coal/that.tickles
+coal/coal-t2-functions.pdf: \
+  coal/fvl/t2-functions.fvl \
+  coal/that.tickles
 	mkdir -p coal/tex
 	$(call document,coal,t2-functions)
 	rm -rf coal/tex
 
-coal/coal-t3-polynomials.pdf: coal/fvl/t3-polynomials.fvl coal/that.tickles
+coal/coal-t3-polynomials.pdf: \
+  coal/fvl/t3-polynomials.fvl \
+  coal/that.tickles
 	mkdir -p coal/tex
 	$(call document,coal,t3-polynomials)
 	rm -rf coal/tex
 
-coal/coal-t4-exponentials-and-logs.pdf: coal/fvl/t4-exponentials-and-logs.fvl coal/that.tickles
+coal/coal-t4-exponentials-and-logs.pdf: \
+  coal/fvl/t4-exponentials-and-logs.fvl \
+  coal/that.tickles
 	mkdir -p coal/tex
 	$(call document,coal,t4-exponentials-and-logs)
 	rm -rf coal/tex
@@ -377,21 +409,9 @@ prfs: FORCE
 
 
 
-geom: FORCE
-	@mkdir -p geom/tex
-
-	# Syllabus
-	$(call copy,geom,nsulogo.png)
-	$(call document,geom,syllabus)
-
-	# Activities
-	$(call document,geom,a1-basic-constructions)
-	$(call document,geom,a2-hyperbolic-constructions)
-	$(call document,geom,a3-symmetries-of-the-square)
-
-	# Remove generated files
-	@rm -rf geom/tex
-
+geom: \
+  geom/geom-syllabus.pdf \
+  geom-activities
 	#  _______  _______  _______  __   __ 
 	# |       ||       ||       ||  |_|  |
 	# |    ___||    ___||   _   ||       |
@@ -400,7 +420,42 @@ geom: FORCE
 	# |   |_| ||   |___ |       || ||_|| |
 	# |_______||_______||_______||_|   |_|
 
-	@echo "Done!" | doppler lightgreen
+
+geom/that.tickles: geom/tickle.me
+	@echo "That tickles!" | doppler lightred
+	@touch geom/that.tickles
+
+geom/geom-syllabus.pdf: geom/fvl/syllabus.fvl geom/that.tickles
+	@mkdir -p geom/tex
+	$(call copy,geom,nsulogo.png)
+	$(call document,geom,syllabus)
+	@rm -rf geom/tex
+
+geom-activities: \
+  geom/geom-a1-basic-constructions.pdf \
+  geom/geom-a2-hyperbolic-constructions.pdf \
+  geom/geom-a3-symmetries-of-the-square.pdf
+
+geom/geom-a1-basic-constructions.pdf: \
+  geom/fvl/a1-basic-constructions.fvl \
+  geom/that.tickles
+	@mkdir -p geom/tex
+	$(call document,geom,a1-basic-constructions)
+	@rm -rf geom/tex
+
+geom/geom-a2-hyperbolic-constructions.pdf: \
+  geom/fvl/a2-hyperbolic-constructions.fvl \
+  geom/that.tickles
+	@mkdir -p geom/tex
+	$(call document,geom,a2-hyperbolic-constructions)
+	@rm -rf geom/tex
+
+geom/geom-a3-symmetries-of-the-square.pdf: \
+  geom/fvl/a3-symmetries-of-the-square.fvl \
+  geom/that.tickles
+	@mkdir -p geom/tex
+	$(call document,geom,a3-symmetries-of-the-square)
+	@rm -rf geom/tex
 
 
 

@@ -12,22 +12,22 @@ Department of Mathematics and Computer Science \\
 Fall 2015
 \end{center}
 
-\begin{itemize}
-\item#[#] \textbf{\Large MATH 3713-20224, Abstract Algebra}
+\textbf{\Large MATH 3713-20224, Modern Algebra: Rings (3 Credits)}
 
+\begin{itemize}
 \item \textbf{Instructor:} Nathan Bloomfield, Ph.D.
 \begin{itemize}
 \item#[#] \textbf{Email:} \texttt{bloomfie#@nsuok.edu}
 \item#[#] \textbf{Office Location:} SC 252 
-\item#[#] \textbf{Office Hours:} MWF 11--12, MW 8:30--9, 2--4
-\item#[#] \textbf{Website:} \texttt{nbloomf.github.io}
+\item#[#] \textbf{Office Hours:} MWF 7:30--8, 10--12, 2--2:30
+\item#[#] \textbf{Website:} \texttt{nbloomf.github.io/classes/ring}
 \end{itemize}
 
 
 \item \textbf{Course Delivery Mode:} Face-to-face
 
 
-\item \textbf{Class Days and Times:} MWF 12--1 in SC 246
+\item \textbf{Class Days and Times:} MWF 12--1 in SC 257
 
 
 \item \textbf{Course Prerequisites and/or Corequisites:} Math 3703; Introduction to Proof.
@@ -39,14 +39,14 @@ Fall 2015
 \item \textbf{Course Purpose and Goals:} In Abstract Algebra I students invesigate examples, properties, interactions, and structure of rings and fields.
 
 
-\item \textbf{Course Topics:} We will cover (roughly) the following sections in the textbook.
+\item \textbf{Course Topics:} We will cover the following chapters in the textbook.
 \begin{itemize*}
-\item Chapter 2: The Integers
-\item Chapter 16: Rings
-\item Chapter 17: Polynomials
-\item Chapter 18: Integral Domains
+\item Chapter 0: Arithmetic
+\item Chapter 1: Rings
+\item Chapter 2: The Domain Hierarchy
+\item Chapter 3: Polynomials
+\item Chapter 4: Ideals and Quotients
 \end{itemize*}
-With supplementary material as time permits.
 
 
 \item \textbf{Student Learning Outcomes:} The student will be expected to achieve the following objectives.
@@ -71,11 +71,10 @@ With supplementary material as time permits.
 The final grade will be the weighted average of the grades in each assignment category above. A final grade of 90 or better is an A; a grade in the interval $#[80,90)$ is a B, et cetera. I reserve the right to adjust the cutoffs between letter grades downward at my discretion.
 
 
-\item \textbf{Instructional Materials:} \emph{Abstract Algebra: Theory and Applications}, by Judson. This is a free textbook; both PDF and (cheap!) printed copies are available at the text's website:
+\item \textbf{Instructional Materials:} We will be working out of my lecture notes, which are available online at the following address.
 \begin{center}
-\texttt{abstract.pugetsound.edu}
+\texttt{http://nbloomf.github.io/pages/alg-notes.html}
 \end{center}
-The text will be heavily supplemented by my lecture notes.
 
 
 \item \textbf{Class and Instructor Policies:}
