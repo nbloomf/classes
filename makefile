@@ -40,7 +40,10 @@ coal/that.tickles: coal/tickle.me
 	@touch coal/that.tickles
 
 
-coal/coal-syllabus.pdf: coal/fvl/syllabus.fvl coal/that.tickles
+coal/coal-syllabus.pdf: \
+  coal/fvl/syllabus.fvl \
+  coal/that.tickles \
+  that.tickles
 	@mkdir -p coal/tex
 	$(call copy,coal,nsulogo.png)
 	$(call document,coal,syllabus)
@@ -141,34 +144,34 @@ coal/coal-r1-equations-and-geometry.pdf: \
   coal/fvl/r1-equations-and-geometry.fvl \
   coal/that.tickles \
   that.tickles
-	mkdir -p coal/tex
+	@mkdir -p coal/tex
 	$(call document,coal,r1-equations-and-geometry)
 	$(call solution,coal,r1-equations-and-geometry)
-	rm -rf coal/tex
+	@rm -rf coal/tex
 
 coal/coal-r2-functions.pdf: \
   coal/fvl/r2-functions.fvl \
   coal/that.tickles \
   that.tickles
-	mkdir -p coal/tex
+	@mkdir -p coal/tex
 	$(call document,coal,r2-functions)
-	rm -rf coal/tex
+	@rm -rf coal/tex
 
 coal/coal-r3-polynomials.pdf: \
   coal/fvl/r3-polynomials.fvl \
   coal/that.tickles \
   that.tickles
-	mkdir -p coal/tex
+	@mkdir -p coal/tex
 	$(call document,coal,r3-polynomials)
-	rm -rf coal/tex
+	@rm -rf coal/tex
 
 coal/coal-r4-exponentials-and-logs.pdf: \
   coal/fvl/r4-exponentials-and-logs.fvl \
   coal/that.tickles \
   that.tickles
-	mkdir -p coal/tex
+	@mkdir -p coal/tex
 	$(call document,coal,r4-exponentials-and-logs)
-	rm -rf coal/tex
+	@rm -rf coal/tex
 
 
 
@@ -182,34 +185,34 @@ coal/coal-t1-equations-and-geometry.pdf: \
   coal/fvl/t1-equations-and-geometry.fvl \
   coal/that.tickles \
   that.tickles
-	mkdir -p coal/tex
+	@mkdir -p coal/tex
 	$(call document,coal,t1-equations-and-geometry)
 	$(call solution,coal,t1-equations-and-geometry)
-	rm -rf coal/tex
+	@rm -rf coal/tex
 
 coal/coal-t2-functions.pdf: \
   coal/fvl/t2-functions.fvl \
   coal/that.tickles \
   that.tickles
-	mkdir -p coal/tex
+	@mkdir -p coal/tex
 	$(call document,coal,t2-functions)
-	rm -rf coal/tex
+	@rm -rf coal/tex
 
 coal/coal-t3-polynomials.pdf: \
   coal/fvl/t3-polynomials.fvl \
   coal/that.tickles \
   that.tickles
-	mkdir -p coal/tex
+	@mkdir -p coal/tex
 	$(call document,coal,t3-polynomials)
-	rm -rf coal/tex
+	@rm -rf coal/tex
 
 coal/coal-t4-exponentials-and-logs.pdf: \
   coal/fvl/t4-exponentials-and-logs.fvl \
   coal/that.tickles \
   that.tickles
-	mkdir -p coal/tex
+	@mkdir -p coal/tex
 	$(call document,coal,t4-exponentials-and-logs)
-	rm -rf coal/tex
+	@rm -rf coal/tex
 
 
 
@@ -250,7 +253,7 @@ stat/stat-z-score-table.pdf: \
   stat/tables/z-score-table.tex \
   stat/that.tickles \
   that.tickles
-	mkdir -p stat/tex
+	@mkdir -p stat/tex
 	$(call plaintex,stat,tables,z-score-table)
 	@rm -rf stat/tex
 
@@ -411,10 +414,10 @@ calc/calc-syllabus.pdf: \
   calc/fvl/syllabus.fvl \
   calc/that.tickles \
   that.tickles
-	mkdir -p calc/tex
+	@mkdir -p calc/tex
 	$(call copy,calc,nsulogo.png)
 	$(call document,calc,syllabus)
-	rm -rf calc/tex
+	@rm -rf calc/tex
 
 
 
@@ -433,61 +436,61 @@ calc/calc-a01-limits.pdf: \
   calc/fvl/a01-limits.fvl \
   calc/that.tickles \
   that.tickles
-	mkdir -p calc/tex
+	@mkdir -p calc/tex
 	$(call document,calc,a01-limits)
 	$(call solution,calc,a01-limits)
-	rm -rf calc/tex
+	@rm -rf calc/tex
 
 calc/calc-a02-continuity.pdf: \
   calc/fvl/a02-continuity.fvl \
   calc/that.tickles \
   that.tickles
-	mkdir -p calc/tex
+	@mkdir -p calc/tex
 	$(call document,calc,a02-continuity)
 	$(call solution,calc,a02-continuity)
-	rm -rf calc/tex
+	@rm -rf calc/tex
 
 calc/calc-a03-differentiation-1.pdf: \
   calc/fvl/a03-differentiation-1.fvl \
   calc/that.tickles \
   that.tickles
-	mkdir -p calc/tex
+	@mkdir -p calc/tex
 	$(call document,calc,a03-differentiation-1)
 	$(call solution,calc,a03-differentiation-1)
-	rm -rf calc/tex
+	@rm -rf calc/tex
 
 calc/calc-a04-differentiation-2.pdf: \
   calc/fvl/a04-differentiation-2.fvl \
   calc/that.tickles \
   that.tickles
-	mkdir -p calc/tex
+	@mkdir -p calc/tex
 	$(call document,calc,a04-differentiation-2)
 	$(call solution,calc,a04-differentiation-2)
-	rm -rf calc/tex
+	@rm -rf calc/tex
 
 calc/calc-a05-differentiation-3.pdf: \
   calc/fvl/a05-differentiation-3.fvl \
   calc/that.tickles \
   that.tickles
-	mkdir -p calc/tex
+	@mkdir -p calc/tex
 	$(call document,calc,a05-differentiation-3)
-	rm -rf calc/tex
+	@rm -rf calc/tex
 
 calc/calc-a06-monotonicity-and-concavity.pdf: \
   calc/fvl/a06-monotonicity-and-concavity.fvl \
   calc/that.tickles \
   that.tickles
-	mkdir -p calc/tex
+	@mkdir -p calc/tex
 	$(call document,calc,a06-monotonicity-and-concavity)
-	rm -rf calc/tex
+	@rm -rf calc/tex
 
 calc/calc-a07-extrema.pdf: \
   calc/fvl/a07-extrema.fvl \
   calc/that.tickles \
   that.tickles
-	mkdir -p calc/tex
+	@mkdir -p calc/tex
 	$(call document,calc,a07-extrema)
-	rm -rf calc/tex
+	@rm -rf calc/tex
 
 calc/calc-a08-applications.pdf: \
   calc/fvl/a08-applications.fvl \
@@ -801,83 +804,83 @@ FORCE:
 
 
 define plaintex
-  @echo "Attempting to build $(1)/$(2)/$(3)" | doppler lightblue
+  @echo "building $(1)/$(2)/$(3)" | doppler lightblue
 
-  # Generate pdfs
+  @echo '  generate pdfs' | doppler lightcyan
   @pdflatex -interaction=batchmode $(1)/$(2)/$(3).tex > /dev/null
   @pdflatex -interaction=batchmode $(1)/$(2)/$(3).tex > /dev/null
   @mv $(3).pdf $(1)/$(1)-$(3).pdf
 
-  # Clean up
+  @echo '  clean up' | doppler lightcyan
   @rm $(3).aux $(3).log
 
-  @echo "Successfully built $(1)/$(2)/$(3)" | doppler lightgreen
+  @echo "built $(1)/$(2)/$(3)" | doppler lightgreen
 endef
 
 
 
 define document
-  @echo "Attempting to build $(1)/fvl/$(2)" | doppler lightblue
+  @echo "building $(1)/fvl/$(2)" | doppler lightblue
 
-  # Run through feivel
+  @echo '  instantiate template' | doppler lightcyan
   @feivel -t $(1)/fvl/$(2).fvl \
    | tee error \
    > $(1)/tex/$(2).tex
 
-  # Generate pdfs
+  @echo '  generate pdfs' | doppler lightcyan
   @pdflatex -interaction=batchmode $(1)/tex/$(2).tex > /dev/null
   @pdflatex -interaction=batchmode $(1)/tex/$(2).tex > /dev/null
   @mv $(2).pdf $(1)/$(1)-$(2).pdf
 
-  # Clean up
+  @echo '  Clean up' | doppler lightcyan
   @rm $(2).aux $(2).log
   @rm -f error
 
-  @echo "Successfully built $(1)/fvl/$(2)" | doppler lightgreen
+  @echo "built $(1)/fvl/$(2)" | doppler lightgreen
 endef
 
 
 
 define solution
-  @echo "Attempting to build $(1)/fvl/soln-$(2)" | doppler lightblue
+  @echo "building $(1)/fvl/soln-$(2)" | doppler lightblue
 
-  # Run through feivel after changing SHOWSOLN flag
+  @echo '  instantiate template' | doppler lightcyan
   @cat $(1)/fvl/$(2).fvl \
    | sed 's/@SHOWSOLN := #f/@SHOWSOLN := #t/' \
    | feivel \
    | tee error \
    > $(1)/tex/soln-$(2).tex
 
-  # Generate pdfs
+  @echo '  generate pdfs' | doppler lightcyan
   @pdflatex -interaction=batchmode $(1)/tex/soln-$(2).tex > /dev/null
   @pdflatex -interaction=batchmode $(1)/tex/soln-$(2).tex > /dev/null
   @mv soln-$(2).pdf $(1)/$(1)-soln-$(2).pdf
 
-  # Clean up
+  @echo '  clean up' | doppler lightcyan
   @rm soln-$(2).aux soln-$(2).log
   @rm -f error
 
-  @echo "Successfully built $(1)/fvl/soln-$(2)" | doppler lightgreen
+  @echo "built $(1)/fvl/soln-$(2)" | doppler lightgreen
 endef
 
 
 
 define slides
-  @echo "Attempting to build $(1)/fvl/$(2)" | doppler lightblue
+  @echo "building $(1)/fvl/$(2)" | doppler lightblue
 
-  # Run through feivel
+  @echo '  instantiate template' | doppler lightcyan
   @feivel -t $(1)/fvl/$(2).fvl \
    | tee error \
    > $(1)/tex/$(2).tex
 
-  # Split into screen and print versions
+  @echo '  split versions' | doppler lightcyan
   @cat $(1)/tex/$(2).tex \
     | sed s/class\{beamer\}/class\[handout\]\{beamer\}/ \
     | sed s/colortheme\{default\}/colortheme\{dove\}/ \
     > $(1)/tex/$(2)-print.tex
   @mv $(1)/tex/$(2).tex $(1)/tex/$(2)-screen.tex
 
-  # Generate pdfs
+  @echo '  generate pdfs' | doppler lightcyan
   @pdflatex -interaction=batchmode $(1)/tex/$(2)-print.tex > /dev/null
   @pdflatex -interaction=batchmode $(1)/tex/$(2)-print.tex > /dev/null
   @mv $(2)-print.pdf $(1)/$(1)-print-$(2).pdf
@@ -886,7 +889,7 @@ define slides
   @pdflatex -interaction=batchmode $(1)/tex/$(2)-screen.tex > /dev/null
   @mv $(2)-screen.pdf $(1)/$(1)-screen-$(2).pdf
 
-  # Clean up
+  @echo '  clean up' | doppler lightcyan
   @rm -- $(2)-print.aux $(2)-print.log
   @rm -- $(2)-print.nav $(2)-print.out $(2)-print.snm $(2)-print.toc
 
@@ -894,11 +897,12 @@ define slides
   @rm -- $(2)-screen.nav $(2)-screen.out $(2)-screen.snm $(2)-screen.toc
   @rm error
 
-  @echo "Successfully built $(1)/fvl/$(2)" | doppler lightgreen
+  @echo "built $(1)/fvl/$(2)" | doppler lightgreen
 endef
 
 
 
 define copy
+  @echo "copying $(1)/fvl/$(2)" | doppler lightmagenta
   @cp -r $(1)/fvl/$(2) $(1)/tex/$(2)
 endef
