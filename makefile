@@ -22,12 +22,19 @@ all: coal stat calc prfs geom ring ssem
 
 clean: FORCE
 	@(rm calc/pdf/* || true) 2> /dev/null
+	@(rm calc/*.pdf || true) 2> /dev/null
 	@(rm coal/pdf/* || true) 2> /dev/null
+	@(rm coal/*.pdf || true) 2> /dev/null
 	@(rm stat/pdf/* || true) 2> /dev/null
+	@(rm stat/*.pdf || true) 2> /dev/null
 	@(rm prfs/pdf/* || true) 2> /dev/null
+	@(rm prfs/*.pdf || true) 2> /dev/null
 	@(rm geom/pdf/* || true) 2> /dev/null
+	@(rm geom/*.pdf || true) 2> /dev/null
 	@(rm ring/pdf/* || true) 2> /dev/null
+	@(rm ring/*.pdf || true) 2> /dev/null
 	@(rm ssem/pdf/* || true) 2> /dev/null
+	@(rm ssem/*.pdf || true) 2> /dev/null
 
 tickle: FORCE
 	@echo 'Tee Hee!' | doppler lightmagenta
@@ -347,10 +354,10 @@ geom/geom-syllabus.pdf: \
 
 
 geom/geom-a%.pdf: \
-  geom/fvl/h%.fvl \
+  geom/fvl/a%.fvl \
   geom/.that.tickles
 	@mkdir -p geom/tex
-	$(call document,geom,h$*)
+	$(call document,geom,a$*)
 	@rm -rf geom/tex
 
 
@@ -364,7 +371,7 @@ ring: \
   ring-title \
   ring/ring-syllabus.pdf \
   ring-slides \
-  ring-homework \
+  $(patsubst ring/fvl/h%.fvl,ring/ring-h%.pdf,$(wildcard ring/fvl/h*.fvl)) \
   ring-tests
 
 
@@ -381,6 +388,7 @@ ring-title: FORCE
 ring/.that.tickles: ring/tickle.me
 	@echo "That tickles!" | doppler lightred
 	@touch ring/.that.tickles
+
 
 ring/ring-syllabus.pdf: \
   ring/fvl/syllabus.fvl \
@@ -402,14 +410,12 @@ ring/ring-screen-slides-zz-axioms.pdf: \
 	$(call slides,ring,slides-zz-axioms)
 	@rm -rf ring/tex
 
-ring-homework: \
-  ring/ring-hw2.pdf
 
-ring/ring-hw2.pdf: \
-  ring/fvl/hw2.fvl \
+ring/ring-h%.pdf: \
+  ring/fvl/h%.fvl \
   ring/.that.tickles
 	@mkdir -p ring/tex
-	$(call document,ring,hw2)
+	$(call document,ring,h$*)
 	@rm -rf ring/tex
 
 ring-tests: \
@@ -463,7 +469,7 @@ define plaintex
   @mv $(3).pdf $(1)/$(1)-$(3).pdf
 
   @echo '  clean up' | doppler lightcyan
-  @rm $(3).aux $(3).log
+  @rm -- $(3).aux $(3).log
 
   @echo '  built' | doppler lightgreen
 endef
@@ -484,7 +490,7 @@ define document
   @mv $(2).pdf $(1)/$(1)-$(2).pdf
 
   @echo '  clean up' | doppler lightcyan
-  @rm $(2).aux $(2).log
+  @rm -- $(2).aux $(2).log
   @rm -f error
 
   @echo '  built' | doppler lightgreen
@@ -508,7 +514,7 @@ define solution
   @mv soln-$(2).pdf $(1)/$(1)-soln-$(2).pdf
 
   @echo '  clean up' | doppler lightcyan
-  @rm soln-$(2).aux soln-$(2).log
+  @rm -- soln-$(2).aux soln-$(2).log
   @rm -f error
 
   @echo '  built' | doppler lightgreen
@@ -546,7 +552,7 @@ define slides
 
   @rm -- $(2)-screen.aux $(2)-screen.log
   @rm -- $(2)-screen.nav $(2)-screen.out $(2)-screen.snm $(2)-screen.toc
-  @rm error
+  @rm -- error
 
   @echo '  built' | doppler lightgreen
 endef
