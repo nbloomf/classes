@@ -72,16 +72,23 @@ coal-activities: \
   coal/coal-a07-polynomials-ii.pdf \
   coal/coal-a08-exponentials-and-logs.pdf
 
-
-
-coal/coal-a01-linear-ish-equations.pdf: \
-  coal/fvl/a01-linear-ish-equations.fvl \
+coal/coal-a%.pdf: \
+  coal/fvl/a%.fvl \
   coal/that.tickles \
   that.tickles
 	@mkdir -p coal/tex
-	$(call document,coal,a01-linear-ish-equations)
-	$(call solution,coal,a01-linear-ish-equations)
+	$(call document,coal,a$*)
+	$(call solution,coal,a$*)	
 	@rm -rf coal/tex
+
+#coal/coal-a01-linear-ish-equations.pdf: \
+#  coal/fvl/a01-linear-ish-equations.fvl \
+#  coal/that.tickles \
+#  that.tickles
+#	@mkdir -p coal/tex
+#	$(call document,coal,a01-linear-ish-equations)
+#	$(call solution,coal,a01-linear-ish-equations)
+#	@rm -rf coal/tex
 
 coal/coal-a02-some-geometry.pdf: \
   coal/fvl/a02-some-geometry.fvl \
