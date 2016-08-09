@@ -18,7 +18,7 @@
 Does the Times have more than double the full price sales of the Daily Telegraph?
 
 \begin{center}
-\includegraphics#[scale=0.6#]{stat/tex/gfx/misleading-graphs/baseline-paper-sales.jpg}
+\includegraphics#[scale=0.6#]{stat/tex/gfx/s-misleading-graphs/baseline-paper-sales.jpg}
 \end{center}
 
 \pause
@@ -36,7 +36,7 @@ About an 8.6\% increase.
 Will the top tax rate increase sixfold?
 
 \begin{center}
-\includegraphics#[scale=0.3#]{stat/tex/gfx/misleading-graphs/baseline-tax-cuts.jpg}
+\includegraphics#[scale=0.3#]{stat/tex/gfx/s-misleading-graphs/baseline-tax-cuts.jpg}
 \end{center}
 
 \pause
@@ -54,7 +54,7 @@ About a 13\% increase.
 Are there four times as many people on welfare as working full time?
 
 \begin{center}
-\includegraphics#[scale=0.3#]{stat/tex/gfx/misleading-graphs/baseline-welfare.jpg}
+\includegraphics#[scale=0.3#]{stat/tex/gfx/s-misleading-graphs/baseline-welfare.jpg}
 \end{center}
 
 \pause
@@ -74,7 +74,7 @@ Are there four times as many people on welfare as working full time?
 \frametitle{More Misleading Baselines}
 
 \begin{center}
-\includegraphics#[scale=0.5#]{stat/tex/gfx/misleading-graphs/baseline-unemployment.jpg}
+\includegraphics#[scale=0.5#]{stat/tex/gfx/s-misleading-graphs/baseline-unemployment.jpg}
 \end{center}
 \end{frame}
 
@@ -84,7 +84,7 @@ Are there four times as many people on welfare as working full time?
 \frametitle{More Misleading Baselines}
 
 \begin{center}
-\includegraphics#[scale=0.2#]{stat/tex/gfx/misleading-graphs/baseline-poverty.jpg}
+\includegraphics#[scale=0.2#]{stat/tex/gfx/s-misleading-graphs/baseline-poverty.jpg}
 \end{center}
 \end{frame}
 
@@ -94,7 +94,7 @@ Are there four times as many people on welfare as working full time?
 \frametitle{More Misleading Baselines}
 
 \begin{center}
-\includegraphics#[scale=0.2#]{stat/tex/gfx/misleading-graphs/baseline-baseball.jpg}
+\includegraphics#[scale=0.2#]{stat/tex/gfx/s-misleading-graphs/baseline-baseball.jpg}
 \end{center}
 \end{frame}
 
@@ -107,7 +107,7 @@ Are there four times as many people on welfare as working full time?
 How many medals does each graphic medal represent?
 
 \begin{center}
-\includegraphics#[scale=0.4#]{stat/tex/gfx/misleading-graphs/pictograph-proportions.jpg}
+\includegraphics#[scale=0.4#]{stat/tex/gfx/s-misleading-graphs/pictograph-proportions.jpg}
 \end{center}
 
 \pause
@@ -125,7 +125,7 @@ US: 329, Russia: 199, Britain: 153, France: 174, Germany: 249
 How much time passes between consecutive bars?
 
 \begin{center}
-\includegraphics#[scale=0.3#]{stat/tex/gfx/misleading-graphs/inconsistent-scale-facebook.jpg}
+\includegraphics#[scale=0.3#]{stat/tex/gfx/s-misleading-graphs/inconsistent-scale-facebook.jpg}
 \end{center}
 
 \pause
@@ -141,7 +141,7 @@ How much time passes between consecutive bars?
 \frametitle{Inconsistent Scale}
 
 \begin{center}
-\includegraphics#[scale=0.4#]{stat/tex/gfx/misleading-graphs/inconsistent-scale-gas.jpg}
+\includegraphics#[scale=0.4#]{stat/tex/gfx/s-misleading-graphs/inconsistent-scale-gas.jpg}
 \end{center}
 
 \end{frame}
@@ -152,7 +152,7 @@ How much time passes between consecutive bars?
 \frametitle{Just Wrong: No Labels}
 
 \begin{center}
-\includegraphics#[scale=0.5#]{stat/tex/gfx/misleading-graphs/no-labels.jpg}
+\includegraphics#[scale=0.5#]{stat/tex/gfx/s-misleading-graphs/no-labels.jpg}
 \end{center}
 
 This graph contains no information!
@@ -164,7 +164,7 @@ This graph contains no information!
 \frametitle{Just Wrong: The Numbers Don't Add Up}
 
 \begin{center}
-\includegraphics#[scale=0.4#]{stat/tex/gfx/misleading-graphs/percentages-dont-add-up.jpg}
+\includegraphics#[scale=0.4#]{stat/tex/gfx/s-misleading-graphs/percentages-dont-add-up.jpg}
 \end{center}
 \end{frame}
 
@@ -174,7 +174,7 @@ This graph contains no information!
 \frametitle{Just Wrong: ???}
 
 \begin{center}
-\includegraphics#[scale=0.4#]{stat/tex/gfx/misleading-graphs/just-wrong-time-series.jpg}
+\includegraphics#[scale=0.4#]{stat/tex/gfx/s-misleading-graphs/just-wrong-time-series.jpg}
 \end{center}
 \end{frame}
 

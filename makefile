@@ -125,7 +125,7 @@ stat: \
   $(patsubst stat/fvl/a%.fvl,stat/stat-a%.pdf,$(wildcard stat/fvl/a*.fvl)) \
   $(patsubst stat/fvl/r%.fvl,stat/stat-r%.pdf,$(wildcard stat/fvl/r*.fvl)) \
   $(patsubst stat/fvl/t%.fvl,stat/stat-t%.pdf,$(wildcard stat/fvl/t*.fvl)) \
-  stat-slides
+  $(patsubst stat/fvl/s%.fvl,stat/stat-s%.pdf,$(wildcard stat/fvl/s*.fvl))
 
 
 stat-title: FORCE
@@ -187,15 +187,12 @@ stat/stat-t%.pdf: \
 	@rm -rf stat/tex
 
 
-stat-slides: \
-  stat/stat-print-slides-misleading-graphs.pdf
-
-stat/stat-print-slides-misleading-graphs.pdf: \
-  stat/fvl/slides-misleading-graphs.fvl \
+stat/stat-s%.pdf: \
+  stat/fvl/s%.fvl \
   stat/.that.tickles
 	@mkdir -p stat/tex/gfx
-	$(call copy,stat,gfx/misleading-graphs/)
-	$(call slides,stat,slides-misleading-graphs)
+	$(call copy,stat,gfx/s$*/)
+	$(call slides,stat,s$*)
 	@rm -rf stat/tex
 
 
@@ -370,9 +367,9 @@ geom/geom-a%.pdf: \
 ring: \
   ring-title \
   ring/ring-syllabus.pdf \
-  ring-slides \
   $(patsubst ring/fvl/h%.fvl,ring/ring-h%.pdf,$(wildcard ring/fvl/h*.fvl)) \
-  ring-tests
+  $(patsubst ring/fvl/t%.fvl,ring/ring-t%.pdf,$(wildcard ring/fvl/t*.fvl)) \
+  $(patsubst ring/fvl/s%.fvl,ring/ring-s%.pdf,$(wildcard ring/fvl/s*.fvl))
 
 
 ring-title: FORCE
@@ -399,15 +396,11 @@ ring/ring-syllabus.pdf: \
 	@rm -rf ring/tex
 
 
-ring-slides: \
-  ring/ring-screen-slides-zz-axioms.pdf
-
-
-ring/ring-screen-slides-zz-axioms.pdf: \
-  ring/fvl/slides-zz-axioms.fvl \
+ring/ring-s%.pdf: \
+  ring/fvl/s%.fvl \
   ring/.that.tickles
 	@mkdir -p ring/tex
-	$(call slides,ring,slides-zz-axioms)
+	$(call slides,ring,s$*)
 	@rm -rf ring/tex
 
 
@@ -418,14 +411,12 @@ ring/ring-h%.pdf: \
 	$(call document,ring,h$*)
 	@rm -rf ring/tex
 
-ring-tests: \
-  ring/ring-final.pdf
 
-ring/ring-final.pdf: \
-  ring/fvl/final.fvl \
+ring/ring-t%.pdf: \
+  ring/fvl/t%.fvl \
   ring/.that.tickles
 	@mkdir -p ring/tex
-	$(call document,ring,final)
+	$(call document,ring,t$*)
 	@rm -rf ring/tex
 
 
@@ -535,23 +526,22 @@ define slides
     | sed s/class\{beamer\}/class\[handout\]\{beamer\}/ \
     | sed s/colortheme\{default\}/colortheme\{dove\}/ \
     > $(1)/tex/$(2)-print.tex
-  @mv $(1)/tex/$(2).tex $(1)/tex/$(2)-screen.tex
 
   @echo '  generate pdfs' | doppler lightcyan
   @pdflatex -interaction=batchmode $(1)/tex/$(2)-print.tex > /dev/null
   @pdflatex -interaction=batchmode $(1)/tex/$(2)-print.tex > /dev/null
   @mv $(2)-print.pdf $(1)/$(1)-print-$(2).pdf
 
-  @pdflatex -interaction=batchmode $(1)/tex/$(2)-screen.tex > /dev/null
-  @pdflatex -interaction=batchmode $(1)/tex/$(2)-screen.tex > /dev/null
-  @mv $(2)-screen.pdf $(1)/$(1)-screen-$(2).pdf
+  @pdflatex -interaction=batchmode $(1)/tex/$(2).tex > /dev/null
+  @pdflatex -interaction=batchmode $(1)/tex/$(2).tex > /dev/null
+  @mv $(2).pdf $(1)/$(1)-$(2).pdf
 
   @echo '  clean up' | doppler lightcyan
   @rm -- $(2)-print.aux $(2)-print.log
   @rm -- $(2)-print.nav $(2)-print.out $(2)-print.snm $(2)-print.toc
 
-  @rm -- $(2)-screen.aux $(2)-screen.log
-  @rm -- $(2)-screen.nav $(2)-screen.out $(2)-screen.snm $(2)-screen.toc
+  @rm -- $(2).aux $(2).log
+  @rm -- $(2).nav $(2).out $(2).snm $(2).toc
   @rm -- error
 
   @echo '  built' | doppler lightgreen
