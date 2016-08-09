@@ -3,7 +3,7 @@
 \usepackage{flexfig}
 \usepackage{amsmath}
 \usepackage{neb-formulas}
-
+\usepackage{neb-macros}
 
 
 \begin{document}

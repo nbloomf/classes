@@ -3,6 +3,7 @@
 \usepackage{flexfig}
 \usepackage{amsmath}
 \usepackage{neb-formulas}
+\usepackage{neb-macros}
 
 [define bool @SHOWSOLN := #f]#
 
