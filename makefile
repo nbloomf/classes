@@ -427,7 +427,8 @@ ring/ring-t%.pdf: \
 
 
 ssem: \
-  ssem-title
+  ssem-title \
+  ssem/ssem-syllabus.pdf
 
 
 ssem-title: FORCE
@@ -443,6 +444,14 @@ ssem-title: FORCE
 ssem/.that.tickles: ssem/tickle.me
 	@echo "That tickles!" | doppler lightred
 	@touch ssem/.that.tickles
+
+ssem/ssem-syllabus.pdf: \
+  ssem/fvl/syllabus.fvl \
+  ssem/.that.tickles
+	@mkdir -p ssem/tex
+	$(call copy,ssem,nsulogo.png)
+	$(call document,ssem,syllabus)
+	@rm -rf ssem/tex
 
 
 
