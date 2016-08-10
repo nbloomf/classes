@@ -21,20 +21,13 @@ FORCE:
 all: coal stat calc prfs geom ring ssem
 
 clean: FORCE
-	@(rm calc/pdf/* || true) 2> /dev/null
-	@(rm calc/*.pdf || true) 2> /dev/null
-	@(rm coal/pdf/* || true) 2> /dev/null
-	@(rm coal/*.pdf || true) 2> /dev/null
-	@(rm stat/pdf/* || true) 2> /dev/null
-	@(rm stat/*.pdf || true) 2> /dev/null
-	@(rm prfs/pdf/* || true) 2> /dev/null
-	@(rm prfs/*.pdf || true) 2> /dev/null
-	@(rm geom/pdf/* || true) 2> /dev/null
-	@(rm geom/*.pdf || true) 2> /dev/null
-	@(rm ring/pdf/* || true) 2> /dev/null
-	@(rm ring/*.pdf || true) 2> /dev/null
-	@(rm ssem/pdf/* || true) 2> /dev/null
-	@(rm ssem/*.pdf || true) 2> /dev/null
+	@(rm calc/pdf/* calc/tex/* calc/*.pdf || true) 2> /dev/null
+	@(rm coal/pdf/* coal/tex/* coal/*.pdf || true) 2> /dev/null
+	@(rm stat/pdf/* stat/tex/* stat/*.pdf || true) 2> /dev/null
+	@(rm prfs/pdf/* prfs/tex/* prfs/*.pdf || true) 2> /dev/null
+	@(rm geom/pdf/* geom/tex/* geom/*.pdf || true) 2> /dev/null
+	@(rm ring/pdf/* ring/tex/* ring/*.pdf || true) 2> /dev/null
+	@(rm ssem/pdf/* ssem/tex/* ssem/*.pdf || true) 2> /dev/null
 
 tickle: FORCE
 	@echo 'Tee Hee!' | doppler lightmagenta
@@ -62,6 +55,7 @@ coal: \
 
 
 coal-title: FORCE
+	@mkdir -p coal/tex
 	@echo ' _______  _______  _______  ___     ' | doppler green
 	@echo '|       ||       ||   _   ||   |    ' | doppler green
 	@echo '|       ||   _   ||  |_|  ||   |    ' | doppler green
@@ -79,37 +73,29 @@ coal/.that.tickles: coal/tickle.me
 coal/coal-syllabus.pdf: \
   coal/fvl/syllabus.fvl \
   coal/.that.tickles
-	@mkdir -p coal/tex
 	$(call copy,coal,nsulogo.png)
 	$(call document,coal,syllabus)
-	@rm -rf coal/tex
 
 
 coal/coal-a%.pdf: \
   coal/fvl/a%.fvl \
   coal/.that.tickles
-	@mkdir -p coal/tex
 	$(call document,coal,a$*)
 	$(call solution,coal,a$*)	
-	@rm -rf coal/tex
 
 
 coal/coal-r%.pdf: \
   coal/fvl/r%.fvl \
   coal/.that.tickles
-	@mkdir -p coal/tex
 	$(call document,coal,r$*)
 	$(call solution,coal,r$*)	
-	@rm -rf coal/tex
 
 
 coal/coal-t%.pdf: \
   coal/fvl/t%.fvl \
   coal/.that.tickles
-	@mkdir -p coal/tex
 	$(call document,coal,t$*)
-	$(call solution,coal,t$*)	
-	@rm -rf coal/tex
+	$(call solution,coal,t$*)
 
 
 
@@ -129,6 +115,7 @@ stat: \
 
 
 stat-title: FORCE
+	@mkdir -p stat/tex/gfx
 	@echo ' _______  _______  _______  _______ ' | doppler green
 	@echo '|       ||       ||   _   ||       |' | doppler green
 	@echo '|  _____||_     _||  |_|  ||_     _|' | doppler green
@@ -146,54 +133,42 @@ stat/.that.tickles: stat/tickle.me
 stat/stat-syllabus.pdf: \
   stat/fvl/syllabus.fvl \
   stat/.that.tickles
-	@mkdir -p stat/tex/gfx
 	$(call copy,stat,gfx/nsulogo.png)
 	$(call document,stat,syllabus)
-	@rm -rf stat/tex
 
 
 stat/stat-z-score-table.pdf: \
   stat/tables/z-score-table.tex \
   stat/.that.tickles
-	@mkdir -p stat/tex
 	$(call plaintex,stat,tables,z-score-table)
-	@rm -rf stat/tex
 
 
 stat/stat-a%.pdf: \
   stat/fvl/a%.fvl \
   stat/.that.tickles
-	@mkdir -p stat/tex
 	$(call document,stat,a$*)
 	$(call solution,stat,a$*)	
-	@rm -rf stat/tex
 
 
 stat/stat-r%.pdf: \
   stat/fvl/r%.fvl \
   stat/.that.tickles
-	@mkdir -p stat/tex
 	$(call document,stat,r$*)
 	$(call solution,stat,r$*)
-	@rm -rf stat/tex
 
 
 stat/stat-t%.pdf: \
   stat/fvl/t%.fvl \
   stat/.that.tickles
-	@mkdir -p stat/tex
 	$(call document,stat,t$*)
 	$(call solution,stat,t$*)
-	@rm -rf stat/tex
 
 
 stat/stat-s%.pdf: \
   stat/fvl/s%.fvl \
   stat/.that.tickles
-	@mkdir -p stat/tex/gfx
 	$(call copy,stat,gfx/s$*/)
 	$(call slides,stat,s$*)
-	@rm -rf stat/tex
 
 
 
@@ -211,6 +186,7 @@ calc: \
 
 
 calc-title: FORCE
+	@mkdir -p calc/tex
 	@echo ' _______  _______  ___      _______ ' | doppler green
 	@echo '|       ||   _   ||   |    |       |' | doppler green
 	@echo '|       ||  |_|  ||   |    |       |' | doppler green
@@ -228,37 +204,29 @@ calc/.that.tickles: calc/tickle.me
 calc/calc-syllabus.pdf: \
   calc/fvl/syllabus.fvl \
   calc/.that.tickles
-	@mkdir -p calc/tex
 	$(call copy,calc,nsulogo.png)
 	$(call document,calc,syllabus)
-	@rm -rf calc/tex
 
 
 calc/calc-a%.pdf: \
   calc/fvl/a%.fvl \
   calc/.that.tickles
-	@mkdir -p calc/tex
 	$(call document,calc,a$*)
-	$(call solution,calc,a$*)	
-	@rm -rf calc/tex
+	$(call solution,calc,a$*)
 
 
 calc/calc-r%.pdf: \
   calc/fvl/r%.fvl \
   calc/.that.tickles
-	@mkdir -p calc/tex
 	$(call document,calc,r$*)
 	$(call solution,calc,r$*)
-	@rm -rf calc/tex
 
 
 calc/calc-t%.pdf: \
   calc/fvl/t%.fvl \
   calc/.that.tickles
-	@mkdir -p calc/tex
 	$(call document,calc,t$*)
 	$(call solution,calc,t$*)
-	@rm -rf calc/tex
 
 
 
@@ -275,6 +243,7 @@ prfs: \
 
 
 prfs-title: FORCE
+	@mkdir -p prfs/tex/gfx
 	@echo ' _______  ______    _______  _______ ' | doppler green
 	@echo '|       ||    _ |  |       ||       |' | doppler green
 	@echo '|    _  ||   | ||  |    ___||  _____|' | doppler green
@@ -292,26 +261,20 @@ prfs/.that.tickles: prfs/tickle.me
 prfs/prfs-syllabus.pdf: \
   prfs/fvl/syllabus.fvl \
   prfs/.that.tickles
-	@mkdir -p prfs/tex/gfx
 	$(call copy,prfs,gfx/nsulogo.png)
 	$(call document,prfs,syllabus)
-	@rm -rf prfs/tex
 
 
 prfs/prfs-h%.pdf: \
   prfs/fvl/h%.fvl \
   prfs/.that.tickles
-	@mkdir -p prfs/tex
 	$(call document,prfs,h$*)
-	@rm -rf prfs/tex
 
 
 prfs/prfs-t%.pdf: \
   prfs/fvl/t%.fvl \
   prfs/.that.tickles
-	@mkdir -p prfs/tex
 	$(call document,prfs,t$*)
-	@rm -rf prfs/tex
 
 
 
@@ -327,6 +290,7 @@ geom: \
 
 
 geom-title: FORCE
+	@mkdir -p geom/tex
 	@echo ' _______  _______  _______  __   __ ' | doppler green
 	@echo '|       ||       ||       ||  |_|  |' | doppler green
 	@echo '|    ___||    ___||   _   ||       |' | doppler green
@@ -344,18 +308,14 @@ geom/.that.tickles: geom/tickle.me
 geom/geom-syllabus.pdf: \
   geom/fvl/syllabus.fvl \
   geom/.that.tickles
-	@mkdir -p geom/tex
 	$(call copy,geom,nsulogo.png)
 	$(call document,geom,syllabus)
-	@rm -rf geom/tex
 
 
 geom/geom-a%.pdf: \
   geom/fvl/a%.fvl \
   geom/.that.tickles
-	@mkdir -p geom/tex
 	$(call document,geom,a$*)
-	@rm -rf geom/tex
 
 
 
@@ -373,6 +333,7 @@ ring: \
 
 
 ring-title: FORCE
+	@mkdir -p ring/tex
 	@echo ' ______    ___   __    _  _______ ' | doppler green
 	@echo '|    _ |  |   | |  |  | ||       |' | doppler green
 	@echo '|   | ||  |   | |   |_| ||    ___|' | doppler green
@@ -390,34 +351,26 @@ ring/.that.tickles: ring/tickle.me
 ring/ring-syllabus.pdf: \
   ring/fvl/syllabus.fvl \
   ring/.that.tickles
-	@mkdir -p ring/tex
 	$(call copy,ring,nsulogo.png)
 	$(call document,ring,syllabus)
-	@rm -rf ring/tex
 
 
 ring/ring-s%.pdf: \
   ring/fvl/s%.fvl \
   ring/.that.tickles
-	@mkdir -p ring/tex
 	$(call slides,ring,s$*)
-	@rm -rf ring/tex
 
 
 ring/ring-h%.pdf: \
   ring/fvl/h%.fvl \
   ring/.that.tickles
-	@mkdir -p ring/tex
 	$(call document,ring,h$*)
-	@rm -rf ring/tex
 
 
 ring/ring-t%.pdf: \
   ring/fvl/t%.fvl \
   ring/.that.tickles
-	@mkdir -p ring/tex
 	$(call document,ring,t$*)
-	@rm -rf ring/tex
 
 
 
@@ -432,6 +385,7 @@ ssem: \
 
 
 ssem-title: FORCE
+	@mkdir -p ssem/tex
 	@echo ' _______  _______  _______  __   __ ' | doppler green
 	@echo '|       ||       ||       ||  |_|  |' | doppler green
 	@echo '|  _____||  _____||    ___||       |' | doppler green
@@ -448,10 +402,8 @@ ssem/.that.tickles: ssem/tickle.me
 ssem/ssem-syllabus.pdf: \
   ssem/fvl/syllabus.fvl \
   ssem/.that.tickles
-	@mkdir -p ssem/tex
 	$(call copy,ssem,nsulogo.png)
 	$(call document,ssem,syllabus)
-	@rm -rf ssem/tex
 
 
 
@@ -463,15 +415,15 @@ ssem/ssem-syllabus.pdf: \
 define plaintex
   @echo "building $(1)/$(2)/$(3)" | doppler lightblue
 
-  @echo '  generate pdfs' | doppler lightcyan
+  @echo "generate $(1)/$(2)/$(3)" | doppler lightcyan
   @pdflatex -interaction=batchmode $(1)/$(2)/$(3).tex > /dev/null
   @pdflatex -interaction=batchmode $(1)/$(2)/$(3).tex > /dev/null
   @mv $(3).pdf $(1)/$(1)-$(3).pdf
 
-  @echo '  clean up' | doppler lightcyan
+  @echo "clean $(1)/$(2)/$(3)" | doppler lightcyan
   @rm -- $(3).aux $(3).log
 
-  @echo '  built' | doppler lightgreen
+  @echo "built $(1)/$(2)/$(3)" | doppler lightgreen
 endef
 
 
@@ -479,21 +431,21 @@ endef
 define document
   @echo "building $(1)/fvl/$(2)" | doppler lightblue
 
-  @echo '  instantiate template' | doppler lightcyan
+  @echo "instantiate $(1)/fvl/$(2)" | doppler lightcyan
   @feivel -t $(1)/fvl/$(2).fvl \
    | tee error \
    > $(1)/tex/$(2).tex
 
-  @echo '  generate pdfs' | doppler lightcyan
+  @echo "generate $(1)/fvl/$(2)" | doppler lightcyan
   @pdflatex -interaction=batchmode $(1)/tex/$(2).tex > /dev/null
   @pdflatex -interaction=batchmode $(1)/tex/$(2).tex > /dev/null
   @mv $(2).pdf $(1)/$(1)-$(2).pdf
 
-  @echo '  clean up' | doppler lightcyan
+  @echo "clean $(1)/fvl/$(2)" | doppler lightcyan
   @rm -- $(2).aux $(2).log
-  @rm -f error
+  @rm -f -- error
 
-  @echo '  built' | doppler lightgreen
+  @echo "built $(1)/fvl/$(2)" | doppler lightgreen
 endef
 
 
@@ -501,23 +453,23 @@ endef
 define solution
   @echo "building $(1)/fvl/soln-$(2)" | doppler lightblue
 
-  @echo '  instantiate template' | doppler lightcyan
+  @echo "instantiate $(1)/fvl/soln-$(2)" | doppler lightcyan
   @cat $(1)/fvl/$(2).fvl \
    | sed 's/@SHOWSOLN := #f/@SHOWSOLN := #t/' \
    | feivel \
    | tee error \
    > $(1)/tex/soln-$(2).tex
 
-  @echo '  generate pdfs' | doppler lightcyan
+  @echo "generate $(1)/fvl/soln-$(2)" | doppler lightcyan
   @pdflatex -interaction=batchmode $(1)/tex/soln-$(2).tex > /dev/null
   @pdflatex -interaction=batchmode $(1)/tex/soln-$(2).tex > /dev/null
   @mv soln-$(2).pdf $(1)/$(1)-soln-$(2).pdf
 
-  @echo '  clean up' | doppler lightcyan
+  @echo "clean $(1)/fvl/soln-$(2)" | doppler lightcyan
   @rm -- soln-$(2).aux soln-$(2).log
-  @rm -f error
+  @rm -f -- error
 
-  @echo '  built' | doppler lightgreen
+  @echo "built $(1)/fvl/soln-$(2)" | doppler lightgreen
 endef
 
 
@@ -525,18 +477,18 @@ endef
 define slides
   @echo "building $(1)/fvl/$(2)" | doppler lightblue
 
-  @echo '  instantiate template' | doppler lightcyan
+  @echo "instantiate $(1)/fvl/$(2)" | doppler lightcyan
   @feivel -t $(1)/fvl/$(2).fvl \
    | tee error \
    > $(1)/tex/$(2).tex
 
-  @echo '  split versions' | doppler lightcyan
+  @echo "split $(1)/fvl/$(2)" | doppler lightcyan
   @cat $(1)/tex/$(2).tex \
     | sed s/class\{beamer\}/class\[handout\]\{beamer\}/ \
     | sed s/colortheme\{default\}/colortheme\{dove\}/ \
     > $(1)/tex/$(2)-print.tex
 
-  @echo '  generate pdfs' | doppler lightcyan
+  @echo "generate $(1)/fvl/$(2)" | doppler lightcyan
   @pdflatex -interaction=batchmode $(1)/tex/$(2)-print.tex > /dev/null
   @pdflatex -interaction=batchmode $(1)/tex/$(2)-print.tex > /dev/null
   @mv $(2)-print.pdf $(1)/$(1)-print-$(2).pdf
@@ -545,15 +497,15 @@ define slides
   @pdflatex -interaction=batchmode $(1)/tex/$(2).tex > /dev/null
   @mv $(2).pdf $(1)/$(1)-$(2).pdf
 
-  @echo '  clean up' | doppler lightcyan
+  @echo "clean $(1)/fvl/$(2)" | doppler lightcyan
   @rm -- $(2)-print.aux $(2)-print.log
   @rm -- $(2)-print.nav $(2)-print.out $(2)-print.snm $(2)-print.toc
 
   @rm -- $(2).aux $(2).log
   @rm -- $(2).nav $(2).out $(2).snm $(2).toc
-  @rm -- error
+  @rm -f -- error
 
-  @echo '  built' | doppler lightgreen
+  @echo "built $(1)/fvl/$(2)" | doppler lightgreen
 endef
 
 

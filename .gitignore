@@ -1,2 +1,9 @@
 # Generated Files
 *.pdf
+coal/tex/*
+stat/tex/*
+calc/tex/*
+prfs/tex/*
+ring/tex/*
+geom/tex/*
+ssem/tex/*
