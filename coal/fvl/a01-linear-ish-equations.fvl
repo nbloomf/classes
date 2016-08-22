@@ -17,7 +17,7 @@
 \item [eval @linear.abs.1 (bool @show.solution := @SHOWSOLN)]
 [if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{5cm}]]
 
-\item [eval @linear.abs.2 (bool @show.solution := @SHOWSOLN)]
+\item [eval @linear.rat.2 (bool @show.solution := @SHOWSOLN)]
 [if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{5cm}]]
 
 \item [eval @linear.abs.3 (bool @show.solution := @SHOWSOLN)]
@@ -28,7 +28,7 @@
 \item [eval @linear.rat.1 (bool @show.solution := @SHOWSOLN)]
 [if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{5cm}]]
 
-\item [eval @linear.rat.2 (bool @show.solution := @SHOWSOLN)]
+\item [eval @linear.abs.2 (bool @show.solution := @SHOWSOLN)]
 [if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{5cm}]]
 
 \item [eval @linear.rat.3 (bool @show.solution := @SHOWSOLN)]
