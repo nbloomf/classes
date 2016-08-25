@@ -1,0 +1,26 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\usepackage{neb-titles}
+\usepackage{neb-macros}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\HomeworkTitle#[class={Abstract Algebra}, number={1}#]
+
+\begin{enumerate}
+\item Use the Euclidean Algorithm to compute the following.
+\begin{enumerate}
+\item $\mathsf{gcd}(12,5)$
+\item $\mathsf{gcd}(100,27)$
+\item $\mathsf{gcd}(1256,437)$
+\item $\mathsf{gcd}(10345,5341)$
+\end{enumerate}
+
+\item Use induction to show that the following identity holds for all natural numbers $n$. \#[ \sum_{k=1}^n (2k-1) = n^2 \#]
+
+\item Find integers \(u\) and \(v\) such that \#[ \mathsf{gcd}(1245,721) = 1245u + 721v. \#]
+\end{enumerate}
+
+\end{document}
