@@ -286,6 +286,7 @@ prfs/prfs-t%.pdf: \
 geom: \
   geom-title \
   geom/geom-syllabus.pdf \
+  $(patsubst geom/fvl/a%.fvl,geom/geom-a%.pdf,$(wildcard geom/fvl/a*.fvl)) \
   $(patsubst geom/fvl/t%.fvl,geom/geom-t%.pdf,$(wildcard geom/fvl/t*.fvl))
 
 
