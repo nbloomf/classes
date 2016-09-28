@@ -17,11 +17,19 @@ Finally, \textbf{your constructions must be robust}. Every geometric constructio
 \begin{enumerate}
 \item \textbf{Construct an equilateral triangle.} Start by placing two free points $X$ and $Y$ in the plane, as well as the segment $\Segment{X}{Y}$. Following the proof we gave in class, construct two points $Z_1$ and $Z_2$, on the opposite sides of $\Line{X}{Y}$, such that $\Triangle{X}{Y}{Z_1}$ and $\Triangle{X}{Y}{Z_2}$ are equilateral.
 
+Make a GeoGebra tool which constructs an equilateral triangle from two of its vertices.
+
 \item \textbf{Copy a line segment.} Start by placing four free points $X$, $Y$, $O$, and $P$ in the plane, as well as the segment $\Segment{X}{Y}$ and the ray $\Ray{O}{P}$. Following the proof we gave in class, construct a point $Z$ on $\Ray{O}{P}$ such that $\Segment{O}{Z} \equiv \Segment{X}{Y}$.
+
+Make a GeoGebra tool which copies a line segment onto a ray.
 
 \item \textbf{Copy an angle.} Start by placing five free points $A$, $O$, $B$, $P$, and $X$ in the plane, as well as the rays $\Ray{O}{A}$, $\Ray{O}{B}$, and $\Ray{P}{X}$. Following the proof we gave in class, construct two points $Y_1$ and $Y_2$, on opposite sides of $\Line{O}{X}$, such that $\Angle{X}{P}{Y_1} \equiv \Angle{A}{O}{B}$ and $\Angle{X}{P}{Y_2} \equiv \Angle{A}{O}{B}$.
 
+Make a GeoGebra tool which copies an angle onto a ray.
+
 \item \textbf{Construct a midpoint.} Start by placing two free points $X$ and $Y$ in the plane, as well as the segment $\Segment{X}{Y}$. Construct a point $Z \in \Segment{X}{Y}$ such that $\Segment{X}{Z} \equiv \Segment{Z}{Y}$. Can you prove that the point you constructed has this property?
+
+Make a GeoGebra tool which constructs the midpoint of a given segment.
 \end{enumerate}
 
 \end{document}
