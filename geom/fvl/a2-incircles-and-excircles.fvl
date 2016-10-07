@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{neb-macros}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\HomeworkTitle#[class={College Geometry}, number={2}, name={Incircles and Excircles}#]
+
+\noindent In this activity you will carry out some basic constructions using GeoGebra. If you have never used GeoGebra before, don't worry; for what we need it to do, it is fairly straightforward. If you get stuck, ask for help!
+
+Each of the following problems should be constructed on a separate file, and these files should be given descriptive titles \textbf{including your name and the activity number}. When you are finished, email the files to me. So I should get four files from you, with names like ``Nathan Bloomfield - A1 - construct equilateral triangle.gsp''.
+
+Finally, \textbf{your constructions must be robust}. Every geometric construction starts with one or more \emph{free elements}; these are points and lines given in the hypotheses of the construction proof. You should be able to \textbf{move the free elements around} without destroying your construction.
+
+\begin{enumerate}
+\item \textbf{Construct the bisector of an angle.} Start by placing three free points $a$, $b$, and $o$ and draw rays \(\Ray{o}{a}\) and \(\Ray{o}{b}\). Following the proof we gave in class, construct the bisector of angle \(\Angle{a}{o}{b}\).
+
+Make your construction into a GeoGebra tool.
+
+\item \textbf{Construct the foot of a point on a line.} Start by placing three free points $a$, $b$, and $p$, and draw the line \(\Line{a}{b}\). Following the proof we gave in class, construct the foot of \(p\) on \(\Line{a}{b}\).
+
+Make your construction into a GeoGebra tool.
+
+\item \textbf{Construct the incircle of a triangle.} Start by placing three free points $a$, $b$, and $c$, and draw the sides of triangle \(\Triangle{a}{b}{c}\). Following the proof we gave in class, construct (1) the incenter $o$ of \(\Triangle{a}{b}{c}\), (2) the feet of \(o\) on the sides of \(\Triangle{a}{b}{c}\), and (3) the incircle of \(\Triangle{a}{b}{c}\).
+
+Make your construction into a GeoGebra tool.
+
+\item \textbf{Construct the excircles of a triangle.} Start by placing three free points $a$, $b$, and $c$, and draw the \emph{extended} sides of triangle \(\Triangle{a}{b}{c}\) -- that is, the lines \(\Line{a}{b}\), \(\Line{b}{c}\), and \(\Line{a}{c}\). Following the proof we gave in class, construct (1) the excenter $o$ of \(\Triangle{a}{b}{c}\) at $a$, (2) the feet of \(o\) on the extended sides of \(\Triangle{a}{b}{c}\), and (3) the excircle of \(\Triangle{a}{b}{c}\) at $a$.
+
+Make your construction into a GeoGebra tool. Use this tool to construct the excircles of \(\Triangle{a}{b}{c}\) at \(b\) and \(c\).
+\end{enumerate}
+
+\end{document}
