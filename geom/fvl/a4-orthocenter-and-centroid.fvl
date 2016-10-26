@@ -22,6 +22,8 @@ Make your construction into a GeoGebra tool.
 \item \textbf{Construct the centroid of a triangle.} Start by placing three free points $a$, $b$, and $c$, and draw the segments \(\Segment{a}{b}\), \(\Segment{b}{c}\), and \(\Segment{c}{a}\). Following the proof we gave in class, construct the centroid of \(\Triangle{a}{b}{c}\).
 
 Make your construction into a GeoGebra tool.
+
+\item Place three free points $a$, $b$, and $c$, and draw the triangle $\Triangle{a}{b}{c}$. Now construct the orthocenter, the circumcenter, and the centroid of this triangle. Do you notice anything interesting about these points?
 \end{enumerate}
 
 \end{document}
