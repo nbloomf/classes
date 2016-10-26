@@ -6,7 +6,7 @@
 
 \begin{document}
 
-\HomeworkTitle#[class={College Geometry}, number={3}, name={Circumcircles and Tangents}#]
+\HomeworkTitle#[class={College Geometry}, number={4}, name={Orthocenter and Centroid}#]
 
 \noindent In this activity you will carry out some basic constructions using GeoGebra. If you have never used GeoGebra before, don't worry; for what we need it to do, it is fairly straightforward. If you get stuck, ask for help!
 
@@ -15,11 +15,11 @@ Each of the following problems should be constructed on a separate file, and the
 Finally, \textbf{your constructions must be robust}. Every geometric construction starts with one or more \emph{free elements}; these are points and lines given in the hypotheses of the construction proof. You should be able to \textbf{move the free elements around} without destroying your construction.
 
 \begin{enumerate}
-\item \textbf{Construct the circumcircle of a triangle.} Start by placing three free points $a$, $b$, and $c$, and draw the segments \(\Segment{a}{b}\), \(\Segment{b}{c}\), and \(\Segment{c}{a}\). Following the proof we gave in class, construct the circumcenter and circumcircle of \(\Triangle{a}{b}{c}\).
+\item \textbf{Construct the orthocenter of a triangle.} Start by placing three free points $a$, $b$, and $c$, and draw the segments \(\Segment{a}{b}\), \(\Segment{b}{c}\), and \(\Segment{c}{a}\). Following the proof we gave in class, construct the orthocenter of \(\Triangle{a}{b}{c}\).
 
 Make your construction into a GeoGebra tool.
 
-\item \textbf{Construct the tangents to a circle through an exterior point.} Start by placing three free points $a$, $b$, and $o$, and draw the circle centered at $o$ and passing through $a$. Following the proof we gave in class, construct the two lines passing through $b$ which are tangent to the circle.
+\item \textbf{Construct the centroid of a triangle.} Start by placing three free points $a$, $b$, and $c$, and draw the segments \(\Segment{a}{b}\), \(\Segment{b}{c}\), and \(\Segment{c}{a}\). Following the proof we gave in class, construct the centroid of \(\Triangle{a}{b}{c}\).
 
 Make your construction into a GeoGebra tool.
 \end{enumerate}
