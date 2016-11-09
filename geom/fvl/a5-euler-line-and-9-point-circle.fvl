@@ -1,0 +1,27 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{neb-macros}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\HomeworkTitle#[class={College Geometry}, number={5}, name={Euler Line and 9-Point Circle}#]
+
+\noindent In this activity you will carry out some basic constructions using GeoGebra. If you have never used GeoGebra before, don't worry; for what we need it to do, it is fairly straightforward. If you get stuck, ask for help!
+
+Each of the following problems should be constructed on a separate file, and these files should be given descriptive titles \textbf{including your name and the activity number}. When you are finished, email the files to me. So I should get four files from you, with names like ``Nathan Bloomfield - A1 - construct equilateral triangle.ggb''.
+
+Finally, \textbf{your constructions must be robust}. Every geometric construction starts with one or more \emph{free elements}; these are points and lines given in the hypotheses of the construction proof. You should be able to \textbf{move the free elements around} without destroying your construction.
+
+\begin{enumerate}
+\item \textbf{Construct the Euler line of a triangle.} Start by placing three free points $a$, $b$, and $c$, and draw the segments \(\Segment{a}{b}\), \(\Segment{b}{c}\), and \(\Segment{c}{a}\). Following the proof we gave in class, construct the Euler line of \(\Triangle{a}{b}{c}\).
+
+Make your construction into a GeoGebra tool.
+
+\item \textbf{Construct the 9-point circle of a triangle.} Start by placing three free points $a$, $b$, and $c$, and draw the segments \(\Segment{a}{b}\), \(\Segment{b}{c}\), and \(\Segment{c}{a}\). Following the proof we gave in class, construct the 9-point circle of \(\Triangle{a}{b}{c}\).
+
+Make your construction into a GeoGebra tool.
+\end{enumerate}
+
+\end{document}
