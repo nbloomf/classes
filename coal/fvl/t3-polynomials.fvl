@@ -40,6 +40,8 @@
 
 \item Find the multiplicity of 1 as a root of the following polynomial. \#[ p(x) = x^3 - x^2 - x + 1 \#]
 
+\item [eval @given.roots.2] \vspace{7cm}
+
 \end{enumerate}
 
 \end{document}
