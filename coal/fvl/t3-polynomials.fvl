@@ -38,7 +38,7 @@
 
 [% \item Find the domain of the following rational function. \#[ f(x) = \frac{1337x^{42} - x^{27} + 1}{(x-1)^2(x+2)(x-3)^3} \#] \vspace{6cm} %]
 
-\item Find the multiplicity of 1 as a root of the following polynomial. \#[ p(x) = x^3 - x^2 - x + 1 \#]
+\item Find the multiplicity of 1 as a root of the following polynomial. \#[ p(x) = x^3 - x^2 - x + 1 \#] \vspace{6cm}
 
 \item [eval @given.roots.2] \vspace{7cm}
 
