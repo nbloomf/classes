@@ -12,7 +12,7 @@
 
 [define str @TITLE := "Exponentials and Logs" ++ (if (@SHOWSOLN) then " (Solutions)" else "")]#
 
-\ActivityTitle#[class={College Algebra}, number={8}, name={@TITLE}#]
+\ActivityTitle#[class={College Algebra}, number={9}, name={@TITLE}#]
 
 \begin{enumerate}
 \item Solve the following equation. \#[ 3^{2x-1} = 27^{x+2} \#] \vspace{5cm}
