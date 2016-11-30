@@ -4,22 +4,14 @@
 
 \begin{document}
 
-\TestTitle#[class={Abstract I}, name={Final Exam}, term=Fall, year=2015, date={}#]
+\TestTitle#[class={Modern Algebra: Rings}, name={Final Exam}, term=Fall, year=2015, date={}#]
 
 \begin{enumerate}
-\item Let $R$ be a ring, with $S \subseteq R$ a subring and $I \subseteq R$ an ideal.
-
-\begin{enumerate}
-\item Show that $S \cap I$ is an ideal in $S$.
-
-\item Show that $I$ is an ideal in $S + I$.
-
-\item Show that $S/(S \cap I) \cong (S + I)/I$. (Hint: show that the map $\varphi : S \rightarrow (S+I)/I$ is surjective with kernel $S \cap I$ and use the First Isomorphism Theorem.)
-\end{enumerate}
+\item Solve the following system of congruences for $x$. \#[ \left\{ \begin{array}{rcl} x & \equiv & 2 \pmod{45} \\ x & \equiv & 5 \pmod{49} \\ x & \equiv & 3 \pmod{121} \end{array} \right. \#]
 
 \item Let $R$ be a ring. An element $x \in R$ is called \emph{nilpotent} if $x^n = 0$ for some power $n$. For example, $\overline{2}$ is nilpotent in $\mathbb{Z}/(8)$ since $\overline{2}^3 = 0$.
 
-Show that if $R$ is commutative then the set $N \subseteq R$ consisting of all the nilpotent elements is an ideal.
+Show that if $R$ is commutative then the set $N \subseteq R$ consisting of all the nilpotent elements is an ideal. (Hint: the binomial theorem holds in any ring.)
 
 \item A ring element $x$ is called \emph{idempotent} if $x^2 = x$. For example, 0 is idempotent in any ring since $0^2 = 0$.
 \begin{enumerate}
