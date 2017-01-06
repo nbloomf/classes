@@ -9,7 +9,7 @@
 \includegraphics#[width=6cm#]{stat/tex/gfx/nsulogo} \\ \vspace{0.5cm}
 College of Science and Health Professions \\
 Department of Mathematics and Computer Science \\
-Spring 2016
+Spring 2017
 \end{center}
 
 \begin{itemize}
@@ -19,15 +19,15 @@ Spring 2016
 \begin{itemize}
 \item#[#] \textbf{Email:} \texttt{bloomfie#@nsuok.edu}
 \item#[#] \textbf{Office Location:} SC 252 
-\item#[#] \textbf{Office Hours:} MWF 8:30--9, 11--12; T 9--10, 11--2
-\item#[#] \textbf{Website:} \texttt{nbloomf.github.io}
+\item#[#] \textbf{Office Hours:} MWF 7--8, 10--11, 1--2
+\item#[#] \textbf{Website:} \texttt{nbloomf.github.io/classes/stat}
 \end{itemize}
 
 
 \item \textbf{Course Delivery Mode:} Face-to-face
 
 
-\item \textbf{Class Days and Times:} MWF 9:00--9:50 in SC 145
+\item \textbf{Class Days and Times:} MWF 11--11:50 in SC 145
 
 
 \item \textbf{Course Prerequisites and/or Corequisites:} MATH 1473, 1513, or 1715.
@@ -41,28 +41,28 @@ Spring 2016
 
 \item \textbf{Course Topics:} We will cover the following sections in the textbook.
 \begin{itemize*}
-\item#[$\cdot$#] Chapter 1: Introduction to Statistics
-\item#[$\cdot$#] Chapter 2: Summarizing and Graphing Data
-\item#[$\cdot$#] Chapter 3: Statistics for Describing, Exploring, and Comparing Data
-\item#[$\cdot$#] Chapter 4: Probability
-\item#[$\cdot$#] Chapter 5: Discrete Probability Distributions
-\item#[$\cdot$#] Chapter 6: Normal Probability Distributions
-\item#[$\cdot$#] Chapter 7: Estimates and Sample Sizes
-\item#[$\cdot$#] Chapter 8: Hypothesis Testing
+\item Chapter 1: Introduction to Statistics
+\item Chapter 2: Summarizing and Graphing Data
+\item Chapter 3: Statistics for Describing, Exploring, and Comparing Data
+\item Chapter 4: Probability
+\item Chapter 5: Discrete Probability Distributions
+\item Chapter 6: Normal Probability Distributions
+\item Chapter 7: Estimates and Sample Sizes
+\item Chapter 8: Hypothesis Testing
 \end{itemize*}
 
 
 \item \textbf{Student Learning Outcomes:} The student will be expected to achieve the following objectives:
 \begin{itemize*}
-\item#[$\cdot$#] Given a data set be able to organize, analyze and summarize the data effectively using the following descriptive statistics tools: frequency distributions, measures of central tendency (mean, median, mode), measures of variability (range, variance, standard deviation), appropriate graphs (histogram, bar charts, pie charts, line charts). 
-\item#[$\cdot$#] Define probability and understand probability concepts. Calculate probabilities from contingency table data. Apply a tree diagram to organize and compute probabilities.
-\item#[$\cdot$#] Understand the concepts of random variable and probability distribution. Describe some common distributions (Binomial, Poisson, Normal) and their application in statistical analysis. Calculate the mean, variance and standard deviation for a discrete probability distribution. 
-\item#[$\cdot$#] Explain the role of sampling in statistical data analysis, discuss rudimentary issues in data collection including types of samples and non-random sampling error. Understand and apply the Central Limit Theorem
-\item#[$\cdot$#] Estimate parameters for populations based on information obtained from samples. 
-\item#[$\cdot$#] Test hypotheses about population parameters based on information obtained from samples.
-\item#[$\cdot$#] Develop and use a simple linear regression model to explore the relationships between dependent and independent variables.
-\item#[$\cdot$#] Apply the gained knowledge to the solution of practical problems through evaluation and selection of appropriate statistical techniques.
-\item#[$\cdot$#] Use statistical software, such as Microsoft® Excel, to solve problems. Be able to read and interpret computer-generated statistical outputs.
+\item Given a data set be able to organize, analyze and summarize the data effectively using the following descriptive statistics tools: frequency distributions, measures of central tendency (mean, median, mode), measures of variability (range, variance, standard deviation), appropriate graphs (histogram, bar charts, pie charts, line charts). 
+\item Define probability and understand probability concepts. Calculate probabilities from contingency table data. Apply a tree diagram to organize and compute probabilities.
+\item Understand the concepts of random variable and probability distribution. Describe some common distributions (Binomial, Poisson, Normal) and their application in statistical analysis. Calculate the mean, variance and standard deviation for a discrete probability distribution. 
+\item Explain the role of sampling in statistical data analysis, discuss rudimentary issues in data collection including types of samples and non-random sampling error. Understand and apply the Central Limit Theorem
+\item Estimate parameters for populations based on information obtained from samples. 
+\item Test hypotheses about population parameters based on information obtained from samples.
+\item Develop and use a simple linear regression model to explore the relationships between dependent and independent variables.
+\item Apply the gained knowledge to the solution of practical problems through evaluation and selection of appropriate statistical techniques.
+\item Use statistical software, such as Microsoft® Excel, to solve problems. Be able to read and interpret computer-generated statistical outputs.
 \end{itemize*}
 
 
@@ -92,9 +92,9 @@ A final percentage of 90 or better is an A; a percentage in the interval $#[80,9
 
 \item \textbf{Instructional Materials.} 
 \begin{itemize*}
-\item#[$\cdot$#] \emph{Elementary Statistics using Excel}, 5\textsuperscript{th} edition, by Triola.
-\item#[$\cdot$#] (Recommended) A graphing calculator, preferably a TI-83 or TI-84.
-\item#[$\cdot$#] Access to spreadsheet software such as Excel. (Excel is available on all NSU network computers, so you do not have to have a personal copy.) If you intend to use software other than Excel, let me know.
+\item \emph{Elementary Statistics using Excel}, 5\textsuperscript{th} edition, by Triola.
+\item (Recommended) A graphing calculator, preferably a TI-83 or TI-84.
+\item Access to spreadsheet software such as Excel. (Excel is available on all NSU network computers, so you do not have to have a personal copy.) If you intend to use software other than Excel, let me know.
 \end{itemize*}
 
 

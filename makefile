@@ -1,4 +1,5 @@
 SHELL = /bin/bash
+FONT = modular
 
 targets: FORCE
 	@echo 'TARGETS:'                                  | doppler lightblue
@@ -9,6 +10,7 @@ targets: FORCE
 	@echo '  make geom   - College Geometry'          | doppler lightblue
 	@echo '  make ring   - Modern Algebra (Rings)'    | doppler lightblue
 	@echo '  make ssem   - Senior Seminar'            | doppler lightblue
+	@echo '  make parp   - Parallel Programming'      | doppler lightblue
 	@echo
 	@echo '  make all    - Everything'                | doppler lightblue
 	@echo '  make clean  - Delete generated files'    | doppler lightblue
@@ -18,7 +20,7 @@ targets: FORCE
 
 FORCE:
 
-all: coal stat calc prfs geom ring ssem
+all: coal stat calc prfs geom ring ssem parp
 
 clean: FORCE
 	@(rm calc/pdf/* calc/tex/* calc/*.pdf || true) 2> /dev/null
@@ -28,6 +30,7 @@ clean: FORCE
 	@(rm geom/pdf/* geom/tex/* geom/*.pdf || true) 2> /dev/null
 	@(rm ring/pdf/* ring/tex/* ring/*.pdf || true) 2> /dev/null
 	@(rm ssem/pdf/* ssem/tex/* ssem/*.pdf || true) 2> /dev/null
+	@(rm parp/pdf/* parp/tex/* parp/*.pdf || true) 2> /dev/null
 
 tickle: FORCE
 	@echo 'Tee Hee!' | doppler lightmagenta
@@ -38,6 +41,7 @@ tickle: FORCE
 	@touch ring/tickle.me
 	@touch ssem/tickle.me
 	@touch prfs/tickle.me
+	@touch parp/tickle.me
 
 
 
@@ -56,13 +60,7 @@ coal: \
 
 coal-title: FORCE
 	@mkdir -p coal/tex
-	@echo ' _______  _______  _______  ___     ' | doppler green
-	@echo '|       ||       ||   _   ||   |    ' | doppler green
-	@echo '|       ||   _   ||  |_|  ||   |    ' | doppler green
-	@echo '|       ||  | |  ||       ||   |    ' | doppler green
-	@echo '|      _||  |_|  ||       ||   |___ ' | doppler green
-	@echo '|     |_ |       ||   _   ||       |' | doppler green
-	@echo '|_______||_______||__| |__||_______|' | doppler green
+	@figlet -f $(FONT) 'coal' | doppler green
 
 
 coal/.that.tickles: coal/tickle.me
@@ -116,13 +114,7 @@ stat: \
 
 stat-title: FORCE
 	@mkdir -p stat/tex/gfx
-	@echo ' _______  _______  _______  _______ ' | doppler green
-	@echo '|       ||       ||   _   ||       |' | doppler green
-	@echo '|  _____||_     _||  |_|  ||_     _|' | doppler green
-	@echo '| |_____   |   |  |       |  |   |  ' | doppler green
-	@echo '|_____  |  |   |  |       |  |   |  ' | doppler green
-	@echo ' _____| |  |   |  |   _   |  |   |  ' | doppler green
-	@echo '|_______|  |___|  |__| |__|  |___|  ' | doppler green
+	@figlet -f $(FONT) 'stat' | doppler green
 
 
 stat/.that.tickles: stat/tickle.me
@@ -187,13 +179,7 @@ calc: \
 
 calc-title: FORCE
 	@mkdir -p calc/tex
-	@echo ' _______  _______  ___      _______ ' | doppler green
-	@echo '|       ||   _   ||   |    |       |' | doppler green
-	@echo '|       ||  |_|  ||   |    |       |' | doppler green
-	@echo '|       ||       ||   |    |       |' | doppler green
-	@echo '|      _||       ||   |___ |      _|' | doppler green
-	@echo '|     |_ |   _   ||       ||     |_ ' | doppler green
-	@echo '|_______||__| |__||_______||_______|' | doppler green
+	@figlet -f $(FONT) 'calc' | doppler green
 
 
 calc/.that.tickles: calc/tickle.me
@@ -244,13 +230,7 @@ prfs: \
 
 prfs-title: FORCE
 	@mkdir -p prfs/tex/gfx
-	@echo ' _______  ______    _______  _______ ' | doppler green
-	@echo '|       ||    _ |  |       ||       |' | doppler green
-	@echo '|    _  ||   | ||  |    ___||  _____|' | doppler green
-	@echo '|   |_| ||   |_||_ |   |___ | |_____ ' | doppler green
-	@echo '|    ___||    __  ||    ___||_____  |' | doppler green
-	@echo '|   |    |   |  | ||   |     _____| |' | doppler green
-	@echo '|___|    |___|  |_||___|    |_______|' | doppler green
+	@figlet -f $(FONT) 'prfs' | doppler green
 
 
 prfs/.that.tickles: prfs/tickle.me
@@ -292,13 +272,7 @@ geom: \
 
 geom-title: FORCE
 	@mkdir -p geom/tex
-	@echo ' _______  _______  _______  __   __ ' | doppler green
-	@echo '|       ||       ||       ||  |_|  |' | doppler green
-	@echo '|    ___||    ___||   _   ||       |' | doppler green
-	@echo '|   | __ |   |___ |  | |  ||       |' | doppler green
-	@echo '|   ||  ||    ___||  |_|  ||       |' | doppler green
-	@echo '|   |_| ||   |___ |       || ||_|| |' | doppler green
-	@echo '|_______||_______||_______||_|   |_|' | doppler green
+	@figlet -f $(FONT) 'geom' | doppler green
 
 
 geom/.that.tickles: geom/tickle.me
@@ -335,13 +309,7 @@ ring: \
 
 ring-title: FORCE
 	@mkdir -p ring/tex
-	@echo ' ______    ___   __    _  _______ ' | doppler green
-	@echo '|    _ |  |   | |  |  | ||       |' | doppler green
-	@echo '|   | ||  |   | |   |_| ||    ___|' | doppler green
-	@echo '|   |_||_ |   | |       ||   | __ ' | doppler green
-	@echo '|    __  ||   | |  _    ||   ||  |' | doppler green
-	@echo '|   |  | ||   | | | |   ||   |_| |' | doppler green
-	@echo '|___|  |_||___| |_|  |__||_______|' | doppler green
+	@figlet -f $(FONT) 'ring' | doppler green
 
 
 ring/.that.tickles: ring/tickle.me
@@ -387,13 +355,7 @@ ssem: \
 
 ssem-title: FORCE
 	@mkdir -p ssem/tex
-	@echo ' _______  _______  _______  __   __ ' | doppler green
-	@echo '|       ||       ||       ||  |_|  |' | doppler green
-	@echo '|  _____||  _____||    ___||       |' | doppler green
-	@echo '| |_____ | |_____ |   |___ |       |' | doppler green
-	@echo '|_____  ||_____  ||    ___||       |' | doppler green
-	@echo ' _____| | _____| ||   |___ | ||_|| |' | doppler green
-	@echo '|_______||_______||_______||_|   |_|' | doppler green
+	@figlet -f $(FONT) 'ssem' | doppler green
 
 
 ssem/.that.tickles: ssem/tickle.me
@@ -405,6 +367,33 @@ ssem/ssem-syllabus.pdf: \
   ssem/.that.tickles
 	$(call copy,ssem,nsulogo.png)
 	$(call document,ssem,syllabus)
+
+
+
+
+
+
+
+
+parp: \
+  parp-title \
+  parp/parp-syllabus.pdf
+
+
+parp-title: FORCE
+	@mkdir -p parp/tex
+	@figlet -f $(FONT) 'parp' | doppler green
+
+
+parp/.that.tickles: parp/tickle.me
+	@echo "That tickles!" | doppler lightred
+	@touch parp/.that.tickles
+
+parp/parp-syllabus.pdf: \
+  parp/fvl/syllabus.fvl \
+  parp/.that.tickles
+	$(call copy,parp,nsulogo.png)
+	$(call document,parp,syllabus)
 
 
 
