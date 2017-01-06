@@ -24,22 +24,6 @@ Solve the following equations.
 
 \newpage
 
-\item [eval @monic.int.roots.1] \vspace{4cm}
-
-\item [eval @monic.int.roots.2] \vspace{4cm}
-
-\item [eval @quad.with.lc] \vspace{4cm}
-
-\item [eval @quad.with.lc (int @lc := 3)] \vspace{4cm}
-
-\item [eval @quad.radical.roots.1] \vspace{4cm}
-
-\newpage
-
-\item [eval @cubic.zero.root.1] \vspace{4cm}
-
-\item [eval @biquadratic.with.lc] \vspace{4cm}
-
 \item [eval @abs.monic.1] \vspace{4cm}
 \end{enumerate}
 

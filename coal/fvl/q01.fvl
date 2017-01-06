@@ -4,7 +4,7 @@
 
 [define bool @SHOWSOLN := #f]#
 
-[import (kreb-scout/ca/eqn/rat/linear.fvl)]#
+[import (kreb-scout/ca/eqn/abs/linear.fvl)]#
 
 \begin{document}
 
@@ -13,7 +13,7 @@
 \QuizTitle#[class={College Algebra}, number={1}, name={@SOL}#]
 
 \begin{enumerate}
-\item [eval @linear.rat.1 (bool @show.solution := @SHOWSOLN)]
+\item [eval @linear.abs.1 (bool @show.solution := @SHOWSOLN)]
 [if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{5cm}]]
 \end{enumerate}
 
