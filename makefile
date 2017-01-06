@@ -55,7 +55,8 @@ coal: \
   coal/coal-syllabus.pdf \
   $(patsubst coal/fvl/a%.fvl,coal/coal-a%.pdf,$(wildcard coal/fvl/a*.fvl)) \
   $(patsubst coal/fvl/r%.fvl,coal/coal-r%.pdf,$(wildcard coal/fvl/r*.fvl)) \
-  $(patsubst coal/fvl/t%.fvl,coal/coal-t%.pdf,$(wildcard coal/fvl/t*.fvl))
+  $(patsubst coal/fvl/t%.fvl,coal/coal-t%.pdf,$(wildcard coal/fvl/t*.fvl)) \
+  $(patsubst coal/fvl/q%.fvl,coal/coal-q%.pdf,$(wildcard coal/fvl/q*.fvl))
 
 
 coal-title: FORCE
@@ -79,14 +80,14 @@ coal/coal-a%.pdf: \
   coal/fvl/a%.fvl \
   coal/.that.tickles
 	$(call document,coal,a$*)
-	$(call solution,coal,a$*)	
+	$(call solution,coal,a$*)
 
 
 coal/coal-r%.pdf: \
   coal/fvl/r%.fvl \
   coal/.that.tickles
 	$(call document,coal,r$*)
-	$(call solution,coal,r$*)	
+	$(call solution,coal,r$*)
 
 
 coal/coal-t%.pdf: \
@@ -94,6 +95,13 @@ coal/coal-t%.pdf: \
   coal/.that.tickles
 	$(call document,coal,t$*)
 	$(call solution,coal,t$*)
+
+
+coal/coal-q%.pdf: \
+  coal/fvl/q%.fvl \
+  coal/.that.tickles
+	$(call document,coal,q$*)
+	$(call solution,coal,q$*)
 
 
 

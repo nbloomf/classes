@@ -1,0 +1,20 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{flexfig}
+
+[define bool @SHOWSOLN := #f]#
+
+[import (kreb-scout/ca/eqn/rat/linear.fvl)]#
+
+\begin{document}
+
+[define str @SOL := if (@SHOWSOLN) then "(Solutions)" else ""]#
+
+\QuizTitle#[class={College Algebra}, number={8}, name={@SOL}#]
+
+\begin{enumerate}
+\item [eval @linear.rat.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{5cm}]]
+\end{enumerate}
+
+\end{document}

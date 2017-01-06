@@ -6,7 +6,7 @@
 
 [define bool @SHOWSOLN := #f]#
 
-[import (kreb-scout/ca/poly/factor/synthdiv.fvl)]#
+[import (kreb-scout/ca/eqn/exp/linear.fvl)]#
 
 \begin{document}
 
@@ -15,7 +15,8 @@
 \ActivityTitle#[class={College Algebra}, number={9}, name={@TITLE}#]
 
 \begin{enumerate}
-\item Solve the following equation. \#[ 3^{2x-1} = 27^{x+2} \#] \vspace{5cm}
+\item [eval @exp.linear.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{5cm}]]
 
 \item Solve the following equation using logarithms. \#[ 3 = 2^{x+1} \#] \vspace{5cm}
 
@@ -23,7 +24,7 @@
 
 %\item Suppose \$20,000 is invested at a 0.5\% APR, compounded quarterly, for 5 years. Using the equation \#[ A = P\left(1 - \frac{r}{n}\right)^{nt} \#] find the final value of this account. \vspace{4cm}
 
-\newpage
+[if (@SHOWSOLN) then [] else [\newpage]]
 
 \item Solve for $x$. Round your solution to four decimal places. \#[ (1 + x)^3 = 5 \#] \vspace{5cm}
 
@@ -35,7 +36,7 @@
 
 %\item Suppose $P$ dollars are invested at 0.7\% APR, compounded monthly. How many months will it take for the value of this account to double?
 
-\newpage
+[if (@SHOWSOLN) then [] else [\newpage]]
 
 \item Use properties of logarithms to write the following expression using only a single log. \#[ \log(2) + \log(x) + \log(y) - \log(z) \#] \vspace{5cm}
 
