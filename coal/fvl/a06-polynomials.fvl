@@ -17,13 +17,16 @@
 \ActivityTitle#[class={College Algebra}, number={6}, name={@TITLE}#]
 
 \begin{enumerate}
-\item [eval @algebraic.end.behavior.1] \vspace{1cm}
+\item [eval @algebraic.end.behavior.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{1cm}]]
 
-\item [eval @poly.long.division.1] \vspace{6cm}
+\item [eval @poly.long.division.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{6cm}]]
 
-\item [eval @poly.synth.division.1] \vspace{3cm}
+\item [eval @poly.synth.division.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{3cm}]]
 
-\newpage
+[if (@SHOWSOLN) then [] else [\newpage]]
 
 \item Compute the following products.
 \begin{enumerate}
@@ -31,9 +34,11 @@
 \item $(x-2)(x+3)(2x-1)$ \vspace{3cm}
 \end{enumerate}
 
-\item [eval @construct.from.roots.1] \vspace{7cm}
+\item [eval @construct.from.roots.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{7cm}]]
 
-\item Construct a polynomial whose roots are $1$, $-2$, and $1/2$.
+\item [eval @construct.from.roots.2 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{7cm}]]
 \end{enumerate}
 
 \end{document}

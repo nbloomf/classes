@@ -15,23 +15,24 @@
 \ActivityTitle#[class={College Algebra}, number={7}, name={@TITLE}#]
 
 \begin{enumerate}
-\item [eval @given.roots.1]
+\item [eval @given.roots.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{8cm}]]
 
-\vspace{8cm}
+\item [eval @given.roots.2 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{8cm}]]
 
-\item [eval @given.roots.2]
+[if (@SHOWSOLN) then [] else [\newpage]]
 
-\newpage
+\item [eval @rational.root.test.candidates.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{3cm}]]
 
-\item [eval @rational.root.test.candidates.1]
+\item [eval @rational.root.test.factor.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{8cm}]]
 
-\vspace{3cm}
+[if (@SHOWSOLN) then [] else [\newpage]]
 
-\item [eval @rational.root.test.factor.1]
-
-\newpage
-
-\item [eval @rational.root.test.factor.2]
+\item [eval @rational.root.test.factor.2 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{8cm}]]
 \end{enumerate}
 
 \end{document}
