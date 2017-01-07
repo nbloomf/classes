@@ -7,8 +7,10 @@
 [define bool @SHOWSOLN := #f]#
 
 [import (kreb-scout/ca/poly/endbehavior.fvl)]#
-[import (kreb-scout/ca/poly/division.fvl)]#
 [import (kreb-scout/ca/poly/factor/synthdiv.fvl)]#
+[import (kreb-scout/ca/poly/division.fvl)]#
+[import (kreb-scout/ca/poly/arithmetic.fvl)]#
+[import (kreb-scout/ca/eqn/quad/quad-type.fvl)]#
 [import (kreb-scout/ca/poly/factor/conjugate.fvl)]#
 
 \begin{document}
@@ -18,30 +20,37 @@
 %\AlgebraFacts#[geom=show,transform=show#]
 
 \begin{enumerate}
-\item [eval @algebraic.end.behavior.1] \vspace{1cm}
+\item [eval @cubic.zero.root.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{4cm}]]
 
-\item Construct a polynomial having roots at $1$, $-3$, and $1/3$. \vspace{3cm}
+\item [eval @biquadratic.with.lc (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{4cm}]]
 
-\item [eval @given.roots.1] \vspace{8cm}
+\item [eval @algebraic.end.behavior.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{2cm}]]
 
-\newpage
+[if (@SHOWSOLN) then [] else [\newpage]]
 
-\item [eval @rational.root.test.candidates.1] \vspace{4cm}
+\item [eval @poly.synth.division.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{4cm}]]
 
-\item [eval @poly.long.division.1] \vspace{7cm}
+\item [eval @rational.root.test.candidates.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{5cm}]]
 
-\item [eval @given.quadratic.root.4] \vspace{7cm}
+\item [eval @construct.from.roots.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{7cm}]]
 
-[% \item Find the long-term behavior asymptote of the following rational function. \#[ f(x) = \frac{x^3 - 2x^2 + 3x - 5}{x^2 + x + 1} \#] \vspace{8cm} %]
+[if (@SHOWSOLN) then [] else [\newpage]]
 
-\newpage
+\item [eval @given.roots.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{9cm}]]
 
-[% \item Find the domain of the following rational function. \#[ f(x) = \frac{1337x^{42} - x^{27} + 1}{(x-1)^2(x+2)(x-3)^3} \#] \vspace{6cm} %]
+\item [eval @given.roots.2 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{9cm}]]
 
-\item Find the multiplicity of 1 as a root of the following polynomial. \#[ p(x) = x^3 - x^2 - x + 1 \#] \vspace{6cm}
+[if (@SHOWSOLN) then [] else [\newpage]]
 
-\item [eval @given.roots.2] \vspace{7cm}
-
+\item#[Bonus.#] [eval @given.quadratic.root.1]
 \end{enumerate}
 
 \end{document}

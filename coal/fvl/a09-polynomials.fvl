@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{flexfig}
+
+[define bool @SHOWSOLN := #f]#
+
+[import (kreb-scout/ca/poly/factor/synthdiv.fvl)]#
+
+\begin{document}
+
+[define str @TITLE := "Polynomials" ++ (if (@SHOWSOLN) then " (Solutions)" else "")]#
+
+\ActivityTitle#[class={College Algebra}, number={9}, name={@TITLE}#]
+
+\begin{enumerate}
+\item [eval @construct.from.roots.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{7cm}]]
+
+\item [eval @construct.from.roots.2 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{7cm}]]
+
+\item [eval @construct.from.roots.3 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{7cm}]]
+
+[if (@SHOWSOLN) then [] else [\newpage]]
+
+\item [eval @given.roots.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{9cm}]]
+
+\item [eval @given.roots.3 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{8cm}]]
+
+[if (@SHOWSOLN) then [] else [\newpage]]
+
+\item [eval @given.roots.2 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{9cm}]]
+
+\item [eval @given.roots.2 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{8cm}]]
+\end{enumerate}
+
+\end{document}

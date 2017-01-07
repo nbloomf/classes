@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage{neb-titles}
+\usepackage{amsmath}
 \usepackage{flexfig}
 
 [define bool @SHOWSOLN := #f]#

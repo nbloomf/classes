@@ -1,0 +1,34 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{flexfig}
+
+[define bool @SHOWSOLN := #f]#
+
+[import (kreb-scout/ca/eqn/quad/int.fvl)]#
+
+\begin{document}
+
+[define str @TITLE := "Quadratic Equations" ++ (if (@SHOWSOLN) then " (Solutions)" else "")]#
+
+\ActivityTitle#[class={College Algebra}, number={2}, name={@TITLE}#]
+
+\begin{enumerate}
+\item [eval @monic.int.roots.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{4cm}]]
+
+\item [eval @monic.int.roots.2 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{5cm}]]
+
+\item [eval @quad.with.lc (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{4cm}]]
+
+[if (@SHOWSOLN) then [] else [\newpage]]
+
+\item [eval @quad.with.lc (int @lc := 3; bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{4cm}]]
+
+\item [eval @quad.radical.roots.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{4cm}]]
+\end{enumerate}
+
+\end{document}

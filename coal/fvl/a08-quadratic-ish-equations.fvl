@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{flexfig}
+
+[define bool @SHOWSOLN := #f]#
+
+[import (kreb-scout/ca/poly/endbehavior.fvl)]#
+[import (kreb-scout/ca/poly/factor/synthdiv.fvl)]#
+[import (kreb-scout/ca/poly/division.fvl)]#
+[import (kreb-scout/ca/poly/arithmetic.fvl)]#
+[import (kreb-scout/ca/eqn/quad/quad-type.fvl)]#
+
+\begin{document}
+
+[define str @TITLE := "Quadratic-ish Equations" ++ (if (@SHOWSOLN) then " (Solutions)" else "")]#
+
+\ActivityTitle#[class={College Algebra}, number={8}, name={@TITLE}#]
+
+\begin{enumerate}
+\item [eval @cubic.zero.root.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{4cm}]]
+
+\item [eval @biquadratic.with.lc (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{4cm}]]
+
+\item [eval @poly.triple.prod.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{4cm}]]
+
+\item [eval @poly.triple.prod.2 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{4cm}]]
+
+[if (@SHOWSOLN) then [] else [\newpage]]
+
+\item [eval @algebraic.end.behavior.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{2cm}]]
+
+\item [eval @algebraic.end.behavior.2 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{2cm}]]
+
+\item [eval @poly.synth.division.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{3cm}]]
+\end{enumerate}
+
+\end{document}

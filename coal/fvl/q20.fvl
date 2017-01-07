@@ -5,17 +5,17 @@
 
 [define bool @SHOWSOLN := #f]#
 
-[import (kreb-scout/ca/geom/lines.fvl)]#
+[import (kreb-scout/ca/poly/factor/synthdiv.fvl)]#
 
 \begin{document}
 
 [define str @SOL := if (@SHOWSOLN) then "(Solutions)" else ""]#
 
-\QuizTitle#[class={College Algebra}, number={7}, name={@SOL}#]
+\QuizTitle#[class={College Algebra}, number={20}, name={@SOL}#]
 
 \begin{enumerate}
-\item [eval @line.through.points.1 (bool @show.solution := @SHOWSOLN)]
-[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{6cm}]]
+\item [eval @rational.root.test.factor.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{8cm}]]
 \end{enumerate}
 
 \end{document}
