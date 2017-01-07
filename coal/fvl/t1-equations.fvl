@@ -14,7 +14,7 @@
 
 \begin{document}
 
-\TestTitle#[class={College Algebra}, name={Test 1}, term={Spring}, date={Feb. 5}, year={2016}, form={A}#]
+\TestTitle#[class={College Algebra}, name={Test 1}, term={Spring}, date={Feb. 5}, year={2017}, form={A}#]
 
 \AlgebraFacts#[lines=hide#]
 

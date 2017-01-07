@@ -7,6 +7,7 @@
 [define bool @SHOWSOLN := #f]#
 
 [import (kreb-scout/ca/func/eval.fvl)]#
+[import (kreb-scout/ca/func/compose.fvl)]#
 
 \begin{document}
 
@@ -18,17 +19,19 @@
 \item [eval @func.eval.1 (bool @show.solution := @SHOWSOLN)]
 [if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{3cm}]]
 
+\item [eval @func.eval.poly.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{4cm}]]
+
 \item [eval @func.eval.2 (bool @show.solution := @SHOWSOLN)]
-[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{3cm}]]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{5cm}]]
 
 [if (@SHOWSOLN) then [] else [\newpage]]
 
-\item Let $f(x) = x^2 + 1$ and $g(x) = 3x - 2$. Find the following.
-\begin{enumerate}
-\item $(f \circ g)(2)$ \vspace{1cm}
-\item $(g \circ f)(2)$ \vspace{1cm}
-\item $(f \circ g)(x)$ \vspace{1cm}
-\end{enumerate}
+\item [eval @compose.linear.quad.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{3cm}]]
+
+\item [eval @compose.linear.piecewise.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{3cm}]]
 \end{enumerate}
 
 \end{document}

@@ -6,44 +6,67 @@
 
 [define bool @SHOWSOLN := #f]#
 
-[import (kreb-scout/ca/func/domain.fvl)]#
-[import (kreb-scout/ca/func/eval.fvl)]#
-[import (kreb-scout/ca/eqn/transform/graph.fvl)]#
 [import (kreb-scout/ca/geom/lines.fvl)]#
 [import (kreb-scout/ca/geom/circles.fvl)]#
-[import (kreb-scout/ca/eqn/quad/quad-type.fvl)]#
+[import (kreb-scout/ca/func/eval.fvl)]#
+[import (kreb-scout/ca/func/compose.fvl)]#
+[import (kreb-scout/ca/func/domain.fvl)]#
+[import (kreb-scout/ca/eqn/transform/graph.fvl)]#
 
 \begin{document}
 
 \ReviewTitle#[class={College Algebra}, for={Test 2}#]
 
 \begin{enumerate}
+\item [eval @linear.eqn.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{3cm}]]
+
+\item [eval @find.distance.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{3cm}]]
+
+\item [eval @plot.line.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{1cm}]]
+
+\item [eval @find.slope.2 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{4cm}]]
+
+[if (@SHOWSOLN) then [] else [\newpage]]
+
+\item [eval @find.midpoint.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{4cm}]]
+
+\item [eval @circle.eqn.2 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{5cm}]]
+
+\item [eval @line.through.points.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{6cm}]]
+
+\item [eval @line.convert.std.to.slopeint.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{6cm}]]
+
+[if (@SHOWSOLN) then [] else [\newpage]]
+
+\item [eval @find.eqn.parallel.line.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{3cm}]]
+
+\item [eval @func.eval.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{3cm}]]
+
+\item [eval @func.eval.2 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{5cm}]]
+
+\item [eval @compose.linear.quad.1 (bool @show.solution := @SHOWSOLN)]
+[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{3cm}]]
+
+[if (@SHOWSOLN) then [] else [\newpage]]
+
 \item [eval @func.domain.1 (bool @show.solution := @SHOWSOLN)]
 [if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{5cm}]]
 
 \item [eval @func.domain.3 (bool @show.solution := @SHOWSOLN)]
 [if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{5cm}]]
 
-\item [eval @func.domain.4 (bool @show.solution := @SHOWSOLN)]
-[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{5cm}]]
-
-[if (@SHOWSOLN) then [] else [\newpage]]
-
-\item [eval @func.eval.1 (bool @show.solution := @SHOWSOLN)]
-[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{3cm}]]
-
-\item [eval @func.eval.2 (bool @show.solution := @SHOWSOLN)]
-[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{3cm}]]
-
 \item [eval @interpret.transformed.eqn.1 (bool @show.solution := @SHOWSOLN)]
-[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{1cm}]]
-
-[if (@SHOWSOLN) then [] else [\newpage]]
-
-\item [eval @interpret.transformed.eqn.2 (bool @show.solution := @SHOWSOLN)]
-[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{1cm}]]
-
-\item [eval @graphically.transform.1 (bool @show.solution := @SHOWSOLN)]
 [if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{1cm}]]
 
 [if (@SHOWSOLN) then [] else [\newpage]]
@@ -53,47 +76,6 @@
 
 \item [eval @algebraically.detect.symmetry.1 (bool @show.solution := @SHOWSOLN)]
 [if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{5cm}]]
-
-\newpage
-
-\item Let $f(x) = x^2 + 1$ and $g(x) = 3x - 2$. Find the following.
-\begin{enumerate}
-\item $(f \circ g)(2)$ \vspace{1cm}
-\item $(g \circ f)(2)$ \vspace{1cm}
-\item $(f \circ g)(x)$ \vspace{1cm}
-\end{enumerate}
-
-\item [eval @line.through.points.1 (bool @show.solution := @SHOWSOLN)]
-[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{6cm}]]
-
-\item [eval @line.convert.std.to.slopeint.1 (bool @show.solution := @SHOWSOLN)]
-[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{6cm}]]
-
-\item [eval @cubic.zero.root.1 (bool @show.solution := @SHOWSOLN)]
-[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{6cm}]]
-
-\item [eval @biquadratic.with.lc (bool @show.solution := @SHOWSOLN)]
-[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{6cm}]]
-
-\item [eval @circle.eqn.1 (bool @show.solution := @SHOWSOLN)]
-[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{5cm}]]
-
-\item [eval @find.midpoint.1 (bool @show.solution := @SHOWSOLN)]
-[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{4cm}]]
-
-\item [eval @plot.line.1 (bool @show.solution := @SHOWSOLN)]
-[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{5cm}]]
-
-\item [eval @find.distance.1 (bool @show.solution := @SHOWSOLN)]
-[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{3cm}]]
-
-\item [eval @find.eqn.parallel.line.1 (bool @show.solution := @SHOWSOLN)]
-[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{6cm}]]
-
-\item [eval @linear.eqn.1 (bool @show.solution := @SHOWSOLN)]
-[if (@SHOWSOLN) then [\vspace{2cm}] else [\vspace{3cm}]]
-
-\item [eval @abs.monic.1 (bool @show.solution := @SHOWSOLN)]
 \end{enumerate}
 
 \end{document}
