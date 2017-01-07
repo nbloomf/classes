@@ -71,9 +71,11 @@ coal/.that.tickles: coal/tickle.me
 
 coal/coal-syllabus.pdf: \
   coal/fvl/syllabus.fvl \
+	coal/fvl/syllabus-lab.fvl \
   coal/.that.tickles
 	$(call copy,coal,nsulogo.png)
 	$(call document,coal,syllabus)
+	$(call document,coal,syllabus-lab)
 
 
 coal/coal-a%.pdf: \
