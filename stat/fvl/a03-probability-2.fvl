@@ -13,9 +13,13 @@
 \ActivityTitle#[class=Statistics, number=3, name={@TITLE}#]
 
 \begin{enumerate}
-\item Suppose a couple has 5 children. What is the probability that none of the five are girls? (Assume that the probability that a single child is a girl is 1/2.)
+\item Suppose a couple has 5 children. (Assume that the probability that a single child is a girl is 1/2.)
+\begin{enumerate}
+\item What is the probability that none of the five are girls? \vspace{3cm}
+\item What is the probability that \emph{at least one} of the five is a girl? 
+\end{enumerate}
 
-\vspace{4cm}
+\vspace{3cm}
 
 \item Suppose you are taking a quiz consisting of 10 true/false questions. You've decided to answer each question by flipping a coin.
 \begin{enumerate}
