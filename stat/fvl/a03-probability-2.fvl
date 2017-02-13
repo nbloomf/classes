@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{flexfig}
+
+[define bool @SHOWSOLN := #f]#
+
+[import (kreb-scout/stat/probability.fvl)]#
+
+\begin{document}
+
+[define str @TITLE := "Probability 2" ++ (if (@SHOWSOLN) then " (Solutions)" else "")]#
+
+\ActivityTitle#[class=Statistics, number=3, name={@TITLE}#]
+
+\begin{enumerate}
+\item Suppose a couple has 5 children. What is the probability that none of the five are girls? (Assume that the probability that a single child is a girl is 1/2.)
+
+\vspace{4cm}
+
+\item Suppose you are taking a quiz consisting of 10 true/false questions. You've decided to answer each question by flipping a coin.
+\begin{enumerate}
+\item What is the probability that you will answer exactly one question correctly? \vspace{2cm}
+\item What is the probability that you will answer the last question correctly, and the first 9 incorrectly? \vspace{3cm}
+\end{enumerate}
+
+\item Suppose $P(E) = 0.7$, $P(F) = 0.4$, and $P(E\ \textsc{and}\ F) = 0.2$. Compute the following.
+\begin{enumerate}
+\item $P(E\ \textsc{given}\ F)$ \vspace{2cm}
+\item $P(F\ \textsc{given}\ E)$ \vspace{2cm}
+\end{enumerate}
+
+\newpage
+
+\item Between 1999 and 2008, the 9th U.S. Circuit Court of Appeals ruled on 114,199 cases. Over the same period, the U.S. Supreme Court reviewed 175 of the 9th circuit's rulings. In 140 of these reviewed cases, the Supreme Court either reversed or vacated (that is, overturned) the 9th circuit's decision.
+\begin{enumerate}
+\item Suppose we choose one of the 9th Circuit's rulings over this period. What is the probability that it was overturned by the Supreme Court? \vspace{2cm}
+\item Suppose we choose one of the 9th Circuit's rulings over this period \emph{which was reviewed by the Supreme Court}. What is the probability that it was overturned? \vspace{2cm}
+\item Evaluate the following claim, made in an interview with NPR's \emph{Morning Edition} on Feb. 13, 2017 by Sebastian Gorka, deputy assistant to the president: "When you look at the 9th Circuit, their rulings have been reversed 82\% of the time."
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
