@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage{neb-titles}
+\usepackage{flexfig}
+
+[define bool @SHOWSOLN := #f]#
+
+
+
+\begin{document}
+
+[define str @TITLE := "Counting 2" ++ (if (@SHOWSOLN) then " (Solutions)" else "")]#
+
+\ActivityTitle#[class=Statistics, number=5, name={@TITLE}#]
+
+\begin{enumerate}
+\item Suppose we flip a coin 15 times in a row. What is the probability that we flip heads at least 11 times?
+
+\vspace{4cm}
+
+\item In poker, a "Four of a Kind" hand consists of all four cards of a given rank plus a fifth card called the \emph{kicker}. For example, a hand consisting of all four 7 cards plus a King is a four of a kind.
+
+Suppose we draw five cards from a standard deck. What is the probability that we draw four of a kind?
+
+\vspace{4cm}
+
+\item The eight justices of the U.S.\ Supreme Court have decided to play a game of 4-on-4 volleyball. In how many different ways can they divide into two teams of four players each? 
+
+\vspace{4cm}
+
+\item In how many ways can the letters in the word BOOKKEEPER be arranged?
+
+\newpage
+
+\item Suppose we flip a coin 10 times in a row and count the number of heads, $k$. This number can be any integer from 0 to 10.
+
+Construct a table to summarize, for each $k$, the number of ways we could flip exactly $k$ heads.
+
+\vspace{7cm}
+
+\item 15 people are to be divided into 3 teams of 5 people each, called Team A, Team B, and Team C. In how many ways can these teams be formed?
+\end{enumerate}
+
+\end{document}

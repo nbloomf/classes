@@ -10,7 +10,7 @@
 
 [define str @TITLE := "Counting" ++ (if (@SHOWSOLN) then " (Solutions)" else "")]#
 
-\ActivityTitle#[class=Statistics, number=3, name={@TITLE}#]
+\ActivityTitle#[class=Statistics, number=4, name={@TITLE}#]
 
 \begin{enumerate}
 \item Suppose we flip a coin 12 times in a row. In how many ways can the coin come up heads exactly four times?
